@@ -10,11 +10,12 @@ DATABASE_CONNECTION = psycopg2.connect(host=os.environ["DB_HOST"],
 
 def app(environ, start_response):
     cur = DATABASE_CONNECTION.cursor()
-    cur.execute('SELECT version()')
-    db_version = cur.fetchone()[0]
+    cur.execute('SELECT title, method FROM recipes')
+    record = cur.fetchone()
     cur.close()
+    response_body = record[0] + "\n\n" + record[1]
     start_response("200 OK", [
         ("Content-Type", "text/plain"),
-        ("Content-Length", str(len(db_version)))
+        ("Content-Length", str(len(response_body)))
     ])
-    return iter([str.encode(db_version)])
+    return iter([str.encode(response_body)])
