@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-gunicorn -w 3 main:app
+source venv/bin/activate
+gunicorn -w 3 --bind 0.0.0.0:8000 platypus.wsgi
+deactivate
