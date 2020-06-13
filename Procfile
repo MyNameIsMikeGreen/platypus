@@ -1,1 +1,2 @@
-gunicorn -w 3 --bind 0.0.0.0:8000 platypus.wsgi
+release: python manage.py migrate
+web: gunicorn platypus.wsgi --log-file -
