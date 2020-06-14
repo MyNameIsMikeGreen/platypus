@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Recipe
@@ -11,4 +10,8 @@ def index(request):
 
 
 def detail(request, recipe_id):
-    return HttpResponse("You're looking at recipe %s." % recipe_id)
+    recipe = Recipe.objects.get(pk=recipe_id)
+    return HttpResponse("<b>Title</b>: %s<br />"
+                        "<b>Ingredients</b>: %s<br />"
+                        "<b>Method</b>: %s<br />"
+                        % (recipe.title, recipe.ingredients, recipe.method, ))
