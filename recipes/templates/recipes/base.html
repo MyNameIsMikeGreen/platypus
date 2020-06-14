@@ -11,6 +11,11 @@
     </head>
 
     <body>
+        <div class="platypus-header">
+            <div class="platypus-title-text">
+                <a href="{% url 'recipes:index' %}">Platypus</a>
+            </div>
+        </div>
         {% block content %}{% endblock content %}
         <footer> <small>&copy; Copyright 2020 Mike Green</small> </footer>
     </body>
