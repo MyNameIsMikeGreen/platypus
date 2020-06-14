@@ -2,6 +2,7 @@
 
 {% block content %}
     {% if recipe_list %}
+        <h1>Recipes</h1>
         <ul>
             {% for recipe in recipe_list %}
                 <li><a href="{% url 'recipes:detail' recipe.pk %}">{{ recipe.title }}</a></li>
