@@ -1,16 +1,15 @@
 from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
 from .models import Recipe
 
 
 def index(request):
     recipe_list = Recipe.objects.order_by('title')
-    template = loader.get_template('recipes/index.html')
     context = {
         'recipe_list': recipe_list,
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'recipes/index.html', context)
 
 
 def detail(request, recipe_id):
