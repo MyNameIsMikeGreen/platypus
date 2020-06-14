@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'recipes/style.css' %}">
+
 {% if recipe_list %}
     <ul>
         {% for recipe in recipe_list %}
