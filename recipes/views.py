@@ -14,7 +14,11 @@ def index(request):
 
 def detail(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
-    return HttpResponse("<b>Title</b>: %s<br />"
-                        "<b>Ingredients</b>: %s<br />"
-                        "<b>Method</b>: %s<br />"
-                        % (recipe.title, recipe.ingredients, recipe.method, ))
+    ingredients_list = recipe.ingredients.split('\\n')
+    method_list = recipe.method.split('\\n')
+    context = {
+        'recipe': recipe,
+        'ingredients_list': ingredients_list,
+        'method_list': method_list,
+    }
+    return render(request, 'recipes/detail.html', context)

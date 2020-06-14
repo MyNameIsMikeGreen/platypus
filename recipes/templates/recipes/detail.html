@@ -1,0 +1,25 @@
+{% extends "recipes/base.html" %}
+
+{% block content %}
+    {% if recipe %}
+        <h1>{{ recipe.title }}</h1>
+        <p><img src="{{ recipe.main_image }}" alt="{{ recipe.title }}" height="300"></p>
+
+        <h2>Ingredients</h2>
+        <ul>
+            {% for ingredient_item in ingredients_list %}
+                <li>{{ ingredient_item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Method</h2>
+        <ul>
+            {% for method_item in method_list %}
+                <li>{{ method_item }}</li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>Recipe not found.</p>
+    {% endif %}
+{% endblock content %}
