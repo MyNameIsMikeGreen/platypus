@@ -6,6 +6,11 @@
     border-bottom-style: solid;
 }
 
+.platypus-content {
+    position: relative;
+    margin: 40px;
+}
+
 .platypus-title-text {
     font-size: 50px;
     font-weight: bolder;
@@ -14,6 +19,16 @@
 .platypus-title-text a {
     color: inherit;
     text-decoration: none;
+}
+
+.main_image {
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.main_image img {
+    width: 300px;
 }
 
 body {
