@@ -3,7 +3,9 @@
 {% block content %}
     {% if recipe %}
         <h1>{{ recipe.title }}</h1>
-        <p><img src="{{ recipe.main_image }}" alt="{{ recipe.title }}" height="300"></p>
+        <div class="main_image">
+            <img src="{{ recipe.main_image }}" alt="{{ recipe.title }}">
+        </div>
 
         <h2>Ingredients</h2>
         <ul>
