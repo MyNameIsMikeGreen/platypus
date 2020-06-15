@@ -2,24 +2,26 @@
 
 {% block content %}
     {% if recipe %}
-        <h1>{{ recipe.title }}</h1>
-        <div class="main_image">
+        <div id="main_image">
             <img src="{{ recipe.main_image }}" alt="{{ recipe.title }}">
         </div>
 
-        <h2>Ingredients</h2>
-        <ul>
-            {% for ingredient_item in ingredients_list %}
-                <li>{{ ingredient_item }}</li>
-            {% endfor %}
-        </ul>
+        <div id="text_content">
+            <h1>{{ recipe.title }}</h1>
+            <h2>Ingredients</h2>
+            <ul>
+                {% for ingredient_item in ingredients_list %}
+                    <li>{{ ingredient_item }}</li>
+                {% endfor %}
+            </ul>
 
-        <h2>Method</h2>
-        <ul>
-            {% for method_item in method_list %}
-                <li>{{ method_item }}</li>
-            {% endfor %}
-        </ul>
+            <h2>Method</h2>
+            <ul>
+                {% for method_item in method_list %}
+                    <li>{{ method_item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
 
     {% else %}
         <p>Recipe not found.</p>
