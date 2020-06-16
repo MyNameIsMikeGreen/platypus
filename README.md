@@ -13,10 +13,12 @@ Hosted on Heroku: https://mike-green-platypus.herokuapp.com/
 
 The following environment variable must be set before running
 
-* `DB_HOST`
-* `DB_NAME`
-* `DB_USER`
-* `DB_PASSWORD`
+* `DB_HOST`: Host URL of database.
+* `DB_NAME`: Name of database.
+* `DB_USER`: User with read access in the database.
+* `DB_PASSWORD`: Password of the database user.
+* `SECRET_KEY`: Cryptographic key for signing.
+* `DEBUG`: Enables or disables debug mode. Application will return HTTP 500 to all requests if deployed with debug mode enabled.
 
 ### Database Migrations
 
