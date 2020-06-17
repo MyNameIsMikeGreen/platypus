@@ -49,11 +49,11 @@ a {
     position: relative;
 }
 
-#main-image {
+#recipe-images {
     flex: 1;
 }
 
-#main-image img {
+#recipe-images img {
     width: 100%;
 }
 
