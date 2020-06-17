@@ -1,3 +1,7 @@
+a {
+    color: green;
+}
+
 #platypus-header {
     margin-bottom: 30px;
     padding-top: 10px;
@@ -19,7 +23,6 @@
 }
 
 #platypus-navigation-buttons a {
-    color: green;
     text-decoration: none;
     font-size: 25px;
     border-left-width: 1px;
@@ -66,10 +69,6 @@
 body {
     font-family: "Karma", sans-serif;
     background-color: beige;
-}
-
-li a {
-    color: green;
 }
 
 footer {
