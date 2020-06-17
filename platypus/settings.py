@@ -27,6 +27,8 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = os.getenv('DEBUG', False) == 'True'
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mike-green-platypus.herokuapp.com']
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+TASTYPIE_FULL_DEBUG = True
 
 # Application definition
 
