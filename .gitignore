@@ -141,4 +141,4 @@ cython_debug/
 .idea/
 
 # Platypus
-recipes.sql
+*recipes*.sql

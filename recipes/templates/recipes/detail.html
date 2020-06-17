@@ -3,8 +3,10 @@
 {% block content %}
     {% if recipe %}
         <div id="details-content">
-            <div id="main-image">
-                <a href="{{ recipe.main_image }}"><img src="{{ recipe.main_image }}" alt="{{ recipe.title }}"></a>
+            <div id="recipe-images">
+                {% for image in image_list %}
+                    <a href="{{ image.url }}"><img src="{{ image.url }}" alt="{{ recipe.title }}"></a>
+                {% endfor %}
             </div>
 
             <div id="text-content">
