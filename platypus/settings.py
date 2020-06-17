@@ -25,10 +25,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False) == 'True'
-if DEBUG:
-    ALLOWED_HOSTS = ['localhost']
-else:
-    ALLOWED_HOSTS = ["mike-green-platypus.herokuapp.com"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mike-green-platypus.herokuapp.com']
 
 
 # Application definition
