@@ -23,3 +23,7 @@ def detail(request, recipe_id):
         'method_list': method_list,
     }
     return render(request, 'recipes/detail.html', context)
+
+
+def about(request):
+    return render(request, 'recipes/about.html', None)
