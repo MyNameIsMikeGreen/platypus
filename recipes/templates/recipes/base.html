@@ -15,6 +15,10 @@
             <div id="platypus-title-text">
                 <a href="{% url 'recipes:index' %}">Platypus</a>
             </div>
+            <div id="platypus-navigation-buttons">
+                <a href="{% url 'recipes:index' %}">Recipes</a>
+                <a href="{% url 'recipes:about' %}">About</a>
+            </div>
         </div>
         <div id="platypus-content">
             {% block content %}{% endblock content %}
