@@ -139,6 +139,3 @@ cython_debug/
 
 # JetBrains
 .idea/
-
-# Platypus
-*recipes*.sql
