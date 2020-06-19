@@ -20,13 +20,15 @@ The following environment variable must be set before running
 * `SECRET_KEY`: Cryptographic key for signing.
 * `DEBUG`: Enables or disables debug mode. Application will return HTTP 500 to all requests if deployed with debug mode enabled.
 
-### Database Migrations
+### Database Setup
 
-Ensure the database is up-to-date before launching by running the migrations:
+Ensure the database is up-to-date before launching the application:
 
 ```bash
-./migrate.sh
+./reset-database.sh
 ```
+
+This will destroy any existing database, run all migrations, and populate it with data.
 
 ## Launch
 
