@@ -376,5 +376,65 @@
       "recipe": 10,
       "relative_order": 3
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 11,
+    "fields": {
+      "title": "Bacon and Leek Tart",
+      "ingredients": "300g Puff Pastry;150-200g Soft Cheese;1 Leek;6-8 Rashers Bacon;100g Cheddar Cheese;Pepper (To Taste)",
+      "method": "If not pre-rolled, roll out pastry into the size of a baking tray.;Spread soft cheese evenly over the pastry.;Slice leek.;Sprinkle leek rings over pastry.;Cut bacon.;Arrange bacon over pastry.;Sprinkle pepper over tart.;Sprinkle cheddar over tart.;Fold edges over to form a crust.;Bake at 180C for ~20 minutes.;Brown cheese under grill if desired."
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/KLGcZKN/IMG-20200310-184938.jpg",
+      "recipe": 11,
+      "relative_order": 0
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 12,
+    "fields": {
+      "title": "Cookies",
+      "ingredients": "100g Butter;60g Light Brown Sugar;60g Caster Sugar;1 Egg;150g Plain Flour;1 Teaspoon Vanilla Extract;Half Teaspoon Bicarbonate of Soda;Flavourings of Choice",
+      "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mis in sifted flour and bicarbonate of soda until consistent.;Prepare and mix in flavourings.;Spoon onto a baking tray lined with baking paper.;Bake at 160C for 10-15 minutes.;Cool on a wire rack."
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/wKXh2jj/IMG-20200325-160834.jpg",
+      "recipe": 12,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/rbjfGn2/IMG-20200325-154429.jpg",
+      "recipe": 12,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/52VZJbb/IMG-20200325-160606.jpg",
+      "recipe": 12,
+      "relative_order": 2
+    }
   }
 ]
