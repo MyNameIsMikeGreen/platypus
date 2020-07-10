@@ -1,4 +1,6 @@
 import unittest
+
+from django.test import TestCase
 from django.test import Client
 
 client = Client()
@@ -8,6 +10,8 @@ class IndexViewTest(unittest.TestCase):
     def test_index_exists(self):
         response = client.get('/')
         self.assertEqual(response.status_code, 200)
+        # self.assertTemplateUsed(response, 'index.html')
+        # self.assertInHTML(response, "<p>No recipes are available.</p>")
 
 
 class DetailWithFixturesTest(unittest.TestCase):
@@ -30,4 +34,3 @@ class AboutViewTest(unittest.TestCase):
     def test_about_exists(self):
         response = client.get('/about')
         self.assertEqual(response.status_code, 200)
-
