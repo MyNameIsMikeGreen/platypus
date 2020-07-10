@@ -1,12 +1,10 @@
-import unittest
-
 from django.test import TestCase
 from django.test import Client
 
 client = Client()
 
 
-class IndexViewTest(unittest.TestCase):
+class IndexViewTest(TestCase):
     def test_index_exists(self):
         response = client.get('/')
         self.assertEqual(response.status_code, 200)
@@ -14,7 +12,7 @@ class IndexViewTest(unittest.TestCase):
         # self.assertInHTML(response, "<p>No recipes are available.</p>")
 
 
-class DetailWithFixturesTest(unittest.TestCase):
+class DetailWithFixturesTest(TestCase):
 
     fixtures = ['recipes.json']
 
@@ -23,14 +21,14 @@ class DetailWithFixturesTest(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-class DetailWithoutFixturesTest(unittest.TestCase):
+class DetailWithoutFixturesTest(TestCase):
 
     def test_details_returns_404_when_recipe_not_present(self):
         response = client.get('/69/')
         self.assertEqual(response.status_code, 404)
 
 
-class AboutViewTest(unittest.TestCase):
+class AboutViewTest(TestCase):
     def test_about_exists(self):
         response = client.get('/about')
         self.assertEqual(response.status_code, 200)
