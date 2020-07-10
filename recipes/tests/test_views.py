@@ -10,8 +10,18 @@ class IndexViewTest(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-class DetailTest(unittest.TestCase):
-    def test_details_returns_404_when_recipe_not_populated(self):
+class DetailWithFixturesTest(unittest.TestCase):
+
+    fixtures = ['recipes.json']
+
+    def test_details_returns_200_when_recipe_present(self):
+        response = client.get('/1/')
+        self.assertEqual(response.status_code, 200)
+
+
+class DetailWithoutFixturesTest(unittest.TestCase):
+
+    def test_details_returns_404_when_recipe_not_present(self):
         response = client.get('/69/')
         self.assertEqual(response.status_code, 404)
 
