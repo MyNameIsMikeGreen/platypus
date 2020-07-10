@@ -8,8 +8,7 @@ class IndexViewTest(TestCase):
     def test_index_exists(self):
         response = client.get('/')
         self.assertEqual(response.status_code, 200)
-        # self.assertTemplateUsed(response, 'index.html')
-        # self.assertInHTML(response, "<p>No recipes are available.</p>")
+        self.assertTemplateUsed(response, 'recipes/index.html')
 
 
 class DetailWithFixturesTest(TestCase):
