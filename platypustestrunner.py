@@ -1,5 +1,3 @@
-import os
-
 from django.test.runner import DiscoverRunner
 import django.conf as conf
 
