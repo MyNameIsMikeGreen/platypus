@@ -7,7 +7,12 @@
 
 <html>
     <head>
-        <title>Platypus - Mike Green</title>
+        {% if recipe %}
+            <title>{{ recipe.title }} | Platypus | Mike Green</title>
+        {% else %}
+            <title>Platypus | Mike Green</title>
+        {% endif %}
+
     </head>
 
     <body>
