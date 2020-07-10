@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recipes.urls')),  # Root redirects to recipes
-    path('recipes/', include('recipes.urls'))
+    path('', include('recipes.urls', namespace="root")),  # Root redirects to recipes
+    path('recipes/', include('recipes.urls', namespace="recipes"))
 ]
