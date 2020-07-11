@@ -29,5 +29,9 @@ class DetailWithoutFixturesTest(TestCase):
 
 class AboutViewTest(TestCase):
     def test_about_exists(self):
-        response = client.get('/about')
+        response = client.get('/about/')
         self.assertEqual(response.status_code, 200)
+
+    def test_about_without_trailing_slash_redirects(self):
+        response = client.get('/about')
+        self.assertEqual(response.status_code, 301)
