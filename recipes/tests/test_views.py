@@ -49,6 +49,7 @@ class AboutViewTest(TestCase):
     def test_about_exists(self):
         response = client.get('/about/')
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recipes/about.html')
 
     def test_about_without_trailing_slash_redirects(self):
         response = client.get('/about')
