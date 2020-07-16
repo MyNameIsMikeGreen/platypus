@@ -661,5 +661,26 @@
       "recipe": 18,
       "relative_order": 6
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 19,
+    "fields": {
+      "title": "Italian Stuff on Toasted Bread",
+      "ingredients": "Bread (Any nice loaf);1 Ball Mozzarella;1 Large Tomato;Handful of Fresh Basil;Olive Oil;Salt and Pepper (To Season)",
+      "method": "Pre-heat a pan large enough to accommodate all bread slices (ideally a cast iron pan).;Add a small amount of olive oil to the pan.;Drizzle olive oil onto 1 side of the bread.;Toast the bread, oil side down, until golden.;Repeat for second side of bread.;Slice mozzarella and tomato into equal numbers of slices to top the bread.;Arrange stacks of toppings onto bread: tomato, mozzarella, then a basil leaf.;Finish with a drizzle of olive oil and salt and pepper."
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/hyVk75H/IMG-20200531-140456.jpg",
+      "recipe": 19,
+      "relative_order": 0
+    }
   }
 ]
