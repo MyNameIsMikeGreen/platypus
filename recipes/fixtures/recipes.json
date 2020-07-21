@@ -682,5 +682,44 @@
       "recipe": 19,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 20,
+    "fields": {
+      "title": "Chicken Kebabs",
+      "ingredients": "1 Chicken Breast;1 Pepper;1 Onion;1 Tablespoon Soy Sauce;1 Tablespoon Olive Oil;1 Tablespoon Dried Oregano;1/2 Tablespoon Lemon Juice;1 Garlic Clove",
+      "method": "Mix together the soy sauce, olive oil, oregano, lemon juice, and garlic.;Cut up chicken breasts, pepper, and onion into cubes/squares.;Mix all ingredients together.;Optionally, marinade for up to 24 hours.;Arrange onto skewers in a repeating pattern of pepper, onion, and chicken.;Suspend skewers from each end bake at 200C for 25 minutes, flipping halfway through."
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/wW49Y8d/IMG-20200721-180642.jpg",
+      "recipe": 20,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/26NrZD9/IMG-20200721-171850.jpg",
+      "recipe": 20,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/nQ03FmB/IMG-20200721-172825.jpg",
+      "recipe": 20,
+      "relative_order": 2
+    }
   }
 ]
