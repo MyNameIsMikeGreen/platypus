@@ -1,14 +1,31 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 
-from .models import Recipe, RecipeImage
+from .models import Recipe, RecipeImage, CATEGORIES
 
 BULLET_POINT_DELIMITER = ';'
 
 
+def fixtures_are_loaded(categorised_recipe_lists: list):
+    for categorised_recipe_list in categorised_recipe_lists:
+        if categorised_recipe_list["recipes"]:
+            return True
+    return False
+
+
 def index(request):
     recipe_list = Recipe.objects.order_by('title')
+    categorised_recipe_lists = []
+    for category in CATEGORIES:
+        categorised_recipe_lists.append({
+            "category": category[1],
+            "recipes": [recipe for recipe in recipe_list if recipe.category == category[0]]
+        })
+
+    fixtures_loaded = fixtures_are_loaded(categorised_recipe_lists)
+
     context = {
-        'recipe_list': recipe_list,
+        'categorised_recipe_lists': categorised_recipe_lists,
+        'fixtures_loaded': fixtures_loaded
     }
     return render(request, 'recipes/index.html', context)
 
