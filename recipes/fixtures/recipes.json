@@ -721,5 +721,35 @@
       "recipe": 20,
       "relative_order": 2
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 21,
+    "fields": {
+      "title": "Basic Curry",
+      "ingredients": "400g Chicken Breast or Thigh;400g Chopped Tomatoes;2 Tablespoons Curry Powder;2 Garlic Cloves;100g Natural Yoghurt;1 Onion;2 Tablespoons Brown Sugar;Rice (To Serve);Coriander Leaf (To Serve)",
+      "method": "Begin cooking some rice.;Cut up the chicken into pieces.;Cut up the onion into large squares.;Fry the chicken in a large frying pan until almost cooked.;Add the curry powder to the chicken and cook until fragrant.;Add the onion.;Before the spices burn, add the chopped tomatoes and garlic.;Cook until the sauce is beginning to thicken.;Stir in the natural yoghurt.;Serve on rice, topped with coriander leaf."
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/YyzFwXq/IMG-20200730-193131.jpg",
+      "recipe": 21,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/9pFZ8Xs/IMG-20200730-192552.jpg",
+      "recipe": 21,
+      "relative_order": 1
+    }
   }
 ]
