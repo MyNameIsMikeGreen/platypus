@@ -1,14 +1,14 @@
 from django.db import models
 
 UNCATEGORISED = "UNCATEGORISED"
-MAIN = "MAIN"
-DESSERT = "DESSERT"
-SNACK = "SNACK"
+MAINS = "MAINS"
+DESSERTS = "DESSERTS"
+SNACKS = "SNACKS"
 CATEGORIES = [
     (UNCATEGORISED, 'Uncategorised'),
-    (MAIN, 'Main'),
-    (DESSERT, 'Dessert'),
-    (SNACK, 'Snack'),
+    (MAINS, 'Mains'),
+    (DESSERTS, 'Desserts'),
+    (SNACKS, 'Snacks'),
 ]
 
 
