@@ -1,13 +1,18 @@
 {% extends "recipes/base.html" %}
 
 {% block content %}
-    {% if recipe_list %}
+    {% if fixtures_loaded %}
         <h1>Recipes</h1>
-        <ul>
-            {% for recipe in recipe_list %}
-                <li><a href="{% url 'recipes:detail' recipe.pk %}">{{ recipe.title }}</a></li>
-            {% endfor %}
-        </ul>
+        {% for categorised_recipe_list in categorised_recipe_lists %}
+            {% if categorised_recipe_list.recipes %}
+                <h2>{{ categorised_recipe_list.category }}</h2>
+                <ul>
+                    {% for recipe in categorised_recipe_list.recipes %}
+                        <li><a href="{% url 'recipes:detail' recipe.pk %}">{{ recipe.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {%  endif %}
+        {% endfor %}
     {% else %}
         <p>No recipes are available.</p>
     {% endif %}

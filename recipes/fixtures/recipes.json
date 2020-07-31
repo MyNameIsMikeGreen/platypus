@@ -5,7 +5,8 @@
     "fields": {
       "title": "Ice Cream",
       "ingredients": "600ml Double Cream;6 Eggs;240g Caster Sugar;Flavourings of Choice",
-      "method": "Whip the cream until stiff.;Separate the egg yolks and egg whites.;Whip the egg whites until stiff.;Lightly whip the egg yolks, sugar, vanilla extract, and any liquid flavourings together.;Whip the egg yolk mixture lightly into the whipped cream.;Carefully fold together the cream mixture, whipped egg whites, and any solid flavourings.;Pour into a suitable container.;Freeze for at least 24 hours."
+      "method": "Whip the cream until stiff.;Separate the egg yolks and egg whites.;Whip the egg whites until stiff.;Lightly whip the egg yolks, sugar, vanilla extract, and any liquid flavourings together.;Whip the egg yolk mixture lightly into the whipped cream.;Carefully fold together the cream mixture, whipped egg whites, and any solid flavourings.;Pour into a suitable container.;Freeze for at least 24 hours.",
+      "category": "DESSERTS"
     }
   },
   {
@@ -53,7 +54,8 @@
     "fields": {
       "title": "Lamb Meatballs with Harissa Dressing",
       "ingredients": "500g Lamb Mince;80g Harissa Paste;1 Lemon;2 Garlic Cloves;10g Fresh Mint;60g Panko Breadcrumbs;1/2 Cucumber;2 Tablespoons Olive Oil;Natural Yoghurt (To Serve);Couscous (To Serve)",
-      "method": "Halve the cucumber lengthways.;Scape out cucumber seeds.;Slice the cucumber thinly.;Salt the cucumber and place in a sieve atop kitchen towel.;Zest the lemon.;Grate the garlic cloves.;Combine the lemon zest, garlic, breadcrumbs, and mince into ~20 meatballs.;Put meatballs in the oven, on a baking tray, at 200C for 15-20 minutes.;Combine harissa paste, olive oil, lemon juice, and mint into a marinade.;Rinse and dry cucumber.;Once meatballs are cooked, toss in marinade.;Serve meatballs atop couscous and topped with natural yoghurt and cucumber."
+      "method": "Halve the cucumber lengthways.;Scape out cucumber seeds.;Slice the cucumber thinly.;Salt the cucumber and place in a sieve atop kitchen towel.;Zest the lemon.;Grate the garlic cloves.;Combine the lemon zest, garlic, breadcrumbs, and mince into ~20 meatballs.;Put meatballs in the oven, on a baking tray, at 200C for 15-20 minutes.;Combine harissa paste, olive oil, lemon juice, and mint into a marinade.;Rinse and dry cucumber.;Once meatballs are cooked, toss in marinade.;Serve meatballs atop couscous and topped with natural yoghurt and cucumber.",
+      "category": "MAINS"
     }
   },
   {
@@ -101,7 +103,8 @@
     "fields": {
       "title": "Ricotta Gnocchi",
       "ingredients": "450g Ricotta;1 Large Egg;80g Grated Parmesan;150g Plain Flour;1/2 Teaspoon Nutmeg (Optional)",
-      "method": "Remove as much moisture from the ricotta as possible.;Sift flour into a large bowl.;Add all ingredients into the flour and mix until combined.;Gently knead dough until it comes together.;Roll the dough out into a long sausage shape.;Cut and shape the dough.;Boil in salted water for ~2 minutes.;Drain and serve."
+      "method": "Remove as much moisture from the ricotta as possible.;Sift flour into a large bowl.;Add all ingredients into the flour and mix until combined.;Gently knead dough until it comes together.;Roll the dough out into a long sausage shape.;Cut and shape the dough.;Boil in salted water for ~2 minutes.;Drain and serve.",
+      "category": "MAINS"
     }
   },
   {
@@ -149,7 +152,8 @@
     "fields": {
       "title": "Chicken and Mushroom Pie",
       "ingredients": "8 Chicken Thigh Fillets (~640g);8 Rashers of Bacon;1 Onion;250g Mushrooms;Thyme Sprigs; 2 Tablespoons Flour;400ml Chicken Stock;200ml Milk;500g Puff Pastry;1 Egg (Optional)",
-      "method": "Cut the chicken into bite-sized pieces.;Fry the chicken.;Slice the onion.;Remove the chicken from the pan.;Fry the bacon.;Add the mushrooms, thyme, and onion to the bacon.;Continue frying until onion softens.;Stir in the flour until combined.;Stir in the stock and milk;Add the chicken back into the pan and simmer for 30 minutes.;Roll out the dough and line a deep pie dish. Enough dough should be left for a lid.;Fill the pie.;Top the pie with a pastry lid. Ensure the lid is bonded to the rest of the pastry and an air vent is cut into the top.;Optionally, apply an egg wash to the exposed pastry.;Bake for ~30 minutes at 200C."
+      "method": "Cut the chicken into bite-sized pieces.;Fry the chicken.;Slice the onion.;Remove the chicken from the pan.;Fry the bacon.;Add the mushrooms, thyme, and onion to the bacon.;Continue frying until onion softens.;Stir in the flour until combined.;Stir in the stock and milk;Add the chicken back into the pan and simmer for 30 minutes.;Roll out the dough and line a deep pie dish. Enough dough should be left for a lid.;Fill the pie.;Top the pie with a pastry lid. Ensure the lid is bonded to the rest of the pastry and an air vent is cut into the top.;Optionally, apply an egg wash to the exposed pastry.;Bake for ~30 minutes at 200C.",
+      "category": "MAINS"
     }
   },
   {
@@ -188,7 +192,8 @@
     "fields": {
       "title": "Beef Casserole",
       "ingredients": "850g Beef Pieces;2 Celery Sticks;1 Onion;2 Carrots;5 Bay Leaves;2 Thyme Sprigs;2 Tablespoons Plain Flour;2 Tablespoons Tomato Puree;2 Tablespoons Worcestershire Sauce;2 Beef Stock Cubes;Dumplings (Optional)",
-      "method": "Chop all vegetables into large chunks.;Fry until lightly softened.;Mix in flour.;Mix in stock cubes, tomato puree, and worcestershire sauce.;Boil water separately then add to the dish.;Add beef.;Bring to a simmer.;Place lid on dish and put in a 140C oven for 2.5 hours.;Make and add dumplings to the casserole.;Bake for a further 30 minutes without the lid."
+      "method": "Chop all vegetables into large chunks.;Fry until lightly softened.;Mix in flour.;Mix in stock cubes, tomato puree, and worcestershire sauce.;Boil water separately then add to the dish.;Add beef.;Bring to a simmer.;Place lid on dish and put in a 140C oven for 2.5 hours.;Make and add dumplings to the casserole.;Bake for a further 30 minutes without the lid.",
+      "category": "MAINS"
     }
   },
   {
@@ -227,7 +232,8 @@
     "fields": {
       "title": "Liver and Chorizo on Toast",
       "ingredients": "250g Chicken Liver;150g Chorizo;1 Onion;2 Garlic Cloves;4 Tablespoons Double Cream;1 Tablespoon Parsley;2-3 Slices Thick Bread;Olive Oil (For Toasting)",
-      "method": "Fry chicken livers until mostly cooked. Break up liver using utensil as it cooks.;Slice onion.;Mince Garlic.;Add garlic and onion to liver and cook until softened.;Slice chorizo.;Add chorizo to pan.;In another pan, Toast bread with olive oil.;Add cream and parsley.;Serve topping on bread once liquid thickens."
+      "method": "Fry chicken livers until mostly cooked. Break up liver using utensil as it cooks.;Slice onion.;Mince Garlic.;Add garlic and onion to liver and cook until softened.;Slice chorizo.;Add chorizo to pan.;In another pan, Toast bread with olive oil.;Add cream and parsley.;Serve topping on bread once liquid thickens.",
+      "category": "MAINS"
     }
   },
   {
@@ -248,7 +254,8 @@
     "fields": {
       "title": "Sticky BBQ Chicken",
       "ingredients": "6-8 Chicken Thighs;6 Tablespoons Tomato Ketchup;2 Tablespoons Grainy Mustard;3 Tablespoons Worcestershire Sauce;2 Tablespoons Honey;2 Garlic Cloves;2 Tablespoons Tomato Puree (Optional)",
-      "method": "Crush Garlic.;Mix together all ingredients except for chicken thighs.;Spread a thin layer of sauce into ceramic dish.;Place chicken in dish, skin-side down.;Top with 75% of the remaining sauce.;Bake in a 200C oven for 20 minutes.;Take out of the oven, flip chicken, add remaining sauce to skin side.;Return to oven for another 20 minutes."
+      "method": "Crush Garlic.;Mix together all ingredients except for chicken thighs.;Spread a thin layer of sauce into ceramic dish.;Place chicken in dish, skin-side down.;Top with 75% of the remaining sauce.;Bake in a 200C oven for 20 minutes.;Take out of the oven, flip chicken, add remaining sauce to skin side.;Return to oven for another 20 minutes.",
+      "category": "MAINS"
     }
   },
   {
@@ -278,7 +285,8 @@
     "fields": {
       "title": "Italian Crackslaw",
       "ingredients": "1 Green Cabbage;500g Beef Mince;1 Leek;2 Garlic Cloves;1 Tablespoon White Wine Vinegar;1 Teaspoon Onion Powder;2 Tablespoons Tomato Puree;20g Fresh Basil (Optional);Salt and Pepper (To Taste);Sour Cream or Mayonnaise (To Serve)",
-      "method": "Fry mince.;Add tomato puree to mince.;Chop cabbage.;Place mince to one side.;Fry cabbage in rendered beef fat until soft;Toss cabbage with vinegar, onion powder, salt, and pepper over heat.;Place mixture to one side.;Chop leeks.;Crush garlic.;Fry leeks and garlic.;Add all ingredients back into pan and mix together over heat.;Serve with sour cream or mayonnaise."
+      "method": "Fry mince.;Add tomato puree to mince.;Chop cabbage.;Place mince to one side.;Fry cabbage in rendered beef fat until soft;Toss cabbage with vinegar, onion powder, salt, and pepper over heat.;Place mixture to one side.;Chop leeks.;Crush garlic.;Fry leeks and garlic.;Add all ingredients back into pan and mix together over heat.;Serve with sour cream or mayonnaise.",
+      "category": "MAINS"
     }
   },
   {
@@ -317,7 +325,8 @@
     "fields": {
       "title": "Eggs in Purgatory",
       "ingredients": "400g Cherry Tomatoes;4 Eggs;2 Garlic Cloves;1/2 Teaspoon Chilli Flakes;50g Spinach;Olive Oil;Salt and Pepper (To Taste);Handful Fresh Basil (Optional)",
-      "method": "In a lidded casserole dish or large saucepan, heat cherry tomatoes with olive oil until soft.;Gently crush the tomatoes.;Stir in spinach.;Add chilli flakes and garlic.;Season with salt and pepper.;Crack eggs onto tomatoes.;Continue to cook with lid on, until egg whites cook.;Top with basil.;Serve on toasted bread or eat as a standalone dish."
+      "method": "In a lidded casserole dish or large saucepan, heat cherry tomatoes with olive oil until soft.;Gently crush the tomatoes.;Stir in spinach.;Add chilli flakes and garlic.;Season with salt and pepper.;Crack eggs onto tomatoes.;Continue to cook with lid on, until egg whites cook.;Top with basil.;Serve on toasted bread or eat as a standalone dish.",
+      "category": "MAINS"
     }
   },
   {
@@ -338,7 +347,8 @@
     "fields": {
       "title": "Cast Iron Pizza",
       "ingredients": "300g(?) Flour (Ideally Strong);200ml(?) Lukewarm Water;1 Sachet Dried Yeast;1/2 Teaspoon Salt;1/2 Tablespoon Sugar;4 Tablespoons Pizza Sauce (Ideally Homemade);150g Mozzarella (Ideally Low-Moisture);50-100g Cheddar Cheese;Toppings of Choice",
-      "method": "Dissolve sugar into water.;Add yeast and to water, leave to bloom.;If bloomed, continue. Else, retry with new yeast.;Mix salt into flour.;Add water mixture to flour.;Mix together until no clumps remain.;Leave for flour to hydrate for 15 minutes.;Knead dough for about 10 minutes and form into a ball.;Lightly cover dough in olive oil and leave in an oiled bowl to rise at room temperate until doubled in size or overnight in the fridge.;Place dough into a cold and oiled cast iron pan and lightly stretch out.;Let rest then continue stretching.;Repeat resting and stretching until the dough holds to the shape of the pan.;If using high-moisture mozzarella, drain and press between kitchen paper until drier.;Grate/chop cheeses.;Prepare toppings as appropriate;Spread pizza sauce over dough.;Arrange toppings onto dough.;Sprinkle cheeses over dough.;Put pan on medium-high heat on hob until base becomes firm (About 3-5 minutes).;Place into oven heated as high as possible for 10-15 minutes."
+      "method": "Dissolve sugar into water.;Add yeast and to water, leave to bloom.;If bloomed, continue. Else, retry with new yeast.;Mix salt into flour.;Add water mixture to flour.;Mix together until no clumps remain.;Leave for flour to hydrate for 15 minutes.;Knead dough for about 10 minutes and form into a ball.;Lightly cover dough in olive oil and leave in an oiled bowl to rise at room temperate until doubled in size or overnight in the fridge.;Place dough into a cold and oiled cast iron pan and lightly stretch out.;Let rest then continue stretching.;Repeat resting and stretching until the dough holds to the shape of the pan.;If using high-moisture mozzarella, drain and press between kitchen paper until drier.;Grate/chop cheeses.;Prepare toppings as appropriate;Spread pizza sauce over dough.;Arrange toppings onto dough.;Sprinkle cheeses over dough.;Put pan on medium-high heat on hob until base becomes firm (About 3-5 minutes).;Place into oven heated as high as possible for 10-15 minutes.",
+      "category": "MAINS"
     }
   },
   {
@@ -386,7 +396,8 @@
     "fields": {
       "title": "Bacon and Leek Tart",
       "ingredients": "300g Puff Pastry;150-200g Soft Cheese;1 Leek;6-8 Rashers Bacon;100g Cheddar Cheese;Pepper (To Taste)",
-      "method": "If not pre-rolled, roll out pastry into the size of a baking tray.;Spread soft cheese evenly over the pastry.;Slice leek.;Sprinkle leek rings over pastry.;Cut bacon.;Arrange bacon over pastry.;Sprinkle pepper over tart.;Sprinkle cheddar over tart.;Fold edges over to form a crust.;Bake at 180C for ~20 minutes.;Brown cheese under grill if desired."
+      "method": "If not pre-rolled, roll out pastry into the size of a baking tray.;Spread soft cheese evenly over the pastry.;Slice leek.;Sprinkle leek rings over pastry.;Cut bacon.;Arrange bacon over pastry.;Sprinkle pepper over tart.;Sprinkle cheddar over tart.;Fold edges over to form a crust.;Bake at 180C for ~20 minutes.;Brown cheese under grill if desired.",
+      "category": "MAINS"
     }
   },
   {
@@ -407,7 +418,8 @@
     "fields": {
       "title": "Cookies",
       "ingredients": "100g Butter;60g Light Brown Sugar;60g Caster Sugar;1 Egg;150g Plain Flour;1 Teaspoon Vanilla Extract;Half Teaspoon Bicarbonate of Soda;Flavourings of Choice",
-      "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mis in sifted flour and bicarbonate of soda until consistent.;Prepare and mix in flavourings.;Spoon onto a baking tray lined with baking paper.;Bake at 160C for 10-15 minutes.;Cool on a wire rack."
+      "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mis in sifted flour and bicarbonate of soda until consistent.;Prepare and mix in flavourings.;Spoon onto a baking tray lined with baking paper.;Bake at 160C for 10-15 minutes.;Cool on a wire rack.",
+      "category": "SNACKS"
     }
   },
   {
@@ -446,7 +458,8 @@
     "fields": {
       "title": "Cast Iron Pineapple Upside-Down Cake",
       "ingredients": "60g Butter;125g Light Brown Sugar;1 Tin (~400g) Pineapple Slices;1 Maraschino Cherry per Pineapple Slice;2 Large Eggs;150g Caster Sugar;100g Flour;Half Teaspoon Baking Powder;Pinch of Salt",
-      "method": "Melt butter in cast iron pan.;Sprinkle brown sugar over base of pan evenly.;Drain pineapple slices from tin. Reserve 60ml of pineapple juice.;Arrange pineapple slices across base of pan.;Place a cherry (Halved if preferred) inside each of the pineapple centres.;Gently heat pineapple juice in a saucepan.;Separate eggs.;Beat egg yolks with a whisk until homogeneous.;Slowly add caster sugar to yolks while continuing to whisk.;Slowly whisk heated pineapple juice into yolk mixture.;Whisk in remaining dry ingredients into yolk mixture.;In a separate bowl, whip egg whites until stiff.;Carefully fold egg whites into batter.;Add batter to pan.;Bake at 160C for 45 minutes.;Let cool in pan for at least 30 minutes before flipping onto a plate/board."
+      "method": "Melt butter in cast iron pan.;Sprinkle brown sugar over base of pan evenly.;Drain pineapple slices from tin. Reserve 60ml of pineapple juice.;Arrange pineapple slices across base of pan.;Place a cherry (Halved if preferred) inside each of the pineapple centres.;Gently heat pineapple juice in a saucepan.;Separate eggs.;Beat egg yolks with a whisk until homogeneous.;Slowly add caster sugar to yolks while continuing to whisk.;Slowly whisk heated pineapple juice into yolk mixture.;Whisk in remaining dry ingredients into yolk mixture.;In a separate bowl, whip egg whites until stiff.;Carefully fold egg whites into batter.;Add batter to pan.;Bake at 160C for 45 minutes.;Let cool in pan for at least 30 minutes before flipping onto a plate/board.",
+      "category": "DESSERTS"
     }
   },
   {
@@ -494,7 +507,8 @@
     "fields": {
       "title": "Turkey and Chickpea Burgers",
       "ingredients": "450g Turkey Mince;1 Can (~250g) Chickpeas;1/2 Onion;Salt and Pepper (To Season)",
-      "method": "Drain chickpeas.;Crush chickpeas into a rough paste.;Finely chop onion.;Mix together all ingredients.;Form into patties slightly larger than the desired final size.;Cook in an oiled frying pan for ~5 minutes on each side.;Serve on burger buns just like any other burger."
+      "method": "Drain chickpeas.;Crush chickpeas into a rough paste.;Finely chop onion.;Mix together all ingredients.;Form into patties slightly larger than the desired final size.;Cook in an oiled frying pan for ~5 minutes on each side.;Serve on burger buns just like any other burger.",
+      "category": "MAINS"
     }
   },
   {
@@ -515,7 +529,8 @@
     "fields": {
       "title": "Pork Belly Braise",
       "ingredients": "500g Pork Belly;1 Onion;1 Carrot;1 Celery Stick;2 Garlic Cloves;1 Teaspoon Fennel Seeds;100g Green Lentils;500g Vegetable Stock;2 Tablespoons Wholegrain Mustard;2 Tablespoons Honey;Salt and Pepper (To Season)",
-      "method": "If not already, cut pork belly into slices.;Liberally season the pork belly with salt and pepper.;Sear all sides of the pork belly in a casserole dish - ensure the fat is particularly browned.;Set aside the pork.;Add all vegetables and fennel seeds into the casserole dish and cook until beginning to soften.;Add lentils for the final minute.;Pour in the stock until the lentils are covered.;Lay pork on top.;Cook in a 160C oven, covered, for 45 minutes.;Mix honey and mustard together.;Glaze pork with mixture.;Return to oven uncovered for a further 40 minutes.;Top up with more stock if it runs dry.;Re-glaze the pork frequently while cooking."
+      "method": "If not already, cut pork belly into slices.;Liberally season the pork belly with salt and pepper.;Sear all sides of the pork belly in a casserole dish - ensure the fat is particularly browned.;Set aside the pork.;Add all vegetables and fennel seeds into the casserole dish and cook until beginning to soften.;Add lentils for the final minute.;Pour in the stock until the lentils are covered.;Lay pork on top.;Cook in a 160C oven, covered, for 45 minutes.;Mix honey and mustard together.;Glaze pork with mixture.;Return to oven uncovered for a further 40 minutes.;Top up with more stock if it runs dry.;Re-glaze the pork frequently while cooking.",
+      "category": "MAINS"
     }
   },
   {
@@ -554,7 +569,8 @@
     "fields": {
       "title": "Thai Green Fish Curry",
       "ingredients": "350g Fish Pie Mix;3 Tablespoons Thai Green Curry Paste;400ml Coconut Milk/Cream;200g Green Beans;500ml Stock (Fish or Vegetable);1 Tablespoon Coriander Leaves;1 Red Chilli;150g Spinach;1 Teaspoon Fish Sauce;2 Tablespoons Lemon Juice;1 Tablespoon Olive Oil;200g Rice",
-      "method": "Cook rice.;In a large saucepan, lightly fry the curry paste, beans, coriander, and chilli.;Pour in the stock and fish sauce.;Bring to a simmer.;Add the fish and simmer until cooked through.;Stir in the coconut milk (cream for a thicker sauce), lemon, and spinach.;Serve on rice."
+      "method": "Cook rice.;In a large saucepan, lightly fry the curry paste, beans, coriander, and chilli.;Pour in the stock and fish sauce.;Bring to a simmer.;Add the fish and simmer until cooked through.;Stir in the coconut milk (cream for a thicker sauce), lemon, and spinach.;Serve on rice.",
+      "category": "MAINS"
     }
   },
   {
@@ -575,7 +591,8 @@
     "fields": {
       "title": "Toad in the Hole",
       "ingredients": "12 Chipolatas;140g Plain Flour;2 Eggs;175ml Milk;1/2 Teaspoon Salt",
-      "method": "Cook sausages in an oiled ceramic rectangular baking dish in a 200C oven for 15 minutes.;While cooking, whisk together flour, eggs, milk, and salt.;Immediately from the oven, pour the batter evenly over the sausages.;Return to the oven for a further 25 minutes."
+      "method": "Cook sausages in an oiled ceramic rectangular baking dish in a 200C oven for 15 minutes.;While cooking, whisk together flour, eggs, milk, and salt.;Immediately from the oven, pour the batter evenly over the sausages.;Return to the oven for a further 25 minutes.",
+      "category": "MAINS"
     }
   },
   {
@@ -596,7 +613,8 @@
     "fields": {
       "title": "Pork Belly Bao",
       "ingredients": "10g Ginger;2 Chillies;2 Garlic Cloves;1 Orange;1l Chicken Stock;1 Cinnamon Stick;2 Star Anise;1kg Pork Belly;500g Plain Flour;50g Caster Sugar;1 Teaspoon Salt;1 Teaspoon Baking Powder;1 Teaspoon Dried Yeast;150ml Water;100ml Milk;50ml Double Cream;3 Tablespoons Vegetable Oil;1 Tablespoon Sesame Oil;4 Tablespoons Honey;2 Tablespoons Light Soy Sauce;1 Tablespoon Rice Wine Vinegar;2 Tablespoons Sesame Seeds",
-      "method": "Deseed (If desired) and slice the chillies.;Peel and slice the ginger.;Crush the garlic.;Quarter the orange.;To a very large saucepan - add the chillies, ginger, orange, garlic, star anise, cinnamon, chicken stock, and pork belly.;Cover and simmer as low as possible for 2 hours.;After 30 minutes of simmering, mix together the flour, yeast, salt, baking powder, sugar, water, milk, and cream until it forms a dough.;Knead the dough for 10 minutes.;Form dough into a ball.;Oil the dough ball and its container lightly.;Let dough prove for 1 hour.;Separate dough into 75g balls.;Roll each miniature ball into an oval.;Lightly oil the side facing up and fold over on itself.;Let uncooked buns prove for 20 more minutes.;Meanwhile, remove pork from broth.;Chop pork into bitesized pieces.;Lightly fry the pork in an oiled frying pan until browned.;Remove any excessive oil in the pan.;Add honey, soy sauce, rice wine vinegar, and 100ml of the broth.;Cook until the pork mixture reaches a saucy consistency.;Arrange three bao buns onto a small plate lined with baking paper in a single layer.;Place plate into broth saucepan atop a tall bowl.;Steam buns in the saucepan for 20 minutes.;Repeat the steaming process for remaining buns.;Fill buns with pork and sprinkle filling with sesame seeds to serve."
+      "method": "Deseed (If desired) and slice the chillies.;Peel and slice the ginger.;Crush the garlic.;Quarter the orange.;To a very large saucepan - add the chillies, ginger, orange, garlic, star anise, cinnamon, chicken stock, and pork belly.;Cover and simmer as low as possible for 2 hours.;After 30 minutes of simmering, mix together the flour, yeast, salt, baking powder, sugar, water, milk, and cream until it forms a dough.;Knead the dough for 10 minutes.;Form dough into a ball.;Oil the dough ball and its container lightly.;Let dough prove for 1 hour.;Separate dough into 75g balls.;Roll each miniature ball into an oval.;Lightly oil the side facing up and fold over on itself.;Let uncooked buns prove for 20 more minutes.;Meanwhile, remove pork from broth.;Chop pork into bitesized pieces.;Lightly fry the pork in an oiled frying pan until browned.;Remove any excessive oil in the pan.;Add honey, soy sauce, rice wine vinegar, and 100ml of the broth.;Cook until the pork mixture reaches a saucy consistency.;Arrange three bao buns onto a small plate lined with baking paper in a single layer.;Place plate into broth saucepan atop a tall bowl.;Steam buns in the saucepan for 20 minutes.;Repeat the steaming process for remaining buns.;Fill buns with pork and sprinkle filling with sesame seeds to serve.",
+      "category": "MAINS"
     }
   },
   {
@@ -671,7 +689,8 @@
     "fields": {
       "title": "Italian Stuff on Toasted Bread",
       "ingredients": "Bread (Any nice loaf);1 Ball Mozzarella;1 Large Tomato;Handful of Fresh Basil;Olive Oil;Salt and Pepper (To Season)",
-      "method": "Pre-heat a pan large enough to accommodate all bread slices (ideally a cast iron pan).;Add a small amount of olive oil to the pan.;Drizzle olive oil onto 1 side of the bread.;Toast the bread, oil side down, until golden.;Repeat for second side of bread.;Slice mozzarella and tomato into equal numbers of slices to top the bread.;Arrange stacks of toppings onto bread: tomato, mozzarella, then a basil leaf.;Finish with a drizzle of olive oil and salt and pepper."
+      "method": "Pre-heat a pan large enough to accommodate all bread slices (ideally a cast iron pan).;Add a small amount of olive oil to the pan.;Drizzle olive oil onto 1 side of the bread.;Toast the bread, oil side down, until golden.;Repeat for second side of bread.;Slice mozzarella and tomato into equal numbers of slices to top the bread.;Arrange stacks of toppings onto bread: tomato, mozzarella, then a basil leaf.;Finish with a drizzle of olive oil and salt and pepper.",
+      "category": "SNACKS"
     }
   },
   {
@@ -692,7 +711,8 @@
     "fields": {
       "title": "Chicken Kebabs",
       "ingredients": "1 Chicken Breast;1 Pepper;1 Onion;1 Tablespoon Soy Sauce;1 Tablespoon Olive Oil;1 Tablespoon Dried Oregano;1/2 Tablespoon Lemon Juice;1 Garlic Clove",
-      "method": "Mix together the soy sauce, olive oil, oregano, lemon juice, and garlic.;Cut up chicken breasts, pepper, and onion into cubes/squares.;Mix all ingredients together.;Optionally, marinade for up to 24 hours.;Arrange onto skewers in a repeating pattern of pepper, onion, and chicken.;Suspend skewers from each end bake at 200C for 25 minutes, flipping halfway through."
+      "method": "Mix together the soy sauce, olive oil, oregano, lemon juice, and garlic.;Cut up chicken breasts, pepper, and onion into cubes/squares.;Mix all ingredients together.;Optionally, marinade for up to 24 hours.;Arrange onto skewers in a repeating pattern of pepper, onion, and chicken.;Suspend skewers from each end bake at 200C for 25 minutes, flipping halfway through.",
+      "category": "MAINS"
     }
   },
   {
@@ -731,7 +751,8 @@
     "fields": {
       "title": "Basic Curry",
       "ingredients": "400g Chicken Breast or Thigh;400g Chopped Tomatoes;2 Tablespoons Curry Powder;2 Garlic Cloves;100g Natural Yoghurt;1 Onion;2 Tablespoons Brown Sugar;Rice (To Serve);Coriander Leaf (To Serve)",
-      "method": "Begin cooking some rice.;Cut up the chicken into pieces.;Cut up the onion into large squares.;Fry the chicken in a large frying pan until almost cooked.;Add the curry powder to the chicken and cook until fragrant.;Add the onion.;Before the spices burn, add the chopped tomatoes and garlic.;Cook until the sauce is beginning to thicken.;Stir in the natural yoghurt.;Serve on rice, topped with coriander leaf."
+      "method": "Begin cooking some rice.;Cut up the chicken into pieces.;Cut up the onion into large squares.;Fry the chicken in a large frying pan until almost cooked.;Add the curry powder to the chicken and cook until fragrant.;Add the onion.;Before the spices burn, add the chopped tomatoes and garlic.;Cook until the sauce is beginning to thicken.;Stir in the natural yoghurt.;Serve on rice, topped with coriander leaf.",
+      "category": "MAINS"
     }
   },
   {
