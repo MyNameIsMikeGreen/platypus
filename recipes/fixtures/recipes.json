@@ -772,5 +772,67 @@
       "recipe": 21,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 22,
+    "fields": {
+      "title": "Vegetarian Duck Pancakes",
+      "ingredients": "1 Tin (~400g) Jackfruit;4 Spring Onions;1/2 Cucumber;2 Teaspoons Chinese Five Spice;2 Teaspoons Rice Wine Vinegar;3 Garlic Cloves;3 Tablespoons Soy Sauce;2 Teaspoons Sesame Oil;~5 Chinese Pancakes;3 Tablespoons Hoisin Sauce (Plus more to serve)",
+      "method": "Drain jackfruit.;Slice 2 of the spring onions.;Lightly fry the spring onions and garlic.;Add in jackfruit, five spice, sesame oil, rice wine vinegar, and hoisin sauce.;Continue to cook for ~10 minutes whilst breaking up jackfruit.;Lay jackfruit mixture flat on a baking tray and cook in the oven for 20 minutes at 200C.;While jackfruit is in the oven, slice cucumber and remaining spring onions into sticks.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/9tyYyZy/IMG-20200808-132418.jpg",
+      "recipe": 22,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/72G70Xd/IMG-20200808-125655.jpg",
+      "recipe": 22,
+      "relative_order": 1
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 23,
+    "fields": {
+      "title": "Chicken and Bacon Cheesy Pasta",
+      "ingredients": "300g Chicken Breast;200g Bacon;150g Tagliatelle;150g Mascarpone;75g Blue Cheese;2 Garlic Cloves;1 Onion;2 Teaspoons Thyme;Salt and Pepper (To Taste)",
+      "method": "Cook pasta in salted water.;Dice chicken and bacon.;Fry chicken until almost browned.;Add bacon and cook through.;Roughly chop and add onion.;Crush and add garlic.;Add cheeses, thyme, and pasta.;If too dry, add additional pasta water.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/vY1KqbD/IMG-20200807-202542.jpg",
+      "recipe": 23,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/4KVkxJW/IMG-20200807-200925.jpg",
+      "recipe": 23,
+      "relative_order": 1
+    }
   }
 ]
