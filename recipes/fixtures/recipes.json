@@ -878,5 +878,45 @@
       "recipe": 25,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 26,
+    "fields": {
+      "title": "Lasagne",
+      "ingredients": "500g Beef Mince;1 Large Onion;1 Pepper;500g Passata;1 Tablespoon Dried Basil;2 Garlic Cloves;2 Teaspoons Worcestershire Sauce;150g Shredded Mozzarella;50g Butter;50g Plain Flour;500ml Milk;9 Lasagne Sheets",
+      "method": "Finely chop onion and pepper.;Crush garlic.;Fry mince.;Add onion and pepper.;Add passata, garlic, basil, and worcestershire sauce.;Simmer for ~10 minutes until slightly thickened.;If using dried lasagne sheets, soak sheets in cold salted water.;Melt butter in a saucepan.;Whisk flour into butter.;Slowly stream milk into butter/flour mixture.;Continue to heat and whisk white sauce until thickened.;Build up lasagne in a lasagne dish in layers of: meat-sauce, lasagne sheets, white sauce.;Top with mozzarella.;Bake at 180C for ~40 minutes.;Brown cheese under grill.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/9g0ZbbF/IMG-20200524-211344.jpg",
+      "recipe": 26,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/VvLGN9j/IMG-20200524-200439.jpg",
+      "recipe": 26,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/d07gF8z/IMG-20200524-202637.jpg",
+      "recipe": 26,
+      "relative_order": 2
+    }
   }
 ]
