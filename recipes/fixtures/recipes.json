@@ -537,7 +537,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://via.placeholder.com/1000x800?text=I+Forgot+To+Take+The+Final+Image",
+      "url": "https://i.ibb.co/8sPcB8j/IMG-20200820-182251.jpg",
       "recipe": 15,
       "relative_order": 0
     }
