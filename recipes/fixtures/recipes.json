@@ -834,5 +834,27 @@
       "recipe": 23,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 24,
+    "fields": {
+      "title": "Cornflake Cakes",
+      "ingredients": "150g Cornflakes;200g Chocolate;2 Tablespoons Golden Syrup;50g Butter;Toppings",
+      "method": "Combine and melt the chocolate, golden syrup, and butter in a double boiler.;Gently stir in cornflakes.;Fill cupcake cases with mixture.;Add toppings.",
+      "category": "SNACKS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/1Gzh20Y/IMG-20200818-124415.jpg",
+      "recipe": 24,
+      "relative_order": 0
+    }
   }
 ]
