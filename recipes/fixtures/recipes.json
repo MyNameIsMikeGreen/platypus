@@ -918,5 +918,36 @@
       "recipe": 26,
       "relative_order": 2
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 27,
+    "fields": {
+      "title": "Cast Iron Giant Cookie",
+      "ingredients": "250g Butter;200g Brown Sugar;100g Caster Sugar;2 Eggs;1 Teaspoon Vanilla Extract;250g Plain Flour;1 Teaspoon Bicarbonate of Soda;1/2 Teaspoon Salt;250g Chocolate;Other Flavourings",
+      "method": "Melt butter in cast iron pan.;Dissolve both sugars into the butter.;Remove from heat and let stand for 15-30 minutes.;Whisk in eggs and vanilla extract.;Stir in flour, bicarbonate of soda, and salt.;Chop chocolate and other toppings into large chunks and stir into mixture.;Level mixture.;Bake at 160C for ~25 minutes.",
+      "category": "DESSERTS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/0yqcV6R/IMG-20200415-185938.jpg",
+      "recipe": 27,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/CsGNSJQ/IMG-20200415-182009.jpg",
+      "recipe": 27,
+      "relative_order": 1
+    }
   }
 ]
