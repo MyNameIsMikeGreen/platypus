@@ -2,15 +2,15 @@
 source venv/bin/activate
 
 echo "Making migrations..."
-python manage.py makemigrations
+python3 manage.py makemigrations
 
 echo "Flushing database..."
-python manage.py flush --no-input
+python3 manage.py flush --no-input
 
 echo "Applying migrations..."
-python manage.py migrate
+python3 manage.py migrate
 
 echo "Populating database..."
-python manage.py loaddata recipes.json
+python3 manage.py loaddata recipes.json
 
 deactivate
