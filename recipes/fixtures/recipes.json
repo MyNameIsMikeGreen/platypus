@@ -949,5 +949,27 @@
       "recipe": 27,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 28,
+    "fields": {
+      "title": "Chicken Stock",
+      "ingredients": "1 Chicken Carcass;~5 Celery Sticks;1 Large Onion;6 Garlic Cloves;2 Tablespoons Parsley (Ideally Fresh);2 Tablespoons Thyme (Ideally Fresh);Handful of Peppercorns;Other Aromatic Vegetables;",
+      "method": "Very roughly chop vegetables.;Throw all ingredients into a large pan.;Barely cover with water.;Simmer for 3-4 hours.;Skim and strain through a colander.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/6DV4LND/IMG-20200826-204351.jpg",
+      "recipe": 28,
+      "relative_order": 0
+    }
   }
 ]
