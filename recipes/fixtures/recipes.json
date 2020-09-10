@@ -971,5 +971,45 @@
       "recipe": 28,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 29,
+    "fields": {
+      "title": "Korean Stir-Fried Chicken",
+      "ingredients": "400g Chicken Thighs;3 Tablespoons Gochujang;1 Onion;4 Spring Onions;1 Tablespoon Light Soy Sauce;1 Tablespoon Sugar;1/2 Teaspoon Pepper;2cm Ginger;3 Garlic Cloves;1 Tablespoon Sesame Oil;Sesame Seeds (To Garnish);Rice (To Serve)",
+      "method": "Cook the rice.;Cut up the chicken into pieces.;Mix together the chicken, gochujang, soy sauce, sugar, pepper, and sesame oil.;Optionally, let the mixture marinade.;In a frying pan or wok, cook the chicken mixture.;Slice the onion.;Peel and crush the garlic and ginger.;Cut the spring onion into large diagonal wedges.;Add the remaining ingredients to the mixture for the final 5 minutes.;Serve mixture on rice.;Garnish with sesame seeds.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/yRRVpWX/IMG-20200910-174655.jpg",
+      "recipe": 29,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/T0kCJ3R/IMG-20200910-164445.jpg",
+      "recipe": 29,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/XVnr4kY/IMG-20200910-174207.jpg",
+      "recipe": 29,
+      "relative_order": 2
+    }
   }
 ]
