@@ -1011,5 +1011,27 @@
       "recipe": 29,
       "relative_order": 2
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 30,
+    "fields": {
+      "title": "Kimchi Pancake",
+      "ingredients": "150g Kimchi;75g Plain Flour;1 Teaspoon Caster Sugar;50g Water;3 Spring Onions",
+      "method": "Roughly chop spring onions and kimchi (if not already).;Mix all ingredients together.;Pour into and fry in a frying pan with oil for ~3 minutes each side.",
+      "category": "SNACKS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/rfsnp92/IMG-20200910-122116.jpg",
+      "recipe": 30,
+      "relative_order": 0
+    }
   }
 ]
