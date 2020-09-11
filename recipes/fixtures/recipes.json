@@ -1135,5 +1135,27 @@
       "recipe": 33,
       "relative_order": 3
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 34,
+    "fields": {
+      "title": "Lamb and Apricot Tagine",
+      "ingredients": "600g Diced Lamb;2 Onions;2 Cloves Garlic;200g Butternut Squash;200g Dried Apricots;1 Can Chopped Tomatoes;500ml Lamb/Beef Stock;1.5 Tablespoons Ras-El-Hanout;1 Teaspoon Ground Coriander;Couscous (To Serve)",
+      "method": "Dice squash.;In a casserole dish, fry the onions.;Once mostly fried, add spices and garlic.;Continue to cook for ~1 minute.;Add all other ingredients.;Mix whilst bringing to the boil.;Add lid and cook in a 200C oven for 1 hour.;Stir, remove lid, and cook for a further 30 minutes.;Serve on couscous.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/17xvtgj/IMG-20200405-212344.jpg",
+      "recipe": 34,
+      "relative_order": 0
+    }
   }
 ]
