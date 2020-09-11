@@ -1157,5 +1157,27 @@
       "recipe": 34,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 35,
+    "fields": {
+      "title": "Sourdough Starter Crumpet",
+      "ingredients": "100g Sourdough Starter;Fresh Rosemary;Pinch Salt Flakes;1 Tablespoon Olive Oil",
+      "method": "Heat a small frying pan containing 1/2 tablespoon olive oil.;Pour sourdough starter into centre of pan.; Cook until the top edges begins to solidify and the crumpet slides freely on the pan.;Sprinkle rosemary and salt onto the top of the crumpet.;Flip.;Cook for a further 1-2 minutes.;Flip again.;Turn off heat.;Lightly drizzle with remaining olive oil.",
+      "category": "SNACKS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/4RyddNV/IMG-20200417-184138.jpg",
+      "recipe": 35,
+      "relative_order": 0
+    }
   }
 ]
