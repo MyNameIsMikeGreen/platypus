@@ -1055,5 +1055,36 @@
       "recipe": 31,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 32,
+    "fields": {
+      "title": "Rosti",
+      "ingredients": "2 Large Potatoes;1/2 Teaspoon Salt;1/4 Teaspoon Pepper;1 Teaspoon Paprika;1 Onion (Optional)",
+      "method": "Peel and grate potatoes and onion.;Drain as much water out by squeezing through a tea towel.;Mix all ingredients together.;Firmly pack mixture into a large oiled saucepan.;Cook for ~5 minutes each side.",
+      "category": "SNACKS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/JFQcQny/IMG-20200315-124354.jpg",
+      "recipe": 32,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/KFhMKMV/IMG-20200315-122526.jpg",
+      "recipe": 32,
+      "relative_order": 1
+    }
   }
 ]
