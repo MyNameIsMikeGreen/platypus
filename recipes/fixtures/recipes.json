@@ -1033,5 +1033,27 @@
       "recipe": 30,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 31,
+    "fields": {
+      "title": "Harissa Sea Bass with Griddled Vegetables",
+      "ingredients": "1 Sea Bass Fillet;1 Teaspoon Harissa Paste;1 Courgette;1 Pepper;1 Onion;Salt and Pepper (To Season)",
+      "method": "Cut courgette into ribbons using a vegetable peeler.;Cut pepper and onion into large wedges.;Fry vegetables in a hot (Ideally griddled) pan until soft and charred.;Dry sea bass.;Rub harissa, salt, and pepper over sea bass.;Grill sea bass under high heat for ~5 minutes.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/K27Tm7V/IMG-20200830-190006.jpg",
+      "recipe": 31,
+      "relative_order": 0
+    }
   }
 ]
