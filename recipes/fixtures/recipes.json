@@ -1073,7 +1073,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/JFQcQny/IMG-20200315-124354.jpg",
+      "url": "https://i.ibb.co/bNPs5Vy/IMG-20200315-124354.jpg",
       "recipe": 32,
       "relative_order": 0
     }
@@ -1082,7 +1082,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/KFhMKMV/IMG-20200315-122526.jpg",
+      "url": "https://i.ibb.co/RTqpWRY/IMG-20200315-122526.jpg",
       "recipe": 32,
       "relative_order": 1
     }
