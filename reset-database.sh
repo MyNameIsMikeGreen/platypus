@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 source venv/bin/activate
+pip install -r requirements.txt
 
 echo "Making migrations..."
 python3 manage.py makemigrations
