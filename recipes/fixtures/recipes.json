@@ -1179,5 +1179,54 @@
       "recipe": 35,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 36,
+    "fields": {
+      "title": "Peach Galette",
+      "ingredients": "250g Plain Flour;100g Butter;100g Caster Sugar;1/2 Teaspoon Salt;800g Tinned Peaches;1 Egg;2 Tablespoons Light Brown or Demerara Sugar",
+      "method": "Dump all flour, butter, sugar, and salt onto a large chopping board.;Cut ingredients together until butter is crumb-sized.;Drain peaches into a sieve, reserving the liquid.;Add 50ml of peach liquid to mixture.;Bring mixture together into a dough without heating it up too much with hands.;Wrap dough in clingfilm and rest in the freezer for 30 minutes.;Sprinkle peaches with sugar to desired sweetness and leave whilst dough is cooling.;Roll dough out into a circle of 1/2cm thickness.;Transfer dough to baking paper.;Arrange peaches into centre of dough, leaving about 1/3 of the radius uncovered.;Fold edge towards centre along the entire circumference.;Crack and beat an egg.;Liberally apply egg-wash to the exposed dough.;Sprinkle sugar over galette.;Transfer to a baking tray.;Bake in 180C oven for 1 hour.;Allow to cool for at least 15 minutes before cutting.",
+      "category": "DESSERTS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/DQvY022/IMG-20201011-123904.jpg",
+      "recipe": 36,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/WFSmR42/IMG-20201010-204255.jpg",
+      "recipe": 36,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/MSZZZvv/IMG-20201010-215153.jpg",
+      "recipe": 36,
+      "relative_order": 2
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/vmT9YYt/IMG-20201010-224356.jpg",
+      "recipe": 36,
+      "relative_order": 3
+    }
   }
 ]
