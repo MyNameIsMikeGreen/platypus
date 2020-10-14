@@ -1286,5 +1286,36 @@
       "recipe": 37,
       "relative_order": 3
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 38,
+    "fields": {
+      "title": "Schnitzel",
+      "ingredients": "2-3 Chicken/Pork/Turkey Fillets;75g Panko Breadcrumbs;75g Plain Flour;2 Eggs;1 Tablespoon Paprika;1 Tablespoon Garlic Powder;1 Teaspoon Salt;1 Teaspoon Pepper",
+      "method": "Flatten meat in plastic.;Mix together flour, paprika, garlic powder, salt, and pepper.;Whisk eggs together.;Bread meat by coating in flour mixture, then eggs, then breadcrumbs.;Shallow fry in a deep frying pan for ~5 minutes each side until golden brown.;Cool on a wire rack above kitchen roll.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/rwx2rvM/IMG-20200928-183503.jpg",
+      "recipe": 38,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/d2jwYXN/IMG-20200928-182955.jpg",
+      "recipe": 38,
+      "relative_order": 1
+    }
   }
 ]
