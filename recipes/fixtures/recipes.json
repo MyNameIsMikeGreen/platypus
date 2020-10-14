@@ -1237,5 +1237,54 @@
       "recipe": 36,
       "relative_order": 3
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 37,
+    "fields": {
+      "title": "Puff Pastry Cinnamon Rolls",
+      "ingredients": "250g Puff Pastry;2 Tablespoons Butter;65g Brown Sugar;15g Caster Sugar;1 Tablespoon Cinnamon;100g Icing Sugar;1 Tablespoon Milk;1 Teaspoon Vanilla Extract",
+      "method": "Roll out pastry into a rectangle of 0.5cm thickness.;Mix together brown sugar, caster sugar, and cinnamon.;Melt butter.;Brush melted butter evenly across the pastry.;Spread sugar mixture evenly across the pastry.;Cut pastry into 3cm strips.;Roll strips.;Place flat on a baking tray lined with baking paper.;Lightly press down on rolls.;Bake at 180C for 20 minutes.;Make glaze by mixing remaining ingredients.;Let rolls cool.;Glaze rolls.",
+      "category": "SNACKS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/BG80rjf/IMG-20200927-154653.jpg",
+      "recipe": 37,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/MggYrg4/IMG-20200927-150503.jpg",
+      "recipe": 37,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/d65LTg6/IMG-20200927-151046.jpg",
+      "recipe": 37,
+      "relative_order": 2
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/6X0G8kH/IMG-20200927-153541.jpg",
+      "recipe": 37,
+      "relative_order": 3
+    }
   }
 ]
