@@ -45,5 +45,9 @@ def detail(request, recipe_id):
     return render(request, 'recipes/detail.html', context)
 
 
+def planner(request):
+    return render(request, 'recipes/planner.html', None)
+
+
 def about(request):
     return render(request, 'recipes/about.html', None)
