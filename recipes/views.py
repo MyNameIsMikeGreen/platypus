@@ -49,5 +49,15 @@ def planner(request):
     return render(request, 'recipes/planner.html', None)
 
 
+def planner_results(request, recipe_count):
+    recipe_list = []
+    for i in range(0, recipe_count):
+        recipe_list.append(get_object_or_404(Recipe, pk=i+1))
+    context = {
+        'recipe_list': recipe_list
+    }
+    return render(request, 'recipes/planner_results.html', context)
+
+
 def about(request):
     return render(request, 'recipes/about.html', None)
