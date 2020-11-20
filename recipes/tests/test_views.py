@@ -45,6 +45,17 @@ class DetailWithoutFixturesTest(TestCase):
         self.assertEqual(response.status_code, 404)
 
 
+class PlannerViewTest(TestCase):
+    def test_planner_exists(self):
+        response = client.get('/planner/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recipes/planner.html')
+
+    def test_planner_without_trailing_slash_redirects(self):
+        response = client.get('/planner')
+        self.assertRedirects(response, '/planner/', status_code=301)
+
+
 class AboutViewTest(TestCase):
     def test_about_exists(self):
         response = client.get('/about/')
