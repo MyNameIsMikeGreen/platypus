@@ -16,6 +16,8 @@ class IndexViewWithFixturesTest(TestCase):
     def test_index_displays_recipes_list_when_recipes_are_present(self):
         response = client.get('/')
         self.assertInHTML('<h1>Recipes</h1>', response.content.decode("utf-8"))
+        self.assertInHTML('<h2>DESSERTS</h2>', response.content.decode("utf-8"))
+        self.assertInHTML('<li><a href="/1/">Ice Cream</a></li>', response.content.decode("utf-8"))
 
 
 class IndexViewWithoutFixturesTest(TestCase):
@@ -50,6 +52,7 @@ class PlannerViewTest(TestCase):
         response = client.get('/planner/')
         self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/planner.html')
+
 
     def test_planner_without_trailing_slash_redirects(self):
         response = client.get('/planner')
