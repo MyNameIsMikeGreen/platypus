@@ -10,7 +10,7 @@ class IndexViewWithFixturesTest(TestCase):
 
     def test_index_exists(self):
         response = client.get('/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/index.html')
 
     def test_index_displays_recipes_list_when_recipes_are_present(self):
@@ -30,7 +30,7 @@ class DetailWithFixturesTest(TestCase):
 
     def test_details_returns_200_when_recipe_present(self):
         response = client.get('/1/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/detail.html')
 
     def test_details_without_trailing_slash_redirects(self):
@@ -42,13 +42,13 @@ class DetailWithoutFixturesTest(TestCase):
 
     def test_details_returns_404_when_recipe_not_present(self):
         response = client.get('/69/')
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 404, msg="HTTP 404 returned")
 
 
 class PlannerViewTest(TestCase):
     def test_planner_exists(self):
         response = client.get('/planner/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/planner.html')
 
     def test_planner_without_trailing_slash_redirects(self):
@@ -62,7 +62,7 @@ class PlannerResultsViewTest(TestCase):
 
     def test_planner_results_exists(self):
         response = client.get('/planner/3/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/planner_results.html')
 
     def test_planner_results_without_trailing_slash_redirects(self):
@@ -71,13 +71,13 @@ class PlannerResultsViewTest(TestCase):
 
     def test_planner_results_returns_404_if_request_too_large(self):
         response = client.get('/planner/69/')
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 404, msg="HTTP 200 returned")
 
 
 class AboutViewTest(TestCase):
     def test_about_exists(self):
         response = client.get('/about/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/about.html')
 
     def test_about_without_trailing_slash_redirects(self):
