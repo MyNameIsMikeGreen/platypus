@@ -53,10 +53,13 @@ class PlannerViewTest(TestCase):
         self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/planner.html')
 
-
     def test_planner_without_trailing_slash_redirects(self):
         response = client.get('/planner')
         self.assertRedirects(response, '/planner/', status_code=301)
+
+    def test_planner_has_title(self):
+        response = client.get('/planner/')
+        self.assertInHTML('<h1>Meal Planner</h1>', response.content.decode("utf-8"))
 
 
 class PlannerResultsViewTest(TestCase):
@@ -75,6 +78,17 @@ class PlannerResultsViewTest(TestCase):
     def test_planner_results_returns_404_if_request_too_large(self):
         response = client.get('/planner/69/')
         self.assertEqual(response.status_code, 404, msg="HTTP 200 returned")
+
+    def test_planner_results_list_number_of_recipes_requested(self):
+        response = client.get('/planner/1/')
+        self.assertInHTML('<ul><li><a href="/1/">Ice Cream</a></li></ul>', response.content.decode("utf-8"))
+
+        response = client.get('/planner/3/')
+        self.assertInHTML('<ul>'
+                          '<li><a href="/1/">Ice Cream</a></li>'
+                          '<li><a href="/2/">Lamb Meatballs with Harissa Dressing</a></li>'
+                          '<li><a href="/3/">Ricotta Gnocchi</a></li>'
+                          '</ul>', response.content.decode("utf-8"))
 
 
 class AboutViewTest(TestCase):
