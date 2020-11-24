@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.test import Client
+from lxml import html
 
 client = Client()
 
@@ -83,12 +84,11 @@ class PlannerResultsViewTest(TestCase):
         response = client.get('/planner/1/')
         self.assertInHTML('<ul><li><a href="/1/">Ice Cream</a></li></ul>', response.content.decode("utf-8"))
 
-        response = client.get('/planner/3/')
-        self.assertInHTML('<ul>'
-                          '<li><a href="/1/">Ice Cream</a></li>'
-                          '<li><a href="/2/">Lamb Meatballs with Harissa Dressing</a></li>'
-                          '<li><a href="/3/">Ricotta Gnocchi</a></li>'
-                          '</ul>', response.content.decode("utf-8"))
+        recipes_to_request = 3
+        response = client.get(f'/planner/{recipes_to_request}/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        recipes_list = response_tree.xpath('//div[@id="platypus-content"]/ul/li')
+        self.assertEqual(len(recipes_list), recipes_to_request, "Recipe list returned equals the number requested")
 
 
 class AboutViewTest(TestCase):
