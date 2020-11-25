@@ -1317,5 +1317,67 @@
       "recipe": 38,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 39,
+    "fields": {
+      "title": "Seasoned Sushi Rice",
+      "ingredients": "250g Sushi Rice;3 Tablespoons Rice Wine Vinegar;2 Tablespoons Caster Sugar;1 Teaspoon Salt",
+      "method": "Thoroughly wash the rice.;Add rice to lidded-saucepan with 330ml of water.;Simmer for 10 minutes.;Leave to stand, with the lid on, for 30 minutes.;Mix together remaining ingredients.;Gently fold all ingredients together.",
+      "category": "OTHER"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/8bxj63d/IMG-20201122-194329.jpg",
+      "recipe": 39,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/fNqhh77/IMG-20201122-195712.jpg",
+      "recipe": 39,
+      "relative_order": 1
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 40,
+    "fields": {
+      "title": "Japanese Mayonnaise Substitute",
+      "ingredients": "200g Mayonnaise;2 Tablespoons Rice Wine Vinegar;1 Tablespoon Caster Sugar;MSG (Optional / To Taste)",
+      "method": "Mix all ingredients together thoroughly.",
+      "category": "OTHER"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/9p6D31S/IMG-20201122-192700.jpg",
+      "recipe": 40,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/XkgtQzP/IMG-20201122-195250.jpg",
+      "recipe": 40,
+      "relative_order": 1
+    }
   }
 ]
