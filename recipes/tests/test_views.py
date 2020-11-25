@@ -76,19 +76,27 @@ class PlannerResultsViewTest(TestCase):
         response = client.get('/planner/3')
         self.assertRedirects(response, '/planner/3/', status_code=301)
 
-    def test_planner_results_returns_404_if_request_too_large(self):
-        response = client.get('/planner/69/')
-        self.assertEqual(response.status_code, 404, msg="HTTP 200 returned")
+    def test_planner_results_returns_list_number_of_recipes_requested(self):
+        for recipes_to_request in range(1, 10):
+            recipes_list_length = self._count_recipe_links_from_planner(recipes_to_request)
+            self.assertEqual(recipes_list_length, recipes_to_request, "Recipe list size equals the recipes requested")
 
-    def test_planner_results_list_number_of_recipes_requested(self):
-        response = client.get('/planner/1/')
-        self.assertInHTML('<ul><li><a href="/1/">Ice Cream</a></li></ul>', response.content.decode("utf-8"))
+    def test_planner_results_returns_random_list_on_each_request(self):
+        link_list_initial = self._fetch_recipe_links_from_planner(5)
+        link_list_repeat = self._fetch_recipe_links_from_planner(5)
+        self.assertNotEqual(link_list_initial, link_list_repeat, "Linked recipes are different between requests")
 
-        recipes_to_request = 3
+    @staticmethod
+    def _count_recipe_links_from_planner(recipes_to_request):
         response = client.get(f'/planner/{recipes_to_request}/')
         response_tree = html.fromstring(response.content.decode("utf-8"))
-        recipes_list = response_tree.xpath('//div[@id="platypus-content"]/ul/li')
-        self.assertEqual(len(recipes_list), recipes_to_request, "Recipe list returned equals the number requested")
+        return len(response_tree.xpath('//div[@id="platypus-content"]/ul/li'))
+
+    @staticmethod
+    def _fetch_recipe_links_from_planner(recipe_count):
+        response = client.get(f'/planner/{recipe_count}/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        return response_tree.xpath('//div[@id="platypus-content"]/ul/li/a/@href')
 
 
 class AboutViewTest(TestCase):
