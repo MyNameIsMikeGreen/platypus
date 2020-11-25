@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.shortcuts import render, get_object_or_404
+from random import randint
 
 from .models import Recipe, RecipeImage
 
@@ -52,7 +53,7 @@ def planner(request):
 def planner_results(request, recipe_count):
     recipe_list = []
     for i in range(0, recipe_count):
-        recipe_list.append(get_object_or_404(Recipe, pk=i+1))
+        recipe_list.append(get_object_or_404(Recipe, pk=randint(1, Recipe.objects.count())))
     context = {
         'recipe_list': recipe_list
     }
