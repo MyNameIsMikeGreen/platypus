@@ -21,12 +21,13 @@
             </div>
             <div id="platypus-navigation-buttons">
                 <a href="{% url 'recipes:index' %}">Recipes</a>
+                <a href="{% url 'recipes:planner' %}">Planner</a>
                 <a href="{% url 'recipes:about' %}">About</a>
             </div>
         </div>
         <div id="platypus-content">
             {% block content %}{% endblock content %}
         </div>
-        <footer> <small>&copy; Copyright 2020 Mike Green</small> </footer>
+        <footer> <small>&#169; Copyright 2020 Mike Green</small> </footer>
     </body>
 </html>

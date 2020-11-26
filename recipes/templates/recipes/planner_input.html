@@ -1,0 +1,10 @@
+{% extends "recipes/base.html" %}
+
+{% block content %}
+    <h1>Meal Planner</h1>
+    <p>How many recipes do you want?</p>
+    <form action="/planner" method="get">
+        <input id="recipe_count" type="number" name="recipe_count" value="7">
+        <input type="submit" value="OK">
+    </form>
+{% endblock content %}

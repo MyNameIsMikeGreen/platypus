@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.shortcuts import render, get_object_or_404
+from random import randint
 
 from .models import Recipe, RecipeImage
 
@@ -45,5 +46,19 @@ def detail(request, recipe_id):
     return render(request, 'recipes/detail.html', context)
 
 
+def planner(request):
+    recipe_count = int(request.GET.get('recipe_count', '0'))
+    if not recipe_count:
+        return render(request, 'recipes/planner_input.html')
+
+    recipe_list = []
+    for i in range(0, recipe_count):
+        recipe_list.append(get_object_or_404(Recipe, pk=randint(1, Recipe.objects.count())))
+    context = {
+        'recipe_list': recipe_list
+    }
+    return render(request, 'recipes/planner_results.html', context)
+
+
 def about(request):
-    return render(request, 'recipes/about.html', None)
+    return render(request, 'recipes/about.html')
