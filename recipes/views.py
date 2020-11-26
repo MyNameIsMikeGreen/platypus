@@ -47,10 +47,10 @@ def detail(request, recipe_id):
 
 
 def planner(request):
-    return render(request, 'recipes/planner.html', None)
+    recipe_count = int(request.GET.get('recipe_count', '0'))
+    if not recipe_count:
+        return render(request, 'recipes/planner_input.html')
 
-
-def planner_results(request, recipe_count):
     recipe_list = []
     for i in range(0, recipe_count):
         recipe_list.append(get_object_or_404(Recipe, pk=randint(1, Recipe.objects.count())))
@@ -61,4 +61,4 @@ def planner_results(request, recipe_count):
 
 
 def about(request):
-    return render(request, 'recipes/about.html', None)
+    return render(request, 'recipes/about.html')
