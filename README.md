@@ -30,6 +30,14 @@ Ensure the database is up-to-date before launching the application:
 
 This will destroy any existing database, run all migrations, and populate it with data.
 
+## Test
+
+Run all tests:
+
+```bash
+./test.sh
+```
+
 ## Launch
 
 Launch the server:
