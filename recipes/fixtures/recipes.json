@@ -1379,5 +1379,27 @@
       "recipe": 40,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 41,
+    "fields": {
+      "title": "Orange Lamb Stir-Fry",
+      "ingredients": "500g Lamb Mince;2 Garlic Cloves;1 Large Onion;2 Oranges;2 Tablespoons Light Soy Sauce;1 Teaspoon Cumin Seeds;1 Teaspoon Ground Coriander;1 Teaspoon Chives;Salt, Pepper, and MSG (To Taste)",
+      "method": "Fry lamb mince in a large saucepan or wok.;Grate garlic.;Slice onion.;Zest oranges.;Peel and segment one orange.;Juice the other orange.;Add garlic, cumin seeds, coriander, and onion.;Continue cooking until onion has began to soften.;Add all remaining ingredients.;Continue to cook for ~5 minutes.",
+      "category": "MAINS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/dpqYBGW/IMG-20201125-195147.jpg",
+      "recipe": 41,
+      "relative_order": 0
+    }
   }
 ]
