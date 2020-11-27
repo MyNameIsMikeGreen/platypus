@@ -92,6 +92,13 @@ class PlannerView(TestCase):
         link_set = set(link_list)
         self.assertEqual(len(link_set), len(link_list), msg="Recipe list contains no duplicates")
 
+    def test_planner_results_returns_all_recipes_in_category_if_too_many_requested(self):
+        recipes_to_request = 9999
+        category_to_request = "MAINS"
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        recipes_in_category = Recipe.objects.filter(category=category_to_request)
+        self.assertEqual(len(link_list), len(recipes_in_category), msg="Recipe list size doesnt exceed max recipes")
+
     @staticmethod
     def _count_recipe_links_from_planner(recipes_to_request):
         response = client.get(f'/planner/?recipe_count={recipes_to_request}')
@@ -99,8 +106,8 @@ class PlannerView(TestCase):
         return len(response_tree.xpath('//div[@id="platypus-content"]/ul/li'))
 
     @staticmethod
-    def _fetch_recipe_links_from_planner(recipe_count):
-        response = client.get(f'/planner/?recipe_count={recipe_count}')
+    def _fetch_recipe_links_from_planner(recipe_count, category="MAINS"):
+        response = client.get(f'/planner/?recipe_count={recipe_count}&category={category}')
         response_tree = html.fromstring(response.content.decode("utf-8"))
         return response_tree.xpath('//div[@id="platypus-content"]/ul/li/a/@href')
 
