@@ -2,6 +2,8 @@ from django.test import TestCase
 from django.test import Client
 from lxml import html
 
+from recipes.models import Recipe
+
 client = Client()
 
 
@@ -76,6 +78,20 @@ class PlannerView(TestCase):
         link_list_repeat = self._fetch_recipe_links_from_planner(5)
         self.assertNotEqual(link_list_initial, link_list_repeat, "Linked recipes are different between requests")
 
+    def test_planner_results_returns_only_mains(self):
+        recipes_to_request = 25
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request)
+        for link in link_list:
+            id = _get_id_from_link(link)
+            recipe = Recipe.objects.get(pk=id)
+            self.assertEqual(recipe.category, "MAINS", msg="Recipe is in the MAINS category")
+
+    def test_planner_results_returns_only_unique_results(self):
+        recipes_to_request = 25
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request)
+        link_set = set(link_list)
+        self.assertEqual(len(link_set), len(link_list), msg="Recipe list contains no duplicates")
+
     @staticmethod
     def _count_recipe_links_from_planner(recipes_to_request):
         response = client.get(f'/planner/?recipe_count={recipes_to_request}')
@@ -98,3 +114,7 @@ class AboutViewTest(TestCase):
     def test_about_without_trailing_slash_redirects(self):
         response = client.get('/about')
         self.assertRedirects(response, '/about/', status_code=301)
+
+
+def _get_id_from_link(link: str):
+    return int(link.strip().replace("/", ""))
