@@ -5,6 +5,12 @@
     <p>How many recipes do you want?</p>
     <form action="/planner" method="get">
         <input id="recipe_count" type="number" name="recipe_count" value="7">
+        <select id="category" name="category">
+            <option value="MAINS">Mains</option>
+            <option value="DESSERTS">Desserts</option>
+            <option value="SNACKS">Snacks</option>
+            <option value="OTHER">Other</option>
+        </select>
         <input type="submit" value="OK">
     </form>
 {% endblock content %}

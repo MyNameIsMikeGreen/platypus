@@ -78,13 +78,20 @@ class PlannerView(TestCase):
         link_list_repeat = self._fetch_recipe_links_from_planner(5)
         self.assertNotEqual(link_list_initial, link_list_repeat, "Linked recipes are different between requests")
 
-    def test_planner_results_returns_only_mains(self):
+    def test_planner_results_returns_only_recipes_from_category_requested(self):
         recipes_to_request = 25
-        link_list = self._fetch_recipe_links_from_planner(recipes_to_request)
-        for link in link_list:
-            id = _get_id_from_link(link)
-            recipe = Recipe.objects.get(pk=id)
-            self.assertEqual(recipe.category, "MAINS", msg="Recipe is in the MAINS category")
+
+        category_to_request = "MAINS"
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
+
+        category_to_request = "DESSERTS"
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
+
+        category_to_request = "OTHER"
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
     def test_planner_results_returns_only_unique_results(self):
         recipes_to_request = 25
@@ -98,6 +105,11 @@ class PlannerView(TestCase):
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
         recipes_in_category = Recipe.objects.filter(category=category_to_request)
         self.assertEqual(len(link_list), len(recipes_in_category), msg="Recipe list size doesnt exceed max recipes")
+
+    def _assert_recipe_list_contains_only_recipes_from_category(self, link_list, category):
+        for link in link_list:
+            recipe = Recipe.objects.get(pk=_get_id_from_link(link))
+            self.assertEqual(recipe.category, category, msg=f"Recipe is in the {category} category")
 
     @staticmethod
     def _count_recipe_links_from_planner(recipes_to_request):
