@@ -53,6 +53,8 @@ def planner(request):
         return render(request, 'recipes/planner_input.html')
     category = request.GET.get('category', 'MAINS')
     recipes_in_category = Recipe.objects.filter(category=category)
+    if recipe_count > len(recipes_in_category):
+        recipe_count = len(recipes_in_category)
     recipe_set = set()
     while len(recipe_set) < recipe_count:
         recipe_set.add(random.choice(recipes_in_category))
