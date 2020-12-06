@@ -1401,5 +1401,36 @@
       "recipe": 41,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 42,
+    "fields": {
+      "title": "Pancakes",
+      "ingredients": "1 Egg;100ml Milk;50g Plain Flour;1 Teaspoon Oil",
+      "method": "Whisk all ingredients together.;Cook in a small frying pan for ~3 minutes, flipping halfway through.;Add toppings of choice (e.g. banana, chocolate spread, honey, or ice cream).",
+      "category": "SNACKS"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/yqVNdRR/IMG-20201206-203500.jpg",
+      "recipe": 42,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/grN71Xn/IMG-20201206-203119.jpg",
+      "recipe": 42,
+      "relative_order": 1
+    }
   }
 ]
