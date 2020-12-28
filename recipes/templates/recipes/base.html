@@ -17,7 +17,7 @@
                 {% if recipe %}
                 "image": [
                     {% for image in image_list %}
-                    "{{image.url}}",
+                    "{{image.url|join:',\n'}}"
                     {% endfor %}
                 ],
                 {% endif %}
@@ -30,14 +30,14 @@
                 "recipeCategory": "{{recipe.category}}",
                 "recipeIngredient": [
                     {% for ingredient_item in ingredients_list %}
-                    "{{ingredient_item}}",
+                    "{{ingredient_item|join:',\n'}}",
                     {% endfor %}
                 ],
                 "recipeInstructions": [
                     {% for method_item in method_list %}
                     {
                     "@type": "HowToStep",
-                    "text": "{{method_item}}",
+                    "text": "{{method_item|join:',\n'}}",
                     },
                     {% endfor %}
                 ]
