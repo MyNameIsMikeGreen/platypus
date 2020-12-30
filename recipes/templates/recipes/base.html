@@ -16,9 +16,7 @@
                 "name": "{{recipe.title}}",
                 {% if recipe %}
                 "image": [
-                    {% for image in image_list %}
-                    "{{image.url|join:',\n'}}"
-                    {% endfor %}
+                    "{{image_url_list|join:'", "'}}"
                 ],
                 {% endif %}
                 "author": {
@@ -29,17 +27,13 @@
                 "keywords": "{{recipe.title}}",
                 "recipeCategory": "{{recipe.category}}",
                 "recipeIngredient": [
-                    {% for ingredient_item in ingredients_list %}
-                    "{{ingredient_item|join:',\n'}}",
-                    {% endfor %}
+                    "{{ingredients_list|join:'", "'}}"
                 ],
                 "recipeInstructions": [
                     {% for method_item in method_list %}
-                    {
-                    "@type": "HowToStep",
-                    "text": "{{method_item|join:',\n'}}",
-                    },
+                    {"@type": "HowToStep", "text": "{{method_item}}"},
                     {% endfor %}
+                    {}
                 ]
             }
         </script>

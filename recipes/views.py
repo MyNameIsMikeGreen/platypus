@@ -37,12 +37,12 @@ def detail(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
     ingredients_list = recipe.ingredients.split(BULLET_POINT_DELIMITER)
     method_list = recipe.method.split(BULLET_POINT_DELIMITER)
-    image_list = RecipeImage.objects.filter(recipe_id=recipe_id).order_by('relative_order')
+    image_url_list = [image.url for image in RecipeImage.objects.filter(recipe_id=recipe_id).order_by('relative_order')]
     context = {
         'recipe': recipe,
         'ingredients_list': ingredients_list,
         'method_list': method_list,
-        'image_list': image_list
+        'image_url_list': image_url_list
     }
     return render(request, 'recipes/detail.html', context)
 
