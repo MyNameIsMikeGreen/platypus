@@ -22,6 +22,11 @@ class IndexViewWithFixturesTest(TestCase):
         self.assertInHTML('<h2>DESSERTS</h2>', response.content.decode("utf-8"))
         self.assertInHTML('<li><a href="/1/">Ice Cream</a></li>', response.content.decode("utf-8"))
 
+    def test_index_does_not_contain_json_ld_block(self):
+        response = client.get('/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 0, "json-ld block not in HTML")
+
 
 class IndexViewWithoutFixturesTest(TestCase):
     def test_index_displays_error_when_no_recipes_present(self):
@@ -42,6 +47,11 @@ class DetailWithFixturesTest(TestCase):
         response = client.get('/1')
         self.assertRedirects(response, '/1/', status_code=301)
 
+    def test_details_contains_json_ld_block(self):
+        response = client.get('/1/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 1, "json-ld block in HTML")
+
 
 class DetailWithoutFixturesTest(TestCase):
 
@@ -59,7 +69,12 @@ class PlannerView(TestCase):
         self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/planner_input.html')
 
-    def test_planner_results_template_used_if_valid_recipe_count_param_provided(self):
+    def test_planner_does_not_contain_json_ld_block(self):
+        response = client.get('/planner/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 0, "json-ld block not in HTML")
+
+    def test_planner_does_not_contain_json_ld_block(self):
         response = client.get('/planner/?recipe_count=3')
         self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/planner_results.html')
@@ -133,6 +148,11 @@ class AboutViewTest(TestCase):
     def test_about_without_trailing_slash_redirects(self):
         response = client.get('/about')
         self.assertRedirects(response, '/about/', status_code=301)
+
+    def test_about_does_not_contain_json_ld_block(self):
+        response = client.get('/about/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 0, "json-ld block not in HTML")
 
 
 def _get_id_from_link(link: str):

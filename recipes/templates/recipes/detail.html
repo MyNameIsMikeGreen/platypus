@@ -4,8 +4,8 @@
     {% if recipe %}
         <div id="details-content">
             <div id="recipe-images">
-                {% for image in image_list %}
-                    <a href="{{ image.url }}"><img src="{{ image.url }}" alt="{{ recipe.title }}"></a>
+                {% for image_url in image_url_list %}
+                    <a href="{{ image_url }}"><img src="{{ image_url }}" alt="{{ recipe.title }}"></a>
                 {% endfor %}
             </div>
 
