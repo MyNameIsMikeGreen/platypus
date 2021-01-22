@@ -11,6 +11,10 @@ class Recipe(models.Model):
         max_length=32,
         default=UNCATEGORISED,
     )
+    pub_date = models.DateField(auto_now=True)
+
+    def get_absolute_url(self):
+        return "/%i/" % self.id     # Use reverse
 
 
 class RecipeImage(models.Model):
