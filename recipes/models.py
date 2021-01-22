@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 UNCATEGORISED = "UNCATEGORISED"
 
@@ -14,7 +15,7 @@ class Recipe(models.Model):
     pub_date = models.DateField(auto_now=True)
 
     def get_absolute_url(self):
-        return "/%i/" % self.id     # Use reverse
+        return reverse('recipes:detail', args=[str(self.id)])
 
 
 class RecipeImage(models.Model):
