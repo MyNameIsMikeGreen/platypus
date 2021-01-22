@@ -9,7 +9,7 @@ app_name = 'recipes'
 
 info_dict = {
     'queryset': Recipe.objects.all(),
-    'date_field': 'pub_date',
+    'date_field': 'published_date',
 }
 
 urlpatterns = [
