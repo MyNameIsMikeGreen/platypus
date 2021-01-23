@@ -18,6 +18,6 @@ urlpatterns = [
     path('planner/', views.planner, name='planner'),
     path('<int:recipe_id>/', views.detail, name='detail'),
     path('sitemap.xml', sitemap,
-         {'sitemaps': {'blog': GenericSitemap(info_dict, priority=0.6)}},
+         {'sitemaps': {'blog': GenericSitemap(info_dict, changefreq="monthly")}},
          name='django.contrib.sitemaps.views.sitemap'),
 ]
