@@ -1497,5 +1497,38 @@
       "recipe": 43,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 44,
+    "fields": {
+      "title": "Enchiladas",
+      "ingredients": "~500g Chicken Breasts;3 Large Tortillas;500g Passata;1 Onion;2 Tablespoons Plain Flour;1 Tablespoon Cumin;1 Tablespoon Paprika;1 Tablespoon Oregano;2 Teaspoons Garlic Powder;1 Teaspoon Onion Powder;1 Teaspoon Salt;1/2 Teaspoon Pepper;250g Cheddar Cheese",
+      "method": "Cut chicken into bitesize pieces.;Chop onion into large pieces.;Fry chicken until almost cooked.;Mix together all seasonings, flour, and passata.;Add onions to chicken.;Add 3/4 of the sauce to chicken.;Add 1/2 of the cheese to the mixture.;Simmer until cheese is fully melted and sauce begins to thicken.;Lightly oil baking dish.;Distribute filling among all tortillas evenly.;Fold tortillas around filling using excess sauce to seal the end shut.;Grate cheese over dish.;Bake at 180C until cheese beginning to brown.",
+      "category": "MAINS",
+      "published_date": "2021-02-09"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/cNCWzWV/IMG-20210131-211538.jpg",
+      "recipe": 44,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/1Zp4Jnn/IMG-20210131-205051.jpg",
+      "recipe": 44,
+      "relative_order": 1
+    }
   }
 ]
+
