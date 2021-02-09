@@ -1529,6 +1529,29 @@
       "recipe": 44,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 45,
+    "fields": {
+      "title": "Spinach and Feta Pie",
+      "ingredients": "350g Frozen Spinach;200g Feta Cheese;500g Puff Pastry;1 Tablespoon Olive Oil;1 Tablespoon Sesame Seeds;1 Onion;2 Teaspoons Lemon Juice;20g Butter;Salt and Pepper (To Taste)",
+      "method": "Dice onion.;Fry onion lightly.;Add spinach.;Cook until spinach melted.;Remove mixture from heat and sprinkle in feta chunks.;Lightly mix mixture together with salt, pepper, and lemon juice.;Roll the pastry out such that it can line a large baking dish with enough off-cuts for a lid.;Lightly oil baking dish.;Line baking dish with pastry.;Add filling.;Remove excess pastry from edges leaving enough overhang to help seal lid onto it.;Roll out offcuts into a lid.;Drape lid over pie.;Seal lid and tidy any overhang.;Cut several small steam vents into lid.;Melt butter.;Brush butter over lid.;Sprinkle sesame seeds over pie.;Bake at 170C for 30 minutes.",
+      "category": "MAINS",
+      "published_date": "2021-02-09"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/Z6DfsCB/IMG-20210125-200624.jpg",
+      "recipe": 45,
+      "relative_order": 0
+    }
   }
 ]
 
