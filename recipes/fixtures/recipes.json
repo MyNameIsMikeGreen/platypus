@@ -1575,6 +1575,38 @@
       "recipe": 46,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 47,
+    "fields": {
+      "title": "Oatmeal Raisin Cookies",
+      "ingredients": "115g Butter;100g Brown Sugar;25g Caster Sugar;1 Egg;1/2 Tablespoon Vanilla Extract;95g Plain Flour;1/2 Teaspoon Bicarbonate of Soda;1 Teaspoon Cinnamon;1/4 Teaspoon Salt;120g Oats;70g Raisins;1/2 Tablespoon Molasses",
+      "method": "Soak raisins in warm water for at least 10 minutes.;Soften butter.;Cream together butter and both sugars.;Mix in egg, vanilla extract, and molasses.;In a separate bowl, mix together the flour, bicarbonate of soda, cinnamon, and salt.;Combine both bowls to form a dough.;Drain and thoroughly dry raisins.;Fold raisins and oats into dough.;Form dough into balls using ~2 tablespoons of dough each.;Bake on a baking tray at 180C for ~12 minutes.",
+      "category": "SNACKS",
+      "published_date": "2021-02-09"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/5LrXPsv/IMG-20210219-215425.jpg",
+      "recipe": 47,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/C5Q3YKc/IMG-20210219-212505.jpg",
+      "recipe": 47,
+      "relative_order": 1
+    }
   }
 ]
 
