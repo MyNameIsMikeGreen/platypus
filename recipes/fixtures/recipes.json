@@ -1587,7 +1587,7 @@
       "ingredients": "115g Butter;100g Brown Sugar;25g Caster Sugar;1 Egg;1/2 Tablespoon Vanilla Extract;95g Plain Flour;1/2 Teaspoon Bicarbonate of Soda;1 Teaspoon Cinnamon;1/4 Teaspoon Salt;120g Oats;70g Raisins;1/2 Tablespoon Molasses",
       "method": "Soak raisins in warm water for at least 10 minutes.;Soften butter.;Cream together butter and both sugars.;Mix in egg, vanilla extract, and molasses.;In a separate bowl, mix together the flour, bicarbonate of soda, cinnamon, and salt.;Combine both bowls to form a dough.;Drain and thoroughly dry raisins.;Fold raisins and oats into dough.;Form dough into balls using ~2 tablespoons of dough each.;Bake on a baking tray at 180C for ~12 minutes.",
       "category": "SNACKS",
-      "published_date": "2021-02-09"
+      "published_date": "2021-02-24"
     }
   },
   {
@@ -1606,6 +1606,29 @@
       "url": "https://i.ibb.co/C5Q3YKc/IMG-20210219-212505.jpg",
       "recipe": 47,
       "relative_order": 1
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 48,
+    "fields": {
+      "title": "Baguette Pizza",
+      "ingredients": "1 Baguette;4 Tablespoons Tomato Puree;1 Tablespoon BBQ Sauce;150g Cheddar Cheese;2 Teaspoons Dried Basil;1 Teaspoon Pepper;Toppings of Choice",
+      "method": "Prepare toppings as necessary.;Cut baguette to the length of a baking tray.;Halve baguette length-ways.;Mix together BBQ sauce and tomato puree.;Spread mixture over baguette halves.;Add toppings.;Sprinkle over pepper.;Sprinkle over cheese.;Sprinkle over basil.;Drip over additional BBQ sauce.;Bake at 180C for 5 minutes.;Grill until cheese is golden.",
+      "category": "MAINS",
+      "published_date": "2021-02-25"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/9qg6gMT/IMG-20210224-202755.jpg",
+      "recipe": 48,
+      "relative_order": 0
     }
   }
 ]
