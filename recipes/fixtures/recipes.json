@@ -6,7 +6,7 @@
       "title": "Ice Cream",
       "ingredients": "600ml Double Cream;6 Eggs;240g Caster Sugar;Flavourings of Choice",
       "method": "Whip the cream until stiff.;Separate the egg yolks and egg whites.;Whip the egg whites until stiff.;Lightly whip the egg yolks, sugar, vanilla extract, and any liquid flavourings together.;Whip the egg yolk mixture lightly into the whipped cream.;Carefully fold together the cream mixture, whipped egg whites, and any solid flavourings.;Pour into a suitable container.;Freeze for at least 24 hours.",
-      "category": "DESSERTS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-06-19"
     }
   },
@@ -430,7 +430,7 @@
       "title": "Cookies",
       "ingredients": "100g Butter;60g Light Brown Sugar;60g Caster Sugar;1 Egg;150g Plain Flour;1 Teaspoon Vanilla Extract;Half Teaspoon Bicarbonate of Soda;Flavourings of Choice",
       "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mis in sifted flour and bicarbonate of soda until consistent.;Prepare and mix in flavourings.;Spoon onto a baking tray lined with baking paper.;Bake at 160C for 10-15 minutes.;Cool on a wire rack.",
-      "category": "SNACKS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-06-20"
     }
   },
@@ -471,7 +471,7 @@
       "title": "Cast Iron Pineapple Upside-Down Cake",
       "ingredients": "60g Butter;125g Light Brown Sugar;1 Tin (~400g) Pineapple Slices;1 Maraschino Cherry per Pineapple Slice;2 Large Eggs;150g Caster Sugar;100g Flour;Half Teaspoon Baking Powder;Pinch of Salt",
       "method": "Melt butter in cast iron pan.;Sprinkle brown sugar over base of pan evenly.;Drain pineapple slices from tin. Reserve 60ml of pineapple juice.;Arrange pineapple slices across base of pan.;Place a cherry (Halved if preferred) inside each of the pineapple centres.;Gently heat pineapple juice in a saucepan.;Separate eggs.;Beat egg yolks with a whisk until homogeneous.;Slowly add caster sugar to yolks while continuing to whisk.;Slowly whisk heated pineapple juice into yolk mixture.;Whisk in remaining dry ingredients into yolk mixture.;In a separate bowl, whip egg whites until stiff.;Carefully fold egg whites into batter.;Add batter to pan.;Bake at 160C for 45 minutes.;Let cool in pan for at least 30 minutes before flipping onto a plate/board.",
-      "category": "DESSERTS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-06-20"
     }
   },
@@ -708,7 +708,7 @@
       "title": "Italian Stuff on Toasted Bread",
       "ingredients": "Bread (Any nice loaf);1 Ball Mozzarella;1 Large Tomato;Handful of Fresh Basil;Olive Oil;Salt and Pepper (To Season)",
       "method": "Pre-heat a pan large enough to accommodate all bread slices (ideally a cast iron pan).;Add a small amount of olive oil to the pan.;Drizzle olive oil onto 1 side of the bread.;Toast the bread, oil side down, until golden.;Repeat for second side of bread.;Slice mozzarella and tomato into equal numbers of slices to top the bread.;Arrange stacks of toppings onto bread: tomato, mozzarella, then a basil leaf.;Finish with a drizzle of olive oil and salt and pepper.",
-      "category": "SNACKS",
+      "category": "LIGHT DISHES",
       "published_date": "2020-07-16"
     }
   },
@@ -868,7 +868,7 @@
       "title": "Cornflake Cakes",
       "ingredients": "150g Cornflakes;200g Chocolate;2 Tablespoons Golden Syrup;50g Butter;Toppings",
       "method": "Combine and melt the chocolate, golden syrup, and butter in a double boiler.;Gently stir in cornflakes.;Fill cupcake cases with mixture.;Add toppings.",
-      "category": "SNACKS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-08-27"
     }
   },
@@ -964,7 +964,7 @@
       "title": "Cast Iron Giant Cookie",
       "ingredients": "250g Butter;200g Brown Sugar;100g Caster Sugar;2 Eggs;1 Teaspoon Vanilla Extract;250g Plain Flour;1 Teaspoon Bicarbonate of Soda;1/2 Teaspoon Salt;250g Chocolate;Other Flavourings",
       "method": "Melt butter in cast iron pan.;Dissolve both sugars into the butter.;Remove from heat and let stand for 15-30 minutes.;Whisk in eggs and vanilla extract.;Stir in flour, bicarbonate of soda, and salt.;Chop chocolate and other toppings into large chunks and stir into mixture.;Level mixture.;Bake at 160C for ~25 minutes.",
-      "category": "DESSERTS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-08-27"
     }
   },
@@ -996,7 +996,7 @@
       "title": "Chicken Stock",
       "ingredients": "1 Chicken Carcass;~5 Celery Sticks;1 Large Onion;6 Garlic Cloves;2 Tablespoons Parsley (Ideally Fresh);2 Tablespoons Thyme (Ideally Fresh);Handful of Peppercorns;Other Aromatic Vegetables",
       "method": "Very roughly chop vegetables.;Throw all ingredients into a large pan.;Barely cover with water.;Simmer for 3-4 hours.;Skim and strain through a colander.",
-      "category": "OTHER",
+      "category": "MISCELLANEOUS",
       "published_date": "2020-08-28"
     }
   },
@@ -1060,7 +1060,7 @@
       "title": "Kimchi Pancake",
       "ingredients": "150g Kimchi;75g Plain Flour;1 Teaspoon Caster Sugar;50g Water;3 Spring Onions",
       "method": "Roughly chop spring onions and kimchi (if not already).;Mix all ingredients together.;Pour into and fry in a frying pan with oil for ~3 minutes each side.",
-      "category": "SNACKS",
+      "category": "LIGHT DISHES",
       "published_date": "2020-09-10"
     }
   },
@@ -1106,7 +1106,7 @@
       "title": "Rosti",
       "ingredients": "2 Large Potatoes;1/2 Teaspoon Salt;1/4 Teaspoon Pepper;1 Teaspoon Paprika;1 Onion (Optional)",
       "method": "Peel and grate potatoes and onion.;Drain as much water out by squeezing through a tea towel.;Mix all ingredients together.;Firmly pack mixture into a large oiled saucepan.;Cook for ~5 minutes each side.",
-      "category": "SNACKS",
+      "category": "LIGHT DISHES",
       "published_date": "2020-09-11"
     }
   },
@@ -1211,7 +1211,7 @@
       "title": "Sourdough Starter Crumpet",
       "ingredients": "100g Sourdough Starter;Fresh Rosemary;Pinch Salt Flakes;1 Tablespoon Olive Oil",
       "method": "Heat a small frying pan containing 1/2 tablespoon olive oil.;Pour sourdough starter into centre of pan.; Cook until the top edges begins to solidify and the crumpet slides freely on the pan.;Sprinkle rosemary and salt onto the top of the crumpet.;Flip.;Cook for a further 1-2 minutes.;Flip again.;Turn off heat.;Lightly drizzle with remaining olive oil.",
-      "category": "SNACKS",
+      "category": "LIGHT DISHES",
       "published_date": "2020-09-11"
     }
   },
@@ -1234,7 +1234,7 @@
       "title": "Peach Galette",
       "ingredients": "250g Plain Flour;100g Butter;100g Caster Sugar;1/2 Teaspoon Salt;800g Tinned Peaches;1 Egg;2 Tablespoons Light Brown or Demerara Sugar",
       "method": "Dump all flour, butter, sugar, and salt onto a large chopping board.;Cut ingredients together until butter is crumb-sized.;Drain peaches into a sieve, reserving the liquid.;Add 50ml of peach liquid to mixture.;Bring mixture together into a dough without heating it up too much with hands.;Wrap dough in clingfilm and rest in the freezer for 30 minutes.;Sprinkle peaches with sugar to desired sweetness and leave whilst dough is cooling.;Roll dough out into a circle of 1/2cm thickness.;Transfer dough to baking paper.;Arrange peaches into centre of dough, leaving about 1/3 of the radius uncovered.;Fold edge towards centre along the entire circumference.;Crack and beat an egg.;Liberally apply egg-wash to the exposed dough.;Sprinkle sugar over galette.;Transfer to a baking tray.;Bake in 180C oven for 1 hour.;Allow to cool for at least 15 minutes before cutting.",
-      "category": "DESSERTS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-10-13"
     }
   },
@@ -1284,7 +1284,7 @@
       "title": "Puff Pastry Cinnamon Rolls",
       "ingredients": "250g Puff Pastry;2 Tablespoons Butter;65g Brown Sugar;15g Caster Sugar;1 Tablespoon Cinnamon;100g Icing Sugar;1 Tablespoon Milk;1 Teaspoon Vanilla Extract",
       "method": "Roll out pastry into a rectangle of 0.5cm thickness.;Mix together brown sugar, caster sugar, and cinnamon.;Melt butter.;Brush melted butter evenly across the pastry.;Spread sugar mixture evenly across the pastry.;Cut pastry into 3cm strips.;Roll strips.;Place flat on a baking tray lined with baking paper.;Lightly press down on rolls.;Bake at 180C for 20 minutes.;Make glaze by mixing remaining ingredients.;Let rolls cool.;Glaze rolls.",
-      "category": "SNACKS",
+      "category": "CONFECTIONERY",
       "published_date": "2020-10-14"
     }
   },
@@ -1366,7 +1366,7 @@
       "title": "Seasoned Sushi Rice",
       "ingredients": "250g Sushi Rice;3 Tablespoons Rice Wine Vinegar;2 Tablespoons Caster Sugar;1 Teaspoon Salt",
       "method": "Thoroughly wash the rice.;Add rice to lidded-saucepan with 330ml of water.;Simmer for 10 minutes.;Leave to stand, with the lid on, for 30 minutes.;Mix together remaining ingredients.;Gently fold all ingredients together.",
-      "category": "OTHER",
+      "category": "MISCELLANEOUS",
       "published_date": "2020-11-25"
     }
   },
@@ -1398,7 +1398,7 @@
       "title": "Japanese Mayonnaise Substitute",
       "ingredients": "200g Mayonnaise;2 Tablespoons Rice Wine Vinegar;1 Tablespoon Caster Sugar;MSG (Optional / To Taste)",
       "method": "Mix all ingredients together thoroughly.",
-      "category": "OTHER",
+      "category": "MISCELLANEOUS",
       "published_date": "2020-11-25"
     }
   },
@@ -1453,7 +1453,7 @@
       "title": "Pancakes",
       "ingredients": "1 Egg;100ml Milk;50g Plain Flour;1 Teaspoon Oil",
       "method": "Whisk all ingredients together.;Cook in a small frying pan for ~3 minutes, flipping halfway through.;Add toppings of choice (e.g. banana, chocolate spread, honey, or ice cream).",
-      "category": "SNACKS",
+      "category": "LIGHT DISHES",
       "published_date": "2020-12-06"
     }
   },
@@ -1586,7 +1586,7 @@
       "title": "Oatmeal Raisin Cookies",
       "ingredients": "115g Butter;100g Brown Sugar;25g Caster Sugar;1 Egg;1/2 Tablespoon Vanilla Extract;95g Plain Flour;1/2 Teaspoon Bicarbonate of Soda;1 Teaspoon Cinnamon;1/4 Teaspoon Salt;120g Oats;70g Raisins;1/2 Tablespoon Molasses",
       "method": "Soak raisins in warm water for at least 10 minutes.;Soften butter.;Cream together butter and both sugars.;Mix in egg, vanilla extract, and molasses.;In a separate bowl, mix together the flour, bicarbonate of soda, cinnamon, and salt.;Combine both bowls to form a dough.;Drain and thoroughly dry raisins.;Fold raisins and oats into dough.;Form dough into balls using ~2 tablespoons of dough each.;Bake on a baking tray at 180C for ~12 minutes.",
-      "category": "SNACKS",
+      "category": "CONFECTIONERY",
       "published_date": "2021-02-24"
     }
   },
@@ -1629,6 +1629,38 @@
       "url": "https://i.ibb.co/9qg6gMT/IMG-20210224-202755.jpg",
       "recipe": 48,
       "relative_order": 0
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 49,
+    "fields": {
+      "title": "Winged Dumplings",
+      "ingredients": "6 Frozen Dumplings;1 Teaspoon Cornflour;1 Teaspoon Plain Flour;75ml water",
+      "method": "Arrange dumplings on an oiled non-stick frying pan as a spiral.;Bring up to a medium heat.;Mix together flours and water.;Pour flour mixture into pan.;Cover with lid and fry until browned.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-02-27"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/frn9SvC/IMG-20210227-135826.jpg",
+      "recipe": 49,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://i.ibb.co/WxYsC9c/IMG-20210227-134351.jpg",
+      "recipe": 49,
+      "relative_order": 1
     }
   }
 ]

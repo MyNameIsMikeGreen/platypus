@@ -19,7 +19,7 @@ class IndexViewWithFixturesTest(TestCase):
     def test_index_displays_recipes_list_when_recipes_are_present(self):
         response = client.get('/')
         self.assertInHTML('<h1>Recipes</h1>', response.content.decode("utf-8"))
-        self.assertInHTML('<h2>DESSERTS</h2>', response.content.decode("utf-8"))
+        self.assertInHTML('<h2>CONFECTIONERY</h2>', response.content.decode("utf-8"))
         self.assertInHTML('<li><a href="/1/">Ice Cream</a></li>', response.content.decode("utf-8"))
 
     def test_index_does_not_contain_json_ld_block(self):
@@ -100,11 +100,11 @@ class PlannerView(TestCase):
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
         self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
-        category_to_request = "DESSERTS"
+        category_to_request = "CONFECTIONERY"
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
         self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
-        category_to_request = "OTHER"
+        category_to_request = "MISCELLANEOUS"
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
         self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
