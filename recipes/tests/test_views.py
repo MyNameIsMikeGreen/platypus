@@ -98,14 +98,22 @@ class PlannerView(TestCase):
 
         category_to_request = "MAINS"
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self.assertGreater(len(link_list), 0, f"Found {len(link_list)} {category_to_request} recipes")
+        self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
+
+        category_to_request = "LIGHT DISHES"
+        link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self.assertGreater(len(link_list), 0, f"Found {len(link_list)} {category_to_request} recipes")
         self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
         category_to_request = "CONFECTIONERY"
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self.assertGreater(len(link_list), 0, f"Found {len(link_list)} {category_to_request} recipes")
         self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
         category_to_request = "MISCELLANEOUS"
         link_list = self._fetch_recipe_links_from_planner(recipes_to_request, category_to_request)
+        self.assertGreater(len(link_list), 0, f"Found {len(link_list)} {category_to_request} recipes")
         self._assert_recipe_list_contains_only_recipes_from_category(link_list, category_to_request)
 
     def test_planner_results_returns_only_unique_results(self):
