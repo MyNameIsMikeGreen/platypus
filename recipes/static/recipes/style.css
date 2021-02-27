@@ -13,6 +13,7 @@ a {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     display: flex;
+    align-items: center;
 }
 
 #platypus-title-text {
@@ -28,7 +29,7 @@ a {
 
 #platypus-navigation-buttons a {
     text-decoration: none;
-    font-size: 25px;
+    font-size: xx-large;
     border-left-width: 1px;
     border-left-style: solid;
     border-right-width: 1px;
