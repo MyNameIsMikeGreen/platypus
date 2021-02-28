@@ -76,6 +76,12 @@ body {
     background-color: beige;
 }
 
+#platypus-category-listings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 footer {
     width: 100%;
     position: relative;
