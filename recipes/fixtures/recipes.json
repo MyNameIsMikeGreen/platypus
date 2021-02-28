@@ -479,7 +479,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/88wwJYF/IMG-20200405-182002.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614533204/IMG_20200405_182002_iogi2g.jpg",
       "recipe": 13,
       "relative_order": 0
     }
@@ -488,7 +488,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/QrR353M/IMG-20200405-162346.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614533206/IMG_20200405_162346_no4gnq.jpg",
       "recipe": 13,
       "relative_order": 1
     }
@@ -497,7 +497,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/n1LZsSs/IMG-20200405-162821.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614533210/IMG_20200405_162821_j81ugo.jpg",
       "recipe": 13,
       "relative_order": 2
     }
@@ -506,7 +506,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/BzGbNYJ/IMG-20200405-165822.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614533184/IMG_20200405_165822_af7edc.jpg",
       "recipe": 13,
       "relative_order": 3
     }
