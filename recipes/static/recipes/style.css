@@ -76,20 +76,13 @@ body {
     background-color: beige;
 }
 
-/* Mobile */
-@media (pointer:none), (pointer:coarse) {
+/* Desktop */
+@media only screen and (min-width: 1200px) {
     #platypus-category-listings {
-        flex-direction: column;
-        flex-wrap: nowrap;
+        flex-direction: row;
+        flex-wrap: wrap;
         display: flex;
     }
-}
-
-/* Desktop */
-#platypus-category-listings {
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
 }
 
 footer {
