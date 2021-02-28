@@ -23,7 +23,7 @@ def index(request):
             "category": category,
             "recipes": [recipe for recipe in recipe_list if recipe.category == category]
         })
-
+    categorised_recipe_lists.sort(key=lambda x: len(x))
     fixtures_loaded = fixtures_are_loaded(categorised_recipe_lists)
 
     context = {
