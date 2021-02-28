@@ -76,10 +76,20 @@ body {
     background-color: beige;
 }
 
+/* Mobile */
 #platypus-category-listings {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+    #platypus-category-listings {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 footer {
