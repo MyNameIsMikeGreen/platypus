@@ -3,16 +3,20 @@
 {% block content %}
     {% if fixtures_loaded %}
         <h1>Recipes</h1>
-        {% for categorised_recipe_list in categorised_recipe_lists %}
-            {% if categorised_recipe_list.recipes %}
-                <h2>{{ categorised_recipe_list.category }}</h2>
-                <ul>
-                    {% for recipe in categorised_recipe_list.recipes %}
-                        <li><a href="{% url 'recipes:detail' recipe.pk %}">{{ recipe.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            {%  endif %}
-        {% endfor %}
+        <div id="platypus-category-listings">
+            {% for categorised_recipe_list in categorised_recipe_lists %}
+                <div id="platypus-category-listing">
+                    {% if categorised_recipe_list.recipes %}
+                        <h2>{{ categorised_recipe_list.category }}</h2>
+                        <ul>
+                            {% for recipe in categorised_recipe_list.recipes %}
+                                <li><a href="{% url 'recipes:detail' recipe.pk %}">{{ recipe.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {%  endif %}
+                </div>
+            {% endfor %}
+        </div>
     {% else %}
         <p>No recipes are available.</p>
     {% endif %}
