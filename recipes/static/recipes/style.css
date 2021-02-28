@@ -78,17 +78,17 @@ body {
 
 /* Mobile */
 #platypus-category-listings {
-    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    display: flex;
 }
 
 /* Desktop */
 @media only screen and (min-width: 1200px) {
     #platypus-category-listings {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        display: flex;
     }
 }
 
