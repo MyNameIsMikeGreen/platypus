@@ -14,7 +14,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/PTk0vjL/IMG-20200508-151701.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536361/Ice%20Cream/IMG_20200508_151701_bgwpkt.jpg",
       "recipe": 1,
       "relative_order": 0
     }
@@ -23,7 +23,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/F3PWn9J/IMG-20200524-163158.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536350/Ice%20Cream/IMG_20200524_163158_txr8z4.jpg",
       "recipe": 1,
       "relative_order": 1
     }
@@ -32,7 +32,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/1ZLsDQb/IMG-20200507-172926.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536348/Ice%20Cream/IMG_20200507_172926_coqr5s.jpg",
       "recipe": 1,
       "relative_order": 2
     }
@@ -41,7 +41,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/VTBCR79/IMG-20200523-112753.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536121/Ice%20Cream/IMG_20200523_112753_kdmmnb.jpg",
       "recipe": 1,
       "relative_order": 3
     }
@@ -64,7 +64,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/rwwJVpT/IMG-20200614-184003.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536458/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_184003_g4togj.jpg",
       "recipe": 2,
       "relative_order": 0
     }
@@ -73,7 +73,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/MhBkTB1/IMG-20200614-174149.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536466/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_174149_zjc76v.jpg",
       "recipe": 2,
       "relative_order": 1
     }
@@ -82,7 +82,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/ggL4ztk/IMG-20200614-180927.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536445/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_180927_ytxyjj.jpg",
       "recipe": 2,
       "relative_order": 2
     }
@@ -91,7 +91,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/rKPWwWx/IMG-20200614-183628.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536472/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_183628_v9o5ym.jpg",
       "recipe": 2,
       "relative_order": 3
     }
@@ -114,7 +114,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/kghpSnW/IMG-20200522-180159.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536644/Ricotta%20Gnocchi/IMG_20200522_180159_mkrwva.jpg",
       "recipe": 3,
       "relative_order": 0
     }
@@ -123,7 +123,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/G7b2wDs/IMG-20200522-173239.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536670/Ricotta%20Gnocchi/IMG_20200522_173239_ytorr6.jpg",
       "recipe": 3,
       "relative_order": 1
     }
@@ -132,7 +132,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/6XSVDm4/IMG-20200522-174206.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536643/Ricotta%20Gnocchi/IMG_20200522_174206_vmmtgt.jpg",
       "recipe": 3,
       "relative_order": 2
     }
@@ -141,7 +141,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/CJ8CLKF/IMG-20200522-174703.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536691/Ricotta%20Gnocchi/IMG_20200522_174703_m2htox.jpg",
       "recipe": 3,
       "relative_order": 3
     }
@@ -164,7 +164,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/wK8sRTQ/IMG-20200416-202427.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536264/Chicken%20and%20Mushroom%20Pie/IMG_20200416_202427_poadnb.jpg",
       "recipe": 4,
       "relative_order": 0
     }
@@ -173,7 +173,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/f0nM95y/IMG-20200416-192148.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536258/Chicken%20and%20Mushroom%20Pie/IMG_20200416_192148_vl56is.jpg",
       "recipe": 4,
       "relative_order": 0
     }
@@ -182,7 +182,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/M5WxNqy/IMG-20200416-194432.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536255/Chicken%20and%20Mushroom%20Pie/IMG_20200416_194432_vghtji.jpg",
       "recipe": 4,
       "relative_order": 0
     }
@@ -205,7 +205,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/HnHt6DQ/IMG-20200414-214957.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536141/Beef%20Casserole/IMG_20200414_214957_jj7fbj.jpg",
       "recipe": 5,
       "relative_order": 0
     }
@@ -214,7 +214,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/ynpdv5k/IMG-20200414-182356.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536141/Beef%20Casserole/IMG_20200414_182356_se2afb.jpg",
       "recipe": 5,
       "relative_order": 1
     }
@@ -223,7 +223,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/hCCFzhc/IMG-20200414-183432.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536156/Beef%20Casserole/IMG_20200414_183432_ubawvb.jpg",
       "recipe": 5,
       "relative_order": 2
     }
@@ -246,7 +246,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/fFqBHhZ/IMG-20200101-184943.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536492/Liver%20and%20Chorizo%20on%20Toast/IMG_20200101_184943_n6cfqp.jpg",
       "recipe": 6,
       "relative_order": 0
     }
@@ -269,7 +269,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/SPXMPnp/IMG-20200304-172821.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536737/Sticky%20BBQ%20Chicken/IMG_20200304_172821_cehpze.jpg",
       "recipe": 7,
       "relative_order": 0
     }
@@ -278,7 +278,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/nCHSKcg/IMG-20200304-162245.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536731/Sticky%20BBQ%20Chicken/IMG_20200304_162245_frgphf.jpg",
       "recipe": 7,
       "relative_order": 1
     }
@@ -301,7 +301,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/wJ4kkY3/IMG-20200305-212637.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536377/Italian%20Crackslaw/IMG_20200305_212637_letkko.jpg",
       "recipe": 8,
       "relative_order": 0
     }
@@ -310,7 +310,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/qr9GG7M/IMG-20181005-191810.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536377/Italian%20Crackslaw/IMG_20181005_191810_gbvadi.jpg",
       "recipe": 8,
       "relative_order": 1
     }
@@ -319,7 +319,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/kD0nWYN/IMG-20200305-211852.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536358/Italian%20Crackslaw/IMG_20200305_211852_qc6c9c.jpg",
       "recipe": 8,
       "relative_order": 2
     }
@@ -342,7 +342,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/z4DYStZ/IMG-20190424-181451.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536350/Eggs%20in%20Purgatory/IMG_20190424_181451_i8mrb1.jpg",
       "recipe": 9,
       "relative_order": 0
     }
@@ -365,7 +365,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/jgbpWP4/IMG-20200616-180654.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536226/Cast%20Iron%20Pizza/IMG_20200616_180654_wdngp2.jpg",
       "recipe": 10,
       "relative_order": 0
     }
@@ -374,7 +374,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/tHkf68L/IMG-20200214-184613.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536209/Cast%20Iron%20Pizza/IMG_20200214_184613_ujm350.jpg",
       "recipe": 10,
       "relative_order": 1
     }
@@ -383,7 +383,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/cxv4T6h/IMG-20200616-173645.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536218/Cast%20Iron%20Pizza/IMG_20200616_173645_v3wjws.jpg",
       "recipe": 10,
       "relative_order": 2
     }
@@ -392,7 +392,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/YB5Bbhq/IMG-20200616-174916.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536240/Cast%20Iron%20Pizza/IMG_20200616_174916_wurrhm.jpg",
       "recipe": 10,
       "relative_order": 3
     }
@@ -415,7 +415,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/KLGcZKN/IMG-20200310-184938.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536120/Bacon%20and%20Leek%20Tart/IMG_20200310_184938_bszjjm.jpg",
       "recipe": 11,
       "relative_order": 0
     }
@@ -438,7 +438,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/wKXh2jj/IMG-20200325-160834.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536302/Cookies/IMG_20200325_160834_mcryri.jpg",
       "recipe": 12,
       "relative_order": 0
     }
@@ -447,7 +447,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/rbjfGn2/IMG-20200325-154429.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536302/Cookies/IMG_20200325_154429_dldhzg.jpg",
       "recipe": 12,
       "relative_order": 1
     }
@@ -456,7 +456,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/52VZJbb/IMG-20200325-160606.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536310/Cookies/IMG_20200325_160606_vpdep9.jpg",
       "recipe": 12,
       "relative_order": 2
     }
@@ -479,7 +479,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/88wwJYF/IMG-20200405-182002.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536184/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_182002_ru8ibq.jpg",
       "recipe": 13,
       "relative_order": 0
     }
@@ -488,7 +488,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/QrR353M/IMG-20200405-162346.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536189/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_162346_yybigv.jpg",
       "recipe": 13,
       "relative_order": 1
     }
@@ -497,7 +497,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/n1LZsSs/IMG-20200405-162821.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536175/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_162821_hwdyvq.jpg",
       "recipe": 13,
       "relative_order": 2
     }
@@ -506,7 +506,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/BzGbNYJ/IMG-20200405-165822.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536196/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_165822_iekb8i.jpg",
       "recipe": 13,
       "relative_order": 3
     }
@@ -529,7 +529,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/h8Mv1C2/IMG-20200709-191950.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536781/Turkey%20and%20Chickpea%20Burgers/IMG_20200709_191950_b71tkm.jpg",
       "recipe": 14,
       "relative_order": 0
     }
@@ -552,7 +552,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/8sPcB8j/IMG-20200820-182251.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536596/Pork%20Belly%20Braise/IMG_20200820_182251_eqp0ei.jpg",
       "recipe": 15,
       "relative_order": 0
     }
@@ -561,7 +561,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/k8TSDq7/IMG-20200704-160740.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536589/Pork%20Belly%20Braise/IMG_20200704_160740_w5xfax.jpg",
       "recipe": 15,
       "relative_order": 1
     }
@@ -570,7 +570,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/qnkkTD4/IMG-20200704-161917.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536594/Pork%20Belly%20Braise/IMG_20200704_161917_aqoujj.jpg",
       "recipe": 15,
       "relative_order": 2
     }
@@ -593,7 +593,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/4WQ43fw/IMG-20200701-220943.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Thai%20Green%20Fish%20Curry/IMG_20200701_220943_ql5mwu.jpg",
       "recipe": 16,
       "relative_order": 0
     }
@@ -616,7 +616,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/74ZNLnt/IMG-20200625-190620.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Toad%20in%20the%20Hole/IMG_20200625_190620_ceypzl.jpg",
       "recipe": 17,
       "relative_order": 0
     }
@@ -630,7 +630,7 @@
     "fields": {
       "title": "Pork Belly Bao",
       "ingredients": "10g Ginger;2 Chillies;2 Garlic Cloves;1 Orange;1l Chicken Stock;1 Cinnamon Stick;2 Star Anise;1kg Pork Belly;500g Plain Flour;50g Caster Sugar;1 Teaspoon Salt;1 Teaspoon Baking Powder;1 Teaspoon Dried Yeast;150ml Water;100ml Milk;50ml Double Cream;3 Tablespoons Vegetable Oil;1 Tablespoon Sesame Oil;4 Tablespoons Honey;2 Tablespoons Light Soy Sauce;1 Tablespoon Rice Wine Vinegar;2 Tablespoons Sesame Seeds",
-      "method": "Deseed (If desired) and slice the chillies.;Peel and slice the ginger.;Crush the garlic.;Quarter the orange.;To a very large saucepan - add the chillies, ginger, orange, garlic, star anise, cinnamon, chicken stock, and pork belly.;Cover and simmer as low as possible for 2 hours.;After 30 minutes of simmering, mix together the flour, yeast, salt, baking powder, sugar, water, milk, and cream until it forms a dough.;Knead the dough for 10 minutes.;Form dough into a ball.;Oil the dough ball and its container lightly.;Let dough prove for 1 hour.;Separate dough into 75g balls.;Roll each miniature ball into an oval.;Lightly oil the side facing up and fold over on itself.;Let uncooked buns prove for 20 more minutes.;Meanwhile, remove pork from broth.;Chop pork into bitesized pieces.;Lightly fry the pork in an oiled frying pan until browned.;Remove any excessive oil in the pan.;Add honey, soy sauce, rice wine vinegar, and 100ml of the broth.;Cook until the pork mixture reaches a saucy consistency.;Arrange three bao buns onto a small plate lined with baking paper in a single layer.;Place plate into broth saucepan atop a tall bowl.;Steam buns in the saucepan for 20 minutes.;Repeat the steaming process for remaining buns.;Fill buns with pork and sprinkle filling with sesame seeds to serve.",
+      "method": "De-seed (If desired) and slice the chillies.;Peel and slice the ginger.;Crush the garlic.;Quarter the orange.;To a very large saucepan - add the chillies, ginger, orange, garlic, star anise, cinnamon, chicken stock, and pork belly.;Cover and simmer as low as possible for 2 hours.;After 30 minutes of simmering, mix together the flour, yeast, salt, baking powder, sugar, water, milk, and cream until it forms a dough.;Knead the dough for 10 minutes.;Form dough into a ball.;Oil the dough ball and its container lightly.;Let dough prove for 1 hour.;Separate dough into 75g balls.;Roll each miniature ball into an oval.;Lightly oil the side facing up and fold over on itself.;Let uncooked buns prove for 20 more minutes.;Meanwhile, remove pork from broth.;Chop pork into bitesized pieces.;Lightly fry the pork in an oiled frying pan until browned.;Remove any excessive oil in the pan.;Add honey, soy sauce, rice wine vinegar, and 100ml of the broth.;Cook until the pork mixture reaches a saucy consistency.;Arrange three bao buns onto a small plate lined with baking paper in a single layer.;Place plate into broth saucepan atop a tall bowl.;Steam buns in the saucepan for 20 minutes.;Repeat the steaming process for remaining buns.;Fill buns with pork and sprinkle filling with sesame seeds to serve.",
       "category": "MAINS",
       "published_date": "2020-07-13"
     }
@@ -639,7 +639,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/RHRpGFs/IMG-20200613-204914.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536562/Pork%20Belly%20Bao/IMG_20200613_204914_lgsb4c.jpg",
       "recipe": 18,
       "relative_order": 0
     }
@@ -648,7 +648,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/wdbx4TT/IMG-20200613-173330.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536593/Pork%20Belly%20Bao/IMG_20200613_173330_lwhbgu.jpg",
       "recipe": 18,
       "relative_order": 1
     }
@@ -657,7 +657,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/p2HsDTS/IMG-20200613-200054.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536563/Pork%20Belly%20Bao/IMG_20200613_200054_ruwnyi.jpg",
       "recipe": 18,
       "relative_order": 2
     }
@@ -666,7 +666,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/TkVHX8g/IMG-20200613-180139.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536555/Pork%20Belly%20Bao/IMG_20200613_180139_wq3it8.jpg",
       "recipe": 18,
       "relative_order": 3
     }
@@ -675,7 +675,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/BLPVcrw/IMG-20200613-195641.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536552/Pork%20Belly%20Bao/IMG_20200613_195641_ikmcmx.jpg",
       "recipe": 18,
       "relative_order": 4
     }
@@ -684,7 +684,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/nf84VSd/IMG-20200613-203034.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536565/Pork%20Belly%20Bao/IMG_20200613_203034_ks5wuq.jpg",
       "recipe": 18,
       "relative_order": 5
     }
@@ -693,7 +693,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/zQ1vSHv/IMG-20200613-204247.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536554/Pork%20Belly%20Bao/IMG_20200613_204247_a9n1hx.jpg",
       "recipe": 18,
       "relative_order": 6
     }
@@ -716,7 +716,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/hyVk75H/IMG-20200531-140456.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536404/Italian%20Stuff%20on%20Toasted%20Bread/IMG_20200531_140456_ikrzou.jpg",
       "recipe": 19,
       "relative_order": 0
     }
@@ -739,7 +739,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/wW49Y8d/IMG-20200721-180642.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536284/Chicken%20Kebab/IMG_20200721_180642_bg8bnd.jpg",
       "recipe": 20,
       "relative_order": 0
     }
@@ -748,7 +748,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/26NrZD9/IMG-20200721-171850.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536272/Chicken%20Kebab/IMG_20200721_171850_yc5xpt.jpg",
       "recipe": 20,
       "relative_order": 1
     }
@@ -757,7 +757,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/nQ03FmB/IMG-20200721-172825.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536279/Chicken%20Kebab/IMG_20200721_172825_azfya3.jpg",
       "recipe": 20,
       "relative_order": 2
     }
@@ -780,7 +780,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/YyzFwXq/IMG-20200730-193131.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536130/Basic%20Curry/IMG_20200730_193131_odt2zu.jpg",
       "recipe": 21,
       "relative_order": 0
     }
@@ -789,7 +789,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/9pFZ8Xs/IMG-20200730-192552.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536131/Basic%20Curry/IMG_20200730_192552_tbubkd.jpg",
       "recipe": 21,
       "relative_order": 1
     }
@@ -812,7 +812,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/9tyYyZy/IMG-20200808-132418.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536774/Vegetarian%20Duck%20Pancakes/IMG_20200808_132418_toxsoh.jpg",
       "recipe": 22,
       "relative_order": 0
     }
@@ -821,7 +821,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/72G70Xd/IMG-20200808-125655.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536774/Vegetarian%20Duck%20Pancakes/IMG_20200808_125655_niihwb.jpg",
       "recipe": 22,
       "relative_order": 1
     }
@@ -844,7 +844,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/vY1KqbD/IMG-20200807-202542.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536238/Chicken%20and%20Bacon%20Cheesy%20Pasta/IMG_20200807_202542_m85rpp.jpg",
       "recipe": 23,
       "relative_order": 0
     }
@@ -853,7 +853,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/4KVkxJW/IMG-20200807-200925.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536242/Chicken%20and%20Bacon%20Cheesy%20Pasta/IMG_20200807_200925_lic2z4.jpg",
       "recipe": 23,
       "relative_order": 1
     }
@@ -876,7 +876,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/1Gzh20Y/IMG-20200818-124415.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536312/Cornflake%20Cakes/IMG_20200818_124415_jhscjx.jpg",
       "recipe": 24,
       "relative_order": 0
     }
@@ -899,7 +899,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/bWCWdR1/IMG-20201010-195901.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536109/Aubergine%20Bake/IMG-20201010-195901_fkm1bl.jpg",
       "recipe": 25,
       "relative_order": 0
     }
@@ -908,7 +908,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/DkdCQF6/IMG-20200708-191615.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536103/Aubergine%20Bake/IMG-20200708-191615_j6dwyh.jpg",
       "recipe": 25,
       "relative_order": 1
     }
@@ -931,7 +931,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/9g0ZbbF/IMG-20200524-211344.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536476/Lasagne/IMG_20200524_211344_hyvgpt.jpg",
       "recipe": 26,
       "relative_order": 0
     }
@@ -940,7 +940,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/VvLGN9j/IMG-20200524-200439.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536472/Lasagne/IMG_20200524_200439_tgkfxj.jpg",
       "recipe": 26,
       "relative_order": 1
     }
@@ -949,7 +949,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/d07gF8z/IMG-20200524-202637.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536483/Lasagne/IMG_20200524_202637_a3lbmg.jpg",
       "recipe": 26,
       "relative_order": 2
     }
@@ -972,7 +972,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/0yqcV6R/IMG-20200415-185938.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536151/Cast%20Iron%20Giant%20Cookie/IMG_20200415_185938_qqvcvf.jpg",
       "recipe": 27,
       "relative_order": 0
     }
@@ -981,7 +981,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/CsGNSJQ/IMG-20200415-182009.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536158/Cast%20Iron%20Giant%20Cookie/IMG_20200415_182009_rrxasy.jpg",
       "recipe": 27,
       "relative_order": 1
     }
@@ -1004,7 +1004,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/6DV4LND/IMG-20200826-204351.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536289/Chicken%20Stock/IMG_20200826_204351_rje5ap.jpg",
       "recipe": 28,
       "relative_order": 0
     }
@@ -1027,7 +1027,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/yRRVpWX/IMG-20200910-174655.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536429/Korean%20Stir-Fried%20Chicken/IMG_20200910_174655_sx3c2a.jpg",
       "recipe": 29,
       "relative_order": 0
     }
@@ -1036,7 +1036,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/T0kCJ3R/IMG-20200910-164445.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536439/Korean%20Stir-Fried%20Chicken/IMG_20200910_164445_a0ph8o.jpg",
       "recipe": 29,
       "relative_order": 1
     }
@@ -1045,7 +1045,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/XVnr4kY/IMG-20200910-174207.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536431/Korean%20Stir-Fried%20Chicken/IMG_20200910_174207_vpwzl2.jpg",
       "recipe": 29,
       "relative_order": 2
     }
@@ -1068,7 +1068,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/rfsnp92/IMG-20200910-122116.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536428/Kimchi%20Pancake/IMG_20200910_122116_lp8h4g.jpg",
       "recipe": 30,
       "relative_order": 0
     }
@@ -1091,7 +1091,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/K27Tm7V/IMG-20200830-190006.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536347/Harissa%20Sea%20Bass%20with%20Griddled%20Vegetables/IMG_20200830_190006_mxca8s.jpg",
       "recipe": 31,
       "relative_order": 0
     }
@@ -1114,7 +1114,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/bNPs5Vy/IMG-20200315-124354.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536681/Rosti/IMG_20200315_124354_ereefv.jpg",
       "recipe": 32,
       "relative_order": 0
     }
@@ -1123,7 +1123,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/RTqpWRY/IMG-20200315-122526.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536678/Rosti/IMG_20200315_122526_d6ot2e.jpg",
       "recipe": 32,
       "relative_order": 1
     }
@@ -1146,7 +1146,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/hgD1D9n/IMG-20200403-194354.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536408/Italian%20Meatballs%20and%20Sauce/IMG_20200403_194354_xvxfii.jpg",
       "recipe": 33,
       "relative_order": 0
     }
@@ -1155,7 +1155,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/RS7P16d/IMG-20200403-181327.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536447/Italian%20Meatballs%20and%20Sauce/IMG_20200403_181327_w7m3pp.jpg",
       "recipe": 33,
       "relative_order": 1
     }
@@ -1164,7 +1164,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/VCzmTCq/IMG-20200403-190749.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536388/Italian%20Meatballs%20and%20Sauce/IMG_20200403_190749_hlipni.jpg",
       "recipe": 33,
       "relative_order": 2
     }
@@ -1173,7 +1173,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/CtFBVZP/IMG-20200403-191651.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536389/Italian%20Meatballs%20and%20Sauce/IMG_20200403_191651_wcosto.jpg",
       "recipe": 33,
       "relative_order": 3
     }
@@ -1196,7 +1196,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/17xvtgj/IMG-20200405-212344.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536511/Lamb%20and%20Apricot%20Tagine/IMG_20200405_212344_plqutc.jpg",
       "recipe": 34,
       "relative_order": 0
     }
@@ -1219,7 +1219,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/4RyddNV/IMG-20200417-184138.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536715/Sourdough%20Starter%20Crumpet/IMG_20200417_184138_vruwfx.jpg",
       "recipe": 35,
       "relative_order": 0
     }
@@ -1242,7 +1242,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/DQvY022/IMG-20201011-123904.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536534/Peach%20Galette/IMG_20201011_123904_lqyav2.jpg",
       "recipe": 36,
       "relative_order": 0
     }
@@ -1251,7 +1251,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/WFSmR42/IMG-20201010-204255.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536557/Peach%20Galette/IMG_20201010_204255_mba6jz.jpg",
       "recipe": 36,
       "relative_order": 1
     }
@@ -1260,7 +1260,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/MSZZZvv/IMG-20201010-215153.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536528/Peach%20Galette/IMG_20201010_215153_qzz9g2.jpg",
       "recipe": 36,
       "relative_order": 2
     }
@@ -1269,7 +1269,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/vmT9YYt/IMG-20201010-224356.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536543/Peach%20Galette/IMG_20201010_224356_dgmqd3.jpg",
       "recipe": 36,
       "relative_order": 3
     }
@@ -1292,7 +1292,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/BG80rjf/IMG-20200927-154653.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536620/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_154653_hioa9i.jpg",
       "recipe": 37,
       "relative_order": 0
     }
@@ -1301,7 +1301,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/MggYrg4/IMG-20200927-150503.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536623/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_150503_gi2wkp.jpg",
       "recipe": 37,
       "relative_order": 1
     }
@@ -1310,7 +1310,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/d65LTg6/IMG-20200927-151046.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536618/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_151046_wrbe9f.jpg",
       "recipe": 37,
       "relative_order": 2
     }
@@ -1319,7 +1319,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/6X0G8kH/IMG-20200927-153541.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536619/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_153541_dxvngr.jpg",
       "recipe": 37,
       "relative_order": 3
     }
@@ -1342,7 +1342,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/rwx2rvM/IMG-20200928-183503.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536728/Schnitzel/IMG_20200928_183503_c7ol48.jpg",
       "recipe": 38,
       "relative_order": 0
     }
@@ -1351,7 +1351,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/d2jwYXN/IMG-20200928-182955.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536690/Schnitzel/IMG_20200928_182955_bmnqgi.jpg",
       "recipe": 38,
       "relative_order": 1
     }
@@ -1374,7 +1374,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/8bxj63d/IMG-20201122-194329.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536696/Seasoned%20Sushi%20Rice/IMG_20201122_194329_qhwp0q.jpg",
       "recipe": 39,
       "relative_order": 0
     }
@@ -1383,7 +1383,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/fNqhh77/IMG-20201122-195712.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536703/Seasoned%20Sushi%20Rice/IMG_20201122_195712_ijfd3f.jpg",
       "recipe": 39,
       "relative_order": 1
     }
@@ -1406,7 +1406,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/9p6D31S/IMG-20201122-192700.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536421/Japanese%20Mayonnaise%20Substitute/IMG_20201122_192700_ge65f9.jpg",
       "recipe": 40,
       "relative_order": 0
     }
@@ -1415,7 +1415,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/XkgtQzP/IMG-20201122-195250.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536411/Japanese%20Mayonnaise%20Substitute/IMG_20201122_195250_ia8xtz.jpg",
       "recipe": 40,
       "relative_order": 1
     }
@@ -1438,7 +1438,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/dpqYBGW/IMG-20201125-195147.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536513/Orange%20Lamb%20Stir-Fry/IMG_20201125_195147_nqsxsq.jpg",
       "recipe": 41,
       "relative_order": 0
     }
@@ -1461,7 +1461,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/yqVNdRR/IMG-20201206-203500.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536516/Pancakes/IMG_20201206_203500_favodh.jpg",
       "recipe": 42,
       "relative_order": 0
     }
@@ -1470,7 +1470,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/grN71Xn/IMG-20201206-203119.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536516/Pancakes/IMG_20201206_203119_cv1iw4.jpg",
       "recipe": 42,
       "relative_order": 1
     }
@@ -1493,7 +1493,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/8XvjWRx/IMG-20210118-201628.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536259/Chicken%20and%20Chorizo%20Traybake/IMG_20210118_201628_tgxj4m.jpg",
       "recipe": 43,
       "relative_order": 0
     }
@@ -1516,7 +1516,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/cNCWzWV/IMG-20210131-211538.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536333/Enchiladas/IMG_20210131_211538_mtmm3y.jpg",
       "recipe": 44,
       "relative_order": 0
     }
@@ -1525,7 +1525,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/1Zp4Jnn/IMG-20210131-205051.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536331/Enchiladas/IMG_20210131_205051_bxnfsy.jpg",
       "recipe": 44,
       "relative_order": 1
     }
@@ -1548,7 +1548,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/Z6DfsCB/IMG-20210125-200624.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536739/Spinach%20and%20Feta%20Pie/IMG_20210125_200624_wwoixu.jpg",
       "recipe": 45,
       "relative_order": 0
     }
@@ -1571,7 +1571,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/58LqYGY/IMG-20210207-202407.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536609/Pork%20Larb/IMG_20210207_202407_ntcjgy.jpg",
       "recipe": 46,
       "relative_order": 0
     }
@@ -1594,7 +1594,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/5LrXPsv/IMG-20210219-215425.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536509/Oatmeal%20Raisin%20Cookies/IMG_20210219_215425_p88hkf.jpg",
       "recipe": 47,
       "relative_order": 0
     }
@@ -1603,7 +1603,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/C5Q3YKc/IMG-20210219-212505.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536497/Oatmeal%20Raisin%20Cookies/IMG_20210219_212505_mnqdum.jpg",
       "recipe": 47,
       "relative_order": 1
     }
@@ -1626,7 +1626,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/9qg6gMT/IMG-20210224-202755.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536132/Baguette%20Pizza/IMG_20210224_202755_ahdpbs.jpg",
       "recipe": 48,
       "relative_order": 0
     }
@@ -1649,7 +1649,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/frn9SvC/IMG-20210227-135826.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_135826_emwh9g.jpg",
       "recipe": 49,
       "relative_order": 0
     }
@@ -1658,7 +1658,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://i.ibb.co/WxYsC9c/IMG-20210227-134351.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_134351_virp31.jpg",
       "recipe": 49,
       "relative_order": 1
     }
