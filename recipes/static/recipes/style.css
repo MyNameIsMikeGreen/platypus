@@ -17,9 +17,22 @@ a {
 }
 
 #platypus-title-text {
+    flex: 1;
+    display: flex;
+}
+
+#platypus-title-text-main {
     font-size: 50px;
     font-weight: bolder;
     flex: 1;
+}
+
+#platypus-title-text-additional {
+    font-size: 13px;
+    font-weight: normal;
+    flex: 10;
+    flex-basis: min-content;
+    align-self: flex-end;
 }
 
 #platypus-navigation-buttons {

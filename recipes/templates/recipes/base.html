@@ -45,7 +45,12 @@
     <body>
         <div id="platypus-header">
             <div id="platypus-title-text">
-                <a href="{% url 'recipes:index' %}">Platypus</a>
+                <div id="platypus-title-text-main">
+                    <a href="{% url 'recipes:index' %}">Platypus</a>
+                </div>
+                <div id="platypus-title-text-additional">
+                    by <a href="https://MikeGreen.net">Mike Green</a>
+                </div>
             </div>
             <div id="platypus-navigation-buttons">
                 <a href="{% url 'recipes:index' %}">Recipes</a>
