@@ -1662,6 +1662,38 @@
       "recipe": 49,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 50,
+    "fields": {
+      "title": "Tuna Pasta Bake",
+      "ingredients": "350g Pasta;3 Tins (~300g) Tuna Chunks;150g Sweetcorn;50g Butter;50g Plain Flour;500ml Milk;300g Cheddar Cheese;1 Tablespoon Pepper",
+      "method": "Cook pasta.;Melt butter in saucepan.;Add flour.;Whisk together, on heat, for ~3 minutes.;Slowly add milk while whisking.;Grate cheese.;Add 1/2 of cheese to sauce.;Mix together all ingredients except for remaining cheese.;Add mixture to baking dish.;Sprinkle remaining cheese over mixture.;Bake at 200C for ~20 minutes.",
+      "category": "MAINS",
+      "published_date": "2021-03-02"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614681708/Tuna%20Pasta%20Bake/IMG_20210301_185010_o87rc4.jpg",
+      "recipe": 50,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614681708/Tuna%20Pasta%20Bake/IMG_20210301_181323_uluhoz.jpg",
+      "recipe": 50,
+      "relative_order": 1
+    }
   }
 ]
 
