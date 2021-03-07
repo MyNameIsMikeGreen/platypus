@@ -342,7 +342,7 @@
     "model": "recipes.recipeimage",
     "pk": null,
     "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536350/Eggs%20in%20Purgatory/IMG_20190424_181451_i8mrb1.jpg",
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615158316/Eggs%20in%20Purgatory/IMG_20210307_184032_whcdqh.jpg",
       "recipe": 9,
       "relative_order": 0
     }
@@ -804,7 +804,7 @@
       "title": "Vegetarian Duck Pancakes",
       "ingredients": "1 Tin (~400g) Jackfruit;4 Spring Onions;1/2 Cucumber;2 Teaspoons Chinese Five Spice;2 Teaspoons Rice Wine Vinegar;3 Garlic Cloves;3 Tablespoons Soy Sauce;2 Teaspoons Sesame Oil;~5 Chinese Pancakes;3 Tablespoons Hoisin Sauce (Plus more to serve)",
       "method": "Drain jackfruit.;Slice 2 of the spring onions.;Lightly fry the spring onions and garlic.;Add in jackfruit, five spice, sesame oil, rice wine vinegar, and hoisin sauce.;Continue to cook for ~10 minutes whilst breaking up jackfruit.;Lay jackfruit mixture flat on a baking tray and cook in the oven for 20 minutes at 200C.;While jackfruit is in the oven, slice cucumber and remaining spring onions into sticks.",
-      "category": "MAINS",
+      "category": "LIGHT DISHES",
       "published_date": "2020-08-12"
     }
   },
