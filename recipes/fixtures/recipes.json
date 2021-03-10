@@ -1694,6 +1694,56 @@
       "recipe": 50,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 51,
+    "fields": {
+      "title": "Chocolate Coconut Tart",
+      "ingredients": "180g Plain Flour;140g Caster Sugar;170g Coconut Oil;250ml Coconut Cream;200g Chocolate;1 Tablespoon Honey;1 Teaspoon Vanilla Extract;1/2 Teaspoon Salt",
+      "method": "Mix together flour, sugar, salt, and coconut oil into a breadcrumb texture.;Line a tart pan with mixture.;Blind bake crust at 180C for 25 minutes.;Let crust cool.;Add all remaining ingredients except for the chocolate into a microwavable container.;Add enough chocolate such that the total volume reaches 500ml.;Gently heat the mixture in the microwave until chocolate melts fully.;Stir ganache.;Pour ganache into crust and let cool fully before serving.",
+      "category": "CONFECTIONERY",
+      "published_date": "2021-03-10"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_195138_rnb416.jpg",
+      "recipe": 51,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_155525_nhlfnp.jpg",
+      "recipe": 51,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_170344_fqqza9.jpg",
+      "recipe": 51,
+      "relative_order": 2
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398510/Chocolate%20Coconut%20Tart/IMG_20210303_194702_fvtsjj.jpg",
+      "recipe": 51,
+      "relative_order": 3
+    }
   }
 ]
 
