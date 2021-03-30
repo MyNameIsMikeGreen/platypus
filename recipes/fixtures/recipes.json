@@ -1817,8 +1817,8 @@
     "pk": 54,
     "fields": {
       "title": "Calzone",
-      "ingredients": "200g Strong Flour;~150ml Milk/Water;5g Yeast;2 Teaspoons Salt;3 Garlic Cloves;25g Butter;200g Passata;1 Tablespoon Oregano;1 Tablespoon Basil;2 Teaspoons Olive Oil;1 Teaspoon Sugar;75g Mozzarella;Fillings of Choice",
-      "method": "Knead together flour, milk/water, 1 teaspoon salt, and yeast.;Let dough rise for 4-6 hours.;Mix together passata, 1 garlic clove; oregano, basil, 1 teaspoon salt, sugar, and olive oil.;Reduce sauce until slightly thickened.;Shape dough into a circle.;Spread a layer of sauce over all of the dough.;Arrange fillings on half of the dough.;Top fillings with cheese and more sauce.;Fold dough over fillings and seal.;Transfer to baking vessel.;Bake at maximum oven temperature for ~10 minutes.;Melt butter.;Mince garlic.;Mix together butter and garlic.;Baste calzone with garlic butter.;Return to oven until golden brown.",
+      "ingredients": "200g Strong Flour;~150ml Milk/Water;5g Yeast;2 Teaspoons Salt;3 Garlic Cloves;25g Butter;200g Passata;1 Tablespoon Oregano;1 Tablespoon Basil;2 Teaspoons Olive Oil;2 Teaspoon Sugar;75g Mozzarella;Fillings of Choice",
+      "method": "Knead together flour, milk/water, 1 teaspoon salt, 1 teaspoon sugar, and yeast.;Let dough rise for 4-6 hours.;Mix together passata, 1 garlic clove; oregano, basil, 1 teaspoon salt, sugar, and olive oil.;Reduce sauce until slightly thickened.;Shape dough into a circle.;Spread a layer of sauce over all of the dough.;Arrange fillings on half of the dough.;Top fillings with cheese and more sauce.;Fold dough over fillings and seal.;Transfer to baking vessel.;Bake at maximum oven temperature for ~10 minutes.;Melt butter.;Mince garlic.;Mix together butter and garlic.;Baste calzone with garlic butter.;Return to oven until golden brown.",
       "category": "MAINS",
       "published_date": "2021-03-30"
     }
@@ -1839,6 +1839,29 @@
       "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_200800_n3zqx1.jpg",
       "recipe": 54,
       "relative_order": 1
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 55,
+    "fields": {
+      "title": "Apple Galette",
+      "ingredients": "200g Strong Flour;~150ml Milk;5g Yeast;1 Teaspoons Salt;4 Golden Delicious Apples;5g Sugar;6 Tablespoons Sugar;25g Butter;100g Apricot Jam",
+      "method": "Knead together flour, milk/water, 1 teaspoon sugar, 1 teaspoon salt, and yeast.;Let dough rise for 4-6 hours.;Peel, core, and slice apples.;Line baking tray with baking paper.;Sprinkle ~2 tablespoons of sugar evenly across the paper.;Spread dough out to the size of the baking tray.;Arrange apples across dough.;Sprinkle with remaining sugar.;Sprinkle with cinnamon.;Distribute chunks of butter across galette.;Bake at 190C for 30 minutes.;Glaze with apricot jam.",
+      "category": "CONFECTIONERY",
+      "published_date": "2021-03-30"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617144570/Apple%20Galette/IMG_20210327_212652_cu0jkm.jpg",
+      "recipe": 55,
+      "relative_order": 0
     }
   }
 ]
