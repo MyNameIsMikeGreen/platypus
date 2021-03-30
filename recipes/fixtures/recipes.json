@@ -1776,6 +1776,70 @@
       "recipe": 52,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 53,
+    "fields": {
+      "title": "Burritos",
+      "ingredients": "4 Tortillas;100g Rice;1 Pepper;1 Onion;100g Kidney Beans;100g Cheddar Cheese;100g Salsa;100g Guacamole;100g Sour Cream;Meat Filling of Choice (e.g. Pulled Pork/Chicken, Spiced Mince Beef);1 Tablespoon Fajita Seasoning;20ml Lime Juice",
+      "method": "Cook rice.;Stir in lime juice.;Slice onion and pepper.;Grate cheese.;Fry onions and peppers until browned.;Season onions and peppers with fajita seasoning.;Lay down four squares of foil.;Microwave tortillas for ~20 seconds.;Lay one tortilla on each of the foil squares.;Add all ingredients to tortilla.;Wrap up burrito.;Repeat for all burritos.;Place burritos on a baking tray.;Bake at 180C for ~20 minutes.",
+      "category": "MAINS",
+      "published_date": "2021-03-30"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617140707/Burritos/IMG_20210328_201713_a9fuva.jpg",
+      "recipe": 53,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617140707/Burritos/IMG_20210328_192647_xnkcat.jpg",
+      "recipe": 53,
+      "relative_order": 1
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 54,
+    "fields": {
+      "title": "Calzone",
+      "ingredients": "200g Strong Flour;~150ml Milk/Water;5g Yeast;2 Teaspoons Salt;3 Garlic Cloves;25g Butter;200g Passata;1 Tablespoon Oregano;1 Tablespoon Basil;2 Teaspoons Olive Oil;1 Teaspoon Sugar;75g Mozzarella;Fillings of Choice",
+      "method": "Knead together flour, milk/water, 1 teaspoon salt, and yeast.;Let dough rise for 4-6 hours.;Mix together passata, 1 garlic clove; oregano, basil, 1 teaspoon salt, sugar, and olive oil.;Reduce sauce until slightly thickened.;Shape dough into a circle.;Spread a layer of sauce over all of the dough.;Arrange fillings on half of the dough.;Top fillings with cheese and more sauce.;Fold dough over fillings and seal.;Transfer to baking vessel.;Bake at maximum oven temperature for ~10 minutes.;Melt butter.;Mince garlic.;Mix together butter and garlic.;Baste calzone with garlic butter.;Return to oven until golden brown.",
+      "category": "MAINS",
+      "published_date": "2021-03-30"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_204325_cdk8pv.jpg",
+      "recipe": 54,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_200800_n3zqx1.jpg",
+      "recipe": 54,
+      "relative_order": 1
+    }
   }
 ]
 
