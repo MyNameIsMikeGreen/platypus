@@ -1863,6 +1863,38 @@
       "recipe": 55,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 56,
+    "fields": {
+      "title": "Banana Bread",
+      "ingredients": "1 Very Ripe Banana;75g Plain Flour;75g Caster Sugar;50g Butter;1 Egg;1 Tablespoon Milk;1/2 Teaspoon Bicarbonate of Soda;1/2 Teaspoon Baking Powder",
+      "method": "Grease loaf tin.;Line loaf tin with baking paper.;Soften butter in microwave for ~5 seconds.;Mash banana in a mixing bowl.;Add all other ingredients to bowl.;Thoroughly mix together all ingredients.;Bake at 140C for 45 minutes.",
+      "category": "CONFECTIONERY",
+      "published_date": "2021-04-03"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_194253_wa5kb7.jpg",
+      "recipe": 56,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_191204_gwqztm.jpg",
+      "recipe": 56,
+      "relative_order": 1
+    }
   }
 ]
 
