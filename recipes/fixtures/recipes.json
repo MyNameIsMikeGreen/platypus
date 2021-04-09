@@ -1895,6 +1895,56 @@
       "recipe": 56,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 57,
+    "fields": {
+      "title": "Chocolate Chilli",
+      "ingredients": "500g Beef Mince;2 Peppers;1 Brown Onion;2-3 Red Chillies;2 Garlic Cloves;400g Kidney Beans;800g Chopped Tomatoes;60g Dark Chocolate;2 Teaspoons Paprika;2 Teaspoons Cumin;2 Teaspoons Oregano;1 Teaspoon Sugar;1 Tablespoon Coriander Leaf",
+      "method": "Finely chop onion, pepper, chilli, and garlic.;Fry mince in casserole dish.;Remove mince from dish.;Fry chopped ingredients in leftover beef fat.;Reintroduce beef alongside cumin, paprika, oregano, sugar, drained kidney beans, and chopped tomatoes.;Simmer with lid ajar for ~30 minutes until thickened.;Add chocolate and coriander.;Stir once chocolate melted.",
+      "category": "MAINS",
+      "published_date": "2021-04-09"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211915_setbmo.jpg",
+      "recipe": 57,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_202058_q0uiq8.jpg",
+      "recipe": 57,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_203132_uqjj9y.jpg",
+      "recipe": 57,
+      "relative_order": 2
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211707_cz9kdu.jpg",
+      "recipe": 57,
+      "relative_order": 3
+    }
   }
 ]
 
