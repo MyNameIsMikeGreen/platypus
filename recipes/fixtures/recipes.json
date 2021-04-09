@@ -1904,8 +1904,8 @@
     "pk": 57,
     "fields": {
       "title": "Chocolate Chilli",
-      "ingredients": "500g Beef Mince;2 Peppers;1 Brown Onion;2-3 Red Chillies;2 Garlic Cloves;400g Kidney Beans;800g Chopped Tomatoes;60g Dark Chocolate;2 Teaspoons Paprika;2 Teaspoons Cumin;2 Teaspoons Oregano;1 Teaspoon Sugar;1 Tablespoon Coriander Leaf",
-      "method": "Finely chop onion, pepper, chilli, and garlic.;Fry mince in casserole dish.;Remove mince from dish.;Fry chopped ingredients in leftover beef fat.;Reintroduce beef alongside cumin, paprika, oregano, sugar, drained kidney beans, and chopped tomatoes.;Simmer with lid ajar for ~30 minutes until thickened.;Add chocolate and coriander.;Stir once chocolate melted.",
+      "ingredients": "500g Beef Mince;2 Peppers;1 Brown Onion;2-3 Red Chillies;2 Garlic Cloves;400g Kidney Beans;800g Chopped Tomatoes;60g Dark Chocolate;2 Teaspoons Paprika;2 Teaspoons Cumin;2 Teaspoons Oregano;1 Teaspoon Sugar;1 Tablespoon Coriander Leaf; Salt and Pepper (To Taste)",
+      "method": "Finely chop onion, pepper, chilli, and garlic.;Fry mince in casserole dish.;Remove mince from dish.;Fry chopped ingredients in leftover beef fat.;Reintroduce beef alongside cumin, paprika, oregano, sugar, drained kidney beans, and chopped tomatoes.;Simmer with lid ajar for ~30 minutes until thickened.;Add chocolate and coriander.;Stir once chocolate melted.;Add salt and pepper to taste.",
       "category": "MAINS",
       "published_date": "2021-04-09"
     }
@@ -1944,6 +1944,38 @@
       "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211707_cz9kdu.jpg",
       "recipe": 57,
       "relative_order": 3
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 58,
+    "fields": {
+      "title": "Grilled Cheese",
+      "ingredients": "2 Slices Sandwich Bread;50g Cheddar Cheese;1 Teaspoon Garlic Powder;1 Teaspoon Paprika;1 Tablespoon Mayonnaise;10g Butter;1/2 Teaspoon Pepper",
+      "method": "Grate cheese.;Spread mayonnaise across entirely of one side of each slice of bread.;Flip one slice upside-down.;Arrange cheese on dry side of flipped bread.;Sprinkle garlic powder, paprika, and pepper evenly across cheese.;Top with other slice of bread so that both mayonnaise sides are facing outwards.;Melt butter in a frying pan.;Fry each side until golden brown.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-04-09"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988429/Grilled%20Cheese/IMG_20210409_124747_s5wmp1.jpg",
+      "recipe": 58,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988428/Grilled%20Cheese/IMG_20210409_124706_lnmozl.jpg",
+      "recipe": 58,
+      "relative_order": 1
     }
   }
 ]
