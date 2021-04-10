@@ -163,5 +163,17 @@ class AboutViewTest(TestCase):
         self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 0, "json-ld block not in HTML")
 
 
+class Http404Test(TestCase):
+    def test_missing_page_returns_custom_404_view(self):
+        response = client.get('/thisPageDoesNotExist/')
+        self.assertEqual(response.status_code, 404, msg="HTTP 404 returned")
+        self.assertTemplateUsed(response, '404.html')
+
+    def test_about_does_not_contain_json_ld_block(self):
+        response = client.get('/thisPageDoesNotExist/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 0, "json-ld block not in HTML")
+
+
 def _get_id_from_link(link: str):
     return int(link.strip().replace("/", ""))
