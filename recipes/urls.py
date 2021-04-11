@@ -16,6 +16,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('planner/', views.planner, name='planner'),
+    path('<int:recipe_id>/<str:slug>/', views.detail, name='detail_with_slug'),
     path('<int:recipe_id>/', views.detail, name='detail'),
     path('sitemap.xml', sitemap,
          {'sitemaps': {'blog': GenericSitemap(info_dict, changefreq="monthly")}},

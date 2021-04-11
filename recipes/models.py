@@ -6,6 +6,7 @@ UNCATEGORISED = "UNCATEGORISED"
 
 class Recipe(models.Model):
     title = models.CharField(max_length=128)
+    slug = models.CharField(max_length=256)
     ingredients = models.CharField(max_length=512)
     method = models.CharField(max_length=8192)
     category = models.CharField(
