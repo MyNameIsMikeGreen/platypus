@@ -39,24 +39,28 @@ class DetailWithFixturesTest(TestCase):
     fixtures = ['recipes.json']
 
     def test_details_returns_200_when_recipe_present(self):
-        response = client.get('/1/')
+        response = client.get('/1/ice-cream/')
         self.assertEqual(response.status_code, 200, msg="HTTP 200 returned")
         self.assertTemplateUsed(response, 'recipes/detail.html')
 
-    def test_details_without_trailing_slash_redirects(self):
-        response = client.get('/1')
-        self.assertRedirects(response, '/1/', status_code=301)
-
     def test_details_contains_json_ld_block(self):
-        response = client.get('/1/')
+        response = client.get('/1/ice-cream/')
         response_tree = html.fromstring(response.content.decode("utf-8"))
         self.assertEqual(len(response_tree.xpath('//head/script[@type="application/ld+json"]')), 1, "json-ld block in HTML")
+
+    def test_slug_appended_if_omitted(self):
+        response = client.get('/1/')
+        self.assertEqual(response.url, "/1/ice-cream/")
+
+    def test_slug_corrected_if_incorrect(self):
+        response = client.get('/1/spaghetti-cookies/')
+        self.assertEqual(response.url, "/1/ice-cream/")
 
 
 class DetailWithoutFixturesTest(TestCase):
 
     def test_details_returns_404_when_recipe_not_present(self):
-        response = client.get('/69/')
+        response = client.get('/99999999/')
         self.assertEqual(response.status_code, 404, msg="HTTP 404 returned")
 
 
