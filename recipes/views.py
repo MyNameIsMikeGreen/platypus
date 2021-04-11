@@ -1,6 +1,7 @@
 import random
 
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils.text import slugify
 
 from .models import Recipe, RecipeImage
 
@@ -35,9 +36,9 @@ def index(request):
 
 def detail(request, recipe_id, slug=None):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
-    if recipe.slug != slug:
-        print(recipe.slug)
-        return redirect("/" + str(recipe_id) + "/" + recipe.slug)
+    expected_slug = slugify(recipe.title)
+    if slug != expected_slug:
+        return redirect("/" + str(recipe_id) + "/" + expected_slug)
     ingredients_list = recipe.ingredients.split(BULLET_POINT_DELIMITER)
     method_list = recipe.method.split(BULLET_POINT_DELIMITER)
     image_url_list = [image.url for image in RecipeImage.objects.filter(recipe_id=recipe_id).order_by('relative_order')]
