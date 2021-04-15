@@ -1977,6 +1977,29 @@
       "recipe": 58,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 59,
+    "fields": {
+      "title": "Baked Salmon",
+      "ingredients": "2 Salmon Fillets;1 Teaspoon Lemon Juice;2 Teaspoons Olive Oil;1/2 Teaspoon Pepper",
+      "method": "Grease a sheet of foil with some of the olive oil.;Place salmon fillet on foil, skin-side down.;Drizzle fillet with lemon juice and remaining olive oil.;Sprinkle fillet with pepper.;Bake at 180C for 15 minutes.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-04-15"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618514889/Baked%20Salmon/IMG_20210415_184118_bxzu1a.jpg",
+      "recipe": 59,
+      "relative_order": 0
+    }
   }
 ]
 
