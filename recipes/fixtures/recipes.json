@@ -2000,6 +2000,28 @@
       "recipe": 59,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 60,
+    "fields": {
+      "title": "Burgers",
+      "ingredients": "500g Beef Mince;1/2 Onion;2 Garlic Cloves;50g Panko Breadcrumbs.;1 Egg;1 Teaspoon Oregano;1 Teaspoon Worcestershire Sauce;1 Teaspoon Salt;1 Teaspoon Pepper",
+      "method": "Finely dice onion.;Mince garlic.;Mix all ingredients together in a large bowl.;Form into burgers.;Cook in a frying pan until browned on both sides (~10 minutes).",
+      "category": "MAINS",
+      "published_date": "2021-04-17"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618643467/Burgers/IMG_20200508_204728_ajek1v.jpg",
+      "recipe": 60,
+      "relative_order": 0
+    }
   }
 ]
-
