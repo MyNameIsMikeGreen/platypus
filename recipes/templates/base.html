@@ -61,6 +61,7 @@
         <div id="platypus-content">
             {% block content %}{% endblock content %}
         </div>
-        <footer> <small>&#169; Copyright 2020-2021 Mike Green</small> </footer>
+        <footer><small>&#169;</small></footer>
+        <script>document.querySelector('footer small').append(` Copyright 2020-${new Date().getFullYear()} Mike Green`);</script>
     </body>
 </html>
