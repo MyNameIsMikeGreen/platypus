@@ -46,3 +46,5 @@ Launch the server:
 ./run.sh
 ```
 
+# Contributing
+If you wish to contribute to Platypus, please see the [Contributing Guidelines](CONTRIBUTING.md).
