@@ -2023,5 +2023,28 @@
       "recipe": 60,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 61,
+    "fields": {
+      "title": "Tuna Pasta",
+      "ingredients": "300g Pasta;2 Tins (~200g) Tuna Chunks;200g Sweetcorn;150g Salad Cream;Pepper (To Taste)",
+      "method": "Cook pasta.;Leave pasta to cool for 4-5 minutes.;Mix all ingredients.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-04-19"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618857925/Tuna%20Pasta/IMG_20210419_185437_rloopa.jpg",
+      "recipe": 61,
+      "relative_order": 0
+    }
   }
 ]
