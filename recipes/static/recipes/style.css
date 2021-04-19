@@ -84,6 +84,10 @@ a {
     margin-top: 0px;
 }
 
+#under-development-flag-container {
+    display: inline;
+}
+
 body {
     font-family: "Karma", sans-serif;
     background-color: beige;

@@ -13,7 +13,7 @@
                 {% if recipe.final %}
                     <h1>{{ recipe.title }}</h1>
                 {% else %}
-                    <h1>&#x26A0; {{ recipe.title }}</h1>
+                    <h1><div id="under-development-flag-container" title="Recipe Under Development">&#x26A0;</div> {{ recipe.title }}</h1>
                 {% endif %}
                 <h2>Ingredients</h2>
                 <ul>
