@@ -5,12 +5,16 @@
         <div id="details-content">
             <div id="recipe-images">
                 {% for image_url in image_url_list %}
-                    <a href="{{ image_url }}"><img src="{{ image_url }}" alt="{{ recipe.title }}"></a>
+                    <a href="{{ image_url }}"><img src="{{ image_url }}" alt="{{ recipe.title }}" /></a>
                 {% endfor %}
             </div>
 
             <div id="text-content">
-                <h1>{{ recipe.title }}</h1>
+                {% if recipe.final %}
+                    <h1>{{ recipe.title }}</h1>
+                {% else %}
+                    <h1><div id="under-development-flag-container" title="Recipe Under Development">&#x26A0;</div> {{ recipe.title }}</h1>
+                {% endif %}
                 <h2>Ingredients</h2>
                 <ul>
                     {% for ingredient_item in ingredients_list %}
