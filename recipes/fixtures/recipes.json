@@ -355,7 +355,7 @@
     "pk": 10,
     "fields": {
       "title": "Cast Iron Pizza",
-      "ingredients": "300g(?) Flour (Ideally Strong);200ml(?) Lukewarm Water;1 Sachet Dried Yeast;1/2 Teaspoon Salt;1/2 Tablespoon Sugar;4 Tablespoons Pizza Sauce (Ideally Homemade);150g Mozzarella (Ideally Low-Moisture);50-100g Cheddar Cheese;Toppings of Choice",
+      "ingredients": "150g Flour (Ideally Strong);100ml Lukewarm Water;4g Dried Yeast;1/2 Teaspoon Salt;1 Teaspoon Sugar;4 Tablespoons Pizza Sauce (Ideally Homemade);150g Mozzarella (Ideally Low-Moisture);50-100g Cheddar Cheese;Toppings of Choice",
       "method": "Dissolve sugar into water.;Add yeast and to water, leave to bloom.;If bloomed, continue. Else, retry with new yeast.;Mix salt into flour.;Add water mixture to flour.;Mix together until no clumps remain.;Leave for flour to hydrate for 15 minutes.;Knead dough for about 10 minutes and form into a ball.;Lightly cover dough in olive oil and leave in an oiled bowl to rise at room temperate until doubled in size or overnight in the fridge.;Place dough into a cold and oiled cast iron pan and lightly stretch out.;Let rest then continue stretching.;Repeat resting and stretching until the dough holds to the shape of the pan.;If using high-moisture mozzarella, drain and press between kitchen paper until drier.;Grate/chop cheeses.;Prepare toppings as appropriate;Spread pizza sauce over dough.;Arrange toppings onto dough.;Sprinkle cheeses over dough.;Put pan on medium-high heat on hob until base becomes firm (About 3-5 minutes).;Place into oven heated as high as possible for 10-15 minutes.",
       "category": "MAINS",
       "published_date": "2020-06-20"
@@ -609,7 +609,8 @@
       "ingredients": "12 Chipolatas;140g Plain Flour;2 Eggs;175ml Milk;1/2 Teaspoon Salt",
       "method": "Cook sausages in an oiled ceramic rectangular baking dish in a 200C oven for 15 minutes.;While cooking, whisk together flour, eggs, milk, and salt.;Immediately from the oven, pour the batter evenly over the sausages.;Return to the oven for a further 25 minutes.",
       "category": "MAINS",
-      "published_date": "2020-07-13"
+      "published_date": "2020-07-13",
+      "final": false
     }
   },
   {
@@ -869,7 +870,8 @@
       "ingredients": "150g Cornflakes;200g Chocolate;2 Tablespoons Golden Syrup;50g Butter;Toppings",
       "method": "Combine and melt the chocolate, golden syrup, and butter in a double boiler.;Gently stir in cornflakes.;Fill cupcake cases with mixture.;Add toppings.",
       "category": "CONFECTIONERY",
-      "published_date": "2020-08-27"
+      "published_date": "2020-08-27",
+      "final": false
     }
   },
   {
@@ -892,7 +894,8 @@
       "ingredients": "1 Aubergine;250g Passata;150g Fresh Mozzarella;100g Cherry Tomatoes;2 Tablespoons Green Pesto;1 Pepper;2 Tablespoons Double Cream;1 Tablespoon Balsamic Vinegar;3 Tablespoons Olive Oil;1 Tablespoon Dried Basil;1 Tablespoon Parsley;1 Tablespoon Thyme",
       "method": "In a large baking dish, mix together the passata, pesto, cream, vinegar, herbs, and half of the olive oil.;Cut the tips off of the aubergine and halve length-ways.;Cut 3 v-shaped slits across each aubergine half.;Place aubergine into the dish.;Stuff the slits with slices of mozzarella and slices of pepper.;Drizzle aubergine with remaining olive oil.;Add halved cherry tomatoes around the aubergine.;Bake at 180C for ~30 minutes.;Eat as-is or serve on toasted bread.",
       "category": "MAINS",
-      "published_date": "2020-08-27"
+      "published_date": "2020-08-27",
+      "final": false
     }
   },
   {
@@ -1399,7 +1402,8 @@
       "ingredients": "200g Mayonnaise;2 Tablespoons Rice Wine Vinegar;1 Tablespoon Caster Sugar;MSG (Optional / To Taste)",
       "method": "Mix all ingredients together thoroughly.",
       "category": "MISCELLANEOUS",
-      "published_date": "2020-11-25"
+      "published_date": "2020-11-25",
+      "final": false
     }
   },
   {
@@ -1756,7 +1760,8 @@
       "ingredients": "500g 10-15% Fat Minced Beef;1 Onion;1 Egg;3 Garlic Cloves;120g Ketchup;3 Tablespoons Parsley;45g Panko Breadcrumbs;75ml Milk;2 Teaspoons Salt;2 Teaspoons Oregano;2 Teaspoons Basil;1 Teaspoon Pepper;1 Teaspoon White Wine Vinegar;2 Tablespoons Brown Sugar;1 Teaspoon Garlic Powder;1 Teaspoon Onion Powder",
       "method": "Finely dice onion and garlic.;Mix together mince, onion, garlic, egg, parsley, panko, milk, oregano, basil, 1/2 teaspoon pepper, 1.5 teaspoons salt, and 100g ketchup.;Press mixture into a loaf tin lined with baking paper.;Bake at 200C for 40 minutes.;Mix together all remaining ingredients.;Glaze top of meatloaf with sauce.;Return to oven for 15 additional minutes.",
       "category": "MAINS",
-      "published_date": "2021-03-26"
+      "published_date": "2021-03-26",
+      "final": false
     }
   },
   {
@@ -1852,7 +1857,8 @@
       "ingredients": "200g Strong Flour;~150ml Milk;5g Yeast;1 Teaspoons Salt;4 Golden Delicious Apples;5g Sugar;6 Tablespoons Sugar;25g Butter;100g Apricot Jam",
       "method": "Knead together flour, milk/water, 1 teaspoon sugar, 1 teaspoon salt, and yeast.;Let dough rise for 4-6 hours.;Peel, core, and slice apples.;Line baking tray with baking paper.;Sprinkle ~2 tablespoons of sugar evenly across the paper.;Spread dough out to the size of the baking tray.;Arrange apples across dough.;Sprinkle with remaining sugar.;Sprinkle with cinnamon.;Distribute chunks of butter across galette.;Bake at 190C for 30 minutes.;Glaze with apricot jam.",
       "category": "CONFECTIONERY",
-      "published_date": "2021-03-30"
+      "published_date": "2021-03-30",
+      "final": false
     }
   },
   {
@@ -2012,7 +2018,8 @@
       "ingredients": "500g Beef Mince;1/2 Onion;2 Garlic Cloves;50g Panko Breadcrumbs.;1 Egg;1 Teaspoon Oregano;1 Teaspoon Worcestershire Sauce;1 Teaspoon Salt;1 Teaspoon Pepper",
       "method": "Finely dice onion.;Mince garlic.;Mix all ingredients together in a large bowl.;Form into burgers.;Cook in a frying pan until browned on both sides (~10 minutes).",
       "category": "MAINS",
-      "published_date": "2021-04-17"
+      "published_date": "2021-04-17",
+      "final": false
     }
   },
   {

@@ -13,6 +13,7 @@ class Recipe(models.Model):
         default=UNCATEGORISED,
     )
     published_date = models.DateField(auto_now=True)
+    final = models.BooleanField(default=True)
 
     def get_absolute_url(self):
         return reverse('recipes:detail', args=[str(self.id)])

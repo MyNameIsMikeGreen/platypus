@@ -36,7 +36,7 @@ class IndexViewWithoutFixturesTest(TestCase):
 
 class DetailWithFixturesTest(TestCase):
 
-    fixtures = ['recipes.json']
+    fixtures = ['recipes.json', 'test_recipes.json']
 
     def test_details_returns_200_when_recipe_present(self):
         response = client.get('/1/ice-cream/')
@@ -55,6 +55,16 @@ class DetailWithFixturesTest(TestCase):
     def test_slug_corrected_if_incorrect(self):
         response = client.get('/1/spaghetti-cookies/')
         self.assertEqual(response.url, "/1/ice-cream/")
+
+    def test_under_development_icon_shown_when_final_flag_false(self):
+        response = client.get('/6969/some-recipe-title/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertIn("⚠", response_tree.xpath('//h1')[0].text_content(), "Under development icon is shown")
+
+    def test_icon_not_shown_when_final_flag_true(self):
+        response = client.get('/1/ice-cream/')
+        response_tree = html.fromstring(response.content.decode("utf-8"))
+        self.assertNotIn("&#x26A0;", response_tree.xpath('//h1')[0].text_content(), "Under development icon is not shown")
 
 
 class DetailWithoutFixturesTest(TestCase):

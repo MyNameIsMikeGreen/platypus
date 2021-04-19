@@ -1,0 +1,14 @@
+[
+  {
+    "model": "recipes.recipe",
+    "pk": 6969,
+    "fields": {
+      "title": "Some recipe title",
+      "ingredients": "100g Toilet Paper;50g Custard;Salt and Pepper (To Taste)",
+      "method": "Throw all ingredients into a volcano.;Wait 2-3 years.;Forget what you were trying to do.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-04-19",
+      "final": false
+    }
+  }
+]
