@@ -2053,5 +2053,38 @@
       "recipe": 61,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 62,
+    "fields": {
+      "title": "Custard",
+      "ingredients": "350ml Milk;30g Caster Sugar;2 Egg Yolks;1 Teaspoon Vanilla Extract;1/2 Teaspoon Cornflour",
+      "method": "In a saucepan, mix together egg yolks, sugar, cornflour, and vanilla extract.;Gently heat milk until barely steaming.;Slowly stream milk into saucepan whilst constantly whisking.;Once all milk incorporated, heat custard gently on hob whilst whisking.",
+      "category": "MISCELLANEOUS",
+      "published_date": "2021-04-20",
+      "final": false
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_190810_uecq7c.jpg",
+      "recipe": 62,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_185138_xfad45.jpg",
+      "recipe": 62,
+      "relative_order": 1
+    }
   }
 ]
