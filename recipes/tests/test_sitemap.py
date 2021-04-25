@@ -10,7 +10,7 @@ SITEMAP_SCHEMA = "http://www.sitemaps.org/schemas/sitemap/0.9"
 client = Client()
 
 
-class IndexViewWithFixturesTest(TestCase):
+class SitemapTest(TestCase):
 
     fixtures = ['recipes.json']
 
