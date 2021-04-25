@@ -19,6 +19,6 @@ urlpatterns = [
     path('<int:recipe_id>/<str:slug>/', views.detail, name='detail_with_slug'),
     path('<int:recipe_id>/', views.detail, name='detail'),
     path('sitemap.xml', sitemap,
-         {'sitemaps': {'blog': GenericSitemap(info_dict, changefreq="monthly")}},
+         {'sitemaps': {'blog': GenericSitemap(info_dict, changefreq="monthly", protocol="https")}},
          name='django.contrib.sitemaps.views.sitemap'),
 ]
