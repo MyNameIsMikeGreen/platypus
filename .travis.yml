@@ -1,11 +1,5 @@
 language: python
 env:
-  - DJANGO=3.1.7
-  - DB_HOST=test.mynameismikegreen.co.uk
-  - DB_NAME=testdb
-  - DB_USER=testuser
-  - DB_PASSWORD=testpw
-  - DEBUG=True
-  - SECRET_KEY=testkey
+  - DJANGO=3.1.7 DB_HOST=test.mynameismikegreen.co.uk DB_NAME=testdb DB_USER=testuser DB_PASSWORD=testpw DEBUG=True SECRET_KEY=testkey
 install: pip install -r requirements.txt
 before_script: python manage.py test
