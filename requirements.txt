@@ -1,8 +1,8 @@
 django~=3.2
-gunicorn
-psycopg2
-django_heroku
-dj-database-url
+gunicorn~=20.0.4
+psycopg2~=2.8.6
+django_heroku~=0.3.1
+dj-database-url~=0.5.0
 testcontainers[postgres]~=3.4.0
-sqlalchemy
+sqlalchemy~=1.4.3
 lxml~=4.6.3
