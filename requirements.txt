@@ -3,6 +3,6 @@ gunicorn
 psycopg2
 django_heroku
 dj-database-url
-testcontainers[postgres]~=3.1.0
+testcontainers[postgres]~=3.4.0
 sqlalchemy
 lxml~=4.6.3
