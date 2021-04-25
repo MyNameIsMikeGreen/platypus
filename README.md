@@ -1,5 +1,6 @@
 Platypus
 ========
+[![Build Status](https://travis-ci.com/MyNameIsMikeGreen/platypus.svg?branch=master)](https://travis-ci.com/MyNameIsMikeGreen/platypus)
 
 Django web server providing Mike Green's recipes.
 
