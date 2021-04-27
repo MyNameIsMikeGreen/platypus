@@ -2086,5 +2086,37 @@
       "recipe": 62,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 63,
+    "fields": {
+      "title": "Spaghetti Bolognese",
+      "ingredients": "500g Beef Mince;500g Passata;1 Tin (400g) Chopped Tomatoes;2 Carrots;1 Onion;2 Garlic Cloves;1 Tablespoon Basil;1 Tablespoon Oregano;1 Teaspoon Thyme;1 Teaspoon Pepper;1 Teaspoon Salt",
+      "method": "Dice carrots.;Chop onions.;Chop garlic.;Fry mince and carrots.;Add onions and garlic.;Drain excess fat.;Add all remaining ingredients.;Simmer until thickened (~15 minutes).;If serving with pasta, add 2-3 tablespoons of pasta water.",
+      "category": "MAINS",
+      "published_date": "2021-04-27"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1619556179/Spaghetti%20Bolognese/IMG_20210427_200847_ka8ckz.jpg",
+      "recipe": 63,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1619556179/Spaghetti%20Bolognese/IMG_20210427_192709_fvqdjl.jpg",
+      "recipe": 63,
+      "relative_order": 1
+    }
   }
 ]
