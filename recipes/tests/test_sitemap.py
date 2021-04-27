@@ -26,7 +26,7 @@ class SitemapTest(TestCase):
         loc_elements = self._sitemap_loc_elements()
         self.assertGreater(len(loc_elements), 0, "loc elements are found")
         for url in loc_elements:
-            self.assertRegex(url.text, "^https://testserver/recipes/\d+/$", "URL matches expected format")
+            self.assertRegex(url.text, "^https://testserver/recipes/\d+/[a-z-]+/$", "URL matches expected format")
 
     def _sitemap_loc_elements(self):
         response = client.get('/sitemap.xml')

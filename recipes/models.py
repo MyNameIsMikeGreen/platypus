@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils.text import slugify
 
 UNCATEGORISED = "UNCATEGORISED"
 
@@ -16,7 +17,7 @@ class Recipe(models.Model):
     final = models.BooleanField(default=True)
 
     def get_absolute_url(self):
-        return reverse('recipes:detail', args=[str(self.id)])
+        return reverse('recipes:detail', args=[str(self.id)]) + f"{slugify(self.title)}/"
 
 
 class RecipeImage(models.Model):
