@@ -7,6 +7,8 @@
 
 <html>
     <head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         {% if recipe %}
             <title>{{ recipe.title }} | Platypus | Mike Green</title>
             <script type="application/ld+json">
@@ -61,6 +63,26 @@
         <div id="platypus-content">
             {% block content %}{% endblock content %}
         </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                $( "#recipe" ).autocomplete({
+                    source: "{% url 'recipes:autocomplete' %}",
+                    minLength: 1
+                });
+            } );
+        </script>
+        <label for="recipe">Recipe</label>
+        <input type="text" name="recipe" id="recipe">
+
+
+
+
         <footer><small>&#169;</small></footer>
         <script>document.querySelector('footer small').append(` Copyright 2020-${new Date().getFullYear()} Mike Green`);</script>
     </body>

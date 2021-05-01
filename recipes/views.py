@@ -1,5 +1,6 @@
 import random
 
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.text import slugify
 
@@ -70,3 +71,12 @@ def planner(request):
 
 def about(request):
     return render(request, 'recipes/about.html')
+
+
+def autocomplete(request):
+    titles = []
+    if "term" in request.GET:
+        matching_recipes = Recipe.objects.filter(title__istartswith=request.GET.get("term"))
+        for matching_recipe in matching_recipes:
+            titles.append(matching_recipe.title)
+    return JsonResponse(titles, safe=False)

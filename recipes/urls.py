@@ -17,5 +17,6 @@ urlpatterns = [
     path('planner/', views.planner, name='planner'),
     path('<int:recipe_id>/<str:slug>/', views.detail, name='detail_with_slug'),
     path('<int:recipe_id>/', views.detail, name='detail'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('autocomplete/', views.autocomplete, name='autocomplete'),
 ]
