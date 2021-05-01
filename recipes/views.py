@@ -17,7 +17,18 @@ def fixtures_are_loaded(categorised_recipe_lists: list):
 
 
 def index(request):
-    recipe_list = Recipe.objects.order_by('title')
+    search_term = request.GET.get('search_term')
+    if not search_term:
+        recipe_list = Recipe.objects.order_by('title')
+        return render_recipe_category_lists(recipe_list, request)
+    else:
+        recipes_matching_search_term = Recipe.objects.filter(title__icontains=search_term)
+        if len(recipes_matching_search_term) == 1:
+            return redirect('recipes:detail', recipes_matching_search_term[0].pk)
+        return render_recipe_category_lists(recipes_matching_search_term, request)
+
+
+def render_recipe_category_lists(recipe_list, request):
     categories = set([recipe.category for recipe in recipe_list])
     categorised_recipe_lists = []
     for category in categories:
@@ -27,11 +38,10 @@ def index(request):
         })
     categorised_recipe_lists.sort(key=lambda x: len(x["recipes"]), reverse=True)
     fixtures_loaded = fixtures_are_loaded(categorised_recipe_lists)
-
     context = {
         'categorised_recipe_lists': categorised_recipe_lists,
         'fixtures_loaded': fixtures_loaded,
-        'all_recipe_titles': [recipe.title for recipe in recipe_list]
+        'all_recipe_titles': [recipe.title for recipe in Recipe.objects.all()]
     }
     return render(request, 'recipes/index.html', context)
 
