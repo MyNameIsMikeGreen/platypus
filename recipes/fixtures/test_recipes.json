@@ -10,5 +10,17 @@
       "published_date": "2021-04-19",
       "final": false
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 6970,
+    "fields": {
+      "title": "Unique title 923y89234kljj9",
+      "ingredients": "10g Cheddar Cheese;4 Snails",
+      "method": "Cook it.",
+      "category": "MAINS",
+      "published_date": "2021-05-01",
+      "final": false
+    }
   }
 ]
