@@ -25,8 +25,16 @@ class SitemapTest(TestCase):
         self.assertEqual(len(recipe_loc_elements), recipe_count, "All recipes have an entry")
 
     def test_sitemap_has_entry_for_index_page(self):
-        recipe_loc_elements = self._sitemap_loc_elements(r"^https://testserver/recipes/$")
-        self.assertEqual(len(recipe_loc_elements), 1, "Index page has an entry")
+        index_loc_elements = self._sitemap_loc_elements(r"^https://testserver/$")
+        self.assertEqual(len(index_loc_elements), 1, "Index page has an entry")
+
+    def test_sitemap_has_entry_for_about_page(self):
+        about_loc_elements = self._sitemap_loc_elements(r"^https://testserver/about/$")
+        self.assertEqual(len(about_loc_elements), 1, "About page has an entry")
+
+    def test_sitemap_has_entry_for_planner_page(self):
+        planner_loc_elements = self._sitemap_loc_elements(r"^https://testserver/planner/$")
+        self.assertEqual(len(planner_loc_elements), 1, "Planner page has an entry")
 
     def _sitemap_loc_elements(self, regex=None):
         response = client.get('/sitemap.xml')
