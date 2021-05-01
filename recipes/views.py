@@ -1,6 +1,5 @@
 import random
 
-from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.text import slugify
 
@@ -24,7 +23,7 @@ def index(request):
     else:
         recipes_matching_search_term = Recipe.objects.filter(title__icontains=search_term)
         if len(recipes_matching_search_term) == 1:
-            return redirect('recipes:detail', recipes_matching_search_term[0].pk)
+            return redirect('recipes:detail', recipes_matching_search_term[0].pk, permanent=True)
         return render_recipe_category_lists(recipes_matching_search_term, request)
 
 
