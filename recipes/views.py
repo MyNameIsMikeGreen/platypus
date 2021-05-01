@@ -30,7 +30,8 @@ def index(request):
 
     context = {
         'categorised_recipe_lists': categorised_recipe_lists,
-        'fixtures_loaded': fixtures_loaded
+        'fixtures_loaded': fixtures_loaded,
+        'all_recipe_titles': [recipe.title for recipe in recipe_list]
     }
     return render(request, 'recipes/index.html', context)
 
@@ -71,12 +72,3 @@ def planner(request):
 
 def about(request):
     return render(request, 'recipes/about.html')
-
-
-def autocomplete(request):
-    titles = []
-    if "term" in request.GET:
-        matching_recipes = Recipe.objects.filter(title__istartswith=request.GET.get("term"))
-        for matching_recipe in matching_recipes:
-            titles.append(matching_recipe.title)
-    return JsonResponse(titles, safe=False)
