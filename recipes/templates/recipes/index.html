@@ -2,22 +2,24 @@
 
 {% block content %}
     {% if fixtures_loaded %}
-        <h1>Recipes</h1>
-        <div id="platypus-search_bar">
-            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-            <script>
-                $( function() {
-                    $( "#recipe-search-bar" ).autocomplete({
+        <div id="platypus-recipe-title-bar">
+            <h1>Recipes</h1>
+            <div id="platypus-search-bar">
+                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <script>
+                    $( function() {
+                        $( "#recipe-search-bar" ).autocomplete({
                         {% autoescape off %}source: {{ all_recipe_titles }},{% endautoescape %}
                         minLength: 1
                     });
-                } );
-            </script>
-            <form action="/recipes" method="get">
-                <input type="text" name="search_term" id="recipe-search-bar">
-                <input type="submit" value="Search">
-            </form>
+                    } );
+                </script>
+                <form action="/recipes" method="get">
+                    <input type="text" name="search_term" id="recipe-search-bar">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
         </div>
         <div id="platypus-category-listings">
             {% for categorised_recipe_list in categorised_recipe_lists %}
