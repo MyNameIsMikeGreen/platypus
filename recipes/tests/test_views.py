@@ -47,6 +47,12 @@ class IndexViewWithFixturesTest(TestCase):
         self.assertInHTML('<li><a href="/6970/">Unique title 923y89234kljj9</a></li>', response_body)
         self.assertNotIn('>Ice Cream</a>', response_body)
 
+    def test_index_with_search_term_param_matching_no_recipes_still_displays_search_bar(self):
+        response = client.get('/', {"search_term": "this search term is utter nonsense"})
+        response_body = response.content.decode(ENCODING)
+        self.assertInHTML('<p>No recipes are available.</p>', response_body)
+        self.assertInHTML('<input type="submit" value="Search">', response_body)
+
 
 class IndexViewWithoutFixturesTest(TestCase):
     def test_index_displays_error_when_no_recipes_present(self):

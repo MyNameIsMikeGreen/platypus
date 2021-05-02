@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if fixtures_loaded %}
         <div id="platypus-recipe-title-bar">
             <h1>Recipes</h1>
             <div id="platypus-search-form">
@@ -21,6 +20,7 @@
                 </form>
             </div>
         </div>
+    {% if fixtures_loaded %}
         <div id="platypus-category-listings">
             {% for categorised_recipe_list in categorised_recipe_lists %}
                 <div id="platypus-category-listing">
