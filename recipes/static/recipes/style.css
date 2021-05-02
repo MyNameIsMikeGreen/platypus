@@ -110,9 +110,13 @@ body {
     display: flex;
 }
 
-#platypus-search-bar {
+#platypus-search-form {
     align-self: center;
     padding-left: 30px;
+}
+
+#platypus-search-bar {
+    width: 250px;
 }
 
 footer {
