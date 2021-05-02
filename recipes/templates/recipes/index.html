@@ -4,19 +4,19 @@
     {% if fixtures_loaded %}
         <div id="platypus-recipe-title-bar">
             <h1>Recipes</h1>
-            <div id="platypus-search-bar">
+            <div id="platypus-search-form">
                 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
                 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
                 <script>
                     $( function() {
-                        $( "#recipe-search-bar" ).autocomplete({
+                        $( "#platypus-search-bar" ).autocomplete({
                         {% autoescape off %}source: {{ all_recipe_titles }},{% endautoescape %}
                         minLength: 1
                     });
                     } );
                 </script>
                 <form action="/recipes" method="get">
-                    <input type="text" name="search_term" id="recipe-search-bar">
+                    <input type="text" name="search_term" id="platypus-search-bar">
                     <input type="submit" value="Search">
                 </form>
             </div>
