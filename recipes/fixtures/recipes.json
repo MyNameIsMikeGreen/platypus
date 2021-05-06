@@ -2118,5 +2118,92 @@
       "recipe": 63,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 64,
+    "fields": {
+      "title": "Carrot Fritters",
+      "ingredients": "300g Carrots;2 Spring Onions;1 Egg;75g Plain Flour;2 Teaspoons Cumin Seeds;1 Teaspoon Pepper;1/2 Teaspoon Paprika;1/2 Teaspoon Salt",
+      "method": "Grate carrots.;Finely slice spring onions.;Mix together all ingredients.;Form into patties.;Fry until browned on each side.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-05-06"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320349/Carrot%20Fritters/IMG_20210505_124152_viluw0.jpg",
+      "recipe": 64,
+      "relative_order": 0
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 65,
+    "fields": {
+      "title": "Baked Feta and Tomato Pasta",
+      "ingredients": "200g Feta;300g Pasta;500g Cherry Tomatoes;3 Garlic Cloves;30g Fresh Basil;2 Tablespoons Olive Oil;Pepper (To Season)",
+      "method": "Peel garlic cloves.;Add garlic, tomatoes, feta, and olive oil to a baking dish.;Bake at 180C for 20 minutes.;Cook pasta.;Slice basil.;Remove baking dish from oven.;Add 100ml of pasta water to dish.;Drain pasta.;Mix together all ingredients.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-05-06"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320967/Baked%20Feta%20and%20Tomato%20Pasta/IMG_20210504_201837_ztvm9k.jpg",
+      "recipe": 65,
+      "relative_order": 0
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 66,
+    "fields": {
+      "title": "Black Bean Burgers",
+      "ingredients": "500g Black Beans (~2 Tins);1/2 Pepper;1/2 Brown Onion;3 Garlic Cloves;1.5 Teaspoons Cumin;1 Teaspoon Chilli Powder;1/2 Teaspoon Garlic Powder;1/2 Teaspoon Paprika;50g Breadcrumbs;2 Eggs;1 Tablespoon Worcestershire Sauce;2 Tablespoons Ketchup;1/2 Teaspoon Salt;1/2 Teaspoon Pepper",
+      "method": "Drain and dry beans.;Bake beans at 180C for 20 minutes.;Finely dice pepper, onion, and garlic.;Lightly fry pepper, onion, and garlic until softened.;Mix together all ingredients.;Form mixture into four patties.;Place patties onto a baking tray lined with baking paper.;Bake at 180C for 15 minutes.",
+      "category": "MAINS",
+      "published_date": "2021-05-06"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_190658_gtdoei.jpg",
+      "recipe": 66,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_182430_sreqok.jpg",
+      "recipe": 66,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_183913_zmvsth.jpg",
+      "recipe": 66,
+      "relative_order": 2
+    }
   }
 ]
