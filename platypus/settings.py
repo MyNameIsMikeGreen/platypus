@@ -134,4 +134,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 TEST_RUNNER = 'platypustestrunner.PlatypusTestRunner'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 django_heroku.settings(locals())
