@@ -2205,5 +2205,69 @@
       "recipe": 66,
       "relative_order": 2
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 67,
+    "fields": {
+      "title": "Falafel Wrap",
+      "ingredients": "4-5 Falafels;1 Tortilla;25g Houmous;25g Salad;2 Tablespoons Natural Yoghurt;1 Teaspoon Olive Oil;5g Fresh Mint;1/2 Teaspoon Pepper;1/4 Teaspoon Salt",
+      "method": "Prepare/heat falafel.;Spread houmous over middle of tortilla.;Lay salad over houmous.;Add falafel.;Tear mint leaves.;Mix together yoghurt, mint, olive oil, salt, and pepper.;Drizzle sauce over fillings.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-05-13"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Falafel%20Wrap/IMG_20210512_184928_rsp1e6.jpg",
+      "recipe": 67,
+      "relative_order": 0
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 68,
+    "fields": {
+      "title": "Korean Seabass",
+      "ingredients": "2 Seabass Fillets;2 Tablespoons Gochujang;2 Tablespoons Soy Sauce;1 Teaspoon Olive Oil;200ml Coconut Milk;1 Teaspoon Pepper",
+      "method": "Pat seabass dry with kitchen roll.;Marinate seabass with 1.5 tablespoons of gochujang and 1 tablespoon of soy sauce.;Optionally, refrigerate for up to 12 hours.;Mix together all other ingredients.;Fry for ~3 minutes on each side.;Add sauce to frying pan.;Cook for 3-5 minutes until sauce is hot.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-05-13"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_185134_qkanru.jpg",
+      "recipe": 68,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_183951_cgqzvb.jpg",
+      "recipe": 68,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_184642_wfgyu5.jpg",
+      "recipe": 68,
+      "relative_order": 2
+    }
   }
 ]
