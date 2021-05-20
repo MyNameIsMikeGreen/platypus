@@ -16,14 +16,25 @@
                     "@context": "https://schema.org/",
                     "@type": "Recipe",
                     "name": "{{recipe.title}}",
-                    {% if recipe %}
+                    {% if image_url_list %}
                     "image": [
                         "{{image_url_list|join:'", "'}}"
                     ],
                     {% endif %}
                     "author": {
                         "@type": "Person",
-                        "name": "Mike Green"
+                        "name": "Mike Green",
+                        "gender": "Male",
+                        "givenName": "Mike",
+                        "familyName": "Green",
+                        "jobTitle": "Software Engineer",
+                        "url": "https://MikeGreen.net/",
+                        "sameAs": [
+                            "https://MyNameIsMikeGreen.co.uk/",
+                            "https://github.com/MyNameIsMikeGreen",
+                            "https://uk.linkedin.com/in/MyNameIsMikeGreen"
+                        ],
+                        "nationality": "British"
                     },
                     "description": "{{recipe.title}}",
                     "keywords": "{{recipe.title}}",
