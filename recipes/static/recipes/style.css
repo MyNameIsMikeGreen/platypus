@@ -50,6 +50,10 @@ a {
         flex: 1;
     }
 
+    #recipe-images img {
+        width: 100%;
+    }
+
     /* Index */
 
     #platypus-category-listings {
@@ -106,6 +110,11 @@ a {
     #recipe-images {
         flex: 1;
         display: flex;
+        margin-bottom: 20px;
+    }
+
+    #recipe-images img {
+        width: 95%;
     }
 }
 
@@ -134,10 +143,6 @@ a {
 
 #platypus-content {
     margin: 40px;
-}
-
-#recipe-images img {
-    width: 100%;
 }
 
 #text-content {
