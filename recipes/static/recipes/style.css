@@ -39,6 +39,29 @@ a {
         align-self: flex-end;
     }
 
+    #platypus-navigation-buttons a {
+        text-decoration: none;
+        font-size: xx-large;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-right-width: 1px;
+        border-right-style: solid;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #platypus-recipe-title-bar {
+        display: flex;
+    }
+
+    #platypus-search-form {
+        padding-left: 30px;
+        align-self: center;
+        flex: 1;
+    }
+
     /* Details */
 
     #details-content {
@@ -99,6 +122,28 @@ a {
         align-self: center;
     }
 
+    #platypus-navigation-buttons a {
+        text-decoration: none;
+        font-size: x-large;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-right-width: 1px;
+        border-right-style: solid;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #platypus-recipe-title-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #platypus-search-form {
+        flex: 1;
+    }
+
     /* Details */
 
     #details-content {
@@ -121,19 +166,6 @@ a {
 #platypus-navigation-buttons {
     flex: 1;
     position: relative;
-}
-
-#platypus-navigation-buttons a {
-    text-decoration: none;
-    font-size: xx-large;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-right-width: 1px;
-    border-right-style: solid;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 #platypus-title-text a {
@@ -167,13 +199,8 @@ body {
     padding-right: 20px;
 }
 
-#platypus-recipe-title-bar {
-    display: flex;
-}
-
-#platypus-search-form {
-    align-self: center;
-    padding-left: 30px;
+#platypus-search-form h1 {
+    flex: 1;
 }
 
 #platypus-search-bar {
