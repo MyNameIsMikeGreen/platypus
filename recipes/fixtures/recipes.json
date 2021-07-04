@@ -2269,5 +2269,28 @@
       "recipe": 68,
       "relative_order": 2
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 69,
+    "fields": {
+      "title": "Sweet and Sour Sauce",
+      "ingredients": "4 Tablespoons Rice Wine Vinegar;2 Tablespoons Sugar;3 Tablespoons Ketchup;1 Teaspoon Soy Sauce",
+      "method": "Mix together in a saucepan.;Slowly heat until boiling.",
+      "category": "MISCELLANEOUS",
+      "published_date": "2021-07-04"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625431164/Sweet%20and%20Sour%20Sauce/IMG_20210625_185854_s5iffv.jpg",
+      "recipe": 69,
+      "relative_order": 0
+    }
   }
 ]
