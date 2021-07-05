@@ -2292,5 +2292,29 @@
       "recipe": 69,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 70,
+    "fields": {
+      "title": "Rock Cakes",
+      "ingredients": "225g Self-Raising Flour;75g Caster Sugar;1/2 Teaspoon Baking Powder;125g Butter;150g Raisins;1 Egg;1 Tablespoon Milk;2 Teaspoons Vanilla Extract;20g Granulated or Demerara Sugar",
+      "method": "Mix together flour, sugar, and baking powder.;Cut Butter into mixture.;Rub butter into mixture until it reaches a breadcrumb consistency.;Mix raisins into mixture.;Whisk together remaining ingredients.;Mix everything together.;Place golf-ball-sized dough balls onto a lined baking tray.;Sprinkle course-grained sugar over top.;Bake at 160C for 20 minutes.",
+      "category": "CONFECTIONERY",
+      "published_date": "2021-07-05",
+      "final": false
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625519213/Rock%20Cakes/IMG_20210705_202052_vr4unw.jpg",
+      "recipe": 70,
+      "relative_order": 0
+    }
   }
 ]
