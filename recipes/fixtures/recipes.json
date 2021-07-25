@@ -2316,5 +2316,46 @@
       "recipe": 70,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 71,
+    "fields": {
+      "title": "Katsu Curry",
+      "ingredients": "1 Chicken Breast;200g Rice;50g Plain Flour;2 Eggs;50g Panko Breadcrumbs;600ml Vegetable Stock;2 Brown Onions;3 Carrots;4 Garlic Cloves;4 Teaspoons Curry Powder;2 Teaspoons Garam Masala;2 Tablespoons Soy Sauce;1 Tablespoon Honey",
+      "method": "Cook rice.;Chop onions, carrots, and garlic.;Lightly fry chopped ingredients in a saucepan.;Add stock, curry powder, garam masala, soy sauce, honey, and 1 tablespoon of flour.;Simmer until thickened.;Blend.;Butterfly chicken breast.;Bread chicken.;Fry chicken for ~10 minutes.",
+      "category": "MAINS",
+      "published_date": "2021-07-25"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194628_xnd0lm.jpg",
+      "recipe": 71,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_185427_u6uuie.jpg",
+      "recipe": 71,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194536_pbugg5.jpg",
+      "recipe": 71,
+      "relative_order": 2
+    }
   }
 ]
