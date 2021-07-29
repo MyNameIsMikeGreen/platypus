@@ -355,7 +355,7 @@
     "pk": 10,
     "fields": {
       "title": "Cast Iron Pizza",
-      "ingredients": "150g Flour (Ideally Strong);100ml Lukewarm Water;4g Dried Yeast;1/2 Teaspoon Salt;1 Teaspoon Sugar;4 Tablespoons Pizza Sauce (Ideally Homemade);150g Mozzarella (Ideally Low-Moisture);50-100g Cheddar Cheese;Toppings of Choice",
+      "ingredients": "150g Strong Flour;100ml Lukewarm Water;4g Dried Yeast;1/2 Teaspoon Salt;1 Teaspoon Sugar;4 Tablespoons Pizza Sauce (Ideally Homemade);150g Mozzarella (Ideally Low-Moisture);50-100g Cheddar Cheese;Toppings of Choice",
       "method": "Dissolve sugar into water.;Add yeast and to water, leave to bloom.;If bloomed, continue. Else, retry with new yeast.;Mix salt into flour.;Add water mixture to flour.;Mix together until no clumps remain.;Leave for flour to hydrate for 15 minutes.;Knead dough for about 10 minutes and form into a ball.;Lightly cover dough in olive oil and leave in an oiled bowl to rise at room temperate until doubled in size or overnight in the fridge.;Place dough into a cold and oiled cast iron pan and lightly stretch out.;Let rest then continue stretching.;Repeat resting and stretching until the dough holds to the shape of the pan.;If using high-moisture mozzarella, drain and press between kitchen paper until drier.;Grate/chop cheeses.;Prepare toppings as appropriate;Spread pizza sauce over dough.;Arrange toppings onto dough.;Sprinkle cheeses over dough.;Put pan on medium-high heat on hob until base becomes firm (About 3-5 minutes).;Place into oven heated as high as possible for 10-15 minutes.",
       "category": "MAINS",
       "published_date": "2020-06-20"
@@ -2356,6 +2356,29 @@
       "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194536_pbugg5.jpg",
       "recipe": 71,
       "relative_order": 2
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 72,
+    "fields": {
+      "title": "Garlic Bread",
+      "ingredients": "150g Strong Flour;100ml Lukewarm Water;4g Dried Yeast;1/2 Teaspoon Salt;1 Teaspoon Sugar;50g Butter;1 Tablespoon Olive Oil;2 Teaspoons Garlic Powder;Finishing Salt (To Garnish)",
+      "method": "Mix together flour, yeast, salt, sugar and water.;Knead for ~10 minutes.;Flatten on a baking tray.;Bake at 200C for 10 minutes.;Melt butter.;Mix garlic powder and olive oil into butter.;Brush some butter mixture over bread.;Bake for a further 5 minutes.;Brush more butter mixture over bread.",
+      "category": "LIGHT DISHES",
+      "published_date": "2021-07-29"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627592714/Garlic%20Bread/IMG_20210726_123505_uygqdx.jpg",
+      "recipe": 72,
+      "relative_order": 0
     }
   }
 ]
