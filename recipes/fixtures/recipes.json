@@ -2380,5 +2380,73 @@
       "recipe": 72,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 73,
+    "fields": {
+      "title": "Baked Alaska",
+      "ingredients": "300g Caster Sugar;100g Butter;2 Eggs;100g Self-Raising Flour;1/2 Teaspoon Baking Powder;300g Ice Cream;4 Egg Whites",
+      "method": "Cream 200g caster sugar and butter.;Mix together butter mixture, eggs, flour, and baking powder.;Line and grease a cake tin.;Bake at 180C for ~20 minutes.;Cool sponge completely.;Whisk egg whites whilst slowly adding remaining sugar until stiff.;Arrange ice cream onto sponge, leaving a 2cm margin from the edge.;Encase the ice cream with meringue.;Leave in freezer for at least 2 hours.;Place on a lined baking tray.;Bake at 200C for ~10 minutes.",
+      "category": "CONFECTIONERY",
+      "published_date": "2021-07-29"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594245/Baked%20Alaska/IMG_20210620_194126_efpdlh.jpg",
+      "recipe": 73,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_112502_soblqp.jpg",
+      "recipe": 73,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_130506_p8ko1x.jpg",
+      "recipe": 73,
+      "relative_order": 2
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_130753_a4gluv.jpg",
+      "recipe": 73,
+      "relative_order": 3
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_192930_icemiy.jpg",
+      "recipe": 73,
+      "relative_order": 4
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_193854_k5crdd.jpg",
+      "recipe": 73,
+      "relative_order": 5
+    }
   }
 ]
