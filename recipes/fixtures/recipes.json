@@ -2448,5 +2448,29 @@
       "recipe": 73,
       "relative_order": 5
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 74,
+    "fields": {
+      "title": "Fajitas",
+      "ingredients": "4 Tortillas;500g Chicken Breast;100g Salad;100ml Sour Cream;100ml Salsa;100g Cheddar Cheese;2 Teaspoons Hot Chilli Powder;1 Tablespoon Smoked Paprika;1 Teaspoon Cumin;1 Teaspoon Garlic Powder;1 Teaspoon Ground Coriander;2 Teaspoons Oregano",
+      "method": "Cut chicken into strips.;Fry chicken until mostly cooked.;Mix spices together.;Add spices to chicken.;Continue to cook until fully cooked.;Grate cheese.;Microwave tortillas for ~15 seconds.;Arrange components onto tortillas.;Wrap.",
+      "category": "MAINS",
+      "published_date": "2021-07-30",
+      "final": false
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627645626/Fajitas/IMG_20210715_182133_ygqs1s.jpg",
+      "recipe": 74,
+      "relative_order": 0
+    }
   }
 ]
