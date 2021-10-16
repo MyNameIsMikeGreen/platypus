@@ -2618,5 +2618,28 @@
       "recipe": 78,
       "relative_order": 1
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 79,
+    "fields": {
+      "title": "Butternut Squash Risotto",
+      "ingredients": "1 Butternut Squash;2 Garlic Cloves;8 Spring Onions;25g Butter;200 Risotto Rice;2 Teaspoons Cumin;1L Vegetable Stock;Coriander Leaf (To Garnish)",
+      "method": "Peel and de-seed butternut squash.;Cut butternut squash into 2cm cubes.;Toss butternut squash in olive oil.;Arrange butternut squash in a single layer on baking trays.;Bake at 160C for 30 minutes.;Peel and crush garlic.;Slice spring onions.;Lightly fry rice, onions, and garlic in butter.;Add cumin.;Add stock in small quantities until rice cooked.;Add butternut squash.;Garnish with coriander leaf.",
+      "category": "MAINS",
+      "published_date": "2021-10-16"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634398745/Butternut%20Squash%20Risotto/IMG_20210909_181534_mk45mg.jpg",
+      "recipe": 79,
+      "relative_order": 0
+    }
   }
 ]
