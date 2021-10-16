@@ -2545,5 +2545,46 @@
       "recipe": 76,
       "relative_order": 0
     }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 77,
+    "fields": {
+      "title": "Korean Pork and Vegetables",
+      "ingredients": "500g Pork;150g Cabbage;1 Carrot;5 Spring Onions;1 Onion;4 Garlic Cloves;2 Teaspoons Sesame Oil;1 Tablespoon Sesame Seeds;2 Tablespoons Soy Sauce;250ml Water;1 Tablespoon Gochugaru;60ml Gochujang;1 Teaspoon Flour;1 Tablespoon Sugar;1/2 Teaspoon Pepper",
+      "method": "Place pork in freezer for about 2 hours.;Thinly slice pork.;Chop all vegetables.;Fry pork.;Fry vegetables.;Mix together all remaining ingredients into a sauce.;Add sauce.",
+      "category": "MAINS",
+      "published_date": "2021-10-16"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_174340_rydfbo.jpg",
+      "recipe": 77,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_171511_m1px8n.jpg",
+      "recipe": 77,
+      "relative_order": 1
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_172845_env8ct.jpg",
+      "recipe": 77,
+      "relative_order": 2
+    }
   }
 ]
