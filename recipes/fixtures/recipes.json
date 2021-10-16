@@ -429,7 +429,7 @@
     "fields": {
       "title": "Cookies",
       "ingredients": "100g Butter;60g Light Brown Sugar;60g Caster Sugar;1 Egg;150g Plain Flour;1 Teaspoon Vanilla Extract;Half Teaspoon Bicarbonate of Soda;Flavourings of Choice",
-      "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mis in sifted flour and bicarbonate of soda until consistent.;Prepare and mix in flavourings.;Spoon onto a baking tray lined with baking paper.;Bake at 160C for 10-15 minutes.;Cool on a wire rack.",
+      "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mix in sifted flour and bicarbonate of soda until consistent.;Prepare and mix in flavourings.;Spoon onto a baking tray lined with baking paper.;Bake at 160C for 10-15 minutes.;Cool on a wire rack.",
       "category": "CONFECTIONERY",
       "published_date": "2020-06-20"
     }
@@ -2585,6 +2585,38 @@
       "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_172845_env8ct.jpg",
       "recipe": 77,
       "relative_order": 2
+    }
+  },
+
+
+
+  {
+    "model": "recipes.recipe",
+    "pk": 78,
+    "fields": {
+      "title": "Chocolate Chip Cookie Cups",
+      "ingredients": "100g Butter;60g Light Brown Sugar;60g Caster Sugar;1 Egg;150g Plain Flour;1 Teaspoon Vanilla Extract;Half Teaspoon Bicarbonate of Soda;100g Chocolate;50g Chocolate Spread",
+      "method": "Soften butter in microwave for ~15 seconds.;Cream together butter and sugar.;Mix in egg and vanilla extract until smooth.;Mix in sifted flour and bicarbonate of soda until consistent.;Spoon mixture into ramekins until 1/4 full.;Spread a thick layer of chocolate spread on top.;Top with another layer of mixture until ramekin is 3/4 full.;Bake at 160C for 20-25 minutes.",
+      "category": "CONFECTIONERY",
+      "published_date": "2021-10-16"
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_213843_zfo1ua.jpg",
+      "recipe": 78,
+      "relative_order": 0
+    }
+  },
+  {
+    "model": "recipes.recipeimage",
+    "pk": null,
+    "fields": {
+      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_205704_klnkbg.jpg",
+      "recipe": 78,
+      "relative_order": 1
     }
   }
 ]
