@@ -77,6 +77,26 @@ a {
         width: 100%;
     }
 
+    #recipe-title-row {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #platypus-tag-list {
+        display: flex;
+        gap: 10px;
+    }
+
+    #platypus-tag {
+        color: green;
+        border: 1px solid;
+        padding: 1px 3px 0;
+        border-radius: 10px;
+        box-shadow: 1px 1px black;
+        font-size: smaller;
+    }
+
     /* Index */
 
     #platypus-category-listings {
@@ -183,7 +203,7 @@ a {
 }
 
 #text-content h1 {
-    margin-top: 0;
+    margin: 0;
 }
 
 #under-development-flag-container {

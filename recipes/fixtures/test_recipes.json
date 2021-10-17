@@ -8,7 +8,8 @@
       "method": "Throw all ingredients into a volcano.;Wait 2-3 years.;Forget what you were trying to do.",
       "category": "LIGHT DISHES",
       "published_date": "2021-04-19",
-      "final": false
+      "final": false,
+      "tags": ["Spicy", "MakesMouthFeelOuchy"]
     }
   },
   {
@@ -20,7 +21,8 @@
       "method": "Cook it.",
       "category": "MAINS",
       "published_date": "2021-05-01",
-      "final": false
+      "final": false,
+      "tags": ["Vegetarian", "Meaty"]
     }
   }
 ]
