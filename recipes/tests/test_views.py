@@ -92,6 +92,13 @@ class DetailWithFixturesTest(TestCase):
         response_tree = html.fromstring(response.content.decode(ENCODING))
         self.assertNotIn("&#x26A0;", response_tree.xpath('//h1')[0].text_content(), "Under development icon is not shown")
 
+    def test_tags_shown(self):
+        response = client.get('/6969/some-recipe-title/')
+        response_tree = html.fromstring(response.content.decode(ENCODING))
+        tags = response_tree.xpath('//div[@id="platypus-tag-list"]/div[@id="platypus-tag"]')
+        self.assertIn("MakesMouthFeelOuchy", tags[0].text_content(), "First tag from recipe (alphabetically) is shown")
+        self.assertIn("Spicy", tags[1].text_content(), "Second tag from recipe (alphabetically) is shown")
+
 
 class DetailWithoutFixturesTest(TestCase):
 

@@ -53,6 +53,7 @@ def detail(request, recipe_id, slug=None):
     ingredients_list = recipe.ingredients.split(BULLET_POINT_DELIMITER)
     method_list = recipe.method.split(BULLET_POINT_DELIMITER)
     image_url_list = [image.url for image in RecipeImage.objects.filter(recipe_id=recipe_id).order_by('relative_order')]
+    recipe.tags = sorted(recipe.tags, key=str.casefold)
     context = {
         'recipe': recipe,
         'ingredients_list': ingredients_list,

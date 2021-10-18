@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
@@ -15,6 +16,7 @@ class Recipe(models.Model):
     )
     published_date = models.DateField(auto_now=True)
     final = models.BooleanField(default=True)
+    tags = ArrayField(models.CharField(max_length=128), blank=True, default=list)
 
     def get_absolute_url(self):
         return reverse('recipes:detail', args=[str(self.id)]) + f"{slugify(self.title)}/"
