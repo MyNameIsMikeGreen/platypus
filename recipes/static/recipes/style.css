@@ -181,6 +181,26 @@ a {
     #recipe-images img {
         width: 95%;
     }
+
+    #recipe-title-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #platypus-tag-list {
+        display: flex;
+        gap: 10px;
+    }
+
+    #platypus-tag {
+        color: green;
+        border: 1px solid;
+        padding: 1px 3px 0;
+        border-radius: 10px;
+        box-shadow: 1px 1px black;
+        font-size: smaller;
+    }
 }
 
 #platypus-navigation-buttons {
