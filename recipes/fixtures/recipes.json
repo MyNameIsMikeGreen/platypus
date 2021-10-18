@@ -626,8 +626,7 @@
       "method": "Cook sausages in an oiled ceramic rectangular baking dish in a 200C oven for 15 minutes.;While cooking, whisk together flour, eggs, milk, and salt.;Immediately from the oven, pour the batter evenly over the sausages.;Return to the oven for a further 25 minutes.",
       "category": "MAINS",
       "published_date": "2020-07-13",
-      "final": false,
-      "tags": ["Cheap"]
+      "final": false
     }
   },
   {
@@ -650,7 +649,8 @@
       "ingredients": "10g Ginger;2 Chillies;2 Garlic Cloves;1 Orange;1l Chicken Stock;1 Cinnamon Stick;2 Star Anise;1kg Pork Belly;500g Plain Flour;50g Caster Sugar;1 Teaspoon Salt;1 Teaspoon Baking Powder;1 Teaspoon Dried Yeast;150ml Water;100ml Milk;50ml Double Cream;3 Tablespoons Vegetable Oil;1 Tablespoon Sesame Oil;4 Tablespoons Honey;2 Tablespoons Light Soy Sauce;1 Tablespoon Rice Wine Vinegar;2 Tablespoons Sesame Seeds",
       "method": "De-seed (If desired) and slice the chillies.;Peel and slice the ginger.;Crush the garlic.;Quarter the orange.;To a very large saucepan - add the chillies, ginger, orange, garlic, star anise, cinnamon, chicken stock, and pork belly.;Cover and simmer as low as possible for 2 hours.;After 30 minutes of simmering, mix together the flour, yeast, salt, baking powder, sugar, water, milk, and cream until it forms a dough.;Knead the dough for 10 minutes.;Form dough into a ball.;Oil the dough ball and its container lightly.;Let dough prove for 1 hour.;Separate dough into 75g balls.;Roll each miniature ball into an oval.;Lightly oil the side facing up and fold over on itself.;Let uncooked buns prove for 20 more minutes.;Meanwhile, remove pork from broth.;Chop pork into bitesized pieces.;Lightly fry the pork in an oiled frying pan until browned.;Remove any excessive oil in the pan.;Add honey, soy sauce, rice wine vinegar, and 100ml of the broth.;Cook until the pork mixture reaches a saucy consistency.;Arrange three bao buns onto a small plate lined with baking paper in a single layer.;Place plate into broth saucepan atop a tall bowl.;Steam buns in the saucepan for 20 minutes.;Repeat the steaming process for remaining buns.;Fill buns with pork and sprinkle filling with sesame seeds to serve.",
       "category": "MAINS",
-      "published_date": "2020-07-13"
+      "published_date": "2020-07-13",
+      "tags": ["Pork"]
     }
   },
   {
@@ -794,7 +794,7 @@
       "method": "Begin cooking some rice.;Cut up the chicken into pieces.;Cut up the onion into large squares.;Fry the chicken in a large frying pan until almost cooked.;Add the curry powder to the chicken and cook until fragrant.;Add the onion.;Before the spices burn, add the chopped tomatoes and garlic.;Cook until the sauce is beginning to thicken.;Stir in the natural yoghurt.;Serve on rice, topped with coriander leaf.",
       "category": "MAINS",
       "published_date": "2020-07-31",
-      "tags": ["Chicken"]
+      "tags": ["Chicken", "Spicy"]
     }
   },
   {
@@ -1048,7 +1048,7 @@
       "method": "Cook the rice.;Cut up the chicken into pieces.;Mix together the chicken, gochujang, soy sauce, sugar, pepper, and sesame oil.;Optionally, let the mixture marinade.;In a frying pan or wok, cook the chicken mixture.;Slice the onion.;Peel and crush the garlic and ginger.;Cut the spring onion into large diagonal wedges.;Add the remaining ingredients to the mixture for the final 5 minutes.;Serve mixture on rice.;Garnish with sesame seeds.",
       "category": "MAINS",
       "published_date": "2020-09-10",
-      "tags": ["Chicken", "Favourite"]
+      "tags": ["Chicken", "Favourite", "Spicy"]
     }
   },
   {
@@ -2621,7 +2621,7 @@
       "method": "Place pork in freezer for about 2 hours.;Thinly slice pork.;Chop all vegetables.;Fry pork.;Fry vegetables.;Mix together all remaining ingredients into a sauce.;Add sauce.",
       "category": "MAINS",
       "published_date": "2021-10-16",
-      "tags": ["Pork"]
+      "tags": ["Pork", "Spicy"]
     }
   },
   {

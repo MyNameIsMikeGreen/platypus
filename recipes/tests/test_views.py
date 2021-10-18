@@ -96,8 +96,8 @@ class DetailWithFixturesTest(TestCase):
         response = client.get('/6969/some-recipe-title/')
         response_tree = html.fromstring(response.content.decode(ENCODING))
         tags = response_tree.xpath('//div[@id="platypus-tag-list"]/div[@id="platypus-tag"]')
-        self.assertIn("Spicy", tags[0].text_content(), "First tag from recipe is shown")
-        self.assertIn("MakesMouthFeelOuchy", tags[1].text_content(), "Second tag from recipe is shown")
+        self.assertIn("MakesMouthFeelOuchy", tags[0].text_content(), "First tag from recipe (alphabetically) is shown")
+        self.assertIn("Spicy", tags[1].text_content(), "Second tag from recipe (alphabetically) is shown")
 
 
 class DetailWithoutFixturesTest(TestCase):
