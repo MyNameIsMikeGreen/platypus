@@ -64,23 +64,30 @@ def detail(request, recipe_id, slug=None):
 
 
 def planner(request):
-    recipe_count = int(request.GET.get('recipe_count', '0'))
-    if not recipe_count:
-        return render(request, 'recipes/planner_input.html')
-    category = request.GET.get('category', 'MAINS')
-    recipes_in_category = Recipe.objects.filter(category=category)
-    if recipe_count > len(recipes_in_category):
-        recipe_count = len(recipes_in_category)
+    return render(request, 'recipes/planner_input.html')
+
+
+def search_results(request):
+    category = request.GET.get('category')
+    tag = request.GET.get('tag')
+    recipe_count = int(request.GET.get('recipe_count', '999'))
+
+    recipes_found = 0
+    if category:
+        recipes_found = Recipe.objects.filter(category=category)
+    elif tag:
+        recipes_found = Recipe.objects.filter(tags__contains=[tag])
+
+    if recipe_count > len(recipes_found):
+        recipe_count = len(recipes_found)
+
     recipe_set = set()
     while len(recipe_set) < recipe_count:
-        recipe_set.add(random.choice(recipes_in_category))
+        recipe_set.add(random.choice(recipes_found))
     context = {
         'recipe_list': recipe_set
     }
-    return search_result(request, context)
 
-
-def search_result(request, context):
     return render(request, 'recipes/search_results.html', context)
 
 

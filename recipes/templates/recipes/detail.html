@@ -18,7 +18,9 @@
                     {% endif %}
                     <div id="platypus-tag-list">
                         {% for tag in recipe.tags %}
-                        <div id="platypus-tag">{{ tag }}</div>
+                        <div id="platypus-tag">
+                            <a href="{% url 'recipes:search-results' %}?tag={{ tag }}">{{ tag }}</a>
+                        </div>
                         {% endfor %}
                     </div>
                 </div>
