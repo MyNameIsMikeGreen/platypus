@@ -166,6 +166,18 @@ class PlannerView(TestCase):
         recipes_in_category = Recipe.objects.filter(category=category_to_request)
         self.assertEqual(len(link_list), len(recipes_in_category), msg="Recipe list size doesnt exceed max recipes")
 
+    def test_search_results_prints_tag_term_in_title(self):
+        response = client.get(f'/search-results/', {"tag": "Vegetarian"})
+        response_tree = html.fromstring(response.content.decode(ENCODING))
+        title = response_tree.xpath('//div[@id="platypus-content"]/h1')[0].text_content()
+        self.assertEqual(title, "Search Results - \"Vegetarian\"", msg="Search page title contains search term")
+
+    def test_search_results_prints_category_term_in_title(self):
+        response = client.get(f'/search-results/', {"category": "MAINS"})
+        response_tree = html.fromstring(response.content.decode(ENCODING))
+        title = response_tree.xpath('//div[@id="platypus-content"]/h1')[0].text_content()
+        self.assertEqual(title, "Search Results - \"MAINS\"", msg="Search page title contains search term")
+
     def _assert_recipe_list_contains_only_recipes_from_category(self, link_list, category):
         for link in link_list:
             recipe = Recipe.objects.get(pk=_get_id_from_link(link))

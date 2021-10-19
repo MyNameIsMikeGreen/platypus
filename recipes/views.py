@@ -73,10 +73,13 @@ def search_results(request):
     recipe_count = int(request.GET.get('recipe_count', '999'))
 
     recipes_found = 0
+    search_term = ""
     if category:
         recipes_found = Recipe.objects.filter(category=category)
+        search_term = category
     elif tag:
         recipes_found = Recipe.objects.filter(tags__contains=[tag])
+        search_term = tag
 
     if recipe_count > len(recipes_found):
         recipe_count = len(recipes_found)
@@ -85,7 +88,8 @@ def search_results(request):
     while len(recipe_set) < recipe_count:
         recipe_set.add(random.choice(recipes_found))
     context = {
-        'recipe_list': recipe_set
+        'recipe_list': recipe_set,
+        'search_term': search_term
     }
 
     return render(request, 'recipes/search_results.html', context)
