@@ -77,7 +77,11 @@ def planner(request):
     context = {
         'recipe_list': recipe_set
     }
-    return render(request, 'recipes/planner_results.html', context)
+    return search_result(request, context)
+
+
+def search_result(request, context):
+    return render(request, 'recipes/search_results.html', context)
 
 
 def about(request):

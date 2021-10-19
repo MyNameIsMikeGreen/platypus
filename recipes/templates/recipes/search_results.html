@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Meal Planner</h1>
+    <h1>Search Results</h1>
     <ul>
         {% for recipe in recipe_list %}
         <li><a href="{% url 'recipes:detail' recipe.pk %}">{{ recipe.title }}</a></li>
