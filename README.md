@@ -49,7 +49,13 @@ Create local database:
 
 #### Virtual Environment
 
-Install virtual wnvironment
+Install virtual environment and activate it:
+
+    sudo pip3 install virtualenv
+
+    virtual venv
+
+    source venv/bin/activate
 
 
 #### Transcrypt
