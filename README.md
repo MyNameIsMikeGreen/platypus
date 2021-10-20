@@ -47,6 +47,10 @@ Create local database:
 
     sudo -u postgres create_db <db_name>
 
+#### Virtual Environment
+
+Install virtual wnvironment
+
 
 #### Transcrypt
 
