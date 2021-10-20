@@ -17,12 +17,7 @@ class Recipe(models.Model):
     published_date = models.DateField(auto_now=True)
     final = models.BooleanField(default=True)
     tags = ArrayField(models.CharField(max_length=128), blank=True, default=list)
+    image_urls = ArrayField(models.URLField(max_length=256), blank=True, default=list)
 
     def get_absolute_url(self):
         return reverse('recipes:detail', args=[str(self.id)]) + f"{slugify(self.title)}/"
-
-
-class RecipeImage(models.Model):
-    url = models.URLField(max_length=256, null=True)
-    recipe = models.ForeignKey('Recipe', on_delete=models.CASCADE)
-    relative_order = models.IntegerField()

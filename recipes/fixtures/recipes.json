@@ -24,43 +24,13 @@
       "published_date": "2020-06-19",
       "tags": [
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536361/Ice%20Cream/IMG_20200508_151701_bgwpkt.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536350/Ice%20Cream/IMG_20200524_163158_txr8z4.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536348/Ice%20Cream/IMG_20200507_172926_coqr5s.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536121/Ice%20Cream/IMG_20200523_112753_kdmmnb.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536361/Ice%20Cream/IMG_20200508_151701_bgwpkt.jpg",
-      "recipe": 1,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536350/Ice%20Cream/IMG_20200524_163158_txr8z4.jpg",
-      "recipe": 1,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536348/Ice%20Cream/IMG_20200507_172926_coqr5s.jpg",
-      "recipe": 1,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536121/Ice%20Cream/IMG_20200523_112753_kdmmnb.jpg",
-      "recipe": 1,
-      "relative_order": 3
     }
   },
   {
@@ -98,43 +68,13 @@
       "published_date": "2020-06-20",
       "tags": [
         "Lamb"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536458/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_184003_g4togj.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536466/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_174149_zjc76v.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536445/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_180927_ytxyjj.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536472/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_183628_v9o5ym.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536458/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_184003_g4togj.jpg",
-      "recipe": 2,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536466/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_174149_zjc76v.jpg",
-      "recipe": 2,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536445/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_180927_ytxyjj.jpg",
-      "recipe": 2,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536472/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_183628_v9o5ym.jpg",
-      "recipe": 2,
-      "relative_order": 3
     }
   },
   {
@@ -163,43 +103,13 @@
       "published_date": "2020-06-20",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536644/Ricotta%20Gnocchi/IMG_20200522_180159_mkrwva.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536670/Ricotta%20Gnocchi/IMG_20200522_173239_ytorr6.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536643/Ricotta%20Gnocchi/IMG_20200522_174206_vmmtgt.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536691/Ricotta%20Gnocchi/IMG_20200522_174703_m2htox.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536644/Ricotta%20Gnocchi/IMG_20200522_180159_mkrwva.jpg",
-      "recipe": 3,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536670/Ricotta%20Gnocchi/IMG_20200522_173239_ytorr6.jpg",
-      "recipe": 3,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536643/Ricotta%20Gnocchi/IMG_20200522_174206_vmmtgt.jpg",
-      "recipe": 3,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536691/Ricotta%20Gnocchi/IMG_20200522_174703_m2htox.jpg",
-      "recipe": 3,
-      "relative_order": 3
     }
   },
   {
@@ -241,34 +151,12 @@
       "tags": [
         "Chicken",
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536264/Chicken%20and%20Mushroom%20Pie/IMG_20200416_202427_poadnb.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536258/Chicken%20and%20Mushroom%20Pie/IMG_20200416_192148_vl56is.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536255/Chicken%20and%20Mushroom%20Pie/IMG_20200416_194432_vghtji.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536264/Chicken%20and%20Mushroom%20Pie/IMG_20200416_202427_poadnb.jpg",
-      "recipe": 4,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536258/Chicken%20and%20Mushroom%20Pie/IMG_20200416_192148_vl56is.jpg",
-      "recipe": 4,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536255/Chicken%20and%20Mushroom%20Pie/IMG_20200416_194432_vghtji.jpg",
-      "recipe": 4,
-      "relative_order": 0
     }
   },
   {
@@ -306,34 +194,12 @@
       "tags": [
         "Beef",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536141/Beef%20Casserole/IMG_20200414_214957_jj7fbj.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536141/Beef%20Casserole/IMG_20200414_182356_se2afb.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536156/Beef%20Casserole/IMG_20200414_183432_ubawvb.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536141/Beef%20Casserole/IMG_20200414_214957_jj7fbj.jpg",
-      "recipe": 5,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536141/Beef%20Casserole/IMG_20200414_182356_se2afb.jpg",
-      "recipe": 5,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536156/Beef%20Casserole/IMG_20200414_183432_ubawvb.jpg",
-      "recipe": 5,
-      "relative_order": 2
     }
   },
   {
@@ -366,16 +232,10 @@
       "published_date": "2020-06-20",
       "tags": [
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536492/Liver%20and%20Chorizo%20on%20Toast/IMG_20200101_184943_n6cfqp.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536492/Liver%20and%20Chorizo%20on%20Toast/IMG_20200101_184943_n6cfqp.jpg",
-      "recipe": 6,
-      "relative_order": 0
     }
   },
   {
@@ -407,25 +267,11 @@
       "tags": [
         "Chicken",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536737/Sticky%20BBQ%20Chicken/IMG_20200304_172821_cehpze.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536731/Sticky%20BBQ%20Chicken/IMG_20200304_162245_frgphf.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536737/Sticky%20BBQ%20Chicken/IMG_20200304_172821_cehpze.jpg",
-      "recipe": 7,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536731/Sticky%20BBQ%20Chicken/IMG_20200304_162245_frgphf.jpg",
-      "recipe": 7,
-      "relative_order": 1
     }
   },
   {
@@ -464,34 +310,12 @@
       "tags": [
         "Beef",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536377/Italian%20Crackslaw/IMG_20200305_212637_letkko.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536377/Italian%20Crackslaw/IMG_20181005_191810_gbvadi.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536358/Italian%20Crackslaw/IMG_20200305_211852_qc6c9c.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536377/Italian%20Crackslaw/IMG_20200305_212637_letkko.jpg",
-      "recipe": 8,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536377/Italian%20Crackslaw/IMG_20181005_191810_gbvadi.jpg",
-      "recipe": 8,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536358/Italian%20Crackslaw/IMG_20200305_211852_qc6c9c.jpg",
-      "recipe": 8,
-      "relative_order": 2
     }
   },
   {
@@ -525,16 +349,10 @@
       "tags": [
         "Vegetarian",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615158316/Eggs%20in%20Purgatory/IMG_20210307_184032_whcdqh.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615158316/Eggs%20in%20Purgatory/IMG_20210307_184032_whcdqh.jpg",
-      "recipe": 9,
-      "relative_order": 0
     }
   },
   {
@@ -580,43 +398,13 @@
       "tags": [
         "Favourite",
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536226/Cast%20Iron%20Pizza/IMG_20200616_180654_wdngp2.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536209/Cast%20Iron%20Pizza/IMG_20200214_184613_ujm350.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536218/Cast%20Iron%20Pizza/IMG_20200616_173645_v3wjws.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536240/Cast%20Iron%20Pizza/IMG_20200616_174916_wurrhm.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536226/Cast%20Iron%20Pizza/IMG_20200616_180654_wdngp2.jpg",
-      "recipe": 10,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536209/Cast%20Iron%20Pizza/IMG_20200214_184613_ujm350.jpg",
-      "recipe": 10,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536218/Cast%20Iron%20Pizza/IMG_20200616_173645_v3wjws.jpg",
-      "recipe": 10,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536240/Cast%20Iron%20Pizza/IMG_20200616_174916_wurrhm.jpg",
-      "recipe": 10,
-      "relative_order": 3
     }
   },
   {
@@ -650,16 +438,10 @@
       "tags": [
         "Cheesy",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536120/Bacon%20and%20Leek%20Tart/IMG_20200310_184938_bszjjm.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536120/Bacon%20and%20Leek%20Tart/IMG_20200310_184938_bszjjm.jpg",
-      "recipe": 11,
-      "relative_order": 0
     }
   },
   {
@@ -691,34 +473,12 @@
       "published_date": "2020-06-20",
       "tags": [
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536302/Cookies/IMG_20200325_160834_mcryri.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536302/Cookies/IMG_20200325_154429_dldhzg.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536310/Cookies/IMG_20200325_160606_vpdep9.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536302/Cookies/IMG_20200325_160834_mcryri.jpg",
-      "recipe": 12,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536302/Cookies/IMG_20200325_154429_dldhzg.jpg",
-      "recipe": 12,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536310/Cookies/IMG_20200325_160606_vpdep9.jpg",
-      "recipe": 12,
-      "relative_order": 2
     }
   },
   {
@@ -759,43 +519,13 @@
       "published_date": "2020-06-20",
       "tags": [
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536184/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_182002_ru8ibq.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536189/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_162346_yybigv.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536175/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_162821_hwdyvq.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536196/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_165822_iekb8i.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536184/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_182002_ru8ibq.jpg",
-      "recipe": 13,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536189/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_162346_yybigv.jpg",
-      "recipe": 13,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536175/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_162821_hwdyvq.jpg",
-      "recipe": 13,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536196/Cast%20Iron%20Pineapple%20Upside-Down%20Cake/IMG_20200405_165822_iekb8i.jpg",
-      "recipe": 13,
-      "relative_order": 3
     }
   },
   {
@@ -822,16 +552,10 @@
       "published_date": "2020-07-13",
       "tags": [
         "Turkey"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536781/Turkey%20and%20Chickpea%20Burgers/IMG_20200709_191950_b71tkm.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536781/Turkey%20and%20Chickpea%20Burgers/IMG_20200709_191950_b71tkm.jpg",
-      "recipe": 14,
-      "relative_order": 0
     }
   },
   {
@@ -874,34 +598,12 @@
         "Pork",
         "Favourite",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536596/Pork%20Belly%20Braise/IMG_20200820_182251_eqp0ei.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536589/Pork%20Belly%20Braise/IMG_20200704_160740_w5xfax.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536594/Pork%20Belly%20Braise/IMG_20200704_161917_aqoujj.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536596/Pork%20Belly%20Braise/IMG_20200820_182251_eqp0ei.jpg",
-      "recipe": 15,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536589/Pork%20Belly%20Braise/IMG_20200704_160740_w5xfax.jpg",
-      "recipe": 15,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536594/Pork%20Belly%20Braise/IMG_20200704_161917_aqoujj.jpg",
-      "recipe": 15,
-      "relative_order": 2
     }
   },
   {
@@ -936,16 +638,10 @@
       "published_date": "2020-07-13",
       "tags": [
         "Fish"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Thai%20Green%20Fish%20Curry/IMG_20200701_220943_ql5mwu.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Thai%20Green%20Fish%20Curry/IMG_20200701_220943_ql5mwu.jpg",
-      "recipe": 16,
-      "relative_order": 0
     }
   },
   {
@@ -968,16 +664,10 @@
       ],
       "category": "MAINS",
       "published_date": "2020-07-13",
-      "final": false
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Toad%20in%20the%20Hole/IMG_20200625_190620_ceypzl.jpg",
-      "recipe": 17,
-      "relative_order": 0
+      "final": false,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Toad%20in%20the%20Hole/IMG_20200625_190620_ceypzl.jpg"
+      ]
     }
   },
   {
@@ -1041,70 +731,16 @@
       "published_date": "2020-07-13",
       "tags": [
         "Pork"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536562/Pork%20Belly%20Bao/IMG_20200613_204914_lgsb4c.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536593/Pork%20Belly%20Bao/IMG_20200613_173330_lwhbgu.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536563/Pork%20Belly%20Bao/IMG_20200613_200054_ruwnyi.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536555/Pork%20Belly%20Bao/IMG_20200613_180139_wq3it8.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536552/Pork%20Belly%20Bao/IMG_20200613_195641_ikmcmx.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536565/Pork%20Belly%20Bao/IMG_20200613_203034_ks5wuq.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536554/Pork%20Belly%20Bao/IMG_20200613_204247_a9n1hx.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536562/Pork%20Belly%20Bao/IMG_20200613_204914_lgsb4c.jpg",
-      "recipe": 18,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536593/Pork%20Belly%20Bao/IMG_20200613_173330_lwhbgu.jpg",
-      "recipe": 18,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536563/Pork%20Belly%20Bao/IMG_20200613_200054_ruwnyi.jpg",
-      "recipe": 18,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536555/Pork%20Belly%20Bao/IMG_20200613_180139_wq3it8.jpg",
-      "recipe": 18,
-      "relative_order": 3
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536552/Pork%20Belly%20Bao/IMG_20200613_195641_ikmcmx.jpg",
-      "recipe": 18,
-      "relative_order": 4
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536565/Pork%20Belly%20Bao/IMG_20200613_203034_ks5wuq.jpg",
-      "recipe": 18,
-      "relative_order": 5
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536554/Pork%20Belly%20Bao/IMG_20200613_204247_a9n1hx.jpg",
-      "recipe": 18,
-      "relative_order": 6
     }
   },
   {
@@ -1134,16 +770,10 @@
       "published_date": "2020-07-16",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536404/Italian%20Stuff%20on%20Toasted%20Bread/IMG_20200531_140456_ikrzou.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536404/Italian%20Stuff%20on%20Toasted%20Bread/IMG_20200531_140456_ikrzou.jpg",
-      "recipe": 19,
-      "relative_order": 0
     }
   },
   {
@@ -1173,34 +803,12 @@
       "published_date": "2020-07-21",
       "tags": [
         "Chicken"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536284/Chicken%20Kebab/IMG_20200721_180642_bg8bnd.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536272/Chicken%20Kebab/IMG_20200721_171850_yc5xpt.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536279/Chicken%20Kebab/IMG_20200721_172825_azfya3.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536284/Chicken%20Kebab/IMG_20200721_180642_bg8bnd.jpg",
-      "recipe": 20,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536272/Chicken%20Kebab/IMG_20200721_171850_yc5xpt.jpg",
-      "recipe": 20,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536279/Chicken%20Kebab/IMG_20200721_172825_azfya3.jpg",
-      "recipe": 20,
-      "relative_order": 2
     }
   },
   {
@@ -1236,25 +844,11 @@
       "tags": [
         "Chicken",
         "Spicy"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536130/Basic%20Curry/IMG_20200730_193131_odt2zu.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536131/Basic%20Curry/IMG_20200730_192552_tbubkd.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536130/Basic%20Curry/IMG_20200730_193131_odt2zu.jpg",
-      "recipe": 21,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536131/Basic%20Curry/IMG_20200730_192552_tbubkd.jpg",
-      "recipe": 21,
-      "relative_order": 1
     }
   },
   {
@@ -1287,25 +881,11 @@
       "published_date": "2020-08-12",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536774/Vegetarian%20Duck%20Pancakes/IMG_20200808_132418_toxsoh.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536774/Vegetarian%20Duck%20Pancakes/IMG_20200808_125655_niihwb.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536774/Vegetarian%20Duck%20Pancakes/IMG_20200808_132418_toxsoh.jpg",
-      "recipe": 22,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536774/Vegetarian%20Duck%20Pancakes/IMG_20200808_125655_niihwb.jpg",
-      "recipe": 22,
-      "relative_order": 1
     }
   },
   {
@@ -1339,25 +919,11 @@
       "tags": [
         "Chicken",
         "Cheesy"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536238/Chicken%20and%20Bacon%20Cheesy%20Pasta/IMG_20200807_202542_m85rpp.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536242/Chicken%20and%20Bacon%20Cheesy%20Pasta/IMG_20200807_200925_lic2z4.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536238/Chicken%20and%20Bacon%20Cheesy%20Pasta/IMG_20200807_202542_m85rpp.jpg",
-      "recipe": 23,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536242/Chicken%20and%20Bacon%20Cheesy%20Pasta/IMG_20200807_200925_lic2z4.jpg",
-      "recipe": 23,
-      "relative_order": 1
     }
   },
   {
@@ -1380,16 +946,10 @@
       ],
       "category": "CONFECTIONERY",
       "published_date": "2020-08-27",
-      "final": false
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536312/Cornflake%20Cakes/IMG_20200818_124415_jhscjx.jpg",
-      "recipe": 24,
-      "relative_order": 0
+      "final": false,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536312/Cornflake%20Cakes/IMG_20200818_124415_jhscjx.jpg"
+      ]
     }
   },
   {
@@ -1428,25 +988,11 @@
       "tags": [
         "Vegetarian",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536109/Aubergine%20Bake/IMG-20201010-195901_fkm1bl.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536103/Aubergine%20Bake/IMG-20200708-191615_j6dwyh.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536109/Aubergine%20Bake/IMG-20201010-195901_fkm1bl.jpg",
-      "recipe": 25,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536103/Aubergine%20Bake/IMG-20200708-191615_j6dwyh.jpg",
-      "recipe": 25,
-      "relative_order": 1
     }
   },
   {
@@ -1489,34 +1035,12 @@
       "published_date": "2020-08-27",
       "tags": [
         "Beef"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536476/Lasagne/IMG_20200524_211344_hyvgpt.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536472/Lasagne/IMG_20200524_200439_tgkfxj.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536483/Lasagne/IMG_20200524_202637_a3lbmg.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536476/Lasagne/IMG_20200524_211344_hyvgpt.jpg",
-      "recipe": 26,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536472/Lasagne/IMG_20200524_200439_tgkfxj.jpg",
-      "recipe": 26,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536483/Lasagne/IMG_20200524_202637_a3lbmg.jpg",
-      "recipe": 26,
-      "relative_order": 2
     }
   },
   {
@@ -1547,25 +1071,11 @@
         "Bake at 160C for ~25 minutes."
       ],
       "category": "CONFECTIONERY",
-      "published_date": "2020-08-27"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536151/Cast%20Iron%20Giant%20Cookie/IMG_20200415_185938_qqvcvf.jpg",
-      "recipe": 27,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536158/Cast%20Iron%20Giant%20Cookie/IMG_20200415_182009_rrxasy.jpg",
-      "recipe": 27,
-      "relative_order": 1
+      "published_date": "2020-08-27",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536151/Cast%20Iron%20Giant%20Cookie/IMG_20200415_185938_qqvcvf.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536158/Cast%20Iron%20Giant%20Cookie/IMG_20200415_182009_rrxasy.jpg"
+      ]
     }
   },
   {
@@ -1591,16 +1101,10 @@
         "Skim and strain through a colander."
       ],
       "category": "MISCELLANEOUS",
-      "published_date": "2020-08-28"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536289/Chicken%20Stock/IMG_20200826_204351_rje5ap.jpg",
-      "recipe": 28,
-      "relative_order": 0
+      "published_date": "2020-08-28",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536289/Chicken%20Stock/IMG_20200826_204351_rje5ap.jpg"
+      ]
     }
   },
   {
@@ -1641,34 +1145,12 @@
         "Chicken",
         "Favourite",
         "Spicy"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536429/Korean%20Stir-Fried%20Chicken/IMG_20200910_174655_sx3c2a.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536439/Korean%20Stir-Fried%20Chicken/IMG_20200910_164445_a0ph8o.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536431/Korean%20Stir-Fried%20Chicken/IMG_20200910_174207_vpwzl2.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536429/Korean%20Stir-Fried%20Chicken/IMG_20200910_174655_sx3c2a.jpg",
-      "recipe": 29,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536439/Korean%20Stir-Fried%20Chicken/IMG_20200910_164445_a0ph8o.jpg",
-      "recipe": 29,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536431/Korean%20Stir-Fried%20Chicken/IMG_20200910_174207_vpwzl2.jpg",
-      "recipe": 29,
-      "relative_order": 2
     }
   },
   {
@@ -1692,16 +1174,10 @@
       "published_date": "2020-09-10",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536428/Kimchi%20Pancake/IMG_20200910_122116_lp8h4g.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536428/Kimchi%20Pancake/IMG_20200910_122116_lp8h4g.jpg",
-      "recipe": 30,
-      "relative_order": 0
     }
   },
   {
@@ -1729,16 +1205,10 @@
       "published_date": "2020-09-11",
       "tags": [
         "Fish"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536347/Harissa%20Sea%20Bass%20with%20Griddled%20Vegetables/IMG_20200830_190006_mxca8s.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536347/Harissa%20Sea%20Bass%20with%20Griddled%20Vegetables/IMG_20200830_190006_mxca8s.jpg",
-      "recipe": 31,
-      "relative_order": 0
     }
   },
   {
@@ -1764,25 +1234,11 @@
       "published_date": "2020-09-11",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536681/Rosti/IMG_20200315_124354_ereefv.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536678/Rosti/IMG_20200315_122526_d6ot2e.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536681/Rosti/IMG_20200315_124354_ereefv.jpg",
-      "recipe": 32,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536678/Rosti/IMG_20200315_122526_d6ot2e.jpg",
-      "recipe": 32,
-      "relative_order": 1
     }
   },
   {
@@ -1819,43 +1275,13 @@
       "published_date": "2020-09-11",
       "tags": [
         "Beef"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536408/Italian%20Meatballs%20and%20Sauce/IMG_20200403_194354_xvxfii.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536447/Italian%20Meatballs%20and%20Sauce/IMG_20200403_181327_w7m3pp.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536388/Italian%20Meatballs%20and%20Sauce/IMG_20200403_190749_hlipni.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536389/Italian%20Meatballs%20and%20Sauce/IMG_20200403_191651_wcosto.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536408/Italian%20Meatballs%20and%20Sauce/IMG_20200403_194354_xvxfii.jpg",
-      "recipe": 33,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536447/Italian%20Meatballs%20and%20Sauce/IMG_20200403_181327_w7m3pp.jpg",
-      "recipe": 33,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536388/Italian%20Meatballs%20and%20Sauce/IMG_20200403_190749_hlipni.jpg",
-      "recipe": 33,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536389/Italian%20Meatballs%20and%20Sauce/IMG_20200403_191651_wcosto.jpg",
-      "recipe": 33,
-      "relative_order": 3
     }
   },
   {
@@ -1891,16 +1317,10 @@
       "tags": [
         "Lamb",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536511/Lamb%20and%20Apricot%20Tagine/IMG_20200405_212344_plqutc.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536511/Lamb%20and%20Apricot%20Tagine/IMG_20200405_212344_plqutc.jpg",
-      "recipe": 34,
-      "relative_order": 0
     }
   },
   {
@@ -1929,16 +1349,10 @@
       "published_date": "2020-09-11",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536715/Sourdough%20Starter%20Crumpet/IMG_20200417_184138_vruwfx.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536715/Sourdough%20Starter%20Crumpet/IMG_20200417_184138_vruwfx.jpg",
-      "recipe": 35,
-      "relative_order": 0
     }
   },
   {
@@ -1978,43 +1392,13 @@
       "published_date": "2020-10-13",
       "tags": [
         "Fruity"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536534/Peach%20Galette/IMG_20201011_123904_lqyav2.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536557/Peach%20Galette/IMG_20201010_204255_mba6jz.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536528/Peach%20Galette/IMG_20201010_215153_qzz9g2.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536543/Peach%20Galette/IMG_20201010_224356_dgmqd3.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536534/Peach%20Galette/IMG_20201011_123904_lqyav2.jpg",
-      "recipe": 36,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536557/Peach%20Galette/IMG_20201010_204255_mba6jz.jpg",
-      "recipe": 36,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536528/Peach%20Galette/IMG_20201010_215153_qzz9g2.jpg",
-      "recipe": 36,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536543/Peach%20Galette/IMG_20201010_224356_dgmqd3.jpg",
-      "recipe": 36,
-      "relative_order": 3
     }
   },
   {
@@ -2048,43 +1432,13 @@
         "Glaze rolls."
       ],
       "category": "CONFECTIONERY",
-      "published_date": "2020-10-14"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536620/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_154653_hioa9i.jpg",
-      "recipe": 37,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536623/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_150503_gi2wkp.jpg",
-      "recipe": 37,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536618/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_151046_wrbe9f.jpg",
-      "recipe": 37,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536619/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_153541_dxvngr.jpg",
-      "recipe": 37,
-      "relative_order": 3
+      "published_date": "2020-10-14",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536620/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_154653_hioa9i.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536623/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_150503_gi2wkp.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536618/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_151046_wrbe9f.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536619/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_153541_dxvngr.jpg"
+      ]
     }
   },
   {
@@ -2114,25 +1468,11 @@
       "published_date": "2020-10-14",
       "tags": [
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536728/Schnitzel/IMG_20200928_183503_c7ol48.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536690/Schnitzel/IMG_20200928_182955_bmnqgi.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536728/Schnitzel/IMG_20200928_183503_c7ol48.jpg",
-      "recipe": 38,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536690/Schnitzel/IMG_20200928_182955_bmnqgi.jpg",
-      "recipe": 38,
-      "relative_order": 1
     }
   },
   {
@@ -2155,25 +1495,11 @@
         "Gently fold all ingredients together."
       ],
       "category": "MISCELLANEOUS",
-      "published_date": "2020-11-25"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536696/Seasoned%20Sushi%20Rice/IMG_20201122_194329_qhwp0q.jpg",
-      "recipe": 39,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536703/Seasoned%20Sushi%20Rice/IMG_20201122_195712_ijfd3f.jpg",
-      "recipe": 39,
-      "relative_order": 1
+      "published_date": "2020-11-25",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536696/Seasoned%20Sushi%20Rice/IMG_20201122_194329_qhwp0q.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536703/Seasoned%20Sushi%20Rice/IMG_20201122_195712_ijfd3f.jpg"
+      ]
     }
   },
   {
@@ -2192,25 +1518,11 @@
       ],
       "category": "MISCELLANEOUS",
       "published_date": "2020-11-25",
-      "final": false
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536421/Japanese%20Mayonnaise%20Substitute/IMG_20201122_192700_ge65f9.jpg",
-      "recipe": 40,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536411/Japanese%20Mayonnaise%20Substitute/IMG_20201122_195250_ia8xtz.jpg",
-      "recipe": 40,
-      "relative_order": 1
+      "final": false,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536421/Japanese%20Mayonnaise%20Substitute/IMG_20201122_192700_ge65f9.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536411/Japanese%20Mayonnaise%20Substitute/IMG_20201122_195250_ia8xtz.jpg"
+      ]
     }
   },
   {
@@ -2246,16 +1558,10 @@
       "tags": [
         "Lamb",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536513/Orange%20Lamb%20Stir-Fry/IMG_20201125_195147_nqsxsq.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536513/Orange%20Lamb%20Stir-Fry/IMG_20201125_195147_nqsxsq.jpg",
-      "recipe": 41,
-      "relative_order": 0
     }
   },
   {
@@ -2279,25 +1585,11 @@
       "tags": [
         "Vegetarian",
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536516/Pancakes/IMG_20201206_203500_favodh.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536516/Pancakes/IMG_20201206_203119_cv1iw4.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536516/Pancakes/IMG_20201206_203500_favodh.jpg",
-      "recipe": 42,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536516/Pancakes/IMG_20201206_203119_cv1iw4.jpg",
-      "recipe": 42,
-      "relative_order": 1
     }
   },
   {
@@ -2340,16 +1632,10 @@
         "Chicken",
         "One Pot",
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536259/Chicken%20and%20Chorizo%20Traybake/IMG_20210118_201628_tgxj4m.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536259/Chicken%20and%20Chorizo%20Traybake/IMG_20210118_201628_tgxj4m.jpg",
-      "recipe": 43,
-      "relative_order": 0
     }
   },
   {
@@ -2392,25 +1678,11 @@
       "tags": [
         "Chicken",
         "Cheesy"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536333/Enchiladas/IMG_20210131_211538_mtmm3y.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536331/Enchiladas/IMG_20210131_205051_bxnfsy.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536333/Enchiladas/IMG_20210131_211538_mtmm3y.jpg",
-      "recipe": 44,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536331/Enchiladas/IMG_20210131_205051_bxnfsy.jpg",
-      "recipe": 44,
-      "relative_order": 1
     }
   },
   {
@@ -2454,16 +1726,10 @@
       "published_date": "2021-02-09",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536739/Spinach%20and%20Feta%20Pie/IMG_20210125_200624_wwoixu.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536739/Spinach%20and%20Feta%20Pie/IMG_20210125_200624_wwoixu.jpg",
-      "recipe": 45,
-      "relative_order": 0
     }
   },
   {
@@ -2502,16 +1768,10 @@
       "tags": [
         "Pork",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536609/Pork%20Larb/IMG_20210207_202407_ntcjgy.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536609/Pork%20Larb/IMG_20210207_202407_ntcjgy.jpg",
-      "recipe": 46,
-      "relative_order": 0
     }
   },
   {
@@ -2546,25 +1806,11 @@
         "Bake on a baking tray at 180C for ~12 minutes."
       ],
       "category": "CONFECTIONERY",
-      "published_date": "2021-02-24"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536509/Oatmeal%20Raisin%20Cookies/IMG_20210219_215425_p88hkf.jpg",
-      "recipe": 47,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536497/Oatmeal%20Raisin%20Cookies/IMG_20210219_212505_mnqdum.jpg",
-      "recipe": 47,
-      "relative_order": 1
+      "published_date": "2021-02-24",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536509/Oatmeal%20Raisin%20Cookies/IMG_20210219_215425_p88hkf.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536497/Oatmeal%20Raisin%20Cookies/IMG_20210219_212505_mnqdum.jpg"
+      ]
     }
   },
   {
@@ -2600,16 +1846,10 @@
       "tags": [
         "Favourite",
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536132/Baguette%20Pizza/IMG_20210224_202755_ahdpbs.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536132/Baguette%20Pizza/IMG_20210224_202755_ahdpbs.jpg",
-      "recipe": 48,
-      "relative_order": 0
     }
   },
   {
@@ -2631,25 +1871,11 @@
         "Cover with lid and fry until browned."
       ],
       "category": "LIGHT DISHES",
-      "published_date": "2021-02-27"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_135826_emwh9g.jpg",
-      "recipe": 49,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_134351_virp31.jpg",
-      "recipe": 49,
-      "relative_order": 1
+      "published_date": "2021-02-27",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_135826_emwh9g.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_134351_virp31.jpg"
+      ]
     }
   },
   {
@@ -2685,25 +1911,11 @@
       "tags": [
         "Fish",
         "Cheesy"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614681708/Tuna%20Pasta%20Bake/IMG_20210301_185010_o87rc4.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614681708/Tuna%20Pasta%20Bake/IMG_20210301_181323_uluhoz.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614681708/Tuna%20Pasta%20Bake/IMG_20210301_185010_o87rc4.jpg",
-      "recipe": 50,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614681708/Tuna%20Pasta%20Bake/IMG_20210301_181323_uluhoz.jpg",
-      "recipe": 50,
-      "relative_order": 1
     }
   },
   {
@@ -2736,43 +1948,13 @@
       "published_date": "2021-03-10",
       "tags": [
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_195138_rnb416.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_155525_nhlfnp.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_170344_fqqza9.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398510/Chocolate%20Coconut%20Tart/IMG_20210303_194702_fvtsjj.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_195138_rnb416.jpg",
-      "recipe": 51,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_155525_nhlfnp.jpg",
-      "recipe": 51,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_170344_fqqza9.jpg",
-      "recipe": 51,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398510/Chocolate%20Coconut%20Tart/IMG_20210303_194702_fvtsjj.jpg",
-      "recipe": 51,
-      "relative_order": 3
     }
   },
   {
@@ -2812,25 +1994,11 @@
       "final": false,
       "tags": [
         "Beef"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1616794550/Meatloaf/IMG_20210326_195617_nubtes.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1616794550/Meatloaf/IMG_20210326_194348_puvhny.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1616794550/Meatloaf/IMG_20210326_195617_nubtes.jpg",
-      "recipe": 52,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1616794550/Meatloaf/IMG_20210326_194348_puvhny.jpg",
-      "recipe": 52,
-      "relative_order": 1
     }
   },
   {
@@ -2872,25 +2040,11 @@
       "published_date": "2021-03-30",
       "tags": [
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617140707/Burritos/IMG_20210328_201713_a9fuva.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617140707/Burritos/IMG_20210328_192647_xnkcat.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617140707/Burritos/IMG_20210328_201713_a9fuva.jpg",
-      "recipe": 53,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617140707/Burritos/IMG_20210328_192647_xnkcat.jpg",
-      "recipe": 53,
-      "relative_order": 1
     }
   },
   {
@@ -2936,25 +2090,11 @@
       "published_date": "2021-03-30",
       "tags": [
         "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_204325_cdk8pv.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_200800_n3zqx1.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_204325_cdk8pv.jpg",
-      "recipe": 54,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617143428/Calzone/IMG_20210327_200800_n3zqx1.jpg",
-      "recipe": 54,
-      "relative_order": 1
     }
   },
   {
@@ -2992,16 +2132,10 @@
       "final": false,
       "tags": [
         "Fruity"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617144570/Apple%20Galette/IMG_20210327_212652_cu0jkm.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617144570/Apple%20Galette/IMG_20210327_212652_cu0jkm.jpg",
-      "recipe": 55,
-      "relative_order": 0
     }
   },
   {
@@ -3029,25 +2163,11 @@
         "Bake at 140C for 45 minutes."
       ],
       "category": "CONFECTIONERY",
-      "published_date": "2021-04-03"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_194253_wa5kb7.jpg",
-      "recipe": 56,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_191204_gwqztm.jpg",
-      "recipe": 56,
-      "relative_order": 1
+      "published_date": "2021-04-03",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_194253_wa5kb7.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_191204_gwqztm.jpg"
+      ]
     }
   },
   {
@@ -3086,43 +2206,13 @@
       "published_date": "2021-04-09",
       "tags": [
         "Beef"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211915_setbmo.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_202058_q0uiq8.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_203132_uqjj9y.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211707_cz9kdu.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211915_setbmo.jpg",
-      "recipe": 57,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_202058_q0uiq8.jpg",
-      "recipe": 57,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_203132_uqjj9y.jpg",
-      "recipe": 57,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211707_cz9kdu.jpg",
-      "recipe": 57,
-      "relative_order": 3
     }
   },
   {
@@ -3155,25 +2245,11 @@
         "Vegetarian",
         "Cheesy",
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988429/Grilled%20Cheese/IMG_20210409_124747_s5wmp1.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988428/Grilled%20Cheese/IMG_20210409_124706_lnmozl.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988429/Grilled%20Cheese/IMG_20210409_124747_s5wmp1.jpg",
-      "recipe": 58,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988428/Grilled%20Cheese/IMG_20210409_124706_lnmozl.jpg",
-      "recipe": 58,
-      "relative_order": 1
     }
   },
   {
@@ -3198,16 +2274,10 @@
       "published_date": "2021-04-15",
       "tags": [
         "Fish"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618514889/Baked%20Salmon/IMG_20210415_184118_bxzu1a.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618514889/Baked%20Salmon/IMG_20210415_184118_bxzu1a.jpg",
-      "recipe": 59,
-      "relative_order": 0
     }
   },
   {
@@ -3238,16 +2308,10 @@
       "final": false,
       "tags": [
         "Beef"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618643467/Burgers/IMG_20200508_204728_ajek1v.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618643467/Burgers/IMG_20200508_204728_ajek1v.jpg",
-      "recipe": 60,
-      "relative_order": 0
     }
   },
   {
@@ -3271,16 +2335,10 @@
       "published_date": "2021-04-19",
       "tags": [
         "Fish"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618857925/Tuna%20Pasta/IMG_20210419_185437_rloopa.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618857925/Tuna%20Pasta/IMG_20210419_185437_rloopa.jpg",
-      "recipe": 61,
-      "relative_order": 0
     }
   },
   {
@@ -3303,25 +2361,11 @@
       ],
       "category": "MISCELLANEOUS",
       "published_date": "2021-04-20",
-      "final": false
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_190810_uecq7c.jpg",
-      "recipe": 62,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_185138_xfad45.jpg",
-      "recipe": 62,
-      "relative_order": 1
+      "final": false,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_190810_uecq7c.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_185138_xfad45.jpg"
+      ]
     }
   },
   {
@@ -3357,25 +2401,11 @@
       "published_date": "2021-04-27",
       "tags": [
         "Beef"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1619556179/Spaghetti%20Bolognese/IMG_20210427_200847_ka8ckz.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1619556179/Spaghetti%20Bolognese/IMG_20210427_192709_fvqdjl.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1619556179/Spaghetti%20Bolognese/IMG_20210427_200847_ka8ckz.jpg",
-      "recipe": 63,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1619556179/Spaghetti%20Bolognese/IMG_20210427_192709_fvqdjl.jpg",
-      "recipe": 63,
-      "relative_order": 1
     }
   },
   {
@@ -3404,16 +2434,10 @@
       "published_date": "2021-05-06",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320349/Carrot%20Fritters/IMG_20210505_124152_viluw0.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320349/Carrot%20Fritters/IMG_20210505_124152_viluw0.jpg",
-      "recipe": 64,
-      "relative_order": 0
     }
   },
   {
@@ -3446,16 +2470,10 @@
       "tags": [
         "Vegetarian",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320967/Baked%20Feta%20and%20Tomato%20Pasta/IMG_20210504_201837_ztvm9k.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320967/Baked%20Feta%20and%20Tomato%20Pasta/IMG_20210504_201837_ztvm9k.jpg",
-      "recipe": 65,
-      "relative_order": 0
     }
   },
   {
@@ -3493,34 +2511,12 @@
       "published_date": "2021-05-06",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_190658_gtdoei.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_182430_sreqok.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_183913_zmvsth.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_190658_gtdoei.jpg",
-      "recipe": 66,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_182430_sreqok.jpg",
-      "recipe": 66,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620321137/Black%20Bean%20Burgers/IMG_20210505_183913_zmvsth.jpg",
-      "recipe": 66,
-      "relative_order": 2
     }
   },
   {
@@ -3552,16 +2548,10 @@
       "published_date": "2021-05-13",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Falafel%20Wrap/IMG_20210512_184928_rsp1e6.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Falafel%20Wrap/IMG_20210512_184928_rsp1e6.jpg",
-      "recipe": 67,
-      "relative_order": 0
     }
   },
   {
@@ -3590,34 +2580,12 @@
       "published_date": "2021-05-13",
       "tags": [
         "Fish"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_185134_qkanru.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_183951_cgqzvb.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_184642_wfgyu5.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_185134_qkanru.jpg",
-      "recipe": 68,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_183951_cgqzvb.jpg",
-      "recipe": 68,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_184642_wfgyu5.jpg",
-      "recipe": 68,
-      "relative_order": 2
     }
   },
   {
@@ -3636,16 +2604,10 @@
         "Slowly heat until boiling."
       ],
       "category": "MISCELLANEOUS",
-      "published_date": "2021-07-04"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625431164/Sweet%20and%20Sour%20Sauce/IMG_20210625_185854_s5iffv.jpg",
-      "recipe": 69,
-      "relative_order": 0
+      "published_date": "2021-07-04",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625431164/Sweet%20and%20Sour%20Sauce/IMG_20210625_185854_s5iffv.jpg"
+      ]
     }
   },
   {
@@ -3677,16 +2639,10 @@
       ],
       "category": "CONFECTIONERY",
       "published_date": "2021-07-05",
-      "final": false
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625519213/Rock%20Cakes/IMG_20210705_202052_vr4unw.jpg",
-      "recipe": 70,
-      "relative_order": 0
+      "final": false,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625519213/Rock%20Cakes/IMG_20210705_202052_vr4unw.jpg"
+      ]
     }
   },
   {
@@ -3725,34 +2681,12 @@
       "tags": [
         "Favourite",
         "Chicken"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194628_xnd0lm.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_185427_u6uuie.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194536_pbugg5.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194628_xnd0lm.jpg",
-      "recipe": 71,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_185427_u6uuie.jpg",
-      "recipe": 71,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194536_pbugg5.jpg",
-      "recipe": 71,
-      "relative_order": 2
     }
   },
   {
@@ -3786,16 +2720,10 @@
       "published_date": "2021-07-29",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627592714/Garlic%20Bread/IMG_20210726_123505_uygqdx.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627592714/Garlic%20Bread/IMG_20210726_123505_uygqdx.jpg",
-      "recipe": 72,
-      "relative_order": 0
     }
   },
   {
@@ -3829,61 +2757,15 @@
       "published_date": "2021-07-29",
       "tags": [
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594245/Baked%20Alaska/IMG_20210620_194126_efpdlh.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_112502_soblqp.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_130506_p8ko1x.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_130753_a4gluv.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_192930_icemiy.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_193854_k5crdd.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594245/Baked%20Alaska/IMG_20210620_194126_efpdlh.jpg",
-      "recipe": 73,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_112502_soblqp.jpg",
-      "recipe": 73,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_130506_p8ko1x.jpg",
-      "recipe": 73,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_130753_a4gluv.jpg",
-      "recipe": 73,
-      "relative_order": 3
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594243/Baked%20Alaska/IMG_20210620_192930_icemiy.jpg",
-      "recipe": 73,
-      "relative_order": 4
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_193854_k5crdd.jpg",
-      "recipe": 73,
-      "relative_order": 5
     }
   },
   {
@@ -3921,16 +2803,10 @@
       "final": false,
       "tags": [
         "Chicken"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627645626/Fajitas/IMG_20210715_182133_ygqs1s.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627645626/Fajitas/IMG_20210715_182133_ygqs1s.jpg",
-      "recipe": 74,
-      "relative_order": 0
     }
   },
   {
@@ -3970,43 +2846,13 @@
       "published_date": "2021-07-30",
       "tags": [
         "Favourite"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_221911_rzq9gm.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_210736_hc67b5.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_212835_e0w4a4.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_213124_n8x00v.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_221911_rzq9gm.jpg",
-      "recipe": 75,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_210736_hc67b5.jpg",
-      "recipe": 75,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_212835_e0w4a4.jpg",
-      "recipe": 75,
-      "relative_order": 2
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_213124_n8x00v.jpg",
-      "recipe": 75,
-      "relative_order": 3
     }
   },
   {
@@ -4030,16 +2876,10 @@
       "published_date": "2021-07-30",
       "tags": [
         "Vegetarian"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627648115/Eggy%20Bread/IMG_20200819_081055_tgbanf.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627648115/Eggy%20Bread/IMG_20200819_081055_tgbanf.jpg",
-      "recipe": 76,
-      "relative_order": 0
     }
   },
   {
@@ -4078,34 +2918,12 @@
       "tags": [
         "Pork",
         "Spicy"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_174340_rydfbo.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_171511_m1px8n.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_172845_env8ct.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_174340_rydfbo.jpg",
-      "recipe": 77,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_171511_m1px8n.jpg",
-      "recipe": 77,
-      "relative_order": 1
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634396937/Korean%20Pork%20and%20Vegetables/IMG_20210904_172845_env8ct.jpg",
-      "recipe": 77,
-      "relative_order": 2
     }
   },
   {
@@ -4135,25 +2953,11 @@
         "Bake at 160C for 20-25 minutes."
       ],
       "category": "CONFECTIONERY",
-      "published_date": "2021-10-16"
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_213843_zfo1ua.jpg",
-      "recipe": 78,
-      "relative_order": 0
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_205704_klnkbg.jpg",
-      "recipe": 78,
-      "relative_order": 1
+      "published_date": "2021-10-16",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_213843_zfo1ua.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_205704_klnkbg.jpg"
+      ]
     }
   },
   {
@@ -4190,16 +2994,10 @@
       "tags": [
         "Vegetarian",
         "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634398745/Butternut%20Squash%20Risotto/IMG_20210909_181534_mk45mg.jpg"
       ]
-    }
-  },
-  {
-    "model": "recipes.recipeimage",
-    "pk": null,
-    "fields": {
-      "url": "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634398745/Butternut%20Squash%20Risotto/IMG_20210909_181534_mk45mg.jpg",
-      "recipe": 79,
-      "relative_order": 0
     }
   }
 ]

@@ -20,7 +20,8 @@
       "tags": [
         "Spicy",
         "MakesMouthFeelOuchy"
-      ]
+      ],
+      "image_urls": []
     }
   },
   {
@@ -41,7 +42,8 @@
       "tags": [
         "Vegetarian",
         "Meaty"
-      ]
+      ],
+      "image_urls": []
     }
   }
 ]
