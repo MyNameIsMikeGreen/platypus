@@ -21,14 +21,32 @@ Platypus requires several environment variables to be set before any interaction
 
 #### Manual
 
-The following environment variable must be set before running
+The following environment variables must be set before running
 
-* `DB_HOST`: Host URL of database.
-* `DB_NAME`: Name of database.
-* `DB_USER`: User with read access in the database.
-* `DB_PASSWORD`: Password of the database user.
-* `SECRET_KEY`: Cryptographic key for signing.
-* `DEBUG`: Enables or disables debug mode. Application will return HTTP 500 to all requests if deployed with debug mode enabled.
+Create setup.sh in the root folder
+
+    touch setup.sh
+
+and update it with appropriate variables:
+
+      export DB_HOST=""
+      export DB_PORT=""
+      export DB_NAME=""
+      export DB_USER=""
+      export DB_PASSWORD=""
+      export SECRET_KEY=""
+      export DEBUG=""
+      # Enables or disables debug mode. Application will return HTTP 500
+      # to all requests if deployed with debug mode enabled.
+
+Start the PostgreSQL server:
+
+    sudo service postgresql start
+
+Create local database:
+
+    sudo -u postgres create_db <db_name>
+
 
 #### Transcrypt
 
