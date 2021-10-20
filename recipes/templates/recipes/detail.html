@@ -26,14 +26,14 @@
                 </div>
                 <h2>Ingredients</h2>
                 <ul>
-                    {% for ingredient_item in ingredients_list %}
+                    {% for ingredient_item in recipe.ingredients %}
                         <li>{{ ingredient_item }}</li>
                     {% endfor %}
                 </ul>
 
                 <h2>Method</h2>
                 <ul>
-                    {% for method_item in method_list %}
+                    {% for method_item in recipe.method %}
                         <li>{{ method_item }}</li>
                     {% endfor %}
                 </ul>

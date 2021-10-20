@@ -4,12 +4,23 @@
     "pk": 6969,
     "fields": {
       "title": "Some recipe title",
-      "ingredients": "100g Toilet Paper;50g Custard;Salt and Pepper (To Taste)",
-      "method": "Throw all ingredients into a volcano.;Wait 2-3 years.;Forget what you were trying to do.",
+      "ingredients": [
+        "100g Toilet Paper",
+        "50g Custard",
+        "Salt and Pepper (To Taste)"
+      ],
+      "method": [
+        "Throw all ingredients into a volcano.",
+        "Wait 2-3 years.",
+        "Forget what you were trying to do."
+      ],
       "category": "LIGHT DISHES",
       "published_date": "2021-04-19",
       "final": false,
-      "tags": ["Spicy", "MakesMouthFeelOuchy"]
+      "tags": [
+        "Spicy",
+        "MakesMouthFeelOuchy"
+      ]
     }
   },
   {
@@ -17,12 +28,20 @@
     "pk": 6970,
     "fields": {
       "title": "Unique title 923y89234kljj9",
-      "ingredients": "10g Cheddar Cheese;4 Snails",
-      "method": "Cook it.",
+      "ingredients": [
+        "10g Cheddar Cheese",
+        "4 Snails"
+      ],
+      "method": [
+        "Cook it."
+      ],
       "category": "MAINS",
       "published_date": "2021-05-01",
       "final": false,
-      "tags": ["Vegetarian", "Meaty"]
+      "tags": [
+        "Vegetarian",
+        "Meaty"
+      ]
     }
   }
 ]
