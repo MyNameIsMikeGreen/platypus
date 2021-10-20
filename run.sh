@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source setup.sh
 source read-secrets.sh
 
 source venv/bin/activate
