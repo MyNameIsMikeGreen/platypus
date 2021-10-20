@@ -4,7 +4,7 @@
     {% if recipe %}
         <div id="details-content">
             <div id="recipe-images">
-                {% for image_url in image_url_list %}
+                {% for image_url in recipe.image_urls %}
                     <a href="{{ image_url }}"><img src="{{ image_url }}" alt="{{ recipe.title }}" /></a>
                 {% endfor %}
             </div>

@@ -3,7 +3,7 @@ import random
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.text import slugify
 
-from .models import Recipe, RecipeImage
+from .models import Recipe
 
 
 def fixtures_are_loaded(categorised_recipe_lists: list):
@@ -48,11 +48,9 @@ def detail(request, recipe_id, slug=None):
     expected_slug = slugify(recipe.title)
     if slug != expected_slug:
         return redirect(f"/{str(recipe_id)}/{expected_slug}/", permanent=True)
-    image_url_list = [image.url for image in RecipeImage.objects.filter(recipe_id=recipe_id).order_by('relative_order')]
     recipe.tags = sorted(recipe.tags, key=str.casefold)
     context = {
-        'recipe': recipe,
-        'image_url_list': image_url_list
+        'recipe': recipe
     }
     return render(request, 'recipes/detail.html', context)
 
