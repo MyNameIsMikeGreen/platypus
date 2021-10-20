@@ -8,8 +8,8 @@ UNCATEGORISED = "UNCATEGORISED"
 
 class Recipe(models.Model):
     title = models.CharField(max_length=128)
-    ingredients = models.CharField(max_length=512)
-    method = models.CharField(max_length=8192)
+    ingredients = ArrayField(models.CharField(max_length=128))
+    method = ArrayField(models.CharField(max_length=1024))
     category = models.CharField(
         max_length=32,
         default=UNCATEGORISED,
