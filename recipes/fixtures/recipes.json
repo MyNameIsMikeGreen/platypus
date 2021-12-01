@@ -2999,5 +2999,44 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634398745/Butternut%20Squash%20Risotto/IMG_20210909_181534_mk45mg.jpg"
       ]
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 80,
+    "fields": {
+      "title": "BBQ Pulled Chicken",
+      "ingredients": [
+        "2-3 Chicken Breasts (~500g)",
+        "150g Ketchup",
+        "25g Light Brown Sugar",
+        "1/2 Teaspoon Salt",
+        "1/2 Teaspoon Pepper",
+        "1/2 Teaspoon Garlic Powder",
+        "1/4 Teaspoon Paprika",
+        "1 Teaspoon Worcestershire Sauce",
+        "1 Teaspoon Chilli Powder",
+        "1/2 Tablespoon Treacle",
+        "1/2 Tablespoon Wholegrain Mustard",
+        "1 Tablespoon White Wine Vinegar"
+      ],
+      "method": [
+        "Deeply score chicken breasts several times.",
+        "Place chicken breasts into baking dish.",
+        "Mix together all remaining ingredients.",
+        "Pour mixture over chicken breasts.",
+        "Cook in over at 180C for 45 minutes.",
+        "Shred chicken using two forks or an electric hand mixer."
+      ],
+      "category": "MAINS",
+      "published_date": "2021-12-01",
+      "tags": [
+        "Chicken"
+      ],
+      "final": false,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1638396987/BBQ%20Pulled%20Chicken/IMG_20211201_211747_obkd63.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1638396987/BBQ%20Pulled%20Chicken/IMG_20211201_211450_rsfte4.jpg"
+      ]
+    }
   }
 ]
