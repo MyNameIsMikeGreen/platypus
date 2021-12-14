@@ -2,6 +2,8 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 
+{% load jsonify %}
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'recipes/style.css' %}">
 
@@ -17,11 +19,7 @@
                     "@context": "https://schema.org/",
                     "@type": "Recipe",
                     "name": "{{recipe.title}}",
-                    {% if image_url_list %}
-                    "image": [
-                        "{{image_url_list|join:'", "'}}"
-                    ],
-                    {% endif %}
+                    "image": {{recipe.image_urls|jsonify|safe}},
                     "author": {
                         "@type": "Person",
                         "name": "Mike Green",
@@ -40,11 +38,9 @@
                     "description": "{{recipe.title}}",
                     "keywords": "{{recipe.title}}",
                     "recipeCategory": "{{recipe.category}}",
-                    "recipeIngredient": [
-                        "{{ingredients_list|join:'", "'}}"
-                    ],
+                    "recipeIngredient": {{recipe.ingredients|jsonify|safe}},
                     "recipeInstructions": [
-                        {% for method_item in method_list %}
+                        {% for method_item in recipe.method %}
                         {"@type": "HowToStep", "text": "{{method_item}}"},
                         {% endfor %}
                         {"@type": "HowToStep", "text": "Serve and eat."}
