@@ -9,5 +9,6 @@ addons:
   hosts:
     - mynameismikegreen.co.uk
     - test.mynameismikegreen.co.uk
+  postgresql: "12.9"
 script:
   - python manage.py test recipes --noinput
