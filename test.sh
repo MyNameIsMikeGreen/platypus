@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source initialiseVirtualEnv.sh
 source venv/bin/activate
 
 export DB_HOST=IGNORED
