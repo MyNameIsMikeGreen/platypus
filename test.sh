@@ -2,7 +2,7 @@
 
 source venv/bin/activate
 
-export DB_HOST=test.mynameismikegreen.co.uk
+export DB_HOST=IGNORED
 export DB_NAME=travis_ci_test
 export DB_USER=postgres
 export DB_PASSWORD=""
