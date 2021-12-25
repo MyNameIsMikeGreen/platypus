@@ -1,4 +1,6 @@
 language: python
+python:
+  - "3.10.1"
 env:
   - DJANGO=3.1.7 DB_HOST=test.mynameismikegreen.co.uk DB_NAME=travis_ci_test DB_USER=postgres DB_PASSWORD="" DEBUG=True SECRET_KEY=testkey
 install: pip install -r requirements.txt
