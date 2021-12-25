@@ -4,14 +4,16 @@ Platypus
 
 Django web server providing Mike Green's recipes.
 
-Hosted on Heroku: https://mike-green-platypus.herokuapp.com/
+Hosted on Heroku:
+* https://MyNameIsMikeGreen.co.uk/
+* https://mike-green-platypus.herokuapp.com/
 
 # Usage
 
 ## Pre-Requisites
 
 ### Utilities
-* Python 3.6+
+* Python 3.8+
 * Pip
 * (Optional) Transcrypt
 
