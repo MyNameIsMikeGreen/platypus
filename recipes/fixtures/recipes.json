@@ -3038,5 +3038,43 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1638396987/BBQ%20Pulled%20Chicken/IMG_20211201_211450_rsfte4.jpg"
       ]
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 81,
+    "fields": {
+      "title": "Prawn and Chorizo Tagliatelle",
+      "ingredients": [
+        "250g Chorizo",
+        "150g-200g King Prawns",
+        "1 Garlic Clove",
+        "500g Passata",
+        "500g Tagliatelle",
+        "20g Fresh Basil",
+        "1 Teaspoon Chilli Flakes"
+      ],
+      "method": [
+        "Slice chorizo.",
+        "Chop garlic.",
+        "Fry chorizo.",
+        "Add chilli flakes and prawns.",
+        "Once prawns cooked, add garlic.",
+        "Add passata.",
+        "Reduce heat and lightly simmer.",
+        "Cook tagliatelle.",
+        "Mix everything together.",
+        "Add basil leaves shortly before serving."
+      ],
+      "category": "MAINS",
+      "published_date": "2021-12-26",
+      "tags": [
+        "Fish",
+        "Favourite"
+      ],
+      "final": true,
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1640534406/Prawn%20and%20Chorizo%20Tagliatelle/IMG_20211219_194223_bmpsbb.jpg"
+      ]
+    }
   }
 ]
