@@ -13,7 +13,7 @@ Hosted on Heroku:
 ## Pre-Requisites
 
 ### Utilities
-* Docker
+* [Docker](https://www.docker.com/)
 
 ## Test
 
@@ -32,9 +32,8 @@ docker-compose up
 ## Pre-Requisites
 
 ### Utilities
-* Python 3.8+
-* Pip
-* (Optional) Transcrypt
+* [Python 3.8+](https://www.python.org/)
+* (Optional) [Transcrypt](https://github.com/elasticdog/transcrypt)
 
 ### Environment Variables
 
