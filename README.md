@@ -17,14 +17,14 @@ Hosted on Heroku:
 
 ## Test
 
-Local testing steps are identical to the [production testing steps](#usage-production)
+Local testing steps are identical to the [production testing steps](#usage-production).
 
 ## Launch
 
-Launch the server using Docker:
+Launch the application and associated database using Docker:
 
 ```bash
-./run.sh
+docker-compose up
 ```
 
 # Usage (Production)
