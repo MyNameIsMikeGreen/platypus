@@ -8,7 +8,26 @@ Hosted on Heroku:
 * https://MyNameIsMikeGreen.co.uk/
 * https://mike-green-platypus.herokuapp.com/
 
-# Usage
+# Usage (Local)
+
+## Pre-Requisites
+
+### Utilities
+* Docker
+
+## Test
+
+Local testing steps are identical to the [production testing steps](#usage-production)
+
+## Launch
+
+Launch the server using Docker:
+
+```bash
+./run.sh
+```
+
+# Usage (Production)
 
 ## Pre-Requisites
 
