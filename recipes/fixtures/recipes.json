@@ -3076,5 +3076,44 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1640534406/Prawn%20and%20Chorizo%20Tagliatelle/IMG_20211219_194223_bmpsbb.jpg"
       ]
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 82,
+    "fields": {
+      "title": "Sausage and Bean Soup",
+      "ingredients": [
+        "12 Shallots",
+        "8 Spiced Sausages (e.g. Lincolnshire)",
+        "2 Garlic Cloves",
+        "1 Carrot",
+        "400g Borlotti Beans",
+        "150g Savoy Cabbage",
+        "500ml Vegetable Stock",
+        "1 Tablespoon Parsley",
+        "2 Tablespoons Olive Oil",
+        "1 Bay Leaf",
+        "Salt and Pepper (To Taste)"
+      ],
+      "method": [
+        "Peel shallots.",
+        "Slice garlic.",
+        "Dice carrots.",
+        "Chop cabbage.",
+        "Brown sausages in a saucepan in olive oil.",
+        "Add shallots and carrots until starting to soften.",
+        "Add all remaining ingredients other than cabbage and parsley.",
+        "Simmmer for 15 minutes.",
+        "Add cabbage and parsley.",
+        "Simmer for 5 minutes."
+      ],
+      "category": "MAINS",
+      "published_date": "2022-08-04",
+      "tags": [
+        "One Pot"
+      ],
+      "final": true,
+      "image_urls": []
+    }
   }
 ]
