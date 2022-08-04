@@ -3113,7 +3113,39 @@
         "One Pot"
       ],
       "final": true,
-      "image_urls": []
+      "image_urls": [
+        "http://via.placeholder.com/350x250"
+      ]
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 83,
+    "fields": {
+      "title": "Mug Cake",
+      "ingredients": [
+        "2 Tablespoons Butter",
+        "2 Tablespoons Honey",
+        "3 Tablespoons Light Brown Sugar",
+        "4 Tablespoon Self-Raising Flour",
+        "1 Egg",
+        "1/2 Teaspoon Vanilla Extract"
+      ],
+      "method": [
+        "Add butter to mug and microwave until melted.",
+        "Whisk in wet ingredients.",
+        "Stir in dry ingredients.",
+        "Microwave for 1 minute, 30 seconds."
+      ],
+      "category": "CONFECTIONERY",
+      "published_date": "2022-08-04",
+      "tags": [
+        "One Pot"
+      ],
+      "final": true,
+      "image_urls": [
+        "http://via.placeholder.com/350x250"
+      ]
     }
   }
 ]
