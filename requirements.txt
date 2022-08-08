@@ -4,5 +4,5 @@ psycopg2~=2.9.3
 django_heroku~=0.3.1
 dj-database-url~=1.0.0
 testcontainers~=3.6.0
-sqlalchemy~=1.4.39
+sqlalchemy~=1.4.40
 lxml~=4.9.1
