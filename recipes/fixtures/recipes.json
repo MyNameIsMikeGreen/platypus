@@ -361,9 +361,9 @@
     "fields": {
       "title": "Cast Iron Pizza",
       "ingredients": [
-        "150g Strong Flour",
-        "100ml Lukewarm Water",
-        "4g Dried Yeast",
+        "200g Strong Flour",
+        "125ml Lukewarm Water",
+        "5g Dried Yeast",
         "1/2 Teaspoon Salt",
         "1 Teaspoon Sugar",
         "4 Tablespoons Pizza Sauce (Ideally Homemade)",
@@ -404,7 +404,8 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536209/Cast%20Iron%20Pizza/IMG_20200214_184613_ujm350.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536218/Cast%20Iron%20Pizza/IMG_20200616_173645_v3wjws.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536240/Cast%20Iron%20Pizza/IMG_20200616_174916_wurrhm.jpg"
-      ]
+      ],
+      "final": false
     }
   },
   {
