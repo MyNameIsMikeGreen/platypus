@@ -1,46 +1,51 @@
 {% extends "base.html" %}
 
+{% load decode_commas %}
+
 {% block content %}
-    {% if recipe %}
-        <div id="details-content">
-            <div id="recipe-images">
-                {% for image_url in recipe.image_urls %}
-                    <a href="{{ image_url }}"><img src="{{ image_url }}" alt="{{ recipe.title }}" /></a>
+{% if recipe %}
+<div id="details-content">
+    <div id="recipe-images">
+        {% for image_url in recipe.image_urls %}
+        <a href="{{ image_url | decode_commas }}"><img src="{{ image_url | decode_commas }}" alt="{{ recipe.title }}"/></a>
+        {% endfor %}
+    </div>
+
+    <div id="text-content">
+        <div id="recipe-title-row">
+            {% if recipe.final %}
+            <h1>{{ recipe.title }}</h1>
+            {% else %}
+            <h1>
+                <div id="under-development-flag-container" title="Recipe Under Development">&#x26A0;</div>
+                {{ recipe.title }}
+            </h1>
+            {% endif %}
+            <div id="platypus-tag-list">
+                {% for tag in recipe.tags %}
+                <div id="platypus-tag">
+                    <a href="{% url 'recipes:search-results' %}?tag={{ tag | decode_commas }}">{{ tag | decode_commas }}</a>
+                </div>
                 {% endfor %}
             </div>
-
-            <div id="text-content">
-                <div id="recipe-title-row">
-                    {% if recipe.final %}
-                    <h1>{{ recipe.title }}</h1>
-                    {% else %}
-                    <h1><div id="under-development-flag-container" title="Recipe Under Development">&#x26A0;</div> {{ recipe.title }}</h1>
-                    {% endif %}
-                    <div id="platypus-tag-list">
-                        {% for tag in recipe.tags %}
-                        <div id="platypus-tag">
-                            <a href="{% url 'recipes:search-results' %}?tag={{ tag }}">{{ tag }}</a>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                <h2>Ingredients</h2>
-                <ul>
-                    {% for ingredient_item in recipe.ingredients %}
-                        <li>{{ ingredient_item }}</li>
-                    {% endfor %}
-                </ul>
-
-                <h2>Method</h2>
-                <ul>
-                    {% for method_item in recipe.method %}
-                        <li>{{ method_item }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
         </div>
+        <h2>Ingredients</h2>
+        <ul>
+            {% for ingredient_item in recipe.ingredients %}
+            <li>{{ ingredient_item | decode_commas }}</li>
+            {% endfor %}
+        </ul>
 
-    {% else %}
-        <p>Recipe not found.</p>
-    {% endif %}
+        <h2>Method</h2>
+        <ul>
+            {% for method_item in recipe.method %}
+            <li>{{ method_item | decode_commas }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% else %}
+<p>Recipe not found.</p>
+{% endif %}
 {% endblock content %}

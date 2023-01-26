@@ -61,9 +61,9 @@ To use Transcrypt, you must know the password. If you don't, give up and use the
 
 ### Database Setup
 
-Platypus requires a PostgreSQL instance to store recipe data. A simple fresh instance with some database and user is sufficient to start with.
+Platypus requires an SQLite instance to store recipe data. A simple fresh instance with some database and user is sufficient to start with.
 
-Run the following to (re)initialise the PostgreSQL database referenced in the environment variables:
+Run the following to (re)initialise the database referenced in the environment variables:
 
 ```bash
 ./reset-database.sh
