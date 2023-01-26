@@ -70,7 +70,7 @@ def search_results(request):
         recipes_found = Recipe.objects.filter(category=category)
         search_term = category
     elif tag:
-        recipes_found = Recipe.objects.filter(tags__contains=[tag])
+        recipes_found = Recipe.objects.filter(tags__regex=fr".*{tag}.*")
         search_term = tag
 
     if recipe_count > len(recipes_found):
