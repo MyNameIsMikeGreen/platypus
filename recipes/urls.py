@@ -15,11 +15,12 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
-    path('planner/', views.planner, name='planner'),
-    path('<int:recipe_id>/<str:slug>/', views.detail, name='detail_with_slug'),
-    path('<int:recipe_id>/', views.detail, name='detail'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    re_path(r"^static/(?P<path>.*)$", serve, {"document_root": settings.STATIC_ROOT}),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('', views.index, name='index'),
+                  path('about/', views.about, name='about'),
+                  path('planner/', views.planner, name='planner'),
+                  path('<int:recipe_id>/<str:slug>/', views.detail, name='detail_with_slug'),
+                  path('<int:recipe_id>/', views.detail, name='detail'),
+                  path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+                  path('search-results/', views.search_results, name='search-results'),
+                  re_path(r"^static/(?P<path>.*)$", serve, {"document_root": settings.STATIC_ROOT}),
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
