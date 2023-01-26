@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import recipes
@@ -27,11 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # TASTYPIE_FULL_DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = "notSoSecret"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False) == 'True'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mike-green-platypus.herokuapp.com', 'mynameismikegreen.co.uk']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -82,12 +81,8 @@ WSGI_APPLICATION = 'platypus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ["DB_NAME"],
-        'USER': os.environ["DB_USER"],
-        'PASSWORD': os.environ["DB_PASSWORD"],
-        'HOST': os.environ["DB_HOST"],
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': './platypus.db'
     }
 }
 
@@ -135,5 +130,3 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 TEST_RUNNER = 'platypustestrunner.PlatypusTestRunner'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
-django_heroku.settings(locals())

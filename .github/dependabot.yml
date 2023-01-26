@@ -7,7 +7,3 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
   - MyNameIsMikeGreen
-  ignore:
-  - dependency-name: testcontainers[postgres]
-    versions:
-    - 3.4.0
