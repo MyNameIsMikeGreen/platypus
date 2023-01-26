@@ -32,32 +32,6 @@ docker-compose up
 
 ### Utilities
 * [Python 3.8+](https://www.python.org/)
-* (Optional) [Transcrypt](https://github.com/elasticdog/transcrypt)
-
-### Environment Variables
-
-Platypus requires several environment variables to be set before any interaction with the system can be carried out (including testing). These can either be set manually using standard IDE or OS methods, or the values can be automatically decrypted and utilised using [Transcrypt](https://github.com/elasticdog/transcrypt).
-
-#### Manual
-
-The following environment variable must be set before running
-
-* `DB_HOST`: Host URL of database.
-* `DB_NAME`: Name of database.
-* `DB_USER`: User with read access in the database.
-* `DB_PASSWORD`: Password of the database user.
-* `SECRET_KEY`: Cryptographic key for signing.
-* `DEBUG`: Enables or disables debug mode. Application will return HTTP 500 to all requests if deployed with debug mode enabled.
-
-#### Transcrypt
-
-To use Transcrypt, you must know the password. If you don't, give up and use the manual approach above.
-
-* Install [Transcrypt](https://github.com/elasticdog/transcrypt) according to the [official documentation](https://github.com/elasticdog/transcrypt/blob/main/INSTALL.md).
-* Initialise the repository:
-  ```
-  transcrypt -c aes-256-cbc -p '[PASSWORD]'
-  ```
 
 ### Database Setup
 
