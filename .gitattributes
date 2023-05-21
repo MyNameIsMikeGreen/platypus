@@ -1,1 +1,2 @@
 *.enc  filter=crypt diff=crypt merge=crypt
+* text=auto eol=lf
