@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 echo "Performing environment setup..."
 ORIGINAL_DIRECTORY="`pwd`"
@@ -7,5 +7,6 @@ cd ${LOCAL_DIRECTORY}
 VENV_DIR=venv
 if [[ ! -d "$VENV_DIR" ]]; then
     echo "$VENV_DIR directory not detected. Creating virtual environment..."
-    python3 -m venv ${VENV_DIR}
+    python -m venv ${VENV_DIR}
 fi
+source venv/bin/activate

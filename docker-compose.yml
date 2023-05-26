@@ -23,4 +23,4 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    command: bash -c "./reset-database.sh && ./run.sh"
+    command: sh -c "./reset-database.sh && ./run.sh"
