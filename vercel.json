@@ -1,4 +1,4 @@
 {
-  "installCommand": "Skipping install as setup is handled by run.sh",
+  "installCommand": "echo 'Skipping install as setup is handled by run.sh'",
   "buildCommand": "./run.sh"
 }
