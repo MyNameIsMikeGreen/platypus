@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+export PATH="$HOME/.local/bin:$PATH"
 source initialiseVirtualEnv.sh
 source read-secrets.sh
 
