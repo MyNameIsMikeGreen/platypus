@@ -31,7 +31,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False) == 'True'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mike-green-platypus.herokuapp.com', 'mynameismikegreen.co.uk']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*.vercel.app', 'mynameismikegreen.co.uk']
 
 # Application definition
 
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'platypus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ["DB_NAME"],
+        'NAME': os.environ["DB_DATABASE"],
         'USER': os.environ["DB_USER"],
         'PASSWORD': os.environ["DB_PASSWORD"],
         'HOST': os.environ["DB_HOST"],

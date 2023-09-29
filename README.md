@@ -43,7 +43,7 @@ Platypus requires several environment variables to be set before any interaction
 The following environment variable must be set before running
 
 * `DB_HOST`: Host URL of database.
-* `DB_NAME`: Name of database.
+* `DB_DATABASE`: Name of database.
 * `DB_USER`: User with read access in the database.
 * `DB_PASSWORD`: Password of the database user.
 * `SECRET_KEY`: Cryptographic key for signing.

@@ -15,7 +15,7 @@ services:
       - "8000:8000"
     environment:
       - DB_HOST=db
-      - DB_NAME=docker_db
+      - DB_DATABASE=docker_db
       - DB_USER=postgres
       - DB_PASSWORD=docker_db_password
       - DEBUG=True
