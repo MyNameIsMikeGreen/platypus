@@ -1,4 +1,16 @@
 {
   "installCommand": "echo 'Skipping install as setup is handled by run.sh'",
-  "buildCommand": "./run.sh"
+  "buildCommand": "./run.sh",
+  "outputDirectory": ".",
+  "builds": [{
+    "src": "platypus/wsgi.py",
+    "use": "@ardnt/vercel-python-wsgi",
+    "config": { "maxLambdaSize": "15mb" }
+  }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "vercel_app/wsgi.py"
+    }
+  ]
 }
