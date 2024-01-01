@@ -3148,5 +3148,63 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1659725409/Mug%20Cake/IMG_20220704_214716_ghxrvn.jpg"
       ]
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 84,
+    "fields": {
+      "title": "American-Style Blueberry Pancakes",
+      "ingredients": [
+        "200g Self-Raising Flour",
+        "1 Teaspoon Baking Powder",
+        "1 Egg",
+        "300ml Milk",
+        "150g Blueberries"
+      ],
+      "method": [
+        "If frozen, lightly thaw berries in microwave.",
+        "Whisk all ingredients together.",
+        "Cook in a small frying pan for ~3 minutes, flipping halfway through.",
+        "Add toppings of choice (e.g. banana, chocolate spread, honey, or ice cream)."
+      ],
+      "category": "LIGHT DISHES",
+      "published_date": "2024-01-01",
+      "tags": [
+        "Vegetarian",
+        "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704135742/American-Style%20Blueberry%20Pancakes/IMG_20231230_114523_wtuh2i.jpg"
+      ]
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 85,
+    "fields": {
+      "title": "Lemon Butter Cod",
+      "ingredients": [
+        "2 Cod Fillets",
+        "60g Butter",
+        "1 Lemon"
+      ],
+      "method": [
+        "Oven bake cod at 180C for 20 minutes.",
+        "Zest lemon.",
+        "Juice lemon.",
+        "Brown butter.",
+        "Combine lemon and butter.",
+        "Drizzle sauce over fish once served."
+      ],
+      "category": "LIGHT DISHES",
+      "published_date": "2024-01-01",
+      "tags": [
+        "Fish",
+        "Customisable"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704137051/Lemon%20Butter%20Cod/IMG_20231223_201355_qe43vu.jpg"
+      ]
+    }
   }
 ]
