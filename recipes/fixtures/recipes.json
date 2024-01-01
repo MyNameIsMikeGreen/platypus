@@ -3206,5 +3206,37 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704137051/Lemon%20Butter%20Cod/IMG_20231223_201355_qe43vu.jpg"
       ]
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 86,
+    "fields": {
+      "title": "Apple Crumble",
+      "ingredients": [
+        "3 Bramley Apples",
+        "175g Plain Flour",
+        "150g Golden Caster Sugar",
+        "110g Butter",
+        "1 Tablespoon Rolled Oats",
+        "1 Tablespoon Demerara Sugar"
+      ],
+      "method": [
+        "In a large bowl, mix together flour and 110g of caster sugar.",
+        "Rub butter into mixture.",
+        "Core and slice apples.",
+        "Toss remaining caster sugar into apples.",
+        "Pack apples into baking dish.",
+        "Sprinkle flour mixture over top of apples.",
+        "Pack flour mixture down.",
+        "Run fork lightly over flour mixture to create shallow ridges.",
+        "Sprinkle oats and demerara sugar over crumble.",
+        "Bake at 180C for 40 minutes."
+      ],
+      "category": "CONFECTIONERY",
+      "published_date": "2024-01-01",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704139599/Apple%20Crumble/IMG_20231201_225041_zhuvdh.jpg"
+      ]
+    }
   }
 ]
