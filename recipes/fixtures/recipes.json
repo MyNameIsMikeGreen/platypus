@@ -3263,5 +3263,39 @@
       "published_date": "2024-06-16",
       "image_urls": []
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 88,
+    "fields": {
+      "title": "Fish Finger and Mango Tacos",
+      "ingredients": [
+        "8 Fish Fingers",
+        "1 Mango",
+        "20g Fresh Coriander",
+        "1 Chilli",
+        "1/2 Lime",
+        "1/2 Red Onion",
+        "4 Mini Tortillas",
+        "150g Guacamole"
+      ],
+      "method": [
+        "Cook fish fingers according to instructions on packet.",
+        "Slice mango into cubes.",
+        "Finely chop coriander.",
+        "Slice chilli.",
+        "Juice lime.",
+        "Dice onion.",
+        "Mix together mango, coriander, chilli, lime, and onion.",
+        "Assemble components as a taco."
+      ],
+      "category": "CONVENIENCE",
+      "published_date": "2024-06-16",
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1718555275/Fish%20Finger%20and%20Mango%20Tacos/IMG_20240509_201413_nokj04.jpg",
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1718557578/Fish%20Finger%20and%20Mango%20Tacos/IMG_20240529_202522_hvr0ft.jpg"
+      ],
+      "final": false
+    }
   }
 ]
