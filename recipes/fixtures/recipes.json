@@ -3238,5 +3238,30 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704139599/Apple%20Crumble/IMG_20231201_225041_zhuvdh.jpg"
       ]
     }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 87,
+    "fields": {
+      "title": "Teriyaki Sauce",
+      "ingredients": [
+        "85g Light Brown Sugar",
+        "70ml Light Soy Sauce",
+        "1 Garlic Clove",
+        "4cm Ginger",
+        "1 Tablespoon Cornflour",
+        "1 Tablespoon Rice Wine Vinegar"
+      ],
+      "method": [
+        "Grate ginger.",
+        "Grate garlic.",
+        "Mix cornflour into vinegar.",
+        "Mix together all ingredients.",
+        "Bring to a boil until thickened."
+      ],
+      "category": "MISCELLANEOUS",
+      "published_date": "2024-06-16",
+      "image_urls": []
+    }
   }
 ]
