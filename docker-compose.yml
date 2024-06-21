@@ -1,26 +1,32 @@
 services:
-  db:
-    image: postgres
-    environment:
-      - POSTGRES_DB=docker_db
-      - POSTGRES_PASSWORD=docker_db_password
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres"]
-      interval: 1s
-      timeout: 5s
-      retries: 10
   web:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - DB_HOST=db
-      - DB_NAME=docker_db
-      - DB_USER=postgres
-      - DB_PASSWORD=docker_db_password
-      - DEBUG=True
-      - SECRET_KEY=testkey
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    command: gunicorn platypus.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - static_volume:/home/app/web/platypus/static
+    expose:
+      - 8000
+    env_file:
+      - .env
     depends_on:
-      db:
-        condition: service_healthy
-    command: bash -c "./reset-database.sh && ./run.sh"
+      - db
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env.db
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/home/app/web/static
+    ports:
+      - 1337:80
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  static_volume:
