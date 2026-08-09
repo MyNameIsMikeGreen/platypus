@@ -2,7 +2,7 @@
 
 FROM ghcr.io/astral-sh/uv:0.11.15 AS uv
 
-FROM python:3.14.7-slim-bookworm AS builder
+FROM python:3.15.0rc1-slim-bookworm AS builder
 
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy
@@ -12,7 +12,7 @@ COPY --from=uv /uv /uvx /bin/
 COPY pyproject.toml uv.lock ./
 RUN uv sync --locked --no-dev --no-install-project
 
-FROM python:3.14.7-slim-bookworm AS app
+FROM python:3.15.0rc1-slim-bookworm AS app
 
 ENV DJANGO_SETTINGS_MODULE=platypus.settings \
     PATH=/app/.venv/bin:$PATH \
