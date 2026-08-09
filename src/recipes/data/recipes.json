@@ -3124,6 +3124,35 @@
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1718555275/Fish%20Finger%20and%20Mango%20Tacos/IMG_20240509_201413_nokj04.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1718557578/Fish%20Finger%20and%20Mango%20Tacos/IMG_20240529_202522_hvr0ft.jpg"
       ]
+    },
+    {
+      "id": 89,
+      "title": "Chicken Myers",
+      "ingredients": [
+        "1 Head of Broccoli",
+        "500g Chicken Breast",
+        "1 Tin (~400g) Condensed Cream of Chicken or Cream of Mushroom Soup",
+        "60g Full-Fat Mayonnaise",
+        "2 Tablespoons Curry Powder",
+        "30g Cheddar Cheese"
+      ],
+      "instructions": [
+        "Chop broccoli.",
+        "Grate cheese.",
+        "Mix together the soup, mayonnaise, broccoli, and curry powder.",
+        "Place chicken in casserole dish.",
+        "Pour mixture over chicken.",
+        "Sprinkle cheese over chicken.",
+        "Bake at 190°C for 1 hour."
+      ],
+      "category": "MAINS",
+      "published_on": "2026-08-09",
+      "is_final": false,
+      "tags": [
+        "One Pot",
+        "Chicken"
+      ],
+      "image_urls": []
     }
   ]
 }
