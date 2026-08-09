@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: .
+      target: app
+    image: platypus-app:local
+    environment:
+      DJANGO_ALLOWED_HOSTS: ${PLATYPUS_ALLOWED_HOSTS:?Set PLATYPUS_ALLOWED_HOSTS in .env}
+    ports:
+      - "${PLATYPUS_PORT:-8080}:8000"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777,noexec,nosuid,nodev
+    pids_limit: 64
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: local
+      options:
+        max-size: 10m
+        max-file: "3"
+    mem_limit: 256m

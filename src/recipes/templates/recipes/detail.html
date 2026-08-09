@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ recipe.title }} | Platypus{% endblock %}
+
+{% block content %}
+  <article>
+    <header class="recipe-header">
+      <div>
+        <a class="back-link" href="{% url 'recipes:index' %}">&larr; All recipes</a>
+        <p class="eyebrow">{{ recipe.category|title }}</p>
+        <h1>{{ recipe.title }}</h1>
+        {% if not recipe.is_final %}
+          <p class="notice">This recipe is still under development.</p>
+        {% endif %}
+      </div>
+      {% if sorted_tags %}
+        <ul class="tag-list" aria-label="Recipe tags">
+          {% for tag in sorted_tags %}
+            <li><a href="{% url 'recipes:search-results' %}?tag={{ tag|urlencode }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </header>
+
+    <div class="recipe-layout">
+      <section class="ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          {% for ingredient in recipe.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
+        </ul>
+      </section>
+      <section class="method">
+        <h2>Method</h2>
+        <ol>
+          {% for instruction in recipe.instructions %}<li>{{ instruction }}</li>{% endfor %}
+        </ol>
+      </section>
+    </div>
+
+    {% if recipe.image_urls %}
+      <section class="gallery">
+        <h2>Photos</h2>
+        <div class="gallery-grid">
+          {% for image_url in recipe.image_urls %}
+            <a href="{{ image_url }}" target="_blank" rel="noopener noreferrer">
+              <img src="{{ image_url }}" alt="{{ recipe.title }} photo {{ forloop.counter }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            </a>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  </article>
+{% endblock %}

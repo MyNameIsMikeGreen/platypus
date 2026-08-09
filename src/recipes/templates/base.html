@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f7f4eb">
+    <meta name="description" content="{% block description %}A personal collection of dependable recipes.{% endblock %}">
+    <title>{% block title %}Platypus | Recipes{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'recipes/site.css' %}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="{% url 'recipes:index' %}">Platypus</a>
+      <nav aria-label="Primary navigation">
+        <a href="{% url 'recipes:index' %}"{% if active_section == "recipes" %} aria-current="page"{% endif %}>Recipes</a>
+        <a href="{% url 'recipes:planner' %}"{% if active_section == "planner" %} aria-current="page"{% endif %}>Planner</a>
+        <a href="{% url 'recipes:about' %}"{% if active_section == "about" %} aria-current="page"{% endif %}>About</a>
+      </nav>
+    </header>
+    <main id="main-content" class="page">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer">
+      Platypus recipes &middot; &copy; 2020&ndash;{% now "Y" %} <a href="https://MikeGreen.net/">Mike Green</a>
+    </footer>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

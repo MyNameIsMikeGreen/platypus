@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Meal planner | Platypus{% endblock %}
+
+{% block content %}
+  <div class="narrow">
+    <p class="eyebrow">Choose for me</p>
+    <h1>Meal planner</h1>
+    <p>Select a category and Platypus will choose a unique set of recipes.</p>
+    <form class="stacked-form" method="get" action="{% url 'recipes:search-results' %}">
+      {{ form.as_div }}
+      <button type="submit">Choose recipes</button>
+    </form>
+  </div>
+{% endblock %}

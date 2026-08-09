@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          version: "0.11.15"
+      - uses: actions/setup-python@v6
+        with:
+          python-version-file: pyproject.toml
+      - run: uv lock --check
+      - run: uv run playwright install --with-deps chromium
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run pytest
+      - run: uv run python manage.py check
+
+  container:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: docker/setup-buildx-action@v4
+      - name: Validate Compose hardening
+        run: |
+          PLATYPUS_ALLOWED_HOSTS=127.0.0.1 \
+            docker compose config --format json |
+            python3 tests/assert_compose_config.py
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          load: true
+          push: false
+          target: app
+          tags: platypus-app:ci
+      - name: Test production image
+        run: |
+          trap 'docker stop platypus-ci > /dev/null 2>&1 || true' EXIT
+          docker run --detach --rm --name platypus-ci \
+            --read-only --tmpfs /tmp:rw,noexec,nosuid,nodev,size=16m \
+            --pids-limit 64 \
+            --cap-drop ALL --security-opt no-new-privileges \
+            --publish 127.0.0.1:18080:8000 \
+            --env DJANGO_ALLOWED_HOSTS=127.0.0.1 \
+            platypus-app:ci
+          ready=false
+          for attempt in {1..10}; do
+            if curl --fail --silent --max-time 2 \
+              http://127.0.0.1:18080/ > /dev/null; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then
+            docker logs platypus-ci
+            exit 1
+          fi
+          test "$(docker exec platypus-ci id -u)" = 10001
+          test "$(curl --silent --output /dev/null --write-out '%{http_code}' \
+            --header 'Host: rejected.invalid' http://127.0.0.1:18080/)" = 400

@@ -1,4 +1,0 @@
-*.enc  filter=crypt diff=crypt merge=crypt
-* text=auto
-*.sh text eol=lf
-*.conf text eol=lf

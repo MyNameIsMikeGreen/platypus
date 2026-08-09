@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ search_term }} recipes | Platypus{% endblock %}
+
+{% block content %}
+  <div class="narrow">
+    {% if is_tag %}
+      <a class="back-link" href="{% url 'recipes:index' %}">&larr; All recipes</a>
+      <p class="eyebrow">Tag</p>
+    {% else %}
+      <a class="back-link" href="{% url 'recipes:planner' %}">&larr; Back to planner</a>
+      <p class="eyebrow">Meal plan</p>
+    {% endif %}
+    <h1>{{ search_term }}</h1>
+    {% if recipes %}
+      <ul class="result-list result-card">
+        {% for recipe in recipes %}
+          <li>
+            <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
+            {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="empty-state">
+        <h2>No matching recipes</h2>
+        <p>No recipes matched this selection.</p>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Recipe collection</p>
+      <h1>Recipes</h1>
+    </div>
+    <form class="search" method="get" action="{% url 'recipes:index' %}" role="search">
+      <label for="recipe-search">Search by title</label>
+      {{ search_form.q.errors }}
+      <div class="search-combobox" data-search-combobox>
+        <div class="field-row">
+          {{ search_form.q }}
+          <button type="submit">Search</button>
+        </div>
+        <ul id="recipe-suggestions" class="search-suggestions" role="listbox" hidden></ul>
+        <p class="visually-hidden" data-search-status aria-live="polite"></p>
+      </div>
+      <div class="search-scope">
+        <label for="recipe-search-category">Search in</label>
+        {{ search_form.category }}
+      </div>
+      {{ search_form.category.errors }}
+      <datalist id="recipe-search-data" data-search-options>
+        {% for recipe in all_recipes %}
+          <option value="{{ recipe.title }}" data-category="{{ recipe.category }}" data-url="{{ recipe.get_absolute_url }}" data-search-option></option>
+        {% endfor %}
+      </datalist>
+    </form>
+  </section>
+
+  {% if categories %}
+    <fieldset class="category-filters" data-category-controls>
+      <legend>Show categories</legend>
+      <div class="category-toggle-list">
+        {% for category, recipes in categories %}
+          <label class="category-toggle" for="category-{{ forloop.counter }}">
+            <input id="category-{{ forloop.counter }}" type="checkbox" value="{{ category }}" data-category-toggle checked>
+            <span>{{ category|title }}</span>
+          </label>
+        {% endfor %}
+      </div>
+      <p class="filter-status" data-category-status aria-live="polite"></p>
+    </fieldset>
+
+    <div class="category-grid">
+      {% for category, recipes in categories %}
+        <section class="category-card" data-category="{{ category }}">
+          <h2>{{ category|title }}</h2>
+          <ul class="recipe-list">
+            {% for recipe in recipes %}
+              <li>
+                <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
+                {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+    </div>
+    <div class="empty-state" data-category-empty hidden>
+      <h2>No categories selected</h2>
+      <p>Enable a category above to show its recipes.</p>
+    </div>
+  {% elif search_term %}
+    <div class="empty-state">
+      <h2>No matching recipes</h2>
+      <p>Try a shorter or different search term.</p>
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <h2>No recipes are available</h2>
+      <p>The recipe catalog is currently unavailable.</p>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'recipes/category-filter.js' %}" defer></script>
+  <script src="{% static 'recipes/search-autocomplete.js' %}" defer></script>
+{% endblock %}

@@ -1,91 +1,34 @@
-Platypus
-========
-[![Build Status](https://travis-ci.com/MyNameIsMikeGreen/platypus.svg?branch=master)](https://travis-ci.com/MyNameIsMikeGreen/platypus)
+# Platypus
 
-Django web server providing Mike Green's recipes.
+Platypus is Mike Green's small, self-hosted recipe collection. It presents the same versioned recipes and familiar recipe, search, tag, and meal-planning workflows as the original application, rebuilt for a Raspberry Pi and a private LAN.
 
-> **Note**
-> This project is no longer publicly hosted
+## Quick start
 
-# Usage (Local)
+Prerequisites: a [supported 64-bit Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/),
+[Docker Engine](https://docs.docker.com/engine/install/debian/), and the
+[Docker Compose plugin](https://docs.docker.com/compose/install/linux/).
 
-## Pre-Requisites
+1. Reserve a stable LAN IP address for the Pi.
+2. Copy `.env.example` to `.env` and set `PLATYPUS_ALLOWED_HOSTS` and `PLATYPUS_PORT`.
+3. Build and start Platypus:
 
-### Utilities
-* [Docker](https://www.docker.com/)
+   ```shell
+   docker compose up --build -d
+   ```
 
-## Test
+4. Open Platypus using any address listed in `PLATYPUS_ALLOWED_HOSTS`, for example `http://192.168.1.50:8080` or `http://raspberrypi:8080`.
 
-Local testing steps are identical to the [production testing steps](#usage-production).
+The single container reads recipes directly from the validated, checked-in catalog. Gunicorn serves the application and WhiteNoise serves its stylesheet.
 
-## Launch
+## Documentation
 
-Launch the application and associated database using Docker:
+- [`docs/development.md`](docs/development.md): local setup, tests, formatting, and IDE configuration
+- [`docs/recipes.md`](docs/recipes.md): adding and changing versioned recipes
+- [`docs/deployment.md`](docs/deployment.md): Raspberry Pi deployment, Tailscale access, and updates
+- [`docs/security-boundary.md`](docs/security-boundary.md): accepted HTTP/LAN risks and the
+  required plan before adding writes or public-internet access
+- [`docs/architecture.md`](docs/architecture.md): design decisions and official guidance
 
-```bash
-docker-compose up
-```
+## Technology
 
-# Usage (Production)
-
-## Pre-Requisites
-
-### Utilities
-* [Python 3.8+](https://www.python.org/)
-* (Optional) [Transcrypt](https://github.com/elasticdog/transcrypt)
-
-### Environment Variables
-
-Platypus requires several environment variables to be set before any interaction with the system can be carried out (including testing). These can either be set manually using standard IDE or OS methods, or the values can be automatically decrypted and utilised using [Transcrypt](https://github.com/elasticdog/transcrypt).
-
-#### Manual
-
-The following environment variable must be set before running
-
-* `DB_HOST`: Host URL of database.
-* `DB_NAME`: Name of database.
-* `DB_USER`: User with read access in the database.
-* `DB_PASSWORD`: Password of the database user.
-* `SECRET_KEY`: Cryptographic key for signing.
-* `DEBUG`: Enables or disables debug mode. Application will return HTTP 500 to all requests if deployed with debug mode enabled.
-
-#### Transcrypt
-
-To use Transcrypt, you must know the password. If you don't, give up and use the manual approach above.
-
-* Install [Transcrypt](https://github.com/elasticdog/transcrypt) according to the [official documentation](https://github.com/elasticdog/transcrypt/blob/main/INSTALL.md).
-* Initialise the repository:
-  ```
-  transcrypt -c aes-256-cbc -p '[PASSWORD]'
-  ```
-
-### Database Setup
-
-Platypus requires a PostgreSQL instance to store recipe data. A simple fresh instance with some database and user is sufficient to start with.
-
-Run the following to (re)initialise the PostgreSQL database referenced in the environment variables:
-
-```bash
-./reset-database.sh
-```
-
-This will destroy any existing database, run all migrations, and populate it with data.
-
-## Test
-
-Run all tests:
-
-```bash
-./test.sh
-```
-
-## Launch
-
-Launch the server:
-
-```bash
-./run.sh
-```
-
-# Contributing
-If you wish to contribute to Platypus, please see the [Contributing Guidelines](CONTRIBUTING.md).
+Python 3.14, Django 6.1, Gunicorn, WhiteNoise, Docker Compose, uv, Ruff, and pytest.
