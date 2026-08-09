@@ -56,7 +56,7 @@
         "Zest the lemon.",
         "Grate the garlic cloves.",
         "Combine the lemon zest, garlic, breadcrumbs, and mince into ~20 meatballs.",
-        "Put meatballs in the oven, on a baking tray, at 200C for 15-20 minutes.",
+        "Put meatballs in the oven, on a baking tray, at 200°C for 15-20 minutes.",
         "Combine harissa paste, olive oil, lemon juice, and mint into a marinade.",
         "Rinse and dry cucumber.",
         "Once meatballs are cooked, toss in marinade.",
@@ -138,7 +138,7 @@
         "Fill the pie.",
         "Top the pie with a pastry lid. Ensure the lid is bonded to the rest of the pastry and an air vent is cut into the top.",
         "Optionally, apply an egg wash to the exposed pastry.",
-        "Bake for ~30 minutes at 200C."
+        "Bake for ~30 minutes at 200°C."
       ],
       "category": "MAINS",
       "published_on": "2020-06-20",
@@ -246,7 +246,7 @@
         "Spread a thin layer of sauce into ceramic dish.",
         "Place chicken in dish, skin-side down.",
         "Top with 75% of the remaining sauce.",
-        "Bake in a 200C oven for 20 minutes.",
+        "Bake in a 200°C oven for 20 minutes.",
         "Take out of the oven, flip chicken, add remaining sauce to skin side.",
         "Return to oven for another 20 minutes."
       ],
@@ -410,7 +410,7 @@
         "Sprinkle pepper over tart.",
         "Sprinkle cheddar over tart.",
         "Fold edges over to form a crust.",
-        "Bake at 180C for ~20 minutes.",
+        "Bake at 180°C for ~20 minutes.",
         "Brown cheese under grill if desired."
       ],
       "category": "MAINS",
@@ -625,7 +625,7 @@
         "1/2 Teaspoon Salt"
       ],
       "instructions": [
-        "Cook sausages in an oiled ceramic rectangular baking dish in a 200C oven for 15 minutes.",
+        "Cook sausages in an oiled ceramic rectangular baking dish in a 200°C oven for 15 minutes.",
         "While cooking, whisk together flour, eggs, milk, and salt.",
         "Immediately from the oven, pour the batter evenly over the sausages.",
         "Return to the oven for a further 25 minutes."
@@ -759,7 +759,7 @@
         "Mix all ingredients together.",
         "Optionally, marinade for up to 24 hours.",
         "Arrange onto skewers in a repeating pattern of pepper, onion, and chicken.",
-        "Suspend skewers from each end bake at 200C for 25 minutes, flipping halfway through."
+        "Suspend skewers from each end bake at 200°C for 25 minutes, flipping halfway through."
       ],
       "category": "MAINS",
       "published_on": "2020-07-21",
@@ -832,7 +832,7 @@
         "Lightly fry the spring onions and garlic.",
         "Add in jackfruit, five spice, sesame oil, rice wine vinegar, and hoisin sauce.",
         "Continue to cook for ~10 minutes whilst breaking up jackfruit.",
-        "Lay jackfruit mixture flat on a baking tray and cook in the oven for 20 minutes at 200C.",
+        "Lay jackfruit mixture flat on a baking tray and cook in the oven for 20 minutes at 200°C.",
         "While jackfruit is in the oven, slice cucumber and remaining spring onions into sticks."
       ],
       "category": "LIGHT DISHES",
@@ -931,7 +931,7 @@
         "Stuff the slits with slices of mozzarella and slices of pepper.",
         "Drizzle aubergine with remaining olive oil.",
         "Add halved cherry tomatoes around the aubergine.",
-        "Bake at 180C for ~30 minutes.",
+        "Bake at 180°C for ~30 minutes.",
         "Eat as-is or serve on toasted bread."
       ],
       "category": "MAINS",
@@ -977,7 +977,7 @@
         "Continue to heat and whisk white sauce until thickened.",
         "Build up lasagne in a lasagne dish in layers of: meat-sauce, lasagne sheets, white sauce.",
         "Top with mozzarella.",
-        "Bake at 180C for ~40 minutes.",
+        "Bake at 180°C for ~40 minutes.",
         "Brown cheese under grill."
       ],
       "category": "MAINS",
@@ -1243,7 +1243,7 @@
         "Continue to cook for ~1 minute.",
         "Add all other ingredients.",
         "Mix whilst bringing to the boil.",
-        "Add lid and cook in a 200C oven for 1 hour.",
+        "Add lid and cook in a 200°C oven for 1 hour.",
         "Stir, remove lid, and cook for a further 30 minutes.",
         "Serve on couscous."
       ],
@@ -1316,7 +1316,7 @@
         "Liberally apply egg-wash to the exposed dough.",
         "Sprinkle sugar over galette.",
         "Transfer to a baking tray.",
-        "Bake in 180C oven for 1 hour.",
+        "Bake in 180°C oven for 1 hour.",
         "Allow to cool for at least 15 minutes before cutting."
       ],
       "category": "CONFECTIONERY",
@@ -1355,7 +1355,7 @@
         "Roll strips.",
         "Place flat on a baking tray lined with baking paper.",
         "Lightly press down on rolls.",
-        "Bake at 180C for 20 minutes.",
+        "Bake at 180°C for 20 minutes.",
         "Make glaze by mixing remaining ingredients.",
         "Let rolls cool.",
         "Glaze rolls."
@@ -1535,7 +1535,7 @@
         "Add Chicken, tomatoes, chorizo, peppers, and chilli flakes to a large roasting dish.",
         "Drizzle with olive oil.",
         "Season with salt and pepper.",
-        "Bake at 180C for 30 minutes.",
+        "Bake at 180°C for 30 minutes.",
         "Mix.",
         "Bake for a further 20 minutes.",
         "Mix in olives.",
@@ -1588,7 +1588,7 @@
         "Distribute filling among all tortillas evenly.",
         "Fold tortillas around filling using excess sauce to seal the end shut.",
         "Grate cheese over dish.",
-        "Bake at 180C until cheese beginning to brown."
+        "Bake at 180°C until cheese beginning to brown."
       ],
       "category": "MAINS",
       "published_on": "2021-02-09",
@@ -1714,7 +1714,7 @@
         "Drain and thoroughly dry raisins.",
         "Fold raisins and oats into dough.",
         "Form dough into balls using ~2 tablespoons of dough each.",
-        "Bake on a baking tray at 180C for ~12 minutes."
+        "Bake on a baking tray at 180°C for ~12 minutes."
       ],
       "category": "CONFECTIONERY",
       "published_on": "2021-02-24",
@@ -1748,7 +1748,7 @@
         "Sprinkle over cheese.",
         "Sprinkle over basil.",
         "Drip over additional BBQ sauce.",
-        "Bake at 180C for 5 minutes.",
+        "Bake at 180°C for 5 minutes.",
         "Grill until cheese is golden."
       ],
       "category": "MAINS",
@@ -1811,7 +1811,7 @@
         "Mix together all ingredients except for remaining cheese.",
         "Add mixture to baking dish.",
         "Sprinkle remaining cheese over mixture.",
-        "Bake at 200C for ~20 minutes."
+        "Bake at 200°C for ~20 minutes."
       ],
       "category": "MAINS",
       "published_on": "2021-03-02",
@@ -1841,7 +1841,7 @@
       "instructions": [
         "Mix together flour, sugar, salt, and coconut oil into a breadcrumb texture.",
         "Line a tart pan with mixture.",
-        "Blind bake crust at 180C for 25 minutes.",
+        "Blind bake crust at 180°C for 25 minutes.",
         "Let crust cool.",
         "Add all remaining ingredients except for the chocolate into a microwavable container.",
         "Add enough chocolate such that the total volume reaches 500ml.",
@@ -1887,7 +1887,7 @@
         "Finely dice onion and garlic.",
         "Mix together mince, onion, garlic, egg, parsley, panko, milk, oregano, basil, 1/2 teaspoon pepper, 1.5 teaspoons salt, and 100g ketchup.",
         "Press mixture into a loaf tin lined with baking paper.",
-        "Bake at 200C for 40 minutes.",
+        "Bake at 200°C for 40 minutes.",
         "Mix together all remaining ingredients.",
         "Glaze top of meatloaf with sauce.",
         "Return to oven for 15 additional minutes."
@@ -1934,7 +1934,7 @@
         "Wrap up burrito.",
         "Repeat for all burritos.",
         "Place burritos on a baking tray.",
-        "Bake at 180C for ~20 minutes."
+        "Bake at 180°C for ~20 minutes."
       ],
       "category": "MAINS",
       "published_on": "2021-03-30",
@@ -2020,7 +2020,7 @@
         "Sprinkle with remaining sugar.",
         "Sprinkle with cinnamon.",
         "Distribute chunks of butter across galette.",
-        "Bake at 190C for 30 minutes.",
+        "Bake at 190°C for 30 minutes.",
         "Glaze with apricot jam."
       ],
       "category": "CONFECTIONERY",
@@ -2156,7 +2156,7 @@
         "Place salmon fillet on foil, skin-side down.",
         "Drizzle fillet with lemon juice and remaining olive oil.",
         "Sprinkle fillet with pepper.",
-        "Bake at 180C for 15 minutes."
+        "Bake at 180°C for 15 minutes."
       ],
       "category": "LIGHT DISHES",
       "published_on": "2021-04-15",
@@ -2332,7 +2332,7 @@
       "instructions": [
         "Peel garlic cloves.",
         "Add garlic, tomatoes, feta, and olive oil to a baking dish.",
-        "Bake at 180C for 20 minutes.",
+        "Bake at 180°C for 20 minutes.",
         "Cook pasta.",
         "Slice basil.",
         "Remove baking dish from oven.",
@@ -2372,13 +2372,13 @@
       ],
       "instructions": [
         "Drain and dry beans.",
-        "Bake beans at 180C for 20 minutes.",
+        "Bake beans at 180°C for 20 minutes.",
         "Finely dice pepper, onion, and garlic.",
         "Lightly fry pepper, onion, and garlic until softened.",
         "Mix together all ingredients.",
         "Form mixture into four patties.",
         "Place patties onto a baking tray lined with baking paper.",
-        "Bake at 180C for 15 minutes."
+        "Bake at 180°C for 15 minutes."
       ],
       "category": "MAINS",
       "published_on": "2021-05-06",
@@ -2571,7 +2571,7 @@
         "Mix together flour, yeast, salt, sugar and water.",
         "Knead for ~10 minutes.",
         "Flatten on a baking tray.",
-        "Bake at 200C for 10 minutes.",
+        "Bake at 200°C for 10 minutes.",
         "Melt butter.",
         "Mix garlic powder and olive oil into butter.",
         "Brush some butter mixture over bread.",
@@ -2604,14 +2604,14 @@
         "Cream 200g caster sugar and butter.",
         "Mix together butter mixture, eggs, flour, and baking powder.",
         "Line and grease a cake tin.",
-        "Bake at 180C for ~20 minutes.",
+        "Bake at 180°C for ~20 minutes.",
         "Cool sponge completely.",
         "Whisk egg whites whilst slowly adding remaining sugar until stiff.",
         "Arrange ice cream onto sponge, leaving a 2cm margin from the edge.",
         "Encase the ice cream with meringue.",
         "Leave in freezer for at least 2 hours.",
         "Place on a lined baking tray.",
-        "Bake at 200C for ~10 minutes."
+        "Bake at 200°C for ~10 minutes."
       ],
       "category": "CONFECTIONERY",
       "published_on": "2021-07-29",
@@ -2690,11 +2690,11 @@
         "Grease and line a ~20cm flan tin.",
         "Add pastry to tin - do not trim edges.",
         "Dock pastry.",
-        "Blind bake at 200C for 10 minutes.",
+        "Blind bake at 200°C for 10 minutes.",
         "Trim edges.",
         "Mix together all remaining ingredients.",
         "Pour mixture into pastry shell.",
-        "Bake at 180C for 45 minutes.",
+        "Bake at 180°C for 45 minutes.",
         "Let cool for at least 30 minutes before cutting."
       ],
       "category": "CONFECTIONERY",
@@ -2870,7 +2870,7 @@
         "Place chicken breasts into baking dish.",
         "Mix together all remaining ingredients.",
         "Pour mixture over chicken breasts.",
-        "Cook in over at 180C for 45 minutes.",
+        "Cook in over at 180°C for 45 minutes.",
         "Shred chicken using two forks or an electric hand mixer."
       ],
       "category": "MAINS",
@@ -3020,7 +3020,7 @@
         "1 Lemon"
       ],
       "instructions": [
-        "Oven bake cod at 180C for 20 minutes.",
+        "Oven bake cod at 180°C for 20 minutes.",
         "Zest lemon.",
         "Juice lemon.",
         "Brown butter.",
@@ -3059,7 +3059,7 @@
         "Pack flour mixture down.",
         "Run fork lightly over flour mixture to create shallow ridges.",
         "Sprinkle oats and demerara sugar over crumble.",
-        "Bake at 180C for 40 minutes."
+        "Bake at 180°C for 40 minutes."
       ],
       "category": "CONFECTIONERY",
       "published_on": "2024-01-01",
