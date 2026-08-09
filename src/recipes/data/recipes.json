@@ -3153,6 +3153,38 @@
         "Chicken"
       ],
       "image_urls": []
+    },
+    {
+      "id": 90,
+      "title": "Sausage Gnocchi",
+      "ingredients": [
+        "500g Gnocchi",
+        "250ml Chicken Stock",
+        "1 Tablespoon Fennel Seeds",
+        "100g Kale",
+        "6-8 Sausages",
+        "30g Parmesan",
+        "0.5 Teaspoon Chilli Flakes"
+      ],
+      "instructions": [
+        "Remove sausage meat from casings.",
+        "Fry sausage meat.",
+        "Add gnocchi, chilli flakes, and fennel seeds.",
+        "Fry until fennel lightly toasted.",
+        "Add kale and stock.",
+        "Cook until kale soft and stock reduced.",
+        "Grate parmesan.",
+        "Mix parmesan into mixture."
+      ],
+      "category": "MAINS",
+      "published_on": "2026-08-09",
+      "is_final": true,
+      "tags": [
+        "One Pot"
+      ],
+      "image_urls": [
+        "https://res.cloudinary.com/mynameismikegreen/image/upload/v1786295597/Sausage%20Gnocchi/20250610_204617_jtrqbq.jpg"
+      ]
     }
   ]
 }
