@@ -5,7 +5,7 @@ description = "A small, self-hosted recipe collection."
 requires-python = ">=3.14,<3.15"
 dependencies = [
   "Django>=6.1,<6.2",
-  "gunicorn>=26.0.0,<27",
+  "gunicorn>=26.1.0,<27",
   "whitenoise>=6.12,<7",
 ]
 
@@ -14,8 +14,8 @@ dev = [
   "playwright>=1.55,<2",
   "pytest>=9,<10",
   "pytest-cov>=7,<8",
-  "pytest-django>=4.11,<5",
-  "ruff>=0.16.2",
+  "pytest-django>=4.14.0,<5",
+  "ruff>=0.16.4",
 ]
 
 [tool.uv]
