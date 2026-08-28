@@ -11,7 +11,7 @@
       <a class="back-link" href="{% url 'recipes:planner' %}">&larr; Back to planner</a>
       <p class="eyebrow">Meal plan</p>
     {% endif %}
-    <h1>{{ search_term }}</h1>
+    <h1>{{ search_term|title }}</h1>
     {% if recipes %}
       <ul class="result-list result-card">
         {% for recipe in recipes %}

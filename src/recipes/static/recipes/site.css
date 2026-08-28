@@ -485,8 +485,11 @@ select:focus-visible {
 .recipe-list,
 .result-list {
   margin: 0;
-  padding: 0;
   list-style: none;
+}
+
+.recipe-list {
+  padding: 0;
 }
 
 .result-card {
