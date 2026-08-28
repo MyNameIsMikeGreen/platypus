@@ -2,11 +2,9 @@ const search = document.querySelector("[data-search-combobox]");
 
 if (search) {
   const input = search.querySelector("input");
-  const category = search.closest("form").querySelector("[data-search-category]");
   const suggestions = search.querySelector("[role='listbox']");
   const status = search.querySelector("[data-search-status]");
   const recipes = [...document.querySelectorAll("[data-search-option]")].map((option) => ({
-    category: option.dataset.category,
     title: option.value,
     url: option.dataset.url,
   }));
@@ -46,11 +44,7 @@ if (search) {
     }
 
     matches = recipes
-      .filter(
-        (recipe) =>
-          (!category.value || recipe.category === category.value) &&
-          recipe.title.toLocaleLowerCase().includes(query),
-      )
+      .filter((recipe) => recipe.title.toLocaleLowerCase().includes(query))
       .slice(0, 8);
     if (!matches.length) {
       status.textContent = "No recipe suggestions";
@@ -63,7 +57,6 @@ if (search) {
       const link = document.createElement("a");
       option.id = `recipe-suggestion-${index}`;
       option.role = "option";
-      option.dataset.category = recipe.category;
       option.setAttribute("aria-selected", "false");
       link.href = recipe.url;
       link.tabIndex = -1;
@@ -81,7 +74,6 @@ if (search) {
 
   input.addEventListener("input", renderSuggestions);
   input.addEventListener("focus", renderSuggestions);
-  category.addEventListener("change", renderSuggestions);
   input.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeSuggestions();

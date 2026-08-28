@@ -13,10 +13,7 @@ def index(request: HttpRequest) -> HttpResponse:
     search_form = RecipeSearchForm(request.GET)
     form_is_valid = search_form.is_valid()
     search_term = search_form.cleaned_data["q"] if form_is_valid else ""
-    search_category = search_form.cleaned_data["category"] if form_is_valid else ""
     recipes = CATALOG
-    if search_category:
-        recipes = tuple(recipe for recipe in recipes if recipe.category == search_category)
     if search_term:
         recipes = tuple(
             recipe for recipe in recipes if search_term.casefold() in recipe.title.casefold()
@@ -28,12 +25,14 @@ def index(request: HttpRequest) -> HttpResponse:
     for recipe in recipes:
         grouped.setdefault(recipe.category, []).append(recipe)
     categories = sorted(grouped.items(), key=lambda item: item[0].casefold())
+    all_tags = sorted({tag for recipe in CATALOG for tag in recipe.tags}, key=str.casefold)
     return render(
         request,
         "recipes/index.html",
         {
             "active_section": "recipes",
             "all_recipes": CATALOG,
+            "all_tags": all_tags,
             "categories": categories,
             "search_form": search_form,
             "search_term": search_term,

@@ -21,12 +21,15 @@ const formatDuration = (minutes) => {
 };
 
 const controls = document.querySelector("[data-category-controls]");
+const tagControls = document.querySelector("[data-tag-controls]");
 const timeControls = document.querySelector("[data-time-controls]");
 
 if (controls) {
   const toggles = [...controls.querySelectorAll("[data-category-toggle]")];
+  const tagToggles = [...(tagControls?.querySelectorAll("[data-tag-toggle]") ?? [])];
   const cards = [...document.querySelectorAll(".category-card[data-category]")];
   const status = controls.querySelector("[data-category-status]");
+  const tagStatus = tagControls?.querySelector("[data-tag-status]") ?? null;
   const categoryEmpty = document.querySelector("[data-category-empty]");
   const timeEmpty = document.querySelector("[data-time-empty]");
 
@@ -49,6 +52,9 @@ if (controls) {
     const enabledCategories = new Set(
       toggles.filter((toggle) => toggle.checked).map((toggle) => toggle.value),
     );
+    const enabledTags = new Set(
+      tagToggles.filter((toggle) => toggle.checked).map((toggle) => toggle.value),
+    );
     const totalThreshold = totalSlider ? TOTAL_TIME_STEPS[Number(totalSlider.value)] : Infinity;
     const activeThreshold = activeSlider
       ? ACTIVE_TIME_STEPS[Number(activeSlider.value)]
@@ -64,7 +70,11 @@ if (controls) {
       for (const item of items) {
         const totalMinutes = Number(item.dataset.totalMinutes);
         const activeMinutes = Number(item.dataset.activeMinutes);
-        const matches = totalMinutes <= totalThreshold && activeMinutes <= activeThreshold;
+        const itemTags = item.dataset.tags ? item.dataset.tags.split(",") : [];
+        const tagMatches =
+          itemTags.length === 0 || itemTags.some((tag) => enabledTags.has(tag));
+        const matches =
+          totalMinutes <= totalThreshold && activeMinutes <= activeThreshold && tagMatches;
         item.hidden = !matches;
         matchCount += Number(matches);
       }
@@ -75,11 +85,18 @@ if (controls) {
     }
 
     status.textContent = `Showing ${enabledCategories.size} of ${cards.length} categories`;
+    if (tagStatus) {
+      tagStatus.textContent = `Showing ${enabledTags.size} of ${tagToggles.length} tags`;
+    }
     categoryEmpty.hidden = enabledCategories.size !== 0;
     timeEmpty.hidden = enabledCategories.size === 0 || cardsWithMatches !== 0;
   };
 
   for (const toggle of toggles) {
+    toggle.addEventListener("change", applyFilters);
+  }
+
+  for (const toggle of tagToggles) {
     toggle.addEventListener("change", applyFilters);
   }
 

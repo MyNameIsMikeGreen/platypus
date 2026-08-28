@@ -21,18 +21,11 @@ class RecipeSearchForm(forms.Form):
                 "autocomplete": "off",
                 "id": "recipe-search",
                 "list": "recipe-search-data",
+                "placeholder": "Search by title",
                 "role": "combobox",
             }
         ),
     )
-    category = forms.ChoiceField(
-        required=False,
-        widget=forms.Select(attrs={"data-search-category": True, "id": "recipe-search-category"}),
-    )
-
-    def __init__(self, *args: object, **kwargs: object) -> None:
-        super().__init__(*args, **kwargs)
-        self.fields["category"].choices = [("", "All categories"), *_category_choices()]
 
 
 class PlannerForm(forms.Form):

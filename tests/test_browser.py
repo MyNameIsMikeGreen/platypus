@@ -39,6 +39,87 @@ def test_category_toggles_show_and_hide_categories(live_url):
             browser.close()
 
 
+def test_tag_toggles_are_all_enabled_by_default_and_filter_recipes(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            page.locator("[data-filter-drawer] summary").click()
+
+            tag_toggles = page.locator("[data-tag-toggle]")
+            items = page.locator("[data-recipe-item]")
+            tag_count = tag_toggles.count()
+            item_count = items.count()
+
+            assert tag_count >= 1
+            for index in range(tag_count):
+                expect(tag_toggles.nth(index)).to_be_checked()
+            expect(page.locator("[data-tag-status]")).to_have_text(
+                f"Showing {tag_count} of {tag_count} tags"
+            )
+            expect(page.locator("[data-recipe-item]:not([hidden])")).to_have_count(item_count)
+
+            item_tags = items.evaluate_all("items => items.map(item => item.dataset.tags)")
+            target_tag = tag_toggles.first.get_attribute("value")
+            # Recipes whose only tag is the one being disabled must disappear;
+            # recipes with additional enabled tags, or no tags at all, must remain.
+            expected_hidden = {
+                index
+                for index, tags in enumerate(item_tags)
+                if tags and all(tag == target_tag for tag in tags.split(","))
+            }
+            assert expected_hidden, "expected at least one recipe solely tagged with the target tag"
+
+            tag_toggles.first.uncheck()
+            expect(page.locator("[data-tag-status]")).to_have_text(
+                f"Showing {tag_count - 1} of {tag_count} tags"
+            )
+            for index in range(item_count):
+                if index in expected_hidden:
+                    expect(items.nth(index)).to_be_hidden()
+                else:
+                    expect(items.nth(index)).to_be_visible()
+
+            tag_toggles.first.check()
+            expect(page.locator("[data-recipe-item]:not([hidden])")).to_have_count(item_count)
+            expect(page.locator("[data-tag-status]")).to_have_text(
+                f"Showing {tag_count} of {tag_count} tags"
+            )
+        finally:
+            browser.close()
+
+
+def test_tag_link_navigates_to_the_single_tag_results_page(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            page.locator("[data-filter-drawer] summary").click()
+
+            wrapper = page.locator("[data-tag-toggle-wrapper]").first
+            target_tag = wrapper.locator("[data-tag-toggle]").get_attribute("value")
+            expected_titles = set(
+                page.locator("[data-recipe-item]").evaluate_all(
+                    """(items, tag) => items
+                        .filter(item => (item.dataset.tags || "").split(",").includes(tag))
+                        .map(item => item.querySelector("a").textContent)""",
+                    target_tag,
+                )
+            )
+
+            wrapper.locator(".tag-toggle-link").click()
+
+            page.wait_for_url(f"**/search-results/?tag={target_tag.replace(' ', '+')}")
+            expect(page.locator("h1")).to_have_text(target_tag.title())
+            result_titles = set(page.locator(".result-list a").all_inner_texts())
+            assert result_titles == expected_titles
+        finally:
+            browser.close()
+
+
+
 def test_search_autocomplete_filters_navigates_and_stays_local(live_url):
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
@@ -50,7 +131,6 @@ def test_search_autocomplete_filters_navigates_and_stays_local(live_url):
             options = page.locator("[data-search-option]")
             recipes = options.evaluate_all(
                 """options => options.map(option => ({
-                    category: option.dataset.category,
                     title: option.value,
                     url: option.dataset.url
                 }))"""
@@ -74,40 +154,13 @@ def test_search_autocomplete_filters_navigates_and_stays_local(live_url):
             expect(page.locator("#recipe-suggestions")).to_be_hidden()
             expect(page.locator("[data-search-status]")).to_have_text("No recipe suggestions")
 
-            scoped_search = None
-            for recipe in recipes:
-                for word in recipe["title"].casefold().split():
-                    candidate = word[:2]
-                    global_matches = [
-                        item for item in recipes if candidate in item["title"].casefold()
-                    ]
-                    scoped_matches = [
-                        item for item in global_matches if item["category"] == recipe["category"]
-                    ][:8]
-                    if scoped_matches and any(
-                        item["category"] != recipe["category"] for item in global_matches
-                    ):
-                        scoped_search = (recipe["category"], candidate, scoped_matches)
-                        break
-                if scoped_search:
-                    break
-
-            assert scoped_search is not None
-            selected_category, query, expected_recipes = scoped_search
-            page.locator("[data-search-category]").select_option(selected_category)
             input_field.fill(query)
-            assert suggestions.all_inner_texts() == [recipe["title"] for recipe in expected_recipes]
-            assert page.locator("[role='option']").evaluate_all(
-                """(options, selectedCategory) =>
-                    options.every(option => option.dataset.category === selectedCategory)""",
-                selected_category,
-            )
             input_field.press("ArrowDown")
             expect(page.locator("[role='option']").first).to_have_attribute("aria-selected", "true")
-            first_url = expected_recipes[0]["url"]
+            first_recipe = next(recipe for recipe in recipes if recipe["title"] == expected[0])
             input_field.press("Enter")
-            page.wait_for_url(f"**{first_url}")
-            expect(page.locator("h1")).to_have_text(expected_recipes[0]["title"])
+            page.wait_for_url(f"**{first_recipe['url']}")
+            expect(page.locator("h1")).to_have_text(expected[0])
         finally:
             browser.close()
 

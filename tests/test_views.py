@@ -54,24 +54,6 @@ def test_search_is_trimmed_case_insensitive_and_keeps_multiple_results(client, r
     }
 
 
-def test_search_can_be_scoped_to_one_category(client, recipe_factory):
-    matching = recipe_factory(title="Shared Curry", category="DINNER")
-    recipe_factory(title="Shared Curry", category="LUNCH")
-    recipe_factory(title="Different Dish", category="DINNER")
-
-    response = client.get(
-        reverse("recipes:index"),
-        {"q": "shared", "category": "DINNER"},
-    )
-
-    assert response.status_code == 302
-    assert response.url == matching.get_absolute_url()
-
-    invalid = client.get(reverse("recipes:index"), {"category": "UNKNOWN"})
-    assert invalid.status_code == 400
-    assert "Select a valid choice" in invalid.content.decode()
-
-
 def test_index_exposes_time_data_attributes_and_slider_controls(client, recipe_factory):
     recipe_factory(
         title="Quick Snack",
@@ -95,6 +77,40 @@ def test_index_exposes_time_data_attributes_and_slider_controls(client, recipe_f
     assert 'data-filter-drawer' in content
     assert "<details" in content
     assert '<details class="filter-drawer" data-filter-drawer open' not in content
+
+
+def test_index_exposes_tag_filter_controls_all_enabled_by_default(client, recipe_factory):
+    recipe_factory(title="Curry", category="MAINS", tags=["Spicy", "Vegetarian"])
+    recipe_factory(title="Toast", category="SNACKS", tags=["Vegetarian"])
+    recipe_factory(title="Plain Bread", category="SNACKS", tags=[])
+
+    response = client.get(reverse("recipes:index"))
+
+    assert response.status_code == 200
+    assert response.context["all_tags"] == ["Spicy", "Vegetarian"]
+    content = response.content.decode()
+    assert 'data-tag-controls' in content
+    # Every tag must be enabled by default.
+    assert content.count("data-tag-toggle checked") == 2
+    assert 'data-tag-status' in content
+    assert 'data-tags="Spicy,Vegetarian"' in content
+    assert 'data-tags="Vegetarian"' in content
+    assert 'data-tags=""' in content
+    # Each tag is also an enumerated link to its dedicated single-tag page.
+    assert response.context["all_tags"], "expected at least one tag"
+    for tag in response.context["all_tags"]:
+        assert f'href="/search-results/?tag={tag}"' in content
+        assert f'aria-label="View all {tag} recipes"' in content
+
+
+def test_index_omits_tag_filters_when_no_recipes_have_tags(client, recipe_factory):
+    recipe_factory(tags=[])
+
+    response = client.get(reverse("recipes:index"))
+
+    assert response.status_code == 200
+    assert response.context["all_tags"] == []
+    assert 'data-tag-controls' not in response.content.decode()
 
 
 def test_index_does_not_render_time_filter_form_fields(client, recipe_factory):

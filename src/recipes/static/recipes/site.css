@@ -165,22 +165,6 @@ h2 {
   position: relative;
 }
 
-.search-scope {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 0.65rem;
-}
-
-.search-scope label {
-  flex: 0 0 auto;
-  margin: 0;
-}
-
-.search-scope select {
-  min-width: 0;
-}
-
 .field-row {
   display: flex;
 }
@@ -400,6 +384,80 @@ select:focus-visible {
   margin: 0.65rem 0 0;
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+.tag-filters {
+  min-inline-size: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.tag-filters legend {
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tag-toggle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.15rem 0 0.5rem;
+}
+
+.tag-toggle {
+  display: inline-flex;
+  align-items: stretch;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.tag-toggle:has(input:checked) {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: #e8f2eb;
+}
+
+.tag-toggle label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.tag-toggle input {
+  width: auto;
+  min-height: auto;
+  margin: 0;
+  accent-color: var(--accent-dark);
+}
+
+.tag-toggle-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  min-width: 2.5rem;
+  justify-content: center;
+  padding: 0.35rem 0.6rem;
+  border-left: 1px solid var(--border);
+  color: var(--muted);
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.tag-toggle-link:hover,
+.tag-toggle-link:focus-visible {
+  color: var(--accent-dark);
 }
 
 .time-filters {

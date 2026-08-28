@@ -8,7 +8,7 @@
       <h1>Recipes</h1>
     </div>
     <form class="search" method="get" action="{% url 'recipes:index' %}" role="search">
-      <label for="recipe-search">Search by title</label>
+      <label class="visually-hidden" for="recipe-search">Search by title</label>
       {{ search_form.q.errors }}
       <div class="search-combobox" data-search-combobox>
         <div class="field-row">
@@ -18,14 +18,9 @@
         <ul id="recipe-suggestions" class="search-suggestions" role="listbox" hidden></ul>
         <p class="visually-hidden" data-search-status aria-live="polite"></p>
       </div>
-      <div class="search-scope">
-        <label for="recipe-search-category">Search in</label>
-        {{ search_form.category }}
-      </div>
-      {{ search_form.category.errors }}
       <datalist id="recipe-search-data" data-search-options>
         {% for recipe in all_recipes %}
-          <option value="{{ recipe.title }}" data-category="{{ recipe.category }}" data-url="{{ recipe.get_absolute_url }}" data-search-option></option>
+          <option value="{{ recipe.title }}" data-url="{{ recipe.get_absolute_url }}" data-search-option></option>
         {% endfor %}
       </datalist>
     </form>
@@ -49,6 +44,29 @@
           </div>
           <p class="filter-status" data-category-status aria-live="polite"></p>
         </fieldset>
+
+        {% if all_tags %}
+          <fieldset class="tag-filters" data-tag-controls>
+            <legend>Show tags</legend>
+            <div class="tag-toggle-list">
+              {% for tag in all_tags %}
+                <div class="tag-toggle" data-tag-toggle-wrapper>
+                  <label for="tag-{{ forloop.counter }}">
+                    <input id="tag-{{ forloop.counter }}" type="checkbox" value="{{ tag }}" data-tag-toggle checked>
+                    <span>{{ tag }}</span>
+                  </label>
+                  <a
+                    class="tag-toggle-link"
+                    href="{% url 'recipes:search-results' %}?tag={{ tag|urlencode }}"
+                    aria-label="View all {{ tag }} recipes"
+                    title="View all {{ tag }} recipes"
+                  >&rarr;</a>
+                </div>
+              {% endfor %}
+            </div>
+            <p class="filter-status" data-tag-status aria-live="polite"></p>
+          </fieldset>
+        {% endif %}
 
         <fieldset class="time-filters" data-time-controls>
           <legend>Filter by time</legend>
@@ -98,6 +116,7 @@
                 data-recipe-item
                 data-total-minutes="{{ recipe.total_time_minutes }}"
                 data-active-minutes="{{ recipe.active_time_minutes }}"
+                data-tags="{{ recipe.tags|join:',' }}"
               >
                 <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
                 {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
@@ -112,8 +131,8 @@
       <p>Enable a category above to show its recipes.</p>
     </div>
     <div class="empty-state" data-time-empty hidden>
-      <h2>No recipes match this time range</h2>
-      <p>Try widening the total time or active time sliders.</p>
+      <h2>No recipes match your filters</h2>
+      <p>Try widening the time sliders or enabling more tags.</p>
     </div>
   {% elif search_term %}
     <div class="empty-state">
