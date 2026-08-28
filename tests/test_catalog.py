@@ -36,24 +36,24 @@ def test_checked_in_catalog_is_valid():
         ({"schema_version": 1, "recipes": ["invalid"]}, "must be an object"),
         ({"schema_version": 1, "recipes": [{**VALID_RECIPE, "extra": True}]}, "exactly"),
         (
-                {
-                    "schema_version": 1,
-                    "recipes": [
-                        {
-                            "id": 1,
-                            "title": "Recipe",
-                            "ingredients": [],
-                            "instructions": ["Step"],
-                            "category": "Category",
-                            "published_on": "2025-01-01",
-                            "last_updated_on": "2025-01-01",
-                            "is_final": True,
-                            "tags": [],
-                            "image_urls": [],
-                        }
-                    ],
-                },
-                "ingredients",
+            {
+                "schema_version": 1,
+                "recipes": [
+                    {
+                        "id": 1,
+                        "title": "Recipe",
+                        "ingredients": [],
+                        "instructions": ["Step"],
+                        "category": "Category",
+                        "published_on": "2025-01-01",
+                        "last_updated_on": "2025-01-01",
+                        "is_final": True,
+                        "tags": [],
+                        "image_urls": [],
+                    }
+                ],
+            },
+            "ingredients",
         ),
     ],
 )
