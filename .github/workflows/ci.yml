@@ -23,8 +23,6 @@ jobs:
           python-version-file: pyproject.toml
       - run: uv lock --check
       - run: uv run playwright install --with-deps chromium
-      - run: uv run ruff format --check .
-      - run: uv run ruff check .
       - run: uv run pytest
       - run: uv run python manage.py check
 

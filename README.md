@@ -31,4 +31,4 @@ The single container reads recipes directly from the validated, checked-in catal
 
 ## Technology
 
-Python 3.14, Django 6.1, Gunicorn, WhiteNoise, Docker Compose, uv, Ruff, and pytest.
+Python 3.14, Django 6.1, Gunicorn, WhiteNoise, Docker Compose, uv, and pytest.

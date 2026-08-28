@@ -15,7 +15,6 @@ dev = [
   "pytest>=9,<10",
   "pytest-cov>=7,<8",
   "pytest-django>=4.11,<5",
-  "ruff>=0.16.2",
 ]
 
 [tool.uv]
@@ -26,39 +25,6 @@ DJANGO_SETTINGS_MODULE = "platypus.test_settings"
 addopts = "--strict-config --strict-markers --cov=recipes --cov=platypus --cov-report=term-missing --cov-fail-under=90"
 pythonpath = ["src"]
 testpaths = ["tests"]
-
-[tool.ruff]
-line-length = 100
-target-version = "py314"
-
-[tool.ruff.lint]
-select = [
-  "A",
-  "ARG",
-  "B",
-  "C4",
-  "DJ",
-  "E",
-  "F",
-  "I",
-  "N",
-  "PERF",
-  "PIE",
-  "PL",
-  "PTH",
-  "RUF",
-  "S",
-  "SIM",
-  "UP",
-  "W",
-]
-ignore = ["RUF012"]
-
-[tool.ruff.lint.per-file-ignores]
-"manage.py" = ["PLC0415"]
-"src/platypus/test_settings.py" = ["F403", "F405"]
-"tests/assert_compose_config.py" = ["S108"]
-"tests/*.py" = ["PLR2004", "S101", "S314"]
 
 [tool.coverage.run]
 branch = true

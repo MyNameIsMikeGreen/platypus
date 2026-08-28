@@ -47,6 +47,5 @@ outside that boundary without completing the applicable plan.
 - [uv Docker integration](https://docs.astral.sh/uv/guides/integration/docker/)
 - [uv lockfiles](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile)
 - [pytest usage](https://docs.pytest.org/en/stable/how-to/usage.html)
-- [Ruff configuration](https://docs.astral.sh/ruff/configuration/)
 
 Version pins and the lockfile should be reviewed regularly because guidance and security releases continue to evolve.

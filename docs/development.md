@@ -35,12 +35,11 @@ Individual commands are:
 
 ```shell
 uv run pytest
-uv run ruff format --check .
-uv run ruff check .
 uv run python manage.py check
 ```
 
-Apply safe formatting and lint fixes with `make format`. Update dependencies intentionally with `uv lock --upgrade`, review `uv.lock`, and rerun `make check`.
+Update dependencies intentionally with `uv lock --upgrade`, review `uv.lock`, and rerun
+`make check`.
 
 Tests use in-memory recipe objects, [pytest](https://docs.pytest.org/en/stable/), and a real
 [Playwright](https://playwright.dev/python/) browser for interactive behavior. They test
