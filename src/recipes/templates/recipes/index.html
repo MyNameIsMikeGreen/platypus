@@ -4,7 +4,7 @@
 {% block content %}
   <section class="page-heading">
     <div>
-      <p class="eyebrow">Recipe collection</p>
+      <p class="eyebrow">{{ all_recipes|length }} recipe{{ all_recipes|pluralize }} to explore</p>
       <h1>Recipes</h1>
     </div>
     <form class="search" method="get" action="{% url 'recipes:index' %}" role="search">
