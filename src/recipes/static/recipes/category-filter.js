@@ -30,6 +30,7 @@ if (controls) {
   const cards = [...document.querySelectorAll(".category-card[data-category]")];
   const status = controls.querySelector("[data-category-status]");
   const tagStatus = tagControls?.querySelector("[data-tag-status]") ?? null;
+  const tagClearButton = tagControls?.querySelector("[data-tag-clear]") ?? null;
   const categoryEmpty = document.querySelector("[data-category-empty]");
   const timeEmpty = document.querySelector("[data-time-empty]");
 
@@ -88,6 +89,9 @@ if (controls) {
     if (tagStatus) {
       tagStatus.textContent = `Showing ${enabledTags.size} of ${tagToggles.length} tags`;
     }
+    if (tagClearButton) {
+      tagClearButton.textContent = enabledTags.size > 0 ? "Clear all" : "Select all";
+    }
     categoryEmpty.hidden = enabledCategories.size !== 0;
     timeEmpty.hidden = enabledCategories.size === 0 || cardsWithMatches !== 0;
   };
@@ -98,6 +102,16 @@ if (controls) {
 
   for (const toggle of tagToggles) {
     toggle.addEventListener("change", applyFilters);
+  }
+
+  if (tagClearButton) {
+    tagClearButton.addEventListener("click", () => {
+      const shouldSelectAll = tagClearButton.textContent === "Select all";
+      for (const toggle of tagToggles) {
+        toggle.checked = shouldSelectAll;
+      }
+      applyFilters();
+    });
   }
 
   if (totalSlider) {

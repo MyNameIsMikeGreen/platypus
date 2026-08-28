@@ -101,6 +101,7 @@ def test_index_exposes_tag_filter_controls_all_enabled_by_default(client, recipe
     for tag in response.context["all_tags"]:
         assert f'href="/search-results/?tag={tag}"' in content
         assert f'aria-label="View all {tag} recipes"' in content
+    assert '<button type="button" class="tag-clear-button" data-tag-clear>Clear all</button>' in content
 
 
 def test_index_omits_tag_filters_when_no_recipes_have_tags(client, recipe_factory):

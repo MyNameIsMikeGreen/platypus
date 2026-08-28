@@ -64,7 +64,10 @@
                 </div>
               {% endfor %}
             </div>
-            <p class="filter-status" data-tag-status aria-live="polite"></p>
+            <div class="tag-filters-footer">
+              <p class="filter-status" data-tag-status aria-live="polite"></p>
+              <button type="button" class="tag-clear-button" data-tag-clear>Clear all</button>
+            </div>
           </fieldset>
         {% endif %}
 

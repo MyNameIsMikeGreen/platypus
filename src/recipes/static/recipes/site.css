@@ -460,6 +460,39 @@ select:focus-visible {
   color: var(--accent-dark);
 }
 
+.tag-filters-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.65rem;
+}
+
+.tag-filters-footer .filter-status {
+  margin: 0;
+}
+
+.tag-clear-button {
+  flex: 0 0 auto;
+  min-height: auto;
+  padding: 0.15rem 0;
+  border: 0;
+  color: var(--accent-dark);
+  background: none;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.tag-clear-button:hover {
+  color: var(--accent);
+  background: none;
+}
+
 .time-filters {
   min-inline-size: 0;
   width: 100%;

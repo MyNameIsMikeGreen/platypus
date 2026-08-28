@@ -90,6 +90,39 @@ def test_tag_toggles_are_all_enabled_by_default_and_filter_recipes(live_url):
             browser.close()
 
 
+def test_tag_clear_all_button_deselects_and_reselects_every_tag(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            page.locator("[data-filter-drawer] summary").click()
+
+            tag_toggles = page.locator("[data-tag-toggle]")
+            clear_button = page.locator("[data-tag-clear]")
+            tag_count = tag_toggles.count()
+
+            expect(clear_button).to_have_text("Clear all")
+            for index in range(tag_count):
+                expect(tag_toggles.nth(index)).to_be_checked()
+
+            clear_button.click()
+            expect(page.locator("[data-tag-status]")).to_have_text(f"Showing 0 of {tag_count} tags")
+            for index in range(tag_count):
+                expect(tag_toggles.nth(index)).not_to_be_checked()
+            expect(clear_button).to_have_text("Select all")
+
+            clear_button.click()
+            expect(page.locator("[data-tag-status]")).to_have_text(
+                f"Showing {tag_count} of {tag_count} tags"
+            )
+            for index in range(tag_count):
+                expect(tag_toggles.nth(index)).to_be_checked()
+            expect(clear_button).to_have_text("Clear all")
+        finally:
+            browser.close()
+
+
 def test_tag_link_navigates_to_the_single_tag_results_page(live_url):
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
