@@ -68,7 +68,8 @@
       "last_updated_on": "2020-06-20",
       "is_final": true,
       "tags": [
-        "Lamb"
+        "Lamb",
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536458/Lamb%20Meatballs%20with%20Harissa%20Dressing/IMG_20200614_184003_g4togj.jpg",
@@ -389,8 +390,9 @@
       "last_updated_on": "2020-06-20",
       "is_final": false,
       "tags": [
-        "Favourite",
-        "Customisable"
+        "Cheesy",
+        "Customisable",
+        "Favourite"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536226/Cast%20Iron%20Pizza/IMG_20200616_180654_wdngp2.jpg",
@@ -428,8 +430,8 @@
       "last_updated_on": "2020-06-20",
       "is_final": true,
       "tags": [
-        "Cheesy",
-        "One Pot"
+        "One Pot",
+        "Cheesy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536120/Bacon%20and%20Leek%20Tart/IMG_20200310_184938_bszjjm.jpg"
@@ -584,8 +586,8 @@
       "is_final": true,
       "tags": [
         "Pork",
-        "Favourite",
-        "One Pot"
+        "One Pot",
+        "Favourite"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536596/Pork%20Belly%20Braise/IMG_20200820_182251_eqp0ei.jpg",
@@ -624,7 +626,8 @@
       "last_updated_on": "2020-07-13",
       "is_final": true,
       "tags": [
-        "Fish"
+        "Fish",
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Thai%20Green%20Fish%20Curry/IMG_20200701_220943_ql5mwu.jpg"
@@ -650,7 +653,9 @@
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": false,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536754/Toad%20in%20the%20Hole/IMG_20200625_190620_ceypzl.jpg"
       ]
@@ -925,7 +930,10 @@
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": false,
-      "tags": [],
+      "tags": [
+        "One Pot",
+        "Customisable"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536312/Cornflake%20Cakes/IMG_20200818_124415_jhscjx.jpg"
       ]
@@ -964,7 +972,8 @@
       "is_final": false,
       "tags": [
         "Vegetarian",
-        "One Pot"
+        "One Pot",
+        "Cheesy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536109/Aubergine%20Bake/IMG-20201010-195901_fkm1bl.jpg",
@@ -1010,7 +1019,8 @@
       "last_updated_on": "2020-08-27",
       "is_final": true,
       "tags": [
-        "Beef"
+        "Beef",
+        "Cheesy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536476/Lasagne/IMG_20200524_211344_hyvgpt.jpg",
@@ -1047,7 +1057,9 @@
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536151/Cast%20Iron%20Giant%20Cookie/IMG_20200415_185938_qqvcvf.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536158/Cast%20Iron%20Giant%20Cookie/IMG_20200415_182009_rrxasy.jpg"
@@ -1077,7 +1089,9 @@
       "published_on": "2020-08-28",
       "last_updated_on": "2020-08-28",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536289/Chicken%20Stock/IMG_20200826_204351_rje5ap.jpg"
       ]
@@ -1118,8 +1132,8 @@
       "is_final": true,
       "tags": [
         "Chicken",
-        "Favourite",
-        "Spicy"
+        "Spicy",
+        "Favourite"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536429/Korean%20Stir-Fried%20Chicken/IMG_20200910_174655_sx3c2a.jpg",
@@ -1462,7 +1476,9 @@
       "published_on": "2020-11-25",
       "last_updated_on": "2020-11-25",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536696/Seasoned%20Sushi%20Rice/IMG_20201122_194329_qhwp0q.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536703/Seasoned%20Sushi%20Rice/IMG_20201122_195712_ijfd3f.jpg"
@@ -1686,7 +1702,8 @@
       "last_updated_on": "2021-02-09",
       "is_final": true,
       "tags": [
-        "Vegetarian"
+        "Vegetarian",
+        "Cheesy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536739/Spinach%20and%20Feta%20Pie/IMG_20210125_200624_wwoixu.jpg"
@@ -1727,7 +1744,8 @@
       "is_final": true,
       "tags": [
         "Pork",
-        "One Pot"
+        "One Pot",
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536609/Pork%20Larb/IMG_20210207_202407_ntcjgy.jpg"
@@ -1766,7 +1784,9 @@
       "published_on": "2021-02-24",
       "last_updated_on": "2021-02-24",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "Fruity"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536509/Oatmeal%20Raisin%20Cookies/IMG_20210219_215425_p88hkf.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536497/Oatmeal%20Raisin%20Cookies/IMG_20210219_212505_mnqdum.jpg"
@@ -1803,8 +1823,9 @@
       "last_updated_on": "2021-02-25",
       "is_final": true,
       "tags": [
-        "Favourite",
-        "Customisable"
+        "Cheesy",
+        "Customisable",
+        "Favourite"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536132/Baguette%20Pizza/IMG_20210224_202755_ahdpbs.jpg"
@@ -1830,7 +1851,9 @@
       "published_on": "2021-02-27",
       "last_updated_on": "2021-02-27",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_135826_emwh9g.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536778/Winged%20Dumplings/IMG_20210227_134351_virp31.jpg"
@@ -2042,6 +2065,7 @@
       "last_updated_on": "2021-03-30",
       "is_final": true,
       "tags": [
+        "Cheesy",
         "Customisable"
       ],
       "image_urls": [
@@ -2114,7 +2138,9 @@
       "published_on": "2021-04-03",
       "last_updated_on": "2021-04-03",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "Fruity"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_194253_wa5kb7.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617486825/Banana%20Bread/IMG_20210402_191204_gwqztm.jpg"
@@ -2155,7 +2181,8 @@
       "last_updated_on": "2021-04-09",
       "is_final": true,
       "tags": [
-        "Beef"
+        "Beef",
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988410/Chocolate%20Chilli/IMG_20210408_211915_setbmo.jpg",
@@ -2305,7 +2332,9 @@
       "published_on": "2021-04-20",
       "last_updated_on": "2021-04-20",
       "is_final": false,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_190810_uecq7c.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1618949583/Custard/IMG_20210420_185138_xfad45.jpg"
@@ -2410,7 +2439,8 @@
       "is_final": true,
       "tags": [
         "Vegetarian",
-        "One Pot"
+        "One Pot",
+        "Cheesy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620320967/Baked%20Feta%20and%20Tomato%20Pasta/IMG_20210504_201837_ztvm9k.jpg"
@@ -2517,7 +2547,8 @@
       "last_updated_on": "2021-05-13",
       "is_final": true,
       "tags": [
-        "Fish"
+        "Fish",
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1620938193/Korean%20Seabass/IMG_20210513_185134_qkanru.jpg",
@@ -2542,7 +2573,9 @@
       "published_on": "2021-07-04",
       "last_updated_on": "2021-07-04",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625431164/Sweet%20and%20Sour%20Sauce/IMG_20210625_185854_s5iffv.jpg"
       ]
@@ -2576,7 +2609,9 @@
       "published_on": "2021-07-05",
       "last_updated_on": "2021-07-05",
       "is_final": false,
-      "tags": [],
+      "tags": [
+        "Fruity"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1625519213/Rock%20Cakes/IMG_20210705_202052_vr4unw.jpg"
       ]
@@ -2615,8 +2650,8 @@
       "last_updated_on": "2021-07-25",
       "is_final": true,
       "tags": [
-        "Favourite",
-        "Chicken"
+        "Chicken",
+        "Favourite"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194628_xnd0lm.jpg",
@@ -2734,7 +2769,8 @@
       "last_updated_on": "2021-07-30",
       "is_final": false,
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627645626/Fajitas/IMG_20210715_182133_ygqs1s.jpg"
@@ -2805,7 +2841,8 @@
       "last_updated_on": "2021-07-30",
       "is_final": true,
       "tags": [
-        "Vegetarian"
+        "Vegetarian",
+        "Customisable"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627648115/Eggy%20Bread/IMG_20200819_081055_tgbanf.jpg"
@@ -3089,6 +3126,7 @@
       "is_final": true,
       "tags": [
         "Vegetarian",
+        "Fruity",
         "Customisable"
       ],
       "image_urls": [
@@ -3116,8 +3154,7 @@
       "last_updated_on": "2024-01-01",
       "is_final": true,
       "tags": [
-        "Fish",
-        "Customisable"
+        "Fish"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704137051/Lemon%20Butter%20Cod/IMG_20231223_201355_qe43vu.jpg"
@@ -3150,7 +3187,9 @@
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "Fruity"
+      ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1704139599/Apple%20Crumble/IMG_20231201_225041_zhuvdh.jpg"
       ]
@@ -3177,7 +3216,9 @@
       "published_on": "2024-06-16",
       "last_updated_on": "2024-06-16",
       "is_final": true,
-      "tags": [],
+      "tags": [
+        "One Pot"
+      ],
       "image_urls": []
     },
     {
@@ -3238,8 +3279,8 @@
       "last_updated_on": "2026-08-09",
       "is_final": false,
       "tags": [
-        "One Pot",
-        "Chicken"
+        "Chicken",
+        "One Pot"
       ],
       "image_urls": []
     },
