@@ -54,6 +54,8 @@ def recipe_factory(monkeypatch):
             "ingredients": ["Ingredient"],
             "instructions": ["Do the thing."],
             "category": "MAINS",
+            "total_time_minutes": 30,
+            "active_time_minutes": 15,
             "published_on": date(2025, 1, 1),
             "last_updated_on": date(2025, 1, 1),
             "is_final": True,

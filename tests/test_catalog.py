@@ -11,6 +11,8 @@ VALID_RECIPE = {
     "ingredients": ["Ingredient"],
     "instructions": ["Step"],
     "category": "Category",
+    "total_time_minutes": 30,
+    "active_time_minutes": 15,
     "published_on": "2025-01-01",
     "last_updated_on": "2025-01-01",
     "is_final": True,
@@ -25,6 +27,42 @@ def test_checked_in_catalog_is_valid():
     assert catalog
     assert len({recipe.id for recipe in catalog}) == len(catalog)
     assert len({recipe.slug for recipe in catalog}) == len(catalog)
+
+
+@pytest.mark.parametrize(
+    ("total_time_minutes", "active_time_minutes", "expected_total", "expected_active"),
+    [
+        (5, 5, "5 min", "5 min"),
+        (90, 30, "1 hr 30 min", "30 min"),
+        (120, 60, "2 hrs", "1 hr"),
+        (1440, 20, "1 day", "20 min"),
+        (1500, 45, "1 day 1 hr", "45 min"),
+        (2925, 10, "2 days 45 min", "10 min"),
+    ],
+)
+def test_time_display_formats_minutes_hours_and_days(
+    tmp_path, total_time_minutes, active_time_minutes, expected_total, expected_active
+):
+    catalog_path = tmp_path / "recipes.json"
+    catalog_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "recipes": [
+                    {
+                        **VALID_RECIPE,
+                        "total_time_minutes": total_time_minutes,
+                        "active_time_minutes": active_time_minutes,
+                    }
+                ],
+            }
+        )
+    )
+
+    recipe = load_catalog(catalog_path)[0]
+
+    assert recipe.total_time_display == expected_total
+    assert recipe.active_time_display == expected_active
 
 
 @pytest.mark.parametrize(
@@ -122,6 +160,10 @@ def test_duplicate_slugs_and_unapproved_image_hosts_are_rejected(tmp_path):
         ({"image_urls": [""]}, "non-empty string"),
         ({"category": "x" * 41}, "at most 40"),
         ({"tags": [1]}, "non-empty string"),
+        ({"total_time_minutes": 0}, "positive integer"),
+        ({"total_time_minutes": "30"}, "positive integer"),
+        ({"active_time_minutes": 0}, "positive integer"),
+        ({"active_time_minutes": 45}, "must not be more than total_time_minutes"),
     ],
 )
 def test_invalid_recipe_fields_are_rejected(tmp_path, changes, message):

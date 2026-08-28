@@ -16,6 +16,16 @@
             <time datetime="{{ recipe.last_updated_on|date:'Y-m-d' }}">Updated {{ recipe.last_updated_on|date:"j M Y" }}</time>
           {% endif %}
         </p>
+        <dl class="time-summary" aria-label="Time required">
+          <div class="time-stat">
+            <dt>Total time</dt>
+            <dd data-total-minutes="{{ recipe.total_time_minutes }}" title="From start to finish">{{ recipe.total_time_display }}</dd>
+          </div>
+          <div class="time-stat">
+            <dt>Active time</dt>
+            <dd data-active-minutes="{{ recipe.active_time_minutes }}" title="Hands-on time you'll spend actively working">{{ recipe.active_time_display }}</dd>
+          </div>
+        </dl>
         {% if not recipe.is_final %}
           <p class="notice">This recipe is still under development.</p>
         {% endif %}

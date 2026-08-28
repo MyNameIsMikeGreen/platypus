@@ -13,12 +13,15 @@ CATALOG_FIELDS = {"schema_version", "recipes"}
 MAX_CATEGORY_LENGTH = 40
 MAX_ID = 2_147_483_647
 MAX_TITLE_LENGTH = 160
+MAX_TIME_MINUTES = 10_080  # One week; a generous upper bound for a home recipe.
 RECIPE_FIELDS = {
     "id",
     "title",
     "ingredients",
     "instructions",
     "category",
+    "total_time_minutes",
+    "active_time_minutes",
     "published_on",
     "last_updated_on",
     "is_final",
@@ -39,6 +42,8 @@ class RecipeData:
     ingredients: tuple[str, ...]
     instructions: tuple[str, ...]
     category: str
+    total_time_minutes: int
+    active_time_minutes: int
     published_on: date
     last_updated_on: date
     is_final: bool
@@ -48,10 +53,39 @@ class RecipeData:
     def get_absolute_url(self) -> str:
         return reverse("recipes:detail", kwargs={"recipe_id": self.id, "slug": self.slug})
 
+    @property
+    def total_time_display(self) -> str:
+        return _format_minutes(self.total_time_minutes)
+
+    @property
+    def active_time_display(self) -> str:
+        return _format_minutes(self.active_time_minutes)
+
+
+def _format_minutes(total_minutes: int) -> str:
+    days, remainder = divmod(total_minutes, 24 * 60)
+    hours, minutes = divmod(remainder, 60)
+    parts = []
+    if days:
+        parts.append(f"{days} day{'s' if days != 1 else ''}")
+    if hours:
+        parts.append(f"{hours} hr{'s' if hours != 1 else ''}")
+    if minutes or not parts:
+        parts.append(f"{minutes} min")
+    return " ".join(parts)
+
 
 def _string(value: object, field: str, recipe_id: object) -> str:
     if not isinstance(value, str) or not value.strip():
         raise CatalogError(f"Recipe {recipe_id}: {field} must be a non-empty string.")
+    return value
+
+
+def _positive_int(value: object, field: str, recipe_id: object, *, max_value: int) -> int:
+    if not isinstance(value, int) or isinstance(value, bool) or not 1 <= value <= max_value:
+        raise CatalogError(
+            f"Recipe {recipe_id}: {field} must be a positive integer of at most {max_value}."
+        )
     return value
 
 
@@ -128,6 +162,20 @@ def _parse_recipe(raw: object) -> RecipeData:
     if len(category) > MAX_CATEGORY_LENGTH:
         raise CatalogError(f"Recipe {recipe_id}: category must be at most 40 characters.")
 
+    total_time_minutes = _positive_int(
+        raw.get("total_time_minutes"), "total_time_minutes", recipe_id, max_value=MAX_TIME_MINUTES
+    )
+    active_time_minutes = _positive_int(
+        raw.get("active_time_minutes"),
+        "active_time_minutes",
+        recipe_id,
+        max_value=MAX_TIME_MINUTES,
+    )
+    if active_time_minutes > total_time_minutes:
+        raise CatalogError(
+            f"Recipe {recipe_id}: active_time_minutes must not be more than total_time_minutes."
+        )
+
     return RecipeData(
         id=recipe_id,
         slug=generated_slug,
@@ -139,6 +187,8 @@ def _parse_recipe(raw: object) -> RecipeData:
             raw.get("instructions"), "instructions", recipe_id, allow_empty=False
         ),
         category=category,
+        total_time_minutes=total_time_minutes,
+        active_time_minutes=active_time_minutes,
         published_on=published_on,
         last_updated_on=last_updated_on,
         is_final=is_final,

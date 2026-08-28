@@ -21,6 +21,8 @@
         "Freeze for at least 24 hours."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 1460,
+      "active_time_minutes": 20,
       "published_on": "2020-06-19",
       "last_updated_on": "2020-06-19",
       "is_final": true,
@@ -64,6 +66,8 @@
         "Serve meatballs atop couscous and topped with natural yoghurt and cucumber."
       ],
       "category": "MAINS",
+      "total_time_minutes": 55,
+      "active_time_minutes": 30,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -99,6 +103,8 @@
         "Drain and serve."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 35,
+      "active_time_minutes": 25,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -145,6 +151,8 @@
         "Bake for ~30 minutes at 200°C."
       ],
       "category": "MAINS",
+      "total_time_minutes": 100,
+      "active_time_minutes": 50,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -187,6 +195,8 @@
         "Bake for a further 30 minutes without the lid."
       ],
       "category": "MAINS",
+      "total_time_minutes": 210,
+      "active_time_minutes": 35,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -225,6 +235,8 @@
         "Serve topping on bread once liquid thickens."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 25,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -258,6 +270,8 @@
         "Return to oven for another 20 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 55,
+      "active_time_minutes": 20,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -300,6 +314,8 @@
         "Serve with sour cream or mayonnaise."
       ],
       "category": "MAINS",
+      "total_time_minutes": 35,
+      "active_time_minutes": 35,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -338,6 +354,8 @@
         "Serve on toasted bread or eat as a standalone dish."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 30,
+      "active_time_minutes": 25,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -386,6 +404,8 @@
         "Place into oven heated as high as possible for 10-15 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 170,
+      "active_time_minutes": 50,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": false,
@@ -426,6 +446,8 @@
         "Brown cheese under grill if desired."
       ],
       "category": "MAINS",
+      "total_time_minutes": 45,
+      "active_time_minutes": 25,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -461,6 +483,8 @@
         "Cool on a wire rack."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 40,
+      "active_time_minutes": 15,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -506,6 +530,8 @@
         "Let cool in pan for at least 30 minutes before flipping onto a plate/board."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 105,
+      "active_time_minutes": 30,
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
@@ -538,6 +564,8 @@
         "Serve on burger buns just like any other burger."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 25,
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
@@ -581,6 +609,8 @@
         "Re-glaze the pork frequently while cooking."
       ],
       "category": "MAINS",
+      "total_time_minutes": 115,
+      "active_time_minutes": 35,
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
@@ -622,6 +652,8 @@
         "Serve on rice."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 25,
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
@@ -650,6 +682,8 @@
         "Return to the oven for a further 25 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 40,
+      "active_time_minutes": 10,
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": false,
@@ -716,6 +750,8 @@
         "Fill buns with pork and sprinkle filling with sesame seeds to serve."
       ],
       "category": "MAINS",
+      "total_time_minutes": 180,
+      "active_time_minutes": 45,
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
@@ -754,6 +790,8 @@
         "Finish with a drizzle of olive oil and salt and pepper."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 20,
+      "active_time_minutes": 20,
       "published_on": "2020-07-16",
       "last_updated_on": "2020-07-16",
       "is_final": true,
@@ -786,6 +824,8 @@
         "Suspend skewers from each end bake at 200°C for 25 minutes, flipping halfway through."
       ],
       "category": "MAINS",
+      "total_time_minutes": 50,
+      "active_time_minutes": 25,
       "published_on": "2020-07-21",
       "last_updated_on": "2020-07-21",
       "is_final": true,
@@ -825,6 +865,8 @@
         "Serve on rice, topped with coriander leaf."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 25,
       "published_on": "2020-07-31",
       "last_updated_on": "2020-07-31",
       "is_final": true,
@@ -862,6 +904,8 @@
         "While jackfruit is in the oven, slice cucumber and remaining spring onions into sticks."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 35,
+      "active_time_minutes": 20,
       "published_on": "2020-08-12",
       "last_updated_on": "2020-08-12",
       "is_final": true,
@@ -898,6 +942,8 @@
         "If too dry, add additional pasta water."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 20,
       "published_on": "2020-08-12",
       "last_updated_on": "2020-08-12",
       "is_final": true,
@@ -927,6 +973,8 @@
         "Add toppings."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 45,
+      "active_time_minutes": 15,
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": false,
@@ -967,6 +1015,8 @@
         "Eat as-is or serve on toasted bread."
       ],
       "category": "MAINS",
+      "total_time_minutes": 50,
+      "active_time_minutes": 20,
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": false,
@@ -1015,6 +1065,8 @@
         "Brown cheese under grill."
       ],
       "category": "MAINS",
+      "total_time_minutes": 90,
+      "active_time_minutes": 45,
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": true,
@@ -1054,6 +1106,8 @@
         "Bake at 160C for ~25 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 60,
+      "active_time_minutes": 15,
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": true,
@@ -1086,6 +1140,8 @@
         "Skim and strain through a colander."
       ],
       "category": "MISCELLANEOUS",
+      "total_time_minutes": 220,
+      "active_time_minutes": 15,
       "published_on": "2020-08-28",
       "last_updated_on": "2020-08-28",
       "is_final": true,
@@ -1127,6 +1183,8 @@
         "Garnish with sesame seeds."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 25,
       "published_on": "2020-09-10",
       "last_updated_on": "2020-09-10",
       "is_final": true,
@@ -1157,6 +1215,8 @@
         "Pour into and fry in a frying pan with oil for ~3 minutes each side."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 15,
+      "active_time_minutes": 15,
       "published_on": "2020-09-10",
       "last_updated_on": "2020-09-10",
       "is_final": true,
@@ -1187,6 +1247,8 @@
         "Grill sea bass under high heat for ~5 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 25,
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
@@ -1215,6 +1277,8 @@
         "Cook for ~5 minutes each side."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 25,
+      "active_time_minutes": 25,
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
@@ -1255,6 +1319,8 @@
         "Serve on either spaghetti or in bread rolls."
       ],
       "category": "MAINS",
+      "total_time_minutes": 45,
+      "active_time_minutes": 40,
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
@@ -1295,6 +1361,8 @@
         "Serve on couscous."
       ],
       "category": "MAINS",
+      "total_time_minutes": 110,
+      "active_time_minutes": 25,
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
@@ -1327,6 +1395,8 @@
         "Lightly drizzle with remaining olive oil."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 10,
+      "active_time_minutes": 10,
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
@@ -1369,6 +1439,8 @@
         "Allow to cool for at least 15 minutes before cutting."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 140,
+      "active_time_minutes": 35,
       "published_on": "2020-10-13",
       "last_updated_on": "2020-10-13",
       "is_final": true,
@@ -1411,6 +1483,8 @@
         "Glaze rolls."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 60,
+      "active_time_minutes": 28,
       "published_on": "2020-10-14",
       "last_updated_on": "2020-10-14",
       "is_final": true,
@@ -1444,6 +1518,8 @@
         "Cool on a wire rack above kitchen roll."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 20,
       "published_on": "2020-10-14",
       "last_updated_on": "2020-10-14",
       "is_final": true,
@@ -1473,6 +1549,8 @@
         "Gently fold all ingredients together."
       ],
       "category": "MISCELLANEOUS",
+      "total_time_minutes": 50,
+      "active_time_minutes": 10,
       "published_on": "2020-11-25",
       "last_updated_on": "2020-11-25",
       "is_final": true,
@@ -1497,6 +1575,8 @@
         "Mix all ingredients together thoroughly."
       ],
       "category": "MISCELLANEOUS",
+      "total_time_minutes": 5,
+      "active_time_minutes": 5,
       "published_on": "2020-11-25",
       "last_updated_on": "2020-11-25",
       "is_final": false,
@@ -1533,6 +1613,8 @@
         "Continue to cook for ~5 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 25,
       "published_on": "2020-11-26",
       "last_updated_on": "2020-11-26",
       "is_final": true,
@@ -1559,6 +1641,8 @@
         "Add toppings of choice (e.g. banana, chocolate spread, honey, or ice cream)."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 15,
+      "active_time_minutes": 10,
       "published_on": "2020-12-06",
       "last_updated_on": "2020-12-06",
       "is_final": true,
@@ -1604,6 +1688,8 @@
         "Dress traybake with dressing."
       ],
       "category": "MAINS",
+      "total_time_minutes": 80,
+      "active_time_minutes": 20,
       "published_on": "2021-01-22",
       "last_updated_on": "2021-01-22",
       "is_final": true,
@@ -1650,6 +1736,8 @@
         "Bake at 180°C until cheese beginning to brown."
       ],
       "category": "MAINS",
+      "total_time_minutes": 55,
+      "active_time_minutes": 40,
       "published_on": "2021-02-09",
       "last_updated_on": "2021-02-09",
       "is_final": true,
@@ -1698,6 +1786,8 @@
         "Bake at 170C for 30 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 75,
+      "active_time_minutes": 45,
       "published_on": "2021-02-09",
       "last_updated_on": "2021-02-09",
       "is_final": true,
@@ -1739,6 +1829,8 @@
         "Serve on lettuce leaves."
       ],
       "category": "MAINS",
+      "total_time_minutes": 35,
+      "active_time_minutes": 30,
       "published_on": "2021-02-09",
       "last_updated_on": "2021-02-09",
       "is_final": true,
@@ -1781,6 +1873,8 @@
         "Bake on a baking tray at 180°C for ~12 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 45,
+      "active_time_minutes": 20,
       "published_on": "2021-02-24",
       "last_updated_on": "2021-02-24",
       "is_final": true,
@@ -1819,6 +1913,8 @@
         "Grill until cheese is golden."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 20,
       "published_on": "2021-02-25",
       "last_updated_on": "2021-02-25",
       "is_final": true,
@@ -1848,6 +1944,8 @@
         "Cover with lid and fry until browned."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 15,
+      "active_time_minutes": 15,
       "published_on": "2021-02-27",
       "last_updated_on": "2021-02-27",
       "is_final": true,
@@ -1886,6 +1984,8 @@
         "Bake at 200°C for ~20 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 45,
+      "active_time_minutes": 20,
       "published_on": "2021-03-02",
       "last_updated_on": "2021-03-02",
       "is_final": true,
@@ -1923,6 +2023,8 @@
         "Pour ganache into crust and let cool fully before serving."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 115,
+      "active_time_minutes": 20,
       "published_on": "2021-03-10",
       "last_updated_on": "2021-03-10",
       "is_final": true,
@@ -1967,6 +2069,8 @@
         "Return to oven for 15 additional minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 70,
+      "active_time_minutes": 15,
       "published_on": "2021-03-26",
       "last_updated_on": "2021-03-26",
       "is_final": false,
@@ -2012,6 +2116,8 @@
         "Bake at 180°C for ~20 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 50,
+      "active_time_minutes": 25,
       "published_on": "2021-03-30",
       "last_updated_on": "2021-03-30",
       "is_final": true,
@@ -2061,6 +2167,8 @@
         "Return to oven until golden brown."
       ],
       "category": "MAINS",
+      "total_time_minutes": 360,
+      "active_time_minutes": 45,
       "published_on": "2021-03-30",
       "last_updated_on": "2021-03-30",
       "is_final": true,
@@ -2102,6 +2210,8 @@
         "Glaze with apricot jam."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 365,
+      "active_time_minutes": 35,
       "published_on": "2021-03-30",
       "last_updated_on": "2021-03-30",
       "is_final": false,
@@ -2135,6 +2245,8 @@
         "Bake at 140C for 45 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 55,
+      "active_time_minutes": 10,
       "published_on": "2021-04-03",
       "last_updated_on": "2021-04-03",
       "is_final": true,
@@ -2177,6 +2289,8 @@
         "Add salt and pepper to taste."
       ],
       "category": "MAINS",
+      "total_time_minutes": 60,
+      "active_time_minutes": 35,
       "published_on": "2021-04-09",
       "last_updated_on": "2021-04-09",
       "is_final": true,
@@ -2214,6 +2328,8 @@
         "Fry each side until golden brown."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 20,
+      "active_time_minutes": 20,
       "published_on": "2021-04-09",
       "last_updated_on": "2021-04-09",
       "is_final": true,
@@ -2244,6 +2360,8 @@
         "Bake at 180°C for 15 minutes."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 20,
+      "active_time_minutes": 5,
       "published_on": "2021-04-15",
       "last_updated_on": "2021-04-15",
       "is_final": true,
@@ -2276,6 +2394,8 @@
         "Cook in a frying pan until browned on both sides (~10 minutes)."
       ],
       "category": "MAINS",
+      "total_time_minutes": 20,
+      "active_time_minutes": 20,
       "published_on": "2021-04-17",
       "last_updated_on": "2021-04-17",
       "is_final": false,
@@ -2302,6 +2422,8 @@
         "Mix all ingredients."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 20,
+      "active_time_minutes": 5,
       "published_on": "2021-04-19",
       "last_updated_on": "2021-04-19",
       "is_final": true,
@@ -2329,6 +2451,8 @@
         "Once all milk incorporated, heat custard gently on hob whilst whisking."
       ],
       "category": "MISCELLANEOUS",
+      "total_time_minutes": 15,
+      "active_time_minutes": 15,
       "published_on": "2021-04-20",
       "last_updated_on": "2021-04-20",
       "is_final": false,
@@ -2368,6 +2492,8 @@
         "If serving with pasta, add 2-3 tablespoons of pasta water."
       ],
       "category": "MAINS",
+      "total_time_minutes": 35,
+      "active_time_minutes": 25,
       "published_on": "2021-04-27",
       "last_updated_on": "2021-04-27",
       "is_final": true,
@@ -2400,6 +2526,8 @@
         "Fry until browned on each side."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 20,
+      "active_time_minutes": 20,
       "published_on": "2021-05-06",
       "last_updated_on": "2021-05-06",
       "is_final": true,
@@ -2434,6 +2562,8 @@
         "Mix together all ingredients."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 30,
+      "active_time_minutes": 15,
       "published_on": "2021-05-06",
       "last_updated_on": "2021-05-06",
       "is_final": true,
@@ -2476,6 +2606,8 @@
         "Bake at 180°C for 15 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 55,
+      "active_time_minutes": 25,
       "published_on": "2021-05-06",
       "last_updated_on": "2021-05-06",
       "is_final": true,
@@ -2512,6 +2644,8 @@
         "Drizzle sauce over fillings."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 15,
+      "active_time_minutes": 10,
       "published_on": "2021-05-13",
       "last_updated_on": "2021-05-13",
       "is_final": true,
@@ -2543,6 +2677,8 @@
         "Cook for 3-5 minutes until sauce is hot."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 20,
+      "active_time_minutes": 15,
       "published_on": "2021-05-13",
       "last_updated_on": "2021-05-13",
       "is_final": true,
@@ -2570,6 +2706,8 @@
         "Slowly heat until boiling."
       ],
       "category": "MISCELLANEOUS",
+      "total_time_minutes": 10,
+      "active_time_minutes": 5,
       "published_on": "2021-07-04",
       "last_updated_on": "2021-07-04",
       "is_final": true,
@@ -2606,6 +2744,8 @@
         "Bake at 160C for 20 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 40,
+      "active_time_minutes": 20,
       "published_on": "2021-07-05",
       "last_updated_on": "2021-07-05",
       "is_final": false,
@@ -2646,6 +2786,8 @@
         "Fry chicken for ~10 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 50,
+      "active_time_minutes": 45,
       "published_on": "2021-07-25",
       "last_updated_on": "2021-07-25",
       "is_final": true,
@@ -2685,6 +2827,8 @@
         "Brush more butter mixture over bread."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 35,
+      "active_time_minutes": 20,
       "published_on": "2021-07-29",
       "last_updated_on": "2021-07-29",
       "is_final": true,
@@ -2721,6 +2865,8 @@
         "Bake at 200°C for ~10 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 205,
+      "active_time_minutes": 25,
       "published_on": "2021-07-29",
       "last_updated_on": "2021-07-29",
       "is_final": true,
@@ -2765,6 +2911,8 @@
         "Wrap."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 30,
       "published_on": "2021-07-30",
       "last_updated_on": "2021-07-30",
       "is_final": false,
@@ -2808,6 +2956,8 @@
         "Let cool for at least 30 minutes before cutting."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 140,
+      "active_time_minutes": 25,
       "published_on": "2021-07-30",
       "last_updated_on": "2021-07-30",
       "is_final": true,
@@ -2837,6 +2987,8 @@
         "Add toppings (e.g. berries, cinnamon, syrup)."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 15,
+      "active_time_minutes": 15,
       "published_on": "2021-07-30",
       "last_updated_on": "2021-07-30",
       "is_final": true,
@@ -2878,6 +3030,8 @@
         "Add sauce."
       ],
       "category": "MAINS",
+      "total_time_minutes": 155,
+      "active_time_minutes": 35,
       "published_on": "2021-10-16",
       "last_updated_on": "2021-10-16",
       "is_final": true,
@@ -2916,6 +3070,8 @@
         "Bake at 160C for 20-25 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 40,
+      "active_time_minutes": 20,
       "published_on": "2021-10-16",
       "last_updated_on": "2021-10-16",
       "is_final": true,
@@ -2953,6 +3109,8 @@
         "Garnish with coriander leaf."
       ],
       "category": "MAINS",
+      "total_time_minutes": 75,
+      "active_time_minutes": 44,
       "published_on": "2021-10-16",
       "last_updated_on": "2021-10-16",
       "is_final": true,
@@ -2990,6 +3148,8 @@
         "Shred chicken using two forks or an electric hand mixer."
       ],
       "category": "MAINS",
+      "total_time_minutes": 55,
+      "active_time_minutes": 13,
       "published_on": "2021-12-01",
       "last_updated_on": "2021-12-01",
       "is_final": false,
@@ -3026,6 +3186,8 @@
         "Add basil leaves shortly before serving."
       ],
       "category": "MAINS",
+      "total_time_minutes": 30,
+      "active_time_minutes": 29,
       "published_on": "2021-12-26",
       "last_updated_on": "2021-12-26",
       "is_final": true,
@@ -3066,6 +3228,8 @@
         "Simmer for 5 minutes."
       ],
       "category": "MAINS",
+      "total_time_minutes": 50,
+      "active_time_minutes": 35,
       "published_on": "2022-08-04",
       "last_updated_on": "2022-08-04",
       "is_final": true,
@@ -3094,6 +3258,8 @@
         "Microwave for 1 minute, 30 seconds."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 5,
+      "active_time_minutes": 5,
       "published_on": "2022-08-04",
       "last_updated_on": "2022-08-04",
       "is_final": true,
@@ -3121,6 +3287,8 @@
         "Add toppings of choice (e.g. banana, chocolate spread, honey, or ice cream)."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 10,
+      "active_time_minutes": 7,
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
@@ -3150,6 +3318,8 @@
         "Drizzle sauce over fish once served."
       ],
       "category": "LIGHT DISHES",
+      "total_time_minutes": 25,
+      "active_time_minutes": 7,
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
@@ -3184,6 +3354,8 @@
         "Bake at 180°C for 40 minutes."
       ],
       "category": "CONFECTIONERY",
+      "total_time_minutes": 60,
+      "active_time_minutes": 20,
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
@@ -3213,6 +3385,8 @@
         "Bring to a boil until thickened."
       ],
       "category": "MISCELLANEOUS",
+      "total_time_minutes": 10,
+      "active_time_minutes": 10,
       "published_on": "2024-06-16",
       "last_updated_on": "2024-06-16",
       "is_final": true,
@@ -3245,6 +3419,8 @@
         "Assemble components as a taco."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 14,
       "published_on": "2024-06-16",
       "last_updated_on": "2024-06-16",
       "is_final": false,
@@ -3275,6 +3451,8 @@
         "Bake at 190°C for 1 hour."
       ],
       "category": "MAINS",
+      "total_time_minutes": 70,
+      "active_time_minutes": 11,
       "published_on": "2026-08-09",
       "last_updated_on": "2026-08-09",
       "is_final": false,
@@ -3307,6 +3485,8 @@
         "Mix parmesan into mixture."
       ],
       "category": "MAINS",
+      "total_time_minutes": 25,
+      "active_time_minutes": 25,
       "published_on": "2026-08-09",
       "last_updated_on": "2026-08-09",
       "is_final": true,

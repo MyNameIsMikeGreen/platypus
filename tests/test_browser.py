@@ -7,6 +7,7 @@ def test_category_toggles_show_and_hide_categories(live_url):
         page = browser.new_page()
         try:
             page.goto(live_url)
+            page.locator("[data-filter-drawer] summary").click()
             toggles = page.locator("[data-category-toggle]")
             cards = page.locator(".category-card[data-category]")
             toggle_count = toggles.count()
@@ -119,6 +120,7 @@ def test_phone_and_desktop_layouts_are_responsive(live_url):
             phone.goto(live_url)
 
             assert phone.evaluate("document.documentElement.scrollWidth <= window.innerWidth")
+            phone.locator("[data-filter-drawer] summary").click()
             for selector in ["nav a", "button", ".category-toggle", ".recipe-list a"]:
                 assert phone.locator(selector).first.bounding_box()["height"] >= 44
             assert (
@@ -159,3 +161,90 @@ def test_phone_and_desktop_layouts_are_responsive(live_url):
             assert method["y"] == ingredients["y"]
         finally:
             browser.close()
+
+
+def test_time_sliders_narrow_recipes_without_navigating(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            starting_url = page.url
+            page.locator("[data-filter-drawer] summary").click()
+
+            items = page.locator("[data-recipe-item]")
+            visible_items = page.locator("[data-recipe-item]:not([hidden])")
+            total_slider = page.locator("[data-total-time-slider]")
+            active_slider = page.locator("[data-active-time-slider]")
+            total_output = page.locator("[data-total-time-value]")
+            active_output = page.locator("[data-active-time-value]")
+
+            total_count = items.count()
+            assert total_count > 0
+            expect(visible_items).to_have_count(total_count)
+            expect(total_output).to_have_text("Any duration")
+            expect(active_output).to_have_text("Any duration")
+
+            # Drag the total time slider down to its minimum step (15 minutes or less).
+            total_slider.evaluate(
+                "el => { el.value = 0; el.dispatchEvent(new Event('input', { bubbles: true })); }"
+            )
+            expect(total_output).to_have_text("15 min or less")
+            filtered_count = visible_items.count()
+            assert 0 < filtered_count < total_count
+            remaining_totals = visible_items.evaluate_all(
+                "items => items.map(item => Number(item.dataset.totalMinutes))"
+            )
+            assert all(minutes <= 15 for minutes in remaining_totals)
+            assert page.url == starting_url
+
+            # Restore total time, then narrow using the active time slider instead.
+            total_slider.evaluate(
+                "el => { el.value = el.max; el.dispatchEvent(new Event('input', { bubbles: true })); }"
+            )
+            expect(visible_items).to_have_count(total_count)
+
+            active_slider.evaluate(
+                "el => { el.value = 1; el.dispatchEvent(new Event('input', { bubbles: true })); }"
+            )
+            expect(active_output).to_have_text("15 min or less")
+            active_filtered_count = visible_items.count()
+            assert 0 < active_filtered_count < total_count
+            remaining_actives = visible_items.evaluate_all(
+                "items => items.map(item => Number(item.dataset.activeMinutes))"
+            )
+            assert all(minutes <= 15 for minutes in remaining_actives)
+            assert page.url == starting_url
+
+            active_slider.evaluate(
+                "el => { el.value = el.max; el.dispatchEvent(new Event('input', { bubbles: true })); }"
+            )
+            expect(visible_items).to_have_count(total_count)
+
+            # Narrowing to a single category whose recipes all exceed the time
+            # budget should surface the dedicated time empty-state, distinct
+            # from the category empty-state.
+            toggles = page.locator("[data-category-toggle]")
+            for index in range(toggles.count()):
+                toggle = toggles.nth(index)
+                if toggle.get_attribute("value") != "MAINS" and toggle.is_checked():
+                    toggle.uncheck()
+            mains_toggle = page.locator("[data-category-toggle][value='MAINS']")
+            expect(mains_toggle).to_be_checked()
+
+            total_slider.evaluate(
+                "el => { el.value = 0; el.dispatchEvent(new Event('input', { bubbles: true })); }"
+            )
+            expect(page.locator("[data-time-empty]")).to_be_visible()
+            expect(page.locator("[data-category-empty]")).to_be_hidden()
+            expect(page.locator('.category-card[data-category="MAINS"]')).to_be_hidden()
+
+            total_slider.evaluate(
+                "el => { el.value = el.max; el.dispatchEvent(new Event('input', { bubbles: true })); }"
+            )
+            expect(page.locator("[data-time-empty]")).to_be_hidden()
+            expect(page.locator('.category-card[data-category="MAINS"]')).to_be_visible()
+            assert page.url == starting_url
+        finally:
+            browser.close()
+

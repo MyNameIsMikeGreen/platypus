@@ -72,6 +72,42 @@ def test_search_can_be_scoped_to_one_category(client, recipe_factory):
     assert "Select a valid choice" in invalid.content.decode()
 
 
+def test_index_exposes_time_data_attributes_and_slider_controls(client, recipe_factory):
+    recipe_factory(
+        title="Quick Snack",
+        category="SNACKS",
+        total_time_minutes=15,
+        active_time_minutes=10,
+    )
+
+    response = client.get(reverse("recipes:index"))
+
+    assert response.status_code == 200
+    content = response.content.decode()
+    assert 'data-recipe-item' in content
+    assert 'data-total-minutes="15"' in content
+    assert 'data-active-minutes="10"' in content
+    assert 'data-time-controls' in content
+    assert 'data-total-time-slider' in content
+    assert 'data-active-time-slider' in content
+    assert 'data-time-empty' in content
+    assert "time-badge" not in content
+    assert 'data-filter-drawer' in content
+    assert "<details" in content
+    assert '<details class="filter-drawer" data-filter-drawer open' not in content
+
+
+def test_index_does_not_render_time_filter_form_fields(client, recipe_factory):
+    recipe_factory()
+
+    response = client.get(reverse("recipes:index"))
+
+    assert response.status_code == 200
+    content = response.content.decode()
+    assert "max_total_time" not in content
+    assert "max_active_time" not in content
+
+
 def test_detail_renders_recipe_information_safely(client, recipe_factory):
     recipe = recipe_factory(
         title='Safe </script><script>alert("x")</script>',

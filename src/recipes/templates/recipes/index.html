@@ -32,18 +32,61 @@
   </section>
 
   {% if categories %}
-    <fieldset class="category-filters" data-category-controls>
-      <legend>Show categories</legend>
-      <div class="category-toggle-list">
-        {% for category, recipes in categories %}
-          <label class="category-toggle" for="category-{{ forloop.counter }}">
-            <input id="category-{{ forloop.counter }}" type="checkbox" value="{{ category }}" data-category-toggle checked>
-            <span>{{ category|title }}</span>
-          </label>
-        {% endfor %}
+    <details class="filter-drawer" data-filter-drawer>
+      <summary>
+        <span>Filters</span>
+      </summary>
+      <div class="filter-panels">
+        <fieldset class="category-filters" data-category-controls>
+          <legend>Show categories</legend>
+          <div class="category-toggle-list">
+            {% for category, recipes in categories %}
+              <label class="category-toggle" for="category-{{ forloop.counter }}">
+                <input id="category-{{ forloop.counter }}" type="checkbox" value="{{ category }}" data-category-toggle checked>
+                <span>{{ category|title }}</span>
+              </label>
+            {% endfor %}
+          </div>
+          <p class="filter-status" data-category-status aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="time-filters" data-time-controls>
+          <legend>Filter by time</legend>
+          <div class="time-filter-fields">
+            <div class="time-filter-field">
+              <div class="time-filter-label-row">
+                <label for="filter-total-time">Total time</label>
+                <output for="filter-total-time" data-total-time-value>Any duration</output>
+              </div>
+              <input
+                type="range"
+                id="filter-total-time"
+                min="0"
+                max="12"
+                step="1"
+                value="12"
+                data-total-time-slider
+              >
+            </div>
+            <div class="time-filter-field">
+              <div class="time-filter-label-row">
+                <label for="filter-active-time">Active time</label>
+                <output for="filter-active-time" data-active-time-value>Any duration</output>
+              </div>
+              <input
+                type="range"
+                id="filter-active-time"
+                min="0"
+                max="8"
+                step="1"
+                value="8"
+                data-active-time-slider
+              >
+            </div>
+          </div>
+        </fieldset>
       </div>
-      <p class="filter-status" data-category-status aria-live="polite"></p>
-    </fieldset>
+    </details>
 
     <div class="category-grid">
       {% for category, recipes in categories %}
@@ -51,7 +94,11 @@
           <h2>{{ category|title }}</h2>
           <ul class="recipe-list">
             {% for recipe in recipes %}
-              <li>
+              <li
+                data-recipe-item
+                data-total-minutes="{{ recipe.total_time_minutes }}"
+                data-active-minutes="{{ recipe.active_time_minutes }}"
+              >
                 <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
                 {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
               </li>
@@ -63,6 +110,10 @@
     <div class="empty-state" data-category-empty hidden>
       <h2>No categories selected</h2>
       <p>Enable a category above to show its recipes.</p>
+    </div>
+    <div class="empty-state" data-time-empty hidden>
+      <h2>No recipes match this time range</h2>
+      <p>Try widening the total time or active time sliders.</p>
     </div>
   {% elif search_term %}
     <div class="empty-state">

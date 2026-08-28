@@ -289,10 +289,63 @@ select:focus-visible {
   border: 0;
 }
 
+.filter-drawer {
+  margin: 0 0 2rem;
+}
+
+.filter-drawer summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.35rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: var(--surface);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  list-style: none;
+  touch-action: manipulation;
+}
+
+.filter-drawer summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-drawer summary::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 0.15rem solid currentColor;
+  border-bottom: 0.15rem solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.filter-drawer[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.filter-drawer[open] summary {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: #e8f2eb;
+}
+
+.filter-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
 .category-filters {
   min-inline-size: 0;
   width: 100%;
-  margin: 0 0 2rem;
+  margin: 0;
   padding: 0;
   border: 0;
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -347,6 +400,59 @@ select:focus-visible {
   margin: 0.65rem 0 0;
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+.time-filters {
+  min-inline-size: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.time-filters legend {
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.time-filter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.time-filter-field {
+  min-width: 0;
+  max-width: 24rem;
+}
+
+.time-filter-label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.time-filter-label-row label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.time-filter-label-row output {
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.time-filters input[type="range"] {
+  width: 100%;
+  min-height: 2.75rem;
+  accent-color: var(--accent-dark);
+  touch-action: manipulation;
 }
 
 .category-grid {
@@ -443,6 +549,37 @@ select:focus-visible {
 
 .recipe-meta span[aria-hidden="true"] {
   margin: 0 0.35em;
+}
+
+.time-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.time-stat {
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.time-stat dt {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.time-stat dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .tag-list {
@@ -627,6 +764,22 @@ select:focus-visible {
     overflow: visible;
   }
 
+  .filter-panels {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .time-filter-fields {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .time-filter-field {
+    flex: 1;
+    max-width: none;
+  }
+
   .category-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
     gap: 1.25rem;
@@ -669,7 +822,7 @@ select:focus-visible {
   .site-footer,
   .back-link,
   .tag-list,
-  .category-filters,
+  .filter-drawer,
   .gallery {
     display: none;
   }
