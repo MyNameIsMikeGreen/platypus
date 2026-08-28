@@ -9,6 +9,13 @@
         <a class="back-link" href="{% url 'recipes:index' %}">&larr; All recipes</a>
         <p class="eyebrow">{{ recipe.category|title }}</p>
         <h1>{{ recipe.title }}</h1>
+        <p class="recipe-meta">
+          <time datetime="{{ recipe.published_on|date:'Y-m-d' }}">Published {{ recipe.published_on|date:"j M Y" }}</time>
+          {% if recipe.last_updated_on != recipe.published_on %}
+            <span aria-hidden="true">&middot;</span>
+            <time datetime="{{ recipe.last_updated_on|date:'Y-m-d' }}">Updated {{ recipe.last_updated_on|date:"j M Y" }}</time>
+          {% endif %}
+        </p>
         {% if not recipe.is_final %}
           <p class="notice">This recipe is still under development.</p>
         {% endif %}

@@ -12,6 +12,7 @@ VALID_RECIPE = {
     "instructions": ["Step"],
     "category": "Category",
     "published_on": "2025-01-01",
+    "last_updated_on": "2025-01-01",
     "is_final": True,
     "tags": [],
     "image_urls": [],
@@ -35,23 +36,24 @@ def test_checked_in_catalog_is_valid():
         ({"schema_version": 1, "recipes": ["invalid"]}, "must be an object"),
         ({"schema_version": 1, "recipes": [{**VALID_RECIPE, "extra": True}]}, "exactly"),
         (
-            {
-                "schema_version": 1,
-                "recipes": [
-                    {
-                        "id": 1,
-                        "title": "Recipe",
-                        "ingredients": [],
-                        "instructions": ["Step"],
-                        "category": "Category",
-                        "published_on": "2025-01-01",
-                        "is_final": True,
-                        "tags": [],
-                        "image_urls": [],
-                    }
-                ],
-            },
-            "ingredients",
+                {
+                    "schema_version": 1,
+                    "recipes": [
+                        {
+                            "id": 1,
+                            "title": "Recipe",
+                            "ingredients": [],
+                            "instructions": ["Step"],
+                            "category": "Category",
+                            "published_on": "2025-01-01",
+                            "last_updated_on": "2025-01-01",
+                            "is_final": True,
+                            "tags": [],
+                            "image_urls": [],
+                        }
+                    ],
+                },
+                "ingredients",
         ),
     ],
 )
@@ -112,6 +114,9 @@ def test_duplicate_slugs_and_unapproved_image_hosts_are_rejected(tmp_path):
         ({"title": "!!!"}, "URL-safe slug"),
         ({"published_on": "20250101"}, "YYYY-MM-DD"),
         ({"published_on": "2025-99-99"}, "valid date"),
+        ({"last_updated_on": "20250101"}, "YYYY-MM-DD"),
+        ({"last_updated_on": "2025-99-99"}, "valid date"),
+        ({"last_updated_on": "2024-12-31"}, "must not be before published_on"),
         ({"is_final": "yes"}, "true or false"),
         ({"image_urls": "invalid"}, "must be a list"),
         ({"image_urls": [""]}, "non-empty string"),

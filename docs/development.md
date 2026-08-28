@@ -11,8 +11,13 @@ optional for local code work and required to validate the
 ```shell
 uv sync
 make browser-install
+uv run python manage.py collectstatic --noinput
 uv run python manage.py runserver
 ```
+
+`collectstatic` must be rerun whenever static files under `src/recipes/static/` change; static
+assets are served through whitenoise's manifest storage, so requests fail with a 500 until the
+manifest exists in `staticfiles/`.
 
 The application reads the checked-in recipe catalog directly and does not require a database or
 external service. Follow [`recipes.md`](recipes.md) when changing catalog data and

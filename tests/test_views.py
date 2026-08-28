@@ -1,6 +1,5 @@
-from datetime import date
-
 import pytest
+from datetime import date
 from django.urls import reverse
 
 
@@ -93,6 +92,33 @@ def test_detail_renders_recipe_information_safely(client, recipe_factory):
     assert "&lt;/script&gt;&lt;script&gt;" in content
     assert 'loading="lazy"' in content
     assert 'referrerpolicy="no-referrer"' in content
+
+
+def test_detail_hides_last_updated_when_same_as_published(client, recipe_factory):
+    recipe = recipe_factory(
+        published_on=date(2025, 1, 1),
+        last_updated_on=date(2025, 1, 1),
+    )
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert "Published 1 Jan 2025" in content
+    assert "Updated" not in content
+
+
+def test_detail_shows_last_updated_when_different_from_published(client, recipe_factory):
+    recipe = recipe_factory(
+        published_on=date(2025, 1, 1),
+        last_updated_on=date(2025, 3, 15),
+    )
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert "Published 1 Jan 2025" in content
+    assert "Updated 15 Mar 2025" in content
+    assert content.index("Published 1 Jan 2025") < content.index("Updated 15 Mar 2025")
 
 
 def test_detail_returns_not_found_for_unknown_recipe_or_wrong_slug(client, recipe_factory):

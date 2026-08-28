@@ -434,6 +434,17 @@ select:focus-visible {
   background: #fff0cc;
 }
 
+.recipe-meta {
+  margin: 0;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+}
+
+.recipe-meta span[aria-hidden="true"] {
+  margin: 0 0.35em;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;

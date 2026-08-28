@@ -20,6 +20,7 @@ RECIPE_FIELDS = {
     "instructions",
     "category",
     "published_on",
+    "last_updated_on",
     "is_final",
     "tags",
     "image_urls",
@@ -39,6 +40,7 @@ class RecipeData:
     instructions: tuple[str, ...]
     category: str
     published_on: date
+    last_updated_on: date
     is_final: bool
     tags: tuple[str, ...]
     image_urls: tuple[str, ...]
@@ -62,6 +64,16 @@ def _string_list(
     if any(not isinstance(item, str) or not item.strip() for item in value):
         raise CatalogError(f"Recipe {recipe_id}: every {field} entry must be a non-empty string.")
     return tuple(value)
+
+
+def _date(value: object, field: str, recipe_id: object) -> date:
+    text = _string(value, field, recipe_id)
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
+        raise CatalogError(f"Recipe {recipe_id}: {field} must use YYYY-MM-DD.")
+    try:
+        return date.fromisoformat(text)
+    except ValueError as error:
+        raise CatalogError(f"Recipe {recipe_id}: {field} must be a valid date.") from error
 
 
 def _unique_object(pairs: list[tuple[str, object]]) -> dict[str, object]:
@@ -95,13 +107,10 @@ def _parse_recipe(raw: object) -> RecipeData:
     if not generated_slug or len(generated_slug) > MAX_TITLE_LENGTH:
         raise CatalogError(f"Recipe {recipe_id}: title must produce a URL-safe slug.")
 
-    published_value = _string(raw.get("published_on"), "published_on", recipe_id)
-    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", published_value):
-        raise CatalogError(f"Recipe {recipe_id}: published_on must use YYYY-MM-DD.")
-    try:
-        published_on = date.fromisoformat(published_value)
-    except ValueError as error:
-        raise CatalogError(f"Recipe {recipe_id}: published_on must be a valid date.") from error
+    published_on = _date(raw.get("published_on"), "published_on", recipe_id)
+    last_updated_on = _date(raw.get("last_updated_on"), "last_updated_on", recipe_id)
+    if last_updated_on < published_on:
+        raise CatalogError(f"Recipe {recipe_id}: last_updated_on must not be before published_on.")
 
     is_final = raw.get("is_final")
     if not isinstance(is_final, bool):
@@ -131,6 +140,7 @@ def _parse_recipe(raw: object) -> RecipeData:
         ),
         category=category,
         published_on=published_on,
+        last_updated_on=last_updated_on,
         is_final=is_final,
         tags=_string_list(raw.get("tags"), "tags", recipe_id, allow_empty=True),
         image_urls=image_urls,
