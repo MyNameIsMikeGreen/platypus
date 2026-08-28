@@ -931,7 +931,33 @@ select:focus-visible {
   .filter-panels {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2rem;
+    grid-template-areas: "category time";
+    align-items: start;
+    gap: 0 2rem;
+  }
+
+  .filter-panels:has(.tag-filters) {
+    grid-template-areas:
+      "category tags"
+      "time tags";
+  }
+
+  .category-filters {
+    grid-area: category;
+  }
+
+  .tag-filters {
+    grid-area: tags;
+  }
+
+  .time-filters {
+    grid-area: time;
+  }
+
+  .filter-panels:has(.tag-filters) .time-filters {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
   }
 
   .time-filter-fields {
