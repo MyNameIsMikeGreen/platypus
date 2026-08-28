@@ -248,3 +248,77 @@ def test_time_sliders_narrow_recipes_without_navigating(live_url):
         finally:
             browser.close()
 
+
+def test_photo_gallery_opens_a_lightbox_and_navigates_without_leaving_the_page(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            recipe_urls = page.locator("[data-search-option]").evaluate_all(
+                "options => options.map(option => option.dataset.url)"
+            )
+
+            gallery_url = None
+            photo_count = 0
+            for recipe_url in recipe_urls:
+                page.goto(f"{live_url}{recipe_url}", wait_until="domcontentloaded")
+                count = page.locator("[data-gallery-trigger]").count()
+                if count >= 3:
+                    gallery_url = recipe_url
+                    photo_count = count
+                    break
+            assert gallery_url is not None, "expected at least one recipe with 3+ photos"
+
+            starting_url = page.url
+            lightbox = page.locator("[data-lightbox]")
+            counter = page.locator("[data-lightbox-counter]")
+            image = page.locator("[data-lightbox-image]")
+            triggers = page.locator("[data-gallery-trigger]")
+            expect(lightbox).to_be_hidden()
+
+            # Clicking a photo opens it in-page, rather than navigating away.
+            triggers.first.click()
+            expect(lightbox).to_be_visible()
+            expect(counter).to_have_text(f"Photo 1 of {photo_count}")
+            first_src = image.get_attribute("src")
+            assert page.url == starting_url
+
+            # The next/previous controls step through photos without navigating.
+            page.locator("[data-lightbox-next]").click()
+            expect(counter).to_have_text(f"Photo 2 of {photo_count}")
+            second_src = image.get_attribute("src")
+            assert second_src != first_src
+            assert page.url == starting_url
+
+            page.keyboard.press("ArrowRight")
+            expect(counter).to_have_text(f"Photo 3 of {photo_count}")
+
+            page.keyboard.press("ArrowLeft")
+            expect(counter).to_have_text(f"Photo 2 of {photo_count}")
+
+            # Escape closes the viewer and restores focus to the triggering thumbnail.
+            page.keyboard.press("Escape")
+            expect(lightbox).to_be_hidden()
+            expect(triggers.first).to_be_focused()
+            assert page.url == starting_url
+
+            # Clicking the backdrop also closes the viewer.
+            triggers.nth(1).click()
+            expect(lightbox).to_be_visible()
+            expect(counter).to_have_text(f"Photo 2 of {photo_count}")
+            page.locator(".lightbox-backdrop").click(position={"x": 5, "y": 5})
+            expect(lightbox).to_be_hidden()
+
+            # Navigation wraps around from the last photo back to the first.
+            triggers.nth(photo_count - 1).click()
+            expect(counter).to_have_text(f"Photo {photo_count} of {photo_count}")
+            page.locator("[data-lightbox-next]").click()
+            expect(counter).to_have_text(f"Photo 1 of {photo_count}")
+
+            # The explicit close button also dismisses the viewer.
+            page.locator("[data-lightbox-close]").click()
+            expect(lightbox).to_be_hidden()
+        finally:
+            browser.close()
+

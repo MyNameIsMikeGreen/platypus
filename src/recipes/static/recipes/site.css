@@ -650,7 +650,7 @@ select:focus-visible {
   scrollbar-width: thin;
 }
 
-.gallery-grid a {
+.gallery-grid .gallery-thumb {
   flex: 0 0 min(85vw, 22rem);
   scroll-snap-align: center;
 }
@@ -662,6 +662,109 @@ select:focus-visible {
   border-radius: 0.65rem;
   object-fit: cover;
   background: var(--border);
+}
+
+.gallery-thumb {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  font: inherit;
+}
+
+.gallery-thumb:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(20 22 18 / 88%);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  width: min(92vw, 60rem);
+  max-height: 92vh;
+}
+
+.lightbox-nav {
+  flex: 0 0 auto;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-nav:disabled,
+.lightbox-nav[hidden] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.lightbox-figure {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  border-radius: 0.65rem;
+  object-fit: contain;
+  background: var(--surface);
+}
+
+.lightbox-counter {
+  margin: 0;
+  color: var(--surface);
+  font-size: 0.9rem;
 }
 
 .narrow {
@@ -802,7 +905,7 @@ select:focus-visible {
     overflow: visible;
   }
 
-  .gallery-grid a {
+  .gallery-grid .gallery-thumb {
     min-width: 0;
   }
 

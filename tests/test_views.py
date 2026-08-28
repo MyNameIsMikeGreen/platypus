@@ -130,6 +130,42 @@ def test_detail_renders_recipe_information_safely(client, recipe_factory):
     assert 'referrerpolicy="no-referrer"' in content
 
 
+def test_detail_renders_photo_lightbox_when_recipe_has_images(client, recipe_factory):
+    recipe = recipe_factory(
+        image_urls=[
+            "https://example.com/one.jpg",
+            "https://example.com/two.jpg",
+        ],
+    )
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    assert content.count("data-gallery-trigger") == 2
+    assert 'data-gallery-index="0"' in content
+    assert 'data-gallery-index="1"' in content
+    assert 'data-lightbox' in content
+    assert 'data-lightbox-prev' in content
+    assert 'data-lightbox-next' in content
+    assert 'data-lightbox-close' in content
+    assert 'role="dialog" aria-modal="true"' in content
+    assert "gallery-lightbox.js" in content
+    # Photos should no longer link directly out to the raw image URL.
+    assert '<a href="https://example.com/one.jpg"' not in content
+
+
+def test_detail_omits_gallery_and_script_when_recipe_has_no_images(client, recipe_factory):
+    recipe = recipe_factory(image_urls=[])
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    assert "data-gallery" not in content
+    assert "gallery-lightbox.js" not in content
+
+
 def test_detail_hides_last_updated_when_same_as_published(client, recipe_factory):
     recipe = recipe_factory(
         published_on=date(2025, 1, 1),

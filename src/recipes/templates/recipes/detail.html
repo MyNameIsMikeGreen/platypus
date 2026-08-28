@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}{{ recipe.title }} | Platypus{% endblock %}
 
@@ -57,14 +58,37 @@
     {% if recipe.image_urls %}
       <section class="gallery">
         <h2>Photos</h2>
-        <div class="gallery-grid">
+        <div class="gallery-grid" data-gallery>
           {% for image_url in recipe.image_urls %}
-            <a href="{{ image_url }}" target="_blank" rel="noopener noreferrer">
+            <button
+              type="button"
+              class="gallery-thumb"
+              data-gallery-trigger
+              data-gallery-index="{{ forloop.counter0 }}"
+            >
               <img src="{{ image_url }}" alt="{{ recipe.title }} photo {{ forloop.counter }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-            </a>
+            </button>
           {% endfor %}
+        </div>
+        <div class="lightbox" data-lightbox hidden>
+          <div class="lightbox-backdrop" data-lightbox-dismiss></div>
+          <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close photo viewer">&times;</button>
+          <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="{{ recipe.title }} photo viewer">
+            <button type="button" class="lightbox-nav lightbox-prev" data-lightbox-prev aria-label="Previous photo">&larr;</button>
+            <figure class="lightbox-figure">
+              <img class="lightbox-image" data-lightbox-image src="" alt="">
+              <figcaption class="lightbox-counter" data-lightbox-counter aria-live="polite"></figcaption>
+            </figure>
+            <button type="button" class="lightbox-nav lightbox-next" data-lightbox-next aria-label="Next photo">&rarr;</button>
+          </div>
         </div>
       </section>
     {% endif %}
   </article>
+{% endblock %}
+
+{% block scripts %}
+  {% if recipe.image_urls %}
+    <script src="{% static 'recipes/gallery-lightbox.js' %}" defer></script>
+  {% endif %}
 {% endblock %}
