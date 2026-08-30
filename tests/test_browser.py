@@ -408,3 +408,88 @@ def test_photo_gallery_opens_a_lightbox_and_navigates_without_leaving_the_page(l
         finally:
             browser.close()
 
+
+def test_ingredient_export_copies_selected_ingredient_names_without_quantities(live_url):
+    def copied_message(count):
+        return f"Copied {count} ingredient{'' if count == 1 else 's'} to your clipboard."
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        context = browser.new_context(permissions=["clipboard-read", "clipboard-write"])
+        page = context.new_page()
+        try:
+            page.goto(live_url)
+            recipe_urls = page.locator("[data-search-option]").evaluate_all(
+                "options => options.map(option => option.dataset.url)"
+            )
+
+            ingredients_url = None
+            ingredient_count = 0
+            for recipe_url in recipe_urls:
+                page.goto(f"{live_url}{recipe_url}", wait_until="domcontentloaded")
+                count = page.locator("[data-ingredient-toggle]").count()
+                if count >= 3:
+                    ingredients_url = recipe_url
+                    ingredient_count = count
+                    break
+            assert ingredients_url is not None, "expected at least one recipe with 3+ ingredients"
+
+            toggles = page.locator("[data-ingredient-toggle]")
+            status = page.locator("[data-ingredient-status]")
+            clear_button = page.locator("[data-ingredient-clear]")
+            copy_button = page.locator("[data-ingredient-copy]")
+            copy_status = page.locator("[data-ingredient-copy-status]")
+
+            # Every ingredient is selected by default.
+            for index in range(ingredient_count):
+                expect(toggles.nth(index)).to_be_checked()
+            expect(status).to_have_text(f"{ingredient_count} of {ingredient_count} ingredients selected")
+            expect(clear_button).to_have_text("Clear all")
+
+            expected_names = toggles.evaluate_all("els => els.map(el => el.dataset.ingredientName)")
+            raw_ingredient_text = page.locator(".ingredient-toggle span").first.inner_text()
+            # The visible label keeps the original quantity; only the export omits it.
+            assert raw_ingredient_text != expected_names[0]
+
+            # Copying with everything selected puts every quantity-free name on the clipboard.
+            # The button's own label briefly flashes "Copied!" (avoiding a layout-shifting message
+            # below it), while the full description is still announced via the hidden live region.
+            default_copy_label = copy_button.inner_text()
+            copy_button.click()
+            expect(copy_button).to_have_text("Copied!")
+            expect(copy_status).to_have_text(copied_message(ingredient_count))
+            assert page.evaluate("navigator.clipboard.readText()") == "\n".join(expected_names)
+            expect(copy_button).to_have_text(default_copy_label, timeout=3000)
+
+            # Deselecting one ingredient (as if the user already has it) excludes it from the export.
+            toggles.first.uncheck()
+            expect(status).to_have_text(f"{ingredient_count - 1} of {ingredient_count} ingredients selected")
+            copy_button.click()
+            expect(copy_button).to_have_text("Copied!")
+            expect(copy_status).to_have_text(copied_message(ingredient_count - 1))
+            assert page.evaluate("navigator.clipboard.readText()") == "\n".join(expected_names[1:])
+            expect(copy_button).to_have_text(default_copy_label, timeout=3000)
+
+            # "Clear all" deselects everything and flips its own label to "Select all".
+            clear_button.click()
+            expect(status).to_have_text(f"0 of {ingredient_count} ingredients selected")
+            for index in range(ingredient_count):
+                expect(toggles.nth(index)).not_to_be_checked()
+            expect(clear_button).to_have_text("Select all")
+
+            # Attempting to copy with nothing selected is a no-op with a clear message, and the
+            # button label flashes an explanation instead of a full sentence below it.
+            copy_button.click()
+            expect(copy_button).to_have_text("Select an ingredient")
+            expect(copy_status).to_have_text("Select at least one ingredient to copy.")
+            expect(copy_button).to_have_text(default_copy_label, timeout=3000)
+
+            # "Select all" restores every ingredient.
+            clear_button.click()
+            expect(status).to_have_text(f"{ingredient_count} of {ingredient_count} ingredients selected")
+            for index in range(ingredient_count):
+                expect(toggles.nth(index)).to_be_checked()
+            expect(clear_button).to_have_text("Clear all")
+        finally:
+            browser.close()
+

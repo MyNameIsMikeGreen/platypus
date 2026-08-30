@@ -43,9 +43,25 @@
     <div class="recipe-layout">
       <section class="ingredients">
         <h2>Ingredients</h2>
-        <ul>
-          {% for ingredient in recipe.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
-        </ul>
+        <div class="ingredient-export" data-ingredient-export>
+          <p class="visually-hidden" data-ingredient-status aria-live="polite"></p>
+          <ul class="ingredient-checklist">
+            {% for item in recipe.ingredients_with_export_names %}
+              <li class="ingredient-toggle">
+                <label>
+                  <input type="checkbox" data-ingredient-toggle data-ingredient-name="{{ item.export_name }}" checked>
+                  <span>{{ item.display }}</span>
+                </label>
+              </li>
+            {% endfor %}
+          </ul>
+          <div class="ingredient-export-actions">
+            <button type="button" class="button-link" data-ingredient-copy>Copy ingredients</button>
+            <button type="button" class="tag-clear-button" data-ingredient-clear>Clear all</button>
+            <p class="visually-hidden" data-ingredient-copy-status aria-live="polite"></p>
+          </div>
+          <textarea class="visually-hidden" data-ingredient-export-text readonly aria-hidden="true" tabindex="-1"></textarea>
+        </div>
       </section>
       <section class="method">
         <h2>Method</h2>
@@ -88,6 +104,7 @@
 {% endblock %}
 
 {% block scripts %}
+  <script src="{% static 'recipes/ingredient-export.js' %}" defer></script>
   {% if recipe.image_urls %}
     <script src="{% static 'recipes/gallery-lightbox.js' %}" defer></script>
   {% endif %}

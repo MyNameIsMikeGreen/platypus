@@ -147,6 +147,26 @@ def test_detail_renders_recipe_information_safely(client, recipe_factory):
     assert 'referrerpolicy="no-referrer"' in content
 
 
+def test_detail_renders_ingredient_export_checkboxes_checked_by_default(client, recipe_factory):
+    recipe = recipe_factory(ingredients=["600ml Double Cream", "6 Eggs", "Salt and Pepper (To Taste)"])
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    # Every ingredient is selected by default and paired with its quantity-free name.
+    assert content.count("data-ingredient-toggle") == 3
+    assert content.count('data-ingredient-toggle data-ingredient-name="') == 3
+    assert 'data-ingredient-name="Double Cream" checked' in content
+    assert 'data-ingredient-name="Eggs" checked' in content
+    assert 'data-ingredient-name="Salt and Pepper (To Taste)" checked' in content
+    assert "600ml Double Cream" in content
+    assert "data-ingredient-clear" in content
+    assert "data-ingredient-copy" in content
+    assert "data-ingredient-status" in content
+    assert "ingredient-export.js" in content
+
+
 def test_detail_renders_photo_lightbox_when_recipe_has_images(client, recipe_factory):
     recipe = recipe_factory(
         image_urls=[

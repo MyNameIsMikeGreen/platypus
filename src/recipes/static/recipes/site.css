@@ -725,6 +725,59 @@ select:focus-visible {
   padding-left: 1.4rem;
 }
 
+.ingredients .ingredient-checklist {
+  padding-left: 0;
+  list-style: none;
+}
+
+.ingredients .ingredient-toggle {
+  padding-left: 0;
+}
+
+.ingredient-toggle label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.ingredient-toggle input {
+  width: auto;
+  min-height: auto;
+  margin: 0;
+  accent-color: var(--accent-dark);
+  flex-shrink: 0;
+  transform: translateY(0.1em);
+}
+
+.ingredient-toggle:has(input:not(:checked)) span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.ingredient-export-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+[data-ingredient-copy] {
+  min-width: 15rem;
+}
+
+.ingredient-export-text-visible {
+  position: static;
+  width: 100%;
+  height: 6rem;
+  margin-top: 0.75rem;
+  overflow: auto;
+  clip: auto;
+  white-space: pre;
+}
+
 .method li::marker {
   color: var(--accent);
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -1047,7 +1100,9 @@ select:focus-visible {
   .back-link,
   .tag-list,
   .filter-drawer,
-  .gallery {
+  .gallery,
+  .ingredient-export-actions,
+  .ingredient-toggle input {
     display: none;
   }
 

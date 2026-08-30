@@ -3,11 +3,21 @@ import re
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
+from typing import NamedTuple
 from urllib.parse import urlparse
 
 from django.conf import settings
 from django.urls import reverse
 from django.utils.text import slugify
+
+from .ingredients import export_name
+
+
+class IngredientExport(NamedTuple):
+    """An ingredient paired with its quantity-free name, for list exports."""
+
+    display: str
+    export_name: str
 
 CATALOG_FIELDS = {"schema_version", "recipes"}
 MAX_CATEGORY_LENGTH = 40
@@ -52,6 +62,14 @@ class RecipeData:
 
     def get_absolute_url(self) -> str:
         return reverse("recipes:detail", kwargs={"recipe_id": self.id, "slug": self.slug})
+
+    @property
+    def ingredients_with_export_names(self) -> tuple[IngredientExport, ...]:
+        """Ingredients paired with a quantity-free name, for the ingredient export feature."""
+        return tuple(
+            IngredientExport(display=ingredient, export_name=export_name(ingredient))
+            for ingredient in self.ingredients
+        )
 
     @property
     def total_time_display(self) -> str:
