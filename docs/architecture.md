@@ -4,13 +4,15 @@
 
 LAN and Tailscale clients connect directly to Gunicorn's default single worker in the
 [`compose.yml`](../compose.yml) application container. WhiteNoise serves the single compiled
-stylesheet, and Django reads the [checked-in recipe catalog](recipes.md) directly into memory.
+stylesheet, and Django reads the [checked-in recipe catalogue](recipes.md) directly into memory —
+there is no database and no runtime write path.
 
-The application omits a database, Django models, migrations, admin, authentication, sessions,
-messages, CSRF processing, uploads, internationalization, frontend dependencies, background
-workers, and compatibility routes because none are required. Django's common middleware remains
-enabled because it triggers host-header validation; its optional trailing-slash redirects are
-disabled. The [security boundary](security-boundary.md) explains when these decisions must change.
+The application is intentionally minimal: it has no models, migrations, admin site,
+authentication, sessions, messages, CSRF processing, uploads, internationalization, or background
+workers, because the read-only recipe catalogue needs none of them. Django's common middleware
+remains enabled because it triggers host-header validation; its optional trailing-slash redirects
+are disabled. The [security boundary](security-boundary.md) explains what would need to change if
+write capability, accounts, or public exposure were ever added.
 
 ## Security posture
 
@@ -20,7 +22,7 @@ disabled. The [security boundary](security-boundary.md) explains when these deci
 - Templates use Django's automatic escaping.
 - Remote images are restricted by CSP to the existing Cloudinary host and are never proxied through the server.
 - Logs use Docker's rotating `local` driver.
-- The catalog rejects empty data, unknown or duplicate fields, invalid types, duplicate IDs or slugs, malformed dates, and unapproved image hosts.
+- The catalogue rejects empty data, unknown or duplicate fields, invalid types, duplicate IDs or slugs, malformed dates, and unapproved image hosts.
 - Django still requires a signing key, but this application has no sessions, authentication, CSRF tokens, messages, or other signed browser state. A fresh random key is therefore generated in memory for each process instead of creating a secret-management workflow with no security benefit.
 
 HTTP is a deliberate scope-based decision. The application is read-only, has no accounts or private data, and is exposed only to the trusted home LAN and Tailscale. Tailscale provides encrypted WireGuard transport for remote connections. Avoiding a private certificate authority removes certificate warnings and device provisioning for household visitors. HTTPS becomes necessary if the application's data, trust boundary, or interaction model changes.

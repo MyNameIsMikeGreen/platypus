@@ -8,7 +8,7 @@ Platypus currently assumes:
 - no router port forwarding, public host, or public tunnel;
 - firewall access limited to the LAN and Tailscale interface;
 - read-only `GET`/`HEAD` endpoints with no accounts, private data, uploads, or runtime writes;
-- recipe changes made only through the [checked-in catalog](recipes.md).
+- recipe changes made only through the [checked-in catalogue](recipes.md).
 
 HTTP is a deliberate simplicity trade-off. Tailscale encrypts remote traffic, but home-LAN HTTP
 can be observed or modified by a compromised local device. Anyone who can reach the port can read
@@ -24,9 +24,9 @@ completing the applicable plan below. See [architecture](architecture.md) and
 Complete this plan even if writes remain LAN/Tailscale-only:
 
 1. **Define access:** specify who may create, edit, and delete each resource; enforce
-   authorization in every write view; keep public registration disabled unless required.
-2. **Add persistent storage:** replace the immutable runtime catalog with Django models,
-   migrations, and a persistent database. Define catalog import/export so recipes remain
+   authorisation in every write view; keep public registration disabled unless required.
+2. **Add persistent storage:** replace the immutable runtime catalogue with Django models,
+   migrations, and a persistent database. Define catalogue import/export so recipes remain
    versioned. Add and test backup, restore, migration, and rollback procedures.
 3. **Add identity and secrets:** enable Django authentication, sessions, and content types. Use
    Django's password handling, least-privilege accounts, and a stable `SECRET_KEY` supplied
@@ -49,9 +49,9 @@ Complete this plan even if writes remain LAN/Tailscale-only:
 
 Complete this plan even if Platypus remains read-only:
 
-1. **Reconsider exposure:** Tailscale is safer and simpler. A Raspberry Pi cannot resist
-   volumetric denial-of-service attacks; use a protective CDN, tunnel, or hosted proxy if that
-   risk must be accepted.
+1. **Reconsider exposure:** Tailscale is safer and simpler. Modest self-hosted hardware cannot
+   resist volumetric denial-of-service attacks; use a protective CDN, tunnel, or hosted proxy if
+   that risk must be accepted.
 2. **Add a public ingress:** use a real domain and publicly trusted TLS through a maintained
    reverse proxy such as [Caddy](https://caddyserver.com/docs/automatic-https). Expose only 443
    and, if needed for certificate issuance or redirect, 80. Never expose Gunicorn directly.
@@ -75,7 +75,7 @@ Before deploying either change:
 
 - trusted HTTPS is automatically renewed and enforced;
 - `python manage.py check --deploy` has no unexplained warnings;
-- authentication, authorization, CSRF, validation, and security-header tests pass;
+- authentication, authorisation, CSRF, validation, and security-header tests pass;
 - secrets are absent from source, images, and logs;
 - only proxy ports are public; Gunicorn and databases are private;
 - off-device backups and restoration have been tested;

@@ -19,8 +19,8 @@ uv run python manage.py runserver
 assets are served through whitenoise's manifest storage, so requests fail with a 500 until the
 manifest exists in `staticfiles/`.
 
-The application reads the checked-in recipe catalog directly and does not require a database or
-external service. Follow [`recipes.md`](recipes.md) when changing catalog data and
+The application reads the checked-in recipe catalogue directly and does not require a database or
+external service. Follow [`recipes.md`](recipes.md) when changing catalogue data and
 [`architecture.md`](architecture.md) before changing runtime components.
 
 ## Quality checks
@@ -42,8 +42,8 @@ Update dependencies intentionally with `uv lock --upgrade`, review `uv.lock`, an
 `make check`.
 
 Tests use in-memory recipe objects, [pytest](https://docs.pytest.org/en/stable/), and a real
-[Playwright](https://playwright.dev/python/) browser for interactive behavior. They test
-application behavior, catalog rules, critical security settings, and deployment hardening rather
+[Playwright](https://playwright.dev/python/) browser for interactive behaviour. They test
+application behaviour, catalogue rules, critical security settings, and deployment hardening rather
 than the wording or number of real recipes.
 
 ## PyCharm and IntelliJ IDEA

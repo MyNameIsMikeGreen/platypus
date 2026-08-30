@@ -3,7 +3,7 @@
 The application reads recipes directly from [`src/recipes/data/recipes.json`](../src/recipes/data/recipes.json). This
 file is the only recipe data source.
 
-## Catalog format
+## Catalogue format
 
 The top-level `schema_version` is currently `1`. Each entry in `recipes` contains:
 
@@ -24,7 +24,7 @@ Recipe prose and ordering are preserved exactly as written. JSON strings must us
 
 ## Add or edit a recipe
 
-1. Edit the catalog. For a new recipe, choose an ID that has never been used. Set
+1. Edit the catalogue. For a new recipe, choose an ID that has never been used. Set
    `last_updated_on` to today's date whenever you change an existing recipe's content; leave it equal to `published_on`
    for new recipes.
 2. Validate it:
@@ -36,8 +36,8 @@ Recipe prose and ordering are preserved exactly as written. JSON strings must us
 3. Run `make check`.
 4. Review the page locally using the setup in [`development.md`](development.md).
 
-The catalog must be non-empty and use exactly the documented fields. Duplicate JSON fields, IDs, and generated slugs are
-rejected. Invalid data fails checks and the container build. Removing a recipe from the catalog removes it from the next
+The catalogue must be non-empty and use exactly the documented fields. Duplicate JSON fields, IDs, and generated slugs are
+rejected. Invalid data fails checks and the container build. Removing a recipe from the catalogue removes it from the next
 image; follow the update procedure in
 [`deployment.md`](deployment.md#updates) to publish the change.
 

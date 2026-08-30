@@ -1,14 +1,15 @@
-# Raspberry Pi deployment
+# Deployment
 
 ## Host preparation
 
-Use a [supported 64-bit Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/)
-and reserve a stable IP in the router's DHCP configuration. Install current
+Use a 64-bit Linux host and reserve a stable IP in the router's DHCP configuration. A Raspberry Pi
+running [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) works well, as
+does any other Debian-based machine. Install current
 [Docker Engine for Debian](https://docs.docker.com/engine/install/debian/) and the
 [Compose plugin](https://docs.docker.com/compose/install/linux/) from Docker's official
 repository. Keep the OS and Docker patched.
 
-Only the configured HTTP port must be reachable from the home LAN and the Pi's Tailscale interface. Do not expose Docker's daemon socket. Use the host firewall to reject access from untrusted networks while allowing the LAN and `tailscale0`.
+Only the configured HTTP port must be reachable from the home LAN and the host's Tailscale interface. Do not expose Docker's daemon socket. Use the host firewall to reject access from untrusted networks while allowing the LAN and `tailscale0`.
 
 ## Start and stop
 
@@ -31,12 +32,12 @@ docker compose down
 List every IP address or hostname that visitors will put in their browser in `.env`:
 
 ```dotenv
-PLATYPUS_ALLOWED_HOSTS=192.168.1.50,raspberrypi
+PLATYPUS_ALLOWED_HOSTS=192.168.1.50,recipes-server
 PLATYPUS_PORT=8080
 ```
 
 Use `http://192.168.1.50:8080` on the home LAN. While connected to the tailnet, use
-`http://raspberrypi:8080`, replacing the example with the Pi's actual
+`http://recipes-server:8080`, replacing the example with the host's actual
 [MagicDNS](https://tailscale.com/kb/1081/magicdns) name. Add both the short and fully qualified
 `*.ts.net` forms if both will be used.
 
@@ -64,11 +65,11 @@ docker compose build --pull
 docker compose up -d
 ```
 
-The image build validates the recipe catalog before deployment.
+The image build validates the recipe catalogue before deployment.
 
 ## Backup
 
-Recipes are versioned using the catalog described in [`recipes.md`](recipes.md), and Platypus has
+Recipes are versioned using the catalogue described in [`recipes.md`](recipes.md), and Platypus has
 no runtime data. Back up the repository through the normal source-control workflow. A fresh image
 fully reconstructs the application.
 
