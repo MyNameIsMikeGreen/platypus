@@ -244,13 +244,37 @@ def test_planner_returns_unique_recipes_from_selected_category(client, recipe_fa
 
     response = client.get(
         reverse("recipes:search-results"),
-        {"category": "DINNER", "recipe_count": 10},
+        {"count_dinner": 10},
     )
 
     assert response.status_code == 200
-    assert set(response.context["recipes"]) == {first, second}
+    assert response.context["groups"][0][0] == "DINNER"
+    assert set(response.context["groups"][0][1]) == {first, second}
+    assert response.context["recipe_count_total"] == 2
     assert response.context["is_tag"] is False
     assert "Meal plan" in response.content.decode()
+
+
+def test_planner_can_combine_multiple_category_counts(client, recipe_factory):
+    main1 = recipe_factory(category="MAINS")
+    main2 = recipe_factory(category="MAINS")
+    main3 = recipe_factory(category="MAINS")
+    light1 = recipe_factory(category="LIGHT DISHES")
+
+    response = client.get(
+        reverse("recipes:search-results"),
+        {"count_mains": 2, "count_light_dishes": 5},
+    )
+
+    assert response.status_code == 200
+    groups = dict(response.context["groups"])
+    assert len(groups["MAINS"]) == 2
+    assert set(groups["MAINS"]) <= {main1, main2, main3}
+    assert groups["LIGHT DISHES"] == [light1]
+    assert response.context["recipe_count_total"] == 3
+    content = response.content.decode()
+    assert "Mains" in content
+    assert "Light Dishes" in content
 
 
 def test_tag_selection_returns_matching_recipes(client, recipe_factory):
@@ -270,18 +294,25 @@ def test_invalid_planner_input_returns_bad_request(client, recipe_factory):
 
     response = client.get(
         reverse("recipes:search-results"),
-        {"category": "DINNER", "recipe_count": 0},
+        {"count_dinner": 0},
     )
 
     assert response.status_code == 400
-    assert "Ensure this value is greater than or equal to 1" in response.content.decode()
+    assert "Choose at least one recipe" in response.content.decode()
 
-    unknown_category = client.get(
+    negative_count = client.get(
         reverse("recipes:search-results"),
-        {"category": "UNKNOWN", "recipe_count": 1},
+        {"count_dinner": -1},
     )
-    assert unknown_category.status_code == 400
-    assert "Select a valid choice" in unknown_category.content.decode()
+    assert negative_count.status_code == 400
+    assert "Ensure this value is greater than or equal to 0" in negative_count.content.decode()
+
+    too_many = client.get(
+        reverse("recipes:search-results"),
+        {"count_dinner": 51},
+    )
+    assert too_many.status_code == 400
+    assert "Ensure this value is less than or equal to 50" in too_many.content.decode()
 
 
 def test_planner_lists_each_available_category_once(client, recipe_factory):
@@ -291,10 +322,11 @@ def test_planner_lists_each_available_category_once(client, recipe_factory):
 
     response = client.get(reverse("recipes:planner"))
 
-    assert response.context["form"].fields["category"].choices == [
-        ("DINNER", "Dinner"),
-        ("SNACKS", "Snacks"),
-    ]
+    assert sorted(response.context["form"].category_fields.values()) == ["DINNER", "SNACKS"]
+    content = response.content.decode()
+    assert content.count('data-quantity-input') == 2
+    assert "Dinner" in content
+    assert "Snacks" in content
 
 
 def test_planner_and_about_pages(client, recipe_factory):

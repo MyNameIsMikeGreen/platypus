@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Meal planner | Platypus{% endblock %}
 
@@ -6,10 +7,30 @@
   <div class="narrow">
     <p class="eyebrow">Choose for me</p>
     <h1>Meal planner</h1>
-    <p>Select a category and Platypus will choose a unique set of recipes.</p>
-    <form class="stacked-form" method="get" action="{% url 'recipes:search-results' %}">
-      {{ form.as_div }}
+    <p>Set how many recipes you want from each category and Platypus will choose a unique meal plan &mdash; for example, 3 mains and 2 light dishes.</p>
+    <form class="quantity-form" method="get" action="{% url 'recipes:search-results' %}" data-quantity-form>
+      {{ form.non_field_errors }}
+      <div class="quantity-list">
+        {% for field in form %}
+          <div class="quantity-row">
+            <div class="quantity-row-label">
+              <span>{{ field.label }}</span>
+              {{ field.errors }}
+            </div>
+            <div class="quantity-stepper">
+              <button type="button" class="quantity-btn" data-quantity-step="-1" aria-label="Decrease {{ field.label }} count">&minus;</button>
+              {{ field }}
+              <button type="button" class="quantity-btn" data-quantity-step="1" aria-label="Increase {{ field.label }} count">&plus;</button>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <p class="quantity-total" data-quantity-total aria-live="polite">No recipes selected yet</p>
       <button type="submit">Choose recipes</button>
     </form>
   </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'recipes/planner.js' %}" defer></script>
 {% endblock %}

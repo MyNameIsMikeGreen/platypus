@@ -493,3 +493,64 @@ def test_ingredient_export_copies_selected_ingredient_names_without_quantities(l
         finally:
             browser.close()
 
+
+def test_planner_builds_a_multi_category_meal_plan(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(f"{live_url}/planner/")
+            total = page.locator("[data-quantity-total]")
+            expect(total).to_have_text("No recipes selected yet")
+
+            mains_row = page.locator(".quantity-row", has_text="Mains")
+            light_dishes_row = page.locator(".quantity-row", has_text="Light Dishes")
+
+            # The stepper buttons are the primary interaction; typing a value directly
+            # into the number input should work identically.
+            mains_row.locator("[data-quantity-step='1']").click()
+            mains_row.locator("[data-quantity-step='1']").click()
+            expect(total).to_have_text("2 recipes selected")
+
+            light_dishes_input = light_dishes_row.locator("[data-quantity-input]")
+            light_dishes_input.fill("1")
+            light_dishes_input.dispatch_event("input")
+            expect(total).to_have_text("3 recipes selected")
+
+            # Decrementing below zero is clamped rather than going negative.
+            confectionery_row = page.locator(".quantity-row", has_text="Confectionery")
+            confectionery_row.locator("[data-quantity-step='-1']").click()
+            expect(confectionery_row.locator("[data-quantity-input]")).to_have_value("0")
+            expect(total).to_have_text("3 recipes selected")
+
+            page.locator("[data-quantity-form] button[type='submit']").click()
+            page.wait_for_url("**/search-results/*")
+
+            expect(page.locator("h1")).to_have_text("Meal plan")
+            expect(page.locator(".plan-summary")).to_have_text(
+                "3 recipes across 2 categories."
+            )
+
+            mains_group = page.locator(".plan-group", has_text="Mains")
+            light_dishes_group = page.locator(".plan-group", has_text="Light Dishes")
+            expect(mains_group.locator(".result-list li")).to_have_count(2)
+            expect(light_dishes_group.locator(".result-list li")).to_have_count(1)
+        finally:
+            browser.close()
+
+
+def test_planner_rejects_an_all_zero_request(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(f"{live_url}/planner/")
+            page.locator("[data-quantity-form] button[type='submit']").click()
+            expect(page.locator(".errorlist")).to_contain_text(
+                "Choose at least one recipe"
+            )
+            # The (re-rendered) planner form is still shown, ready to try again.
+            expect(page.locator("[data-quantity-form]")).to_be_visible()
+        finally:
+            browser.close()
+

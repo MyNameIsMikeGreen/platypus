@@ -98,18 +98,22 @@ def search_results(request: HttpRequest) -> HttpResponse:
             status=400,
         )
 
-    category = form.cleaned_data["category"]
-    recipe_count = form.cleaned_data["recipe_count"]
-    candidates = [recipe for recipe in CATALOG if recipe.category == category]
-    recipes = random.sample(candidates, min(recipe_count, len(candidates)))
+    groups = []
+    recipe_count_total = 0
+    for category, count in form.category_counts():
+        candidates = [recipe for recipe in CATALOG if recipe.category == category]
+        recipes = random.sample(candidates, min(count, len(candidates)))
+        groups.append((category, recipes))
+        recipe_count_total += len(recipes)
+
     return render(
         request,
         "recipes/search_results.html",
         {
             "active_section": "planner",
             "is_tag": False,
-            "recipes": recipes,
-            "search_term": category,
+            "groups": groups,
+            "recipe_count_total": recipe_count_total,
         },
     )
 

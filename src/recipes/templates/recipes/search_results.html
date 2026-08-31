@@ -1,31 +1,53 @@
 {% extends "base.html" %}
 
-{% block title %}{{ search_term }} recipes | Platypus{% endblock %}
+{% block title %}{% if is_tag %}{{ search_term }}{% else %}Meal plan{% endif %} recipes | Platypus{% endblock %}
 
 {% block content %}
   <div class="narrow">
     {% if is_tag %}
       <a class="back-link" href="{% url 'recipes:index' %}">&larr; All recipes</a>
       <p class="eyebrow">Tag</p>
+      <h1>{{ search_term|title }}</h1>
+      {% if recipes %}
+        <ul class="result-list result-card">
+          {% for recipe in recipes %}
+            <li>
+              <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
+              {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <div class="empty-state">
+          <h2>No matching recipes</h2>
+          <p>No recipes matched this selection.</p>
+        </div>
+      {% endif %}
     {% else %}
       <a class="back-link" href="{% url 'recipes:planner' %}">&larr; Back to planner</a>
       <p class="eyebrow">Meal plan</p>
-    {% endif %}
-    <h1>{{ search_term|title }}</h1>
-    {% if recipes %}
-      <ul class="result-list result-card">
-        {% for recipe in recipes %}
-          <li>
-            <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
-            {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <div class="empty-state">
-        <h2>No matching recipes</h2>
-        <p>No recipes matched this selection.</p>
-      </div>
+      <h1>Meal plan</h1>
+      <p class="plan-summary">{{ recipe_count_total }} recipe{{ recipe_count_total|pluralize }} across {{ groups|length }} categor{{ groups|length|pluralize:"y,ies" }}.</p>
+      {% for category, category_recipes in groups %}
+        <section class="plan-group">
+          <h2>{{ category|title }} <span class="plan-group-count">{{ category_recipes|length }}</span></h2>
+          {% if category_recipes %}
+            <ul class="result-list result-card">
+              {% for recipe in category_recipes %}
+                <li>
+                  <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
+                  {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="empty-state">
+              <h2>No recipes available</h2>
+              <p>There weren&rsquo;t enough {{ category|title }} recipes to fill this request.</p>
+            </div>
+          {% endif %}
+        </section>
+      {% endfor %}
     {% endif %}
   </div>
 {% endblock %}
