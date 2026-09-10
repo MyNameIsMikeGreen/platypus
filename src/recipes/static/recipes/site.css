@@ -5,13 +5,44 @@
   --muted: #62695f;
   --accent: #176b4d;
   --accent-dark: #0d4c35;
+  --accent-text: #0d4c35;
+  --accent-text-hover: #176b4d;
   --border: #d9d5c8;
   --shadow: 0 12px 30px rgb(31 43 35 / 8%);
+  --highlight-bg: #e8f2eb;
+  --badge-bg: #fff0cc;
+  --badge-text: #6b3b00;
+  --notice-border: #ba6f00;
+  --favourite-color: #b5124e;
+  --favourite-glow: rgb(181 18 78 / 35%);
+  --error-color: #8a1f11;
+  color-scheme: light;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
   color: var(--ink);
   background: var(--background);
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
+}
+
+:root[data-theme="dark"] {
+  --background: #12150e;
+  --surface: #1c2018;
+  --ink: #eef1e7;
+  --muted: #a3ab98;
+  --accent: #4ecf9d;
+  --accent-dark: #1f6b4a;
+  --accent-text: #5fd3a0;
+  --accent-text-hover: #8fe9c4;
+  --border: #333a2c;
+  --shadow: 0 12px 30px rgb(0 0 0 / 45%);
+  --highlight-bg: #1e3a2b;
+  --badge-bg: #4a3300;
+  --badge-text: #ffd27a;
+  --notice-border: #d9a441;
+  --favourite-color: #ff6f9c;
+  --favourite-glow: rgb(255 111 156 / 40%);
+  --error-color: #ff6b57;
+  color-scheme: dark;
 }
 
 * {
@@ -36,12 +67,12 @@ body {
 }
 
 a {
-  color: var(--accent-dark);
+  color: var(--accent-text);
   text-underline-offset: 0.18em;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--accent-text-hover);
 }
 
 .skip-link {
@@ -78,11 +109,42 @@ a:hover {
   text-decoration: none;
 }
 
+.site-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--surface);
+  font-size: 1.15rem;
+  line-height: 1;
+  touch-action: manipulation;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+  background: var(--highlight-bg);
+  border-color: var(--accent);
+}
+
 nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.35rem;
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: 0.95rem;
   font-weight: 650;
@@ -184,7 +246,7 @@ select {
   width: 100%;
   padding: 0.6rem 0.75rem;
   color: var(--ink);
-  background: white;
+  background: var(--surface);
 }
 
 button,
@@ -313,8 +375,8 @@ select:focus-visible {
 
 .filter-drawer[open] summary {
   border-color: var(--accent);
-  color: var(--accent-dark);
-  background: #e8f2eb;
+  color: var(--accent-text);
+  background: var(--highlight-bg);
 }
 
 .filter-panels {
@@ -369,8 +431,8 @@ select:focus-visible {
 
 .category-toggle:has(input:checked) {
   border-color: var(--accent);
-  color: var(--accent-dark);
-  background: #e8f2eb;
+  color: var(--accent-text);
+  background: var(--highlight-bg);
 }
 
 .category-toggle input {
@@ -436,8 +498,8 @@ select:focus-visible {
 
 .tag-toggle:has(input:checked) {
   border-color: var(--accent);
-  color: var(--accent-dark);
-  background: #e8f2eb;
+  color: var(--accent-text);
+  background: var(--highlight-bg);
 }
 
 .tag-toggle label {
@@ -472,7 +534,7 @@ select:focus-visible {
 
 .tag-toggle-link:hover,
 .tag-toggle-link:focus-visible {
-  color: var(--accent-dark);
+  color: var(--accent-text);
 }
 
 .tag-filters-footer {
@@ -492,7 +554,7 @@ select:focus-visible {
   min-height: auto;
   padding: 0.15rem 0;
   border: 0;
-  color: var(--accent-dark);
+  color: var(--accent-text);
   background: none;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: 0.8rem;
@@ -548,7 +610,7 @@ select:focus-visible {
 }
 
 .time-filter-label-row output {
-  color: var(--accent-dark);
+  color: var(--accent-text);
   font-size: 0.85rem;
   font-weight: 700;
   white-space: nowrap;
@@ -626,15 +688,15 @@ select:focus-visible {
   margin-left: 0.4rem;
   padding: 0.1rem 0.35rem;
   border-radius: 1rem;
-  color: #6b3b00;
-  background: #fff0cc;
+  color: var(--badge-text);
+  background: var(--badge-bg);
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: 0.7rem;
 }
 
 .favourite {
   margin-left: 0.4rem;
-  color: #b5124e;
+  color: var(--favourite-color);
   font-size: 1rem;
   line-height: 1;
 }
@@ -643,7 +705,7 @@ select:focus-visible {
   margin-left: 0.5rem;
   font-size: 0.6em;
   vertical-align: middle;
-  filter: drop-shadow(0 0.05em 0.1em rgba(181, 18, 78, 0.35));
+  filter: drop-shadow(0 0.05em 0.1em var(--favourite-glow));
 }
 
 .back-link {
@@ -659,8 +721,8 @@ select:focus-visible {
 
 .notice {
   padding: 0.65rem 0.85rem;
-  border-left: 0.25rem solid #ba6f00;
-  background: #fff0cc;
+  border-left: 0.25rem solid var(--notice-border);
+  background: var(--badge-bg);
 }
 
 .recipe-meta {
@@ -1056,8 +1118,8 @@ select:focus-visible {
   height: 1.75rem;
   padding: 0 0.4rem;
   border-radius: 1rem;
-  background: #e8f2eb;
-  color: var(--accent-dark);
+  background: var(--highlight-bg);
+  color: var(--accent-text);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -1068,7 +1130,7 @@ select:focus-visible {
 }
 
 .errorlist {
-  color: #8a1f11;
+  color: var(--error-color);
 }
 
 .prose {
@@ -1105,6 +1167,10 @@ select:focus-visible {
 
   .brand {
     font-size: 2.7rem;
+  }
+
+  .site-header-controls {
+    width: auto;
   }
 
   nav {
