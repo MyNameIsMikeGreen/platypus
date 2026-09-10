@@ -1,0 +1,11 @@
+[Unit]
+Description=Periodically trigger platypus-update.service
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+RandomizedDelaySec=30s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Check origin/main and redeploy Platypus if it has updated
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+# Adjust to the absolute path of the Platypus checkout on this host.
+WorkingDirectory=/opt/platypus
+ExecStart=/opt/platypus/deploy/platypus-update.sh
+TimeoutStartSec=900
+# Must be a user that can run `git pull` on this checkout and is a member of
+# the `docker` group (the same user you use to run `docker compose` manually).
+User=platypus-deploy

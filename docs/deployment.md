@@ -67,6 +67,49 @@ docker compose up -d
 
 The image build validates the recipe catalogue before deployment.
 
+## Auto-update
+
+[`deploy/platypus-update.sh`](../deploy/platypus-update.sh) automates the update above: it checks
+`origin/main` for new commits and, only if the branch has moved on, fast-forwards the checkout and
+runs `docker compose up --build -d`. A `systemd` timer runs it periodically, so the host stays
+current without manual intervention or an always-on daemon.
+
+The script first checks whether the `app` container is currently running and does nothing at all
+if it is not. This means a deliberate `docker compose down` (for maintenance, debugging, and so on)
+stays down — the timer will not bring Platypus back up behind your back. It only ever restarts a
+container that was already running.
+
+### Setup
+
+1. Ensure the deploying user is a member of the `docker` group and owns (or can write to) the
+   repository checkout.
+2. Copy the unit files and adjust the paths and user:
+
+   ```shell
+   sudo cp deploy/platypus-update.service deploy/platypus-update.timer /etc/systemd/system/
+   sudo systemctl edit platypus-update.service  # or edit the file directly:
+   #   WorkingDirectory=<absolute path to this checkout>
+   #   ExecStart=<same path>/deploy/platypus-update.sh
+   #   User=<deploying user>
+   ```
+
+3. Enable and start the timer:
+
+   ```shell
+   sudo systemctl daemon-reload
+   sudo systemctl enable --now platypus-update.timer
+   ```
+
+4. Check status and logs:
+
+   ```shell
+   systemctl list-timers platypus-update.timer
+   journalctl -u platypus-update.service --since "1 hour ago"
+   ```
+
+By default the timer checks every 15 minutes (plus up to 30 seconds of random jitter), and again
+shortly after boot. Adjust `OnUnitActiveSec` in `platypus-update.timer` to change the interval.
+
 ## Backup
 
 Recipes are versioned using the catalogue described in [`recipes.md`](recipes.md), and Platypus has
