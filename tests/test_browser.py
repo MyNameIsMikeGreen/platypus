@@ -123,7 +123,98 @@ def test_tag_clear_all_button_deselects_and_reselects_every_tag(live_url):
             browser.close()
 
 
-def test_tag_link_navigates_to_the_single_tag_results_page(live_url):
+def test_status_toggles_are_checked_by_default_and_hide_draft_and_favourite_recipes(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            page.locator("[data-filter-drawer] summary").click()
+
+            draft_toggle = page.locator('[data-status-toggle="draft"]')
+            favourite_toggle = page.locator('[data-status-toggle="favourite"]')
+            items = page.locator("[data-recipe-item]")
+            item_count = items.count()
+
+            expect(draft_toggle).to_be_checked()
+            expect(favourite_toggle).to_be_checked()
+            expect(page.locator("[data-recipe-item]:not([hidden])")).to_have_count(item_count)
+
+            draft_indexes = set(
+                items.evaluate_all(
+                    "items => items.map((item, i) => item.dataset.isDraft === 'true' ? i : -1)"
+                    ".filter(i => i !== -1)"
+                )
+            )
+            favourite_indexes = set(
+                items.evaluate_all(
+                    "items => items.map((item, i) => item.dataset.isFavourite === 'true' ? i : -1)"
+                    ".filter(i => i !== -1)"
+                )
+            )
+            assert draft_indexes, "expected at least one draft recipe"
+            assert favourite_indexes, "expected at least one favourite recipe"
+
+            draft_toggle.uncheck()
+            for index in range(item_count):
+                if index in draft_indexes:
+                    expect(items.nth(index)).to_be_hidden()
+                else:
+                    expect(items.nth(index)).to_be_visible()
+
+            draft_toggle.check()
+            expect(page.locator("[data-recipe-item]:not([hidden])")).to_have_count(item_count)
+
+            favourite_toggle.uncheck()
+            for index in range(item_count):
+                if index in favourite_indexes:
+                    expect(items.nth(index)).to_be_hidden()
+                else:
+                    expect(items.nth(index)).to_be_visible()
+
+            favourite_toggle.check()
+            expect(page.locator("[data-recipe-item]:not([hidden])")).to_have_count(item_count)
+        finally:
+            browser.close()
+
+
+def test_status_links_navigate_to_dedicated_draft_and_favourite_pages(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            page.locator("[data-filter-drawer] summary").click()
+
+            wrappers = page.locator("[data-status-toggle-wrapper]")
+            draft_wrapper = wrappers.filter(has=page.locator('[data-status-toggle="draft"]'))
+            favourite_wrapper = wrappers.filter(
+                has=page.locator('[data-status-toggle="favourite"]')
+            )
+
+            draft_wrapper.locator(".tag-toggle-link").click()
+            page.wait_for_url("**/search-results/?status=draft")
+            expect(page.locator("h1")).to_have_text("Draft")
+            expect(page.locator(".result-list .draft")).to_have_count(
+                page.locator(".result-list li").count()
+            )
+
+            page.go_back()
+            page.locator("[data-filter-drawer] summary").click()
+            favourite_wrapper = page.locator("[data-status-toggle-wrapper]").filter(
+                has=page.locator('[data-status-toggle="favourite"]')
+            )
+            favourite_wrapper.locator(".tag-toggle-link").click()
+            page.wait_for_url("**/search-results/?status=favourite")
+            expect(page.locator("h1")).to_have_text("Favourite")
+            expect(page.locator(".result-list .favourite")).to_have_count(
+                page.locator(".result-list li").count()
+            )
+        finally:
+            browser.close()
+
+
+
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
         page = browser.new_page()

@@ -26,6 +26,7 @@
       "published_on": "2020-06-19",
       "last_updated_on": "2020-06-19",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Customisable"
       ],
@@ -59,7 +60,7 @@
         "Zest the lemon.",
         "Grate the garlic cloves.",
         "Combine the lemon zest, garlic, breadcrumbs, and mince into ~20 meatballs.",
-        "Put meatballs in the oven, on a baking tray, at 200°C for 15-20 minutes.",
+        "Put meatballs in the oven, on a baking tray, at 200\u00b0C for 15-20 minutes.",
         "Combine harissa paste, olive oil, lemon juice, and mint into a marinade.",
         "Rinse and dry cucumber.",
         "Once meatballs are cooked, toss in marinade.",
@@ -71,6 +72,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Lamb",
         "Spicy"
@@ -108,6 +110,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -148,7 +151,7 @@
         "Fill the pie.",
         "Top the pie with a pastry lid. Ensure the lid is bonded to the rest of the pastry and an air vent is cut into the top.",
         "Optionally, apply an egg wash to the exposed pastry.",
-        "Bake for ~30 minutes at 200°C."
+        "Bake for ~30 minutes at 200\u00b0C."
       ],
       "category": "MAINS",
       "total_time_minutes": 100,
@@ -156,9 +159,9 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
-        "Chicken",
-        "Favourite"
+        "Chicken"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536264/Chicken%20and%20Mushroom%20Pie/IMG_20200416_202427_poadnb.jpg",
@@ -200,6 +203,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Beef",
         "One Pot"
@@ -240,9 +244,8 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
-      "tags": [
-        "Favourite"
-      ],
+      "is_favourite": true,
+      "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536492/Liver%20and%20Chorizo%20on%20Toast/IMG_20200101_184943_n6cfqp.jpg"
       ]
@@ -265,7 +268,7 @@
         "Spread a thin layer of sauce into ceramic dish.",
         "Place chicken in dish, skin-side down.",
         "Top with 75% of the remaining sauce.",
-        "Bake in a 200°C oven for 20 minutes.",
+        "Bake in a 200\u00b0C oven for 20 minutes.",
         "Take out of the oven, flip chicken, add remaining sauce to skin side.",
         "Return to oven for another 20 minutes."
       ],
@@ -275,6 +278,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Chicken",
         "One Pot"
@@ -319,6 +323,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Beef",
         "One Pot"
@@ -359,6 +364,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "One Pot"
@@ -409,10 +415,10 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": false,
+      "is_favourite": true,
       "tags": [
         "Cheesy",
-        "Customisable",
-        "Favourite"
+        "Customisable"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536226/Cast%20Iron%20Pizza/IMG_20200616_180654_wdngp2.jpg",
@@ -442,7 +448,7 @@
         "Sprinkle pepper over tart.",
         "Sprinkle cheddar over tart.",
         "Fold edges over to form a crust.",
-        "Bake at 180°C for ~20 minutes.",
+        "Bake at 180\u00b0C for ~20 minutes.",
         "Brown cheese under grill if desired."
       ],
       "category": "MAINS",
@@ -451,6 +457,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot",
         "Cheesy"
@@ -488,6 +495,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Customisable"
       ],
@@ -535,6 +543,7 @@
       "published_on": "2020-06-20",
       "last_updated_on": "2020-06-20",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -569,6 +578,7 @@
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Turkey"
       ],
@@ -614,10 +624,10 @@
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
         "Pork",
-        "One Pot",
-        "Favourite"
+        "One Pot"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536596/Pork%20Belly%20Braise/IMG_20200820_182251_eqp0ei.jpg",
@@ -657,6 +667,7 @@
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish",
         "Spicy"
@@ -676,7 +687,7 @@
         "1/2 Teaspoon Salt"
       ],
       "instructions": [
-        "Cook sausages in an oiled ceramic rectangular baking dish in a 200°C oven for 15 minutes.",
+        "Cook sausages in an oiled ceramic rectangular baking dish in a 200\u00b0C oven for 15 minutes.",
         "While cooking, whisk together flour, eggs, milk, and salt.",
         "Immediately from the oven, pour the batter evenly over the sausages.",
         "Return to the oven for a further 25 minutes."
@@ -687,6 +698,7 @@
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -755,6 +767,7 @@
       "published_on": "2020-07-13",
       "last_updated_on": "2020-07-13",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Pork"
       ],
@@ -795,6 +808,7 @@
       "published_on": "2020-07-16",
       "last_updated_on": "2020-07-16",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -821,7 +835,7 @@
         "Mix all ingredients together.",
         "Optionally, marinade for up to 24 hours.",
         "Arrange onto skewers in a repeating pattern of pepper, onion, and chicken.",
-        "Suspend skewers from each end bake at 200°C for 25 minutes, flipping halfway through."
+        "Suspend skewers from each end bake at 200\u00b0C for 25 minutes, flipping halfway through."
       ],
       "category": "MAINS",
       "total_time_minutes": 50,
@@ -829,6 +843,7 @@
       "published_on": "2020-07-21",
       "last_updated_on": "2020-07-21",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Chicken"
       ],
@@ -870,6 +885,7 @@
       "published_on": "2020-07-31",
       "last_updated_on": "2020-07-31",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Chicken",
         "Spicy"
@@ -900,7 +916,7 @@
         "Lightly fry the spring onions and garlic.",
         "Add in jackfruit, five spice, sesame oil, rice wine vinegar, and hoisin sauce.",
         "Continue to cook for ~10 minutes whilst breaking up jackfruit.",
-        "Lay jackfruit mixture flat on a baking tray and cook in the oven for 20 minutes at 200°C.",
+        "Lay jackfruit mixture flat on a baking tray and cook in the oven for 20 minutes at 200\u00b0C.",
         "While jackfruit is in the oven, slice cucumber and remaining spring onions into sticks."
       ],
       "category": "LIGHT DISHES",
@@ -909,6 +925,7 @@
       "published_on": "2020-08-12",
       "last_updated_on": "2020-08-12",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -947,6 +964,7 @@
       "published_on": "2020-08-12",
       "last_updated_on": "2020-08-12",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Chicken",
         "Cheesy"
@@ -978,6 +996,7 @@
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "One Pot",
         "Customisable"
@@ -1011,7 +1030,7 @@
         "Stuff the slits with slices of mozzarella and slices of pepper.",
         "Drizzle aubergine with remaining olive oil.",
         "Add halved cherry tomatoes around the aubergine.",
-        "Bake at 180°C for ~30 minutes.",
+        "Bake at 180\u00b0C for ~30 minutes.",
         "Eat as-is or serve on toasted bread."
       ],
       "category": "MAINS",
@@ -1020,6 +1039,7 @@
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "One Pot",
@@ -1061,7 +1081,7 @@
         "Continue to heat and whisk white sauce until thickened.",
         "Build up lasagne in a lasagne dish in layers of: meat-sauce, lasagne sheets, white sauce.",
         "Top with mozzarella.",
-        "Bake at 180°C for ~40 minutes.",
+        "Bake at 180\u00b0C for ~40 minutes.",
         "Brown cheese under grill."
       ],
       "category": "MAINS",
@@ -1070,6 +1090,7 @@
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Beef",
         "Cheesy"
@@ -1111,6 +1132,7 @@
       "published_on": "2020-08-27",
       "last_updated_on": "2020-08-27",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -1145,6 +1167,7 @@
       "published_on": "2020-08-28",
       "last_updated_on": "2020-08-28",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -1188,10 +1211,10 @@
       "published_on": "2020-09-10",
       "last_updated_on": "2020-09-10",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
         "Chicken",
-        "Spicy",
-        "Favourite"
+        "Spicy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536429/Korean%20Stir-Fried%20Chicken/IMG_20200910_174655_sx3c2a.jpg",
@@ -1220,6 +1243,7 @@
       "published_on": "2020-09-10",
       "last_updated_on": "2020-09-10",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -1252,6 +1276,7 @@
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish"
       ],
@@ -1282,6 +1307,7 @@
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -1324,6 +1350,7 @@
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Beef"
       ],
@@ -1356,7 +1383,7 @@
         "Continue to cook for ~1 minute.",
         "Add all other ingredients.",
         "Mix whilst bringing to the boil.",
-        "Add lid and cook in a 200°C oven for 1 hour.",
+        "Add lid and cook in a 200\u00b0C oven for 1 hour.",
         "Stir, remove lid, and cook for a further 30 minutes.",
         "Serve on couscous."
       ],
@@ -1366,6 +1393,7 @@
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Lamb",
         "One Pot"
@@ -1400,6 +1428,7 @@
       "published_on": "2020-09-11",
       "last_updated_on": "2020-09-11",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -1435,7 +1464,7 @@
         "Liberally apply egg-wash to the exposed dough.",
         "Sprinkle sugar over galette.",
         "Transfer to a baking tray.",
-        "Bake in 180°C oven for 1 hour.",
+        "Bake in 180\u00b0C oven for 1 hour.",
         "Allow to cool for at least 15 minutes before cutting."
       ],
       "category": "CONFECTIONERY",
@@ -1444,6 +1473,7 @@
       "published_on": "2020-10-13",
       "last_updated_on": "2020-10-13",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fruity"
       ],
@@ -1477,7 +1507,7 @@
         "Roll strips.",
         "Place flat on a baking tray lined with baking paper.",
         "Lightly press down on rolls.",
-        "Bake at 180°C for 20 minutes.",
+        "Bake at 180\u00b0C for 20 minutes.",
         "Make glaze by mixing remaining ingredients.",
         "Let rolls cool.",
         "Glaze rolls."
@@ -1488,6 +1518,7 @@
       "published_on": "2020-10-14",
       "last_updated_on": "2020-10-14",
       "is_final": true,
+      "is_favourite": false,
       "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536620/Puff%20Pastry%20Cinnamon%20Rolls/IMG_20200927_154653_hioa9i.jpg",
@@ -1523,6 +1554,7 @@
       "published_on": "2020-10-14",
       "last_updated_on": "2020-10-14",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Customisable"
       ],
@@ -1554,6 +1586,7 @@
       "published_on": "2020-11-25",
       "last_updated_on": "2020-11-25",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -1580,6 +1613,7 @@
       "published_on": "2020-11-25",
       "last_updated_on": "2020-11-25",
       "is_final": false,
+      "is_favourite": false,
       "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536421/Japanese%20Mayonnaise%20Substitute/IMG_20201122_192700_ge65f9.jpg",
@@ -1618,6 +1652,7 @@
       "published_on": "2020-11-26",
       "last_updated_on": "2020-11-26",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Lamb",
         "One Pot"
@@ -1646,6 +1681,7 @@
       "published_on": "2020-12-06",
       "last_updated_on": "2020-12-06",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "Customisable"
@@ -1677,7 +1713,7 @@
         "Add Chicken, tomatoes, chorizo, peppers, and chilli flakes to a large roasting dish.",
         "Drizzle with olive oil.",
         "Season with salt and pepper.",
-        "Bake at 180°C for 30 minutes.",
+        "Bake at 180\u00b0C for 30 minutes.",
         "Mix.",
         "Bake for a further 20 minutes.",
         "Mix in olives.",
@@ -1693,10 +1729,10 @@
       "published_on": "2021-01-22",
       "last_updated_on": "2021-01-22",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
         "Chicken",
-        "One Pot",
-        "Favourite"
+        "One Pot"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536259/Chicken%20and%20Chorizo%20Traybake/IMG_20210118_201628_tgxj4m.jpg"
@@ -1733,7 +1769,7 @@
         "Distribute filling among all tortillas evenly.",
         "Fold tortillas around filling using excess sauce to seal the end shut.",
         "Grate cheese over dish.",
-        "Bake at 180°C until cheese beginning to brown."
+        "Bake at 180\u00b0C until cheese beginning to brown."
       ],
       "category": "MAINS",
       "total_time_minutes": 55,
@@ -1741,6 +1777,7 @@
       "published_on": "2021-02-09",
       "last_updated_on": "2021-02-09",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Chicken",
         "Cheesy"
@@ -1791,6 +1828,7 @@
       "published_on": "2021-02-09",
       "last_updated_on": "2021-02-09",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "Cheesy"
@@ -1834,6 +1872,7 @@
       "published_on": "2021-02-09",
       "last_updated_on": "2021-02-09",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Pork",
         "One Pot",
@@ -1870,7 +1909,7 @@
         "Drain and thoroughly dry raisins.",
         "Fold raisins and oats into dough.",
         "Form dough into balls using ~2 tablespoons of dough each.",
-        "Bake on a baking tray at 180°C for ~12 minutes."
+        "Bake on a baking tray at 180\u00b0C for ~12 minutes."
       ],
       "category": "CONFECTIONERY",
       "total_time_minutes": 45,
@@ -1878,6 +1917,7 @@
       "published_on": "2021-02-24",
       "last_updated_on": "2021-02-24",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fruity"
       ],
@@ -1909,7 +1949,7 @@
         "Sprinkle over cheese.",
         "Sprinkle over basil.",
         "Drip over additional BBQ sauce.",
-        "Bake at 180°C for 5 minutes.",
+        "Bake at 180\u00b0C for 5 minutes.",
         "Grill until cheese is golden."
       ],
       "category": "MAINS",
@@ -1918,10 +1958,10 @@
       "published_on": "2021-02-25",
       "last_updated_on": "2021-02-25",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
         "Cheesy",
-        "Customisable",
-        "Favourite"
+        "Customisable"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1614536132/Baguette%20Pizza/IMG_20210224_202755_ahdpbs.jpg"
@@ -1949,6 +1989,7 @@
       "published_on": "2021-02-27",
       "last_updated_on": "2021-02-27",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -1981,7 +2022,7 @@
         "Mix together all ingredients except for remaining cheese.",
         "Add mixture to baking dish.",
         "Sprinkle remaining cheese over mixture.",
-        "Bake at 200°C for ~20 minutes."
+        "Bake at 200\u00b0C for ~20 minutes."
       ],
       "category": "MAINS",
       "total_time_minutes": 45,
@@ -1989,6 +2030,7 @@
       "published_on": "2021-03-02",
       "last_updated_on": "2021-03-02",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish",
         "Cheesy"
@@ -2014,7 +2056,7 @@
       "instructions": [
         "Mix together flour, sugar, salt, and coconut oil into a breadcrumb texture.",
         "Line a tart pan with mixture.",
-        "Blind bake crust at 180°C for 25 minutes.",
+        "Blind bake crust at 180\u00b0C for 25 minutes.",
         "Let crust cool.",
         "Add all remaining ingredients except for the chocolate into a microwavable container.",
         "Add enough chocolate such that the total volume reaches 500ml.",
@@ -2028,9 +2070,8 @@
       "published_on": "2021-03-10",
       "last_updated_on": "2021-03-10",
       "is_final": true,
-      "tags": [
-        "Favourite"
-      ],
+      "is_favourite": true,
+      "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_195138_rnb416.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1615398511/Chocolate%20Coconut%20Tart/IMG_20210303_155525_nhlfnp.jpg",
@@ -2063,7 +2104,7 @@
         "Finely dice onion and garlic.",
         "Mix together mince, onion, garlic, egg, parsley, panko, milk, oregano, basil, 1/2 teaspoon pepper, 1.5 teaspoons salt, and 100g ketchup.",
         "Press mixture into a loaf tin lined with baking paper.",
-        "Bake at 200°C for 40 minutes.",
+        "Bake at 200\u00b0C for 40 minutes.",
         "Mix together all remaining ingredients.",
         "Glaze top of meatloaf with sauce.",
         "Return to oven for 15 additional minutes."
@@ -2074,6 +2115,7 @@
       "published_on": "2021-03-26",
       "last_updated_on": "2021-03-26",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Beef"
       ],
@@ -2113,7 +2155,7 @@
         "Wrap up burrito.",
         "Repeat for all burritos.",
         "Place burritos on a baking tray.",
-        "Bake at 180°C for ~20 minutes."
+        "Bake at 180\u00b0C for ~20 minutes."
       ],
       "category": "MAINS",
       "total_time_minutes": 50,
@@ -2121,6 +2163,7 @@
       "published_on": "2021-03-30",
       "last_updated_on": "2021-03-30",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Customisable"
       ],
@@ -2172,6 +2215,7 @@
       "published_on": "2021-03-30",
       "last_updated_on": "2021-03-30",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Cheesy",
         "Customisable"
@@ -2206,7 +2250,7 @@
         "Sprinkle with remaining sugar.",
         "Sprinkle with cinnamon.",
         "Distribute chunks of butter across galette.",
-        "Bake at 190°C for 30 minutes.",
+        "Bake at 190\u00b0C for 30 minutes.",
         "Glaze with apricot jam."
       ],
       "category": "CONFECTIONERY",
@@ -2215,6 +2259,7 @@
       "published_on": "2021-03-30",
       "last_updated_on": "2021-03-30",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Fruity"
       ],
@@ -2250,6 +2295,7 @@
       "published_on": "2021-04-03",
       "last_updated_on": "2021-04-03",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fruity"
       ],
@@ -2294,6 +2340,7 @@
       "published_on": "2021-04-09",
       "last_updated_on": "2021-04-09",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Beef",
         "Spicy"
@@ -2333,10 +2380,10 @@
       "published_on": "2021-04-09",
       "last_updated_on": "2021-04-09",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
         "Vegetarian",
-        "Cheesy",
-        "Favourite"
+        "Cheesy"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1617988429/Grilled%20Cheese/IMG_20210409_124747_s5wmp1.jpg",
@@ -2357,7 +2404,7 @@
         "Place salmon fillet on foil, skin-side down.",
         "Drizzle fillet with lemon juice and remaining olive oil.",
         "Sprinkle fillet with pepper.",
-        "Bake at 180°C for 15 minutes."
+        "Bake at 180\u00b0C for 15 minutes."
       ],
       "category": "LIGHT DISHES",
       "total_time_minutes": 20,
@@ -2365,6 +2412,7 @@
       "published_on": "2021-04-15",
       "last_updated_on": "2021-04-15",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish"
       ],
@@ -2399,6 +2447,7 @@
       "published_on": "2021-04-17",
       "last_updated_on": "2021-04-17",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Beef"
       ],
@@ -2427,6 +2476,7 @@
       "published_on": "2021-04-19",
       "last_updated_on": "2021-04-19",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish"
       ],
@@ -2456,6 +2506,7 @@
       "published_on": "2021-04-20",
       "last_updated_on": "2021-04-20",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -2497,6 +2548,7 @@
       "published_on": "2021-04-27",
       "last_updated_on": "2021-04-27",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Beef"
       ],
@@ -2531,6 +2583,7 @@
       "published_on": "2021-05-06",
       "last_updated_on": "2021-05-06",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -2553,7 +2606,7 @@
       "instructions": [
         "Peel garlic cloves.",
         "Add garlic, tomatoes, feta, and olive oil to a baking dish.",
-        "Bake at 180°C for 20 minutes.",
+        "Bake at 180\u00b0C for 20 minutes.",
         "Cook pasta.",
         "Slice basil.",
         "Remove baking dish from oven.",
@@ -2567,6 +2620,7 @@
       "published_on": "2021-05-06",
       "last_updated_on": "2021-05-06",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "One Pot",
@@ -2597,13 +2651,13 @@
       ],
       "instructions": [
         "Drain and dry beans.",
-        "Bake beans at 180°C for 20 minutes.",
+        "Bake beans at 180\u00b0C for 20 minutes.",
         "Finely dice pepper, onion, and garlic.",
         "Lightly fry pepper, onion, and garlic until softened.",
         "Mix together all ingredients.",
         "Form mixture into four patties.",
         "Place patties onto a baking tray lined with baking paper.",
-        "Bake at 180°C for 15 minutes."
+        "Bake at 180\u00b0C for 15 minutes."
       ],
       "category": "MAINS",
       "total_time_minutes": 55,
@@ -2611,6 +2665,7 @@
       "published_on": "2021-05-06",
       "last_updated_on": "2021-05-06",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -2649,6 +2704,7 @@
       "published_on": "2021-05-13",
       "last_updated_on": "2021-05-13",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -2682,6 +2738,7 @@
       "published_on": "2021-05-13",
       "last_updated_on": "2021-05-13",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish",
         "Spicy"
@@ -2711,6 +2768,7 @@
       "published_on": "2021-07-04",
       "last_updated_on": "2021-07-04",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -2749,6 +2807,7 @@
       "published_on": "2021-07-05",
       "last_updated_on": "2021-07-05",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Fruity"
       ],
@@ -2791,9 +2850,9 @@
       "published_on": "2021-07-25",
       "last_updated_on": "2021-07-25",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
-        "Chicken",
-        "Favourite"
+        "Chicken"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627249497/Katsu%20Curry/IMG_20210601_194628_xnd0lm.jpg",
@@ -2819,7 +2878,7 @@
         "Mix together flour, yeast, salt, sugar and water.",
         "Knead for ~10 minutes.",
         "Flatten on a baking tray.",
-        "Bake at 200°C for 10 minutes.",
+        "Bake at 200\u00b0C for 10 minutes.",
         "Melt butter.",
         "Mix garlic powder and olive oil into butter.",
         "Brush some butter mixture over bread.",
@@ -2832,6 +2891,7 @@
       "published_on": "2021-07-29",
       "last_updated_on": "2021-07-29",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian"
       ],
@@ -2855,14 +2915,14 @@
         "Cream 200g caster sugar and butter.",
         "Mix together butter mixture, eggs, flour, and baking powder.",
         "Line and grease a cake tin.",
-        "Bake at 180°C for ~20 minutes.",
+        "Bake at 180\u00b0C for ~20 minutes.",
         "Cool sponge completely.",
         "Whisk egg whites whilst slowly adding remaining sugar until stiff.",
         "Arrange ice cream onto sponge, leaving a 2cm margin from the edge.",
         "Encase the ice cream with meringue.",
         "Leave in freezer for at least 2 hours.",
         "Place on a lined baking tray.",
-        "Bake at 200°C for ~10 minutes."
+        "Bake at 200\u00b0C for ~10 minutes."
       ],
       "category": "CONFECTIONERY",
       "total_time_minutes": 205,
@@ -2870,9 +2930,8 @@
       "published_on": "2021-07-29",
       "last_updated_on": "2021-07-29",
       "is_final": true,
-      "tags": [
-        "Favourite"
-      ],
+      "is_favourite": true,
+      "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594245/Baked%20Alaska/IMG_20210620_194126_efpdlh.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627594244/Baked%20Alaska/IMG_20210620_112502_soblqp.jpg",
@@ -2916,6 +2975,7 @@
       "published_on": "2021-07-30",
       "last_updated_on": "2021-07-30",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Chicken",
         "Spicy"
@@ -2948,11 +3008,11 @@
         "Grease and line a ~20cm flan tin.",
         "Add pastry to tin - do not trim edges.",
         "Dock pastry.",
-        "Blind bake at 200°C for 10 minutes.",
+        "Blind bake at 200\u00b0C for 10 minutes.",
         "Trim edges.",
         "Mix together all remaining ingredients.",
         "Pour mixture into pastry shell.",
-        "Bake at 180°C for 45 minutes.",
+        "Bake at 180\u00b0C for 45 minutes.",
         "Let cool for at least 30 minutes before cutting."
       ],
       "category": "CONFECTIONERY",
@@ -2961,9 +3021,8 @@
       "published_on": "2021-07-30",
       "last_updated_on": "2021-07-30",
       "is_final": true,
-      "tags": [
-        "Favourite"
-      ],
+      "is_favourite": true,
+      "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_221911_rzq9gm.jpg",
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1627647663/Pumpkin%20Pie/IMG_20210724_210736_hc67b5.jpg",
@@ -2992,6 +3051,7 @@
       "published_on": "2021-07-30",
       "last_updated_on": "2021-07-30",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "Customisable"
@@ -3035,6 +3095,7 @@
       "published_on": "2021-10-16",
       "last_updated_on": "2021-10-16",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Pork",
         "Spicy"
@@ -3075,6 +3136,7 @@
       "published_on": "2021-10-16",
       "last_updated_on": "2021-10-16",
       "is_final": true,
+      "is_favourite": false,
       "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1634397726/Chocolate%20Chip%20Cookie%20Cups/IMG_20210904_213843_zfo1ua.jpg",
@@ -3114,6 +3176,7 @@
       "published_on": "2021-10-16",
       "last_updated_on": "2021-10-16",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "One Pot"
@@ -3144,7 +3207,7 @@
         "Place chicken breasts into baking dish.",
         "Mix together all remaining ingredients.",
         "Pour mixture over chicken breasts.",
-        "Cook in over at 180°C for 45 minutes.",
+        "Cook in over at 180\u00b0C for 45 minutes.",
         "Shred chicken using two forks or an electric hand mixer."
       ],
       "category": "MAINS",
@@ -3153,6 +3216,7 @@
       "published_on": "2021-12-01",
       "last_updated_on": "2021-12-01",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Chicken"
       ],
@@ -3191,9 +3255,9 @@
       "published_on": "2021-12-26",
       "last_updated_on": "2021-12-26",
       "is_final": true,
+      "is_favourite": true,
       "tags": [
-        "Fish",
-        "Favourite"
+        "Fish"
       ],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1640534406/Prawn%20and%20Chorizo%20Tagliatelle/IMG_20211219_194223_bmpsbb.jpg"
@@ -3233,6 +3297,7 @@
       "published_on": "2022-08-04",
       "last_updated_on": "2022-08-04",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -3263,6 +3328,7 @@
       "published_on": "2022-08-04",
       "last_updated_on": "2022-08-04",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -3292,6 +3358,7 @@
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Vegetarian",
         "Fruity",
@@ -3310,7 +3377,7 @@
         "1 Lemon"
       ],
       "instructions": [
-        "Oven bake cod at 180°C for 20 minutes.",
+        "Oven bake cod at 180\u00b0C for 20 minutes.",
         "Zest lemon.",
         "Juice lemon.",
         "Brown butter.",
@@ -3323,6 +3390,7 @@
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fish"
       ],
@@ -3351,7 +3419,7 @@
         "Pack flour mixture down.",
         "Run fork lightly over flour mixture to create shallow ridges.",
         "Sprinkle oats and demerara sugar over crumble.",
-        "Bake at 180°C for 40 minutes."
+        "Bake at 180\u00b0C for 40 minutes."
       ],
       "category": "CONFECTIONERY",
       "total_time_minutes": 60,
@@ -3359,6 +3427,7 @@
       "published_on": "2024-01-01",
       "last_updated_on": "2024-01-01",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "Fruity"
       ],
@@ -3390,6 +3459,7 @@
       "published_on": "2024-06-16",
       "last_updated_on": "2024-06-16",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],
@@ -3424,6 +3494,7 @@
       "published_on": "2024-06-16",
       "last_updated_on": "2024-06-16",
       "is_final": false,
+      "is_favourite": false,
       "tags": [],
       "image_urls": [
         "https://res.cloudinary.com/mynameismikegreen/image/upload/v1718555275/Fish%20Finger%20and%20Mango%20Tacos/IMG_20240509_201413_nokj04.jpg",
@@ -3448,7 +3519,7 @@
         "Place chicken in casserole dish.",
         "Pour mixture over chicken.",
         "Sprinkle cheese over chicken.",
-        "Bake at 190°C for 1 hour."
+        "Bake at 190\u00b0C for 1 hour."
       ],
       "category": "MAINS",
       "total_time_minutes": 70,
@@ -3456,6 +3527,7 @@
       "published_on": "2026-08-09",
       "last_updated_on": "2026-08-09",
       "is_final": false,
+      "is_favourite": false,
       "tags": [
         "Chicken",
         "One Pot"
@@ -3490,6 +3562,7 @@
       "published_on": "2026-08-09",
       "last_updated_on": "2026-08-09",
       "is_final": true,
+      "is_favourite": false,
       "tags": [
         "One Pot"
       ],

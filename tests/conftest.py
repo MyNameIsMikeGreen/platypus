@@ -59,6 +59,7 @@ def recipe_factory(monkeypatch):
             "published_on": date(2025, 1, 1),
             "last_updated_on": date(2025, 1, 1),
             "is_final": True,
+            "is_favourite": False,
             "tags": [],
             "image_urls": [],
         }

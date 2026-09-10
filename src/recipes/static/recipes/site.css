@@ -320,7 +320,7 @@ select:focus-visible {
 .filter-panels {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
@@ -396,6 +396,21 @@ select:focus-visible {
 }
 
 .tag-filters legend {
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-filters {
+  min-inline-size: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.status-filters legend {
   margin-bottom: 0.7rem;
   font-size: 0.85rem;
   font-weight: 700;
@@ -615,6 +630,20 @@ select:focus-visible {
   background: #fff0cc;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: 0.7rem;
+}
+
+.favourite {
+  margin-left: 0.4rem;
+  color: #b5124e;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.favourite.favourite-detail {
+  margin-left: 0.5rem;
+  font-size: 0.6em;
+  vertical-align: middle;
+  filter: drop-shadow(0 0.05em 0.1em rgba(181, 18, 78, 0.35));
 }
 
 .back-link {
@@ -1121,19 +1150,26 @@ select:focus-visible {
   .filter-panels {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas: "category time";
+    grid-template-areas:
+      "category status"
+      "time time";
     align-items: start;
-    gap: 0 2rem;
+    gap: 2rem;
   }
 
   .filter-panels:has(.tag-filters) {
     grid-template-areas:
       "category tags"
+      "status tags"
       "time tags";
   }
 
   .category-filters {
     grid-area: category;
+  }
+
+  .status-filters {
+    grid-area: status;
   }
 
   .tag-filters {
@@ -1142,10 +1178,6 @@ select:focus-visible {
 
   .time-filters {
     grid-area: time;
-  }
-
-  .filter-panels:has(.tag-filters) .time-filters {
-    margin-top: 1.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--border);
   }

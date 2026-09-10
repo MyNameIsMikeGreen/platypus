@@ -73,6 +73,12 @@ def planner(request: HttpRequest) -> HttpResponse:
     )
 
 
+STATUS_FILTERS = {
+    "draft": ("Draft", lambda recipe: not recipe.is_final),
+    "favourite": ("Favourite", lambda recipe: recipe.is_favourite),
+}
+
+
 @require_safe
 def search_results(request: HttpRequest) -> HttpResponse:
     form = PlannerForm(request.GET)
@@ -85,8 +91,25 @@ def search_results(request: HttpRequest) -> HttpResponse:
             {
                 "active_section": "recipes",
                 "is_tag": True,
+                "eyebrow": "Tag",
                 "recipes": recipes,
                 "search_term": tag,
+            },
+        )
+
+    status = request.GET.get("status", "").strip().casefold()
+    if status in STATUS_FILTERS:
+        label, matches_status = STATUS_FILTERS[status]
+        recipes = [recipe for recipe in CATALOG if matches_status(recipe)]
+        return render(
+            request,
+            "recipes/search_results.html",
+            {
+                "active_section": "recipes",
+                "is_tag": True,
+                "eyebrow": "Status",
+                "recipes": recipes,
+                "search_term": label,
             },
         )
 

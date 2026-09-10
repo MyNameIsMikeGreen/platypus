@@ -22,11 +22,15 @@ const formatDuration = (minutes) => {
 
 const controls = document.querySelector("[data-category-controls]");
 const tagControls = document.querySelector("[data-tag-controls]");
+const statusControls = document.querySelector("[data-status-controls]");
 const timeControls = document.querySelector("[data-time-controls]");
 
 if (controls) {
   const toggles = [...controls.querySelectorAll("[data-category-toggle]")];
   const tagToggles = [...(tagControls?.querySelectorAll("[data-tag-toggle]") ?? [])];
+  const draftToggle = statusControls?.querySelector('[data-status-toggle="draft"]') ?? null;
+  const favouriteToggle =
+    statusControls?.querySelector('[data-status-toggle="favourite"]') ?? null;
   const cards = [...document.querySelectorAll(".category-card[data-category]")];
   const status = controls.querySelector("[data-category-status]");
   const tagStatus = tagControls?.querySelector("[data-tag-status]") ?? null;
@@ -56,6 +60,8 @@ if (controls) {
     const enabledTags = new Set(
       tagToggles.filter((toggle) => toggle.checked).map((toggle) => toggle.value),
     );
+    const showDrafts = !draftToggle || draftToggle.checked;
+    const showFavourites = !favouriteToggle || favouriteToggle.checked;
     const totalThreshold = totalSlider ? TOTAL_TIME_STEPS[Number(totalSlider.value)] : Infinity;
     const activeThreshold = activeSlider
       ? ACTIVE_TIME_STEPS[Number(activeSlider.value)]
@@ -74,8 +80,14 @@ if (controls) {
         const itemTags = item.dataset.tags ? item.dataset.tags.split(",") : [];
         const tagMatches =
           itemTags.length === 0 || itemTags.some((tag) => enabledTags.has(tag));
+        const isDraft = item.dataset.isDraft === "true";
+        const isFavourite = item.dataset.isFavourite === "true";
+        const statusMatches = (!isDraft || showDrafts) && (!isFavourite || showFavourites);
         const matches =
-          totalMinutes <= totalThreshold && activeMinutes <= activeThreshold && tagMatches;
+          totalMinutes <= totalThreshold &&
+          activeMinutes <= activeThreshold &&
+          tagMatches &&
+          statusMatches;
         item.hidden = !matches;
         matchCount += Number(matches);
       }
@@ -102,6 +114,14 @@ if (controls) {
 
   for (const toggle of tagToggles) {
     toggle.addEventListener("change", applyFilters);
+  }
+
+  if (draftToggle) {
+    draftToggle.addEventListener("change", applyFilters);
+  }
+
+  if (favouriteToggle) {
+    favouriteToggle.addEventListener("change", applyFilters);
   }
 
   if (tagClearButton) {

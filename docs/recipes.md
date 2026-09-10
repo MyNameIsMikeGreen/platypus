@@ -17,6 +17,7 @@ The top-level `schema_version` is currently `1`. Each entry in `recipes` contain
 | `published_on`    | Original publication date in `YYYY-MM-DD` format                                |
 | `last_updated_on` | Date of the last edit in `YYYY-MM-DD` format; must not be before `published_on` |
 | `is_final`        | `false` displays the under-development notice                                   |
+| `is_favourite`    | `true` shows a heart marker on the recipe and lists it on the favourites page   |
 | `tags`            | Optional list used for tag links                                                |
 | `image_urls`      | Optional list of image URLs                                                     |
 

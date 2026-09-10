@@ -35,6 +35,7 @@ RECIPE_FIELDS = {
     "published_on",
     "last_updated_on",
     "is_final",
+    "is_favourite",
     "tags",
     "image_urls",
 }
@@ -57,6 +58,7 @@ class RecipeData:
     published_on: date
     last_updated_on: date
     is_final: bool
+    is_favourite: bool
     tags: tuple[str, ...]
     image_urls: tuple[str, ...]
 
@@ -168,6 +170,10 @@ def _parse_recipe(raw: object) -> RecipeData:
     if not isinstance(is_final, bool):
         raise CatalogError(f"Recipe {recipe_id}: is_final must be true or false.")
 
+    is_favourite = raw.get("is_favourite")
+    if not isinstance(is_favourite, bool):
+        raise CatalogError(f"Recipe {recipe_id}: is_favourite must be true or false.")
+
     image_urls = _string_list(raw.get("image_urls"), "image_urls", recipe_id, allow_empty=True)
     for image_url in image_urls:
         parsed = urlparse(image_url)
@@ -210,6 +216,7 @@ def _parse_recipe(raw: object) -> RecipeData:
         published_on=published_on,
         last_updated_on=last_updated_on,
         is_final=is_final,
+        is_favourite=is_favourite,
         tags=_string_list(raw.get("tags"), "tags", recipe_id, allow_empty=True),
         image_urls=image_urls,
     )

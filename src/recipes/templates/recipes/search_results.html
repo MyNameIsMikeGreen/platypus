@@ -6,14 +6,14 @@
   <div class="narrow">
     {% if is_tag %}
       <a class="back-link" href="{% url 'recipes:index' %}">&larr; All recipes</a>
-      <p class="eyebrow">Tag</p>
+      <p class="eyebrow">{{ eyebrow }}</p>
       <h1>{{ search_term|title }}</h1>
       {% if recipes %}
         <ul class="result-list result-card">
           {% for recipe in recipes %}
             <li>
               <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
-              {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+              {% include "recipes/_status_badges.html" with recipe=recipe %}
             </li>
           {% endfor %}
         </ul>
@@ -36,7 +36,7 @@
               {% for recipe in category_recipes %}
                 <li>
                   <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
-                  {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+                  {% include "recipes/_status_badges.html" with recipe=recipe %}
                 </li>
               {% endfor %}
             </ul>

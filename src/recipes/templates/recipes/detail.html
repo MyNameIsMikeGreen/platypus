@@ -9,7 +9,10 @@
       <div>
         <a class="back-link" href="{% url 'recipes:index' %}">&larr; All recipes</a>
         <p class="eyebrow">{{ recipe.category|title }}</p>
-        <h1>{{ recipe.title }}</h1>
+        <h1>
+          {{ recipe.title }}
+          {% if recipe.is_favourite %}<span class="favourite favourite-detail" role="img" aria-label="Favourite recipe" title="Favourite recipe">&hearts;</span>{% endif %}
+        </h1>
         <p class="recipe-meta">
           <time datetime="{{ recipe.published_on|date:'Y-m-d' }}">Published {{ recipe.published_on|date:"j M Y" }}</time>
           {% if recipe.last_updated_on != recipe.published_on %}

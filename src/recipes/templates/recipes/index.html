@@ -45,6 +45,36 @@
           <p class="filter-status" data-category-status aria-live="polite"></p>
         </fieldset>
 
+        <fieldset class="status-filters" data-status-controls>
+          <legend>Show draft &amp; favourite recipes</legend>
+          <div class="tag-toggle-list">
+            <div class="tag-toggle" data-status-toggle-wrapper>
+              <label for="status-draft">
+                <input id="status-draft" type="checkbox" value="draft" data-status-toggle="draft" checked>
+                <span>Draft</span>
+              </label>
+              <a
+                class="tag-toggle-link"
+                href="{% url 'recipes:search-results' %}?status=draft"
+                aria-label="View all draft recipes"
+                title="View all draft recipes"
+              >&rarr;</a>
+            </div>
+            <div class="tag-toggle" data-status-toggle-wrapper>
+              <label for="status-favourite">
+                <input id="status-favourite" type="checkbox" value="favourite" data-status-toggle="favourite" checked>
+                <span>Favourite</span>
+              </label>
+              <a
+                class="tag-toggle-link"
+                href="{% url 'recipes:search-results' %}?status=favourite"
+                aria-label="View all favourite recipes"
+                title="View all favourite recipes"
+              >&rarr;</a>
+            </div>
+          </div>
+        </fieldset>
+
         {% if all_tags %}
           <fieldset class="tag-filters" data-tag-controls>
             <legend>Show tags</legend>
@@ -120,9 +150,11 @@
                 data-total-minutes="{{ recipe.total_time_minutes }}"
                 data-active-minutes="{{ recipe.active_time_minutes }}"
                 data-tags="{{ recipe.tags|join:',' }}"
+                data-is-draft="{{ recipe.is_final|yesno:'false,true' }}"
+                data-is-favourite="{{ recipe.is_favourite|yesno:'true,false' }}"
               >
                 <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
-                {% if not recipe.is_final %}<span class="draft" title="Recipe under development">Draft</span>{% endif %}
+                {% include "recipes/_status_badges.html" with recipe=recipe %}
               </li>
             {% endfor %}
           </ul>

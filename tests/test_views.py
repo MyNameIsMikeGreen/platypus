@@ -79,7 +79,54 @@ def test_index_exposes_time_data_attributes_and_slider_controls(client, recipe_f
     assert '<details class="filter-drawer" data-filter-drawer open' not in content
 
 
-def test_index_exposes_tag_filter_controls_all_enabled_by_default(client, recipe_factory):
+def test_index_exposes_status_filter_controls_linking_to_dedicated_pages(client, recipe_factory):
+    recipe_factory(title="Draft Dish", is_final=False)
+
+    response = client.get(reverse("recipes:index"))
+
+    assert response.status_code == 200
+    content = response.content.decode()
+    assert 'data-status-controls' in content
+    assert '<legend>Show draft &amp; favourite recipes</legend>' in content
+    assert 'data-status-toggle="draft" checked' in content
+    assert 'data-status-toggle="favourite" checked' in content
+    assert 'href="/search-results/?status=draft"' in content
+    assert 'href="/search-results/?status=favourite"' in content
+    assert 'aria-label="View all draft recipes"' in content
+    assert 'aria-label="View all favourite recipes"' in content
+
+
+def test_index_marks_draft_and_favourite_recipes_with_badges_and_data_attributes(
+    client, recipe_factory
+):
+    favourite = recipe_factory(title="Amber Favourite Dish", is_final=True, is_favourite=True)
+    draft = recipe_factory(title="Brown Draft Dish", is_final=False, is_favourite=False)
+    plain = recipe_factory(title="Cyan Plain Dish", is_final=True, is_favourite=False)
+
+    response = client.get(reverse("recipes:index"))
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    assert content.count('data-is-draft="true"') == 1
+    assert content.count('data-is-favourite="true"') == 1
+    assert content.count('class="draft"') == 1
+    assert content.count('class="favourite"') == 1
+
+    def item_html(recipe):
+        anchor = content.index(f'href="{recipe.get_absolute_url()}"')
+        start = content.rindex("<li", 0, anchor)
+        end = content.index("</li>", anchor)
+        return content[start:end]
+
+    assert 'class="favourite"' in item_html(favourite)
+    assert 'class="draft"' not in item_html(favourite)
+    assert 'class="draft"' in item_html(draft)
+    assert 'class="favourite"' not in item_html(draft)
+    assert 'class="draft"' not in item_html(plain)
+    assert 'class="favourite"' not in item_html(plain)
+
+
+
     recipe_factory(title="Curry", category="MAINS", tags=["Spicy", "Vegetarian"])
     recipe_factory(title="Toast", category="SNACKS", tags=["Vegetarian"])
     recipe_factory(title="Plain Bread", category="SNACKS", tags=[])
@@ -147,7 +194,28 @@ def test_detail_renders_recipe_information_safely(client, recipe_factory):
     assert 'referrerpolicy="no-referrer"' in content
 
 
-def test_detail_renders_ingredient_export_checkboxes_checked_by_default(client, recipe_factory):
+def test_detail_shows_favourite_indicator_when_recipe_is_favourite(client, recipe_factory):
+    recipe = recipe_factory(is_favourite=True)
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    assert 'class="favourite favourite-detail"' in content
+    assert 'aria-label="Favourite recipe"' in content
+
+
+def test_detail_hides_favourite_indicator_when_recipe_is_not_favourite(client, recipe_factory):
+    recipe = recipe_factory(is_favourite=False)
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    assert 'class="favourite favourite-detail"' not in content
+
+
+
     recipe = recipe_factory(ingredients=["600ml Double Cream", "6 Eggs", "Salt and Pepper (To Taste)"])
 
     response = client.get(recipe.get_absolute_url())
@@ -287,6 +355,46 @@ def test_tag_selection_returns_matching_recipes(client, recipe_factory):
     assert response.context["recipes"] == [tagged]
     assert response.context["is_tag"] is True
     assert "All recipes" in response.content.decode()
+
+
+def test_status_draft_filter_returns_only_draft_recipes(client, recipe_factory):
+    draft = recipe_factory(title="Draft Recipe", is_final=False)
+    recipe_factory(title="Finished Recipe", is_final=True)
+
+    response = client.get(reverse("recipes:search-results"), {"status": "draft"})
+
+    assert response.status_code == 200
+    assert response.context["recipes"] == [draft]
+    assert response.context["is_tag"] is True
+    content = response.content.decode()
+    assert "<p class=\"eyebrow\">Status</p>" in content
+    assert "<h1>Draft</h1>" in content
+
+
+def test_status_favourite_filter_returns_only_favourite_recipes(client, recipe_factory):
+    favourite = recipe_factory(title="Favourite Recipe", is_favourite=True)
+    recipe_factory(title="Plain Recipe", is_favourite=False)
+
+    response = client.get(reverse("recipes:search-results"), {"status": "favourite"})
+
+    assert response.status_code == 200
+    assert response.context["recipes"] == [favourite]
+    assert response.context["is_tag"] is True
+    content = response.content.decode()
+    assert "<h1>Favourite</h1>" in content
+
+
+def test_status_filter_is_case_insensitive_and_ignores_unknown_values(client, recipe_factory):
+    draft = recipe_factory(title="Draft Recipe", is_final=False)
+
+    response = client.get(reverse("recipes:search-results"), {"status": "DRAFT"})
+    assert response.context["recipes"] == [draft]
+
+    unknown_response = client.get(
+        reverse("recipes:search-results"), {"count_mains": 1, "status": "unknown"}
+    )
+    assert unknown_response.status_code in (200, 400)
+    assert unknown_response.context.get("is_tag") is not True
 
 
 def test_invalid_planner_input_returns_bad_request(client, recipe_factory):

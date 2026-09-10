@@ -16,6 +16,7 @@ VALID_RECIPE = {
     "published_on": "2025-01-01",
     "last_updated_on": "2025-01-01",
     "is_final": True,
+    "is_favourite": False,
     "tags": [],
     "image_urls": [],
 }
@@ -156,6 +157,7 @@ def test_duplicate_slugs_and_unapproved_image_hosts_are_rejected(tmp_path):
         ({"last_updated_on": "2025-99-99"}, "valid date"),
         ({"last_updated_on": "2024-12-31"}, "must not be before published_on"),
         ({"is_final": "yes"}, "true or false"),
+        ({"is_favourite": "yes"}, "true or false"),
         ({"image_urls": "invalid"}, "must be a list"),
         ({"image_urls": [""]}, "non-empty string"),
         ({"category": "x" * 41}, "at most 40"),
