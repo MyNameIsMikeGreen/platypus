@@ -1,3 +1,5 @@
+import json
+
 import pytest
 from datetime import date
 from django.urls import reverse
@@ -452,6 +454,57 @@ def test_planner_and_about_pages(client, recipe_factory):
     assert "https://MikeGreen.net/" in content
 
 
+def test_offline_page_renders_helpful_message(client):
+    response = client.get(reverse("recipes:offline"))
+
+    assert response.status_code == 200
+    assert response.context["active_section"] == "offline"
+    content = response.content.decode()
+    assert "You're offline" in content
+    assert reverse("recipes:index") in content
+
+
+def test_manifest_describes_an_installable_app(client):
+    response = client.get(reverse("recipes:manifest"))
+
+    assert response.status_code == 200
+    assert response.headers["Content-Type"] == "application/manifest+json"
+    manifest = json.loads(response.content)
+    assert manifest["name"] == "Platypus"
+    assert manifest["start_url"] == "/"
+    assert manifest["display"] == "standalone"
+    icon_srcs = {icon["src"] for icon in manifest["icons"]}
+    assert any(src.endswith(".png") for src in icon_srcs)
+    assert {icon["purpose"] for icon in manifest["icons"]} == {"any", "maskable"}
+
+
+def test_service_worker_precaches_app_shell_and_pages(client):
+    response = client.get(reverse("recipes:service-worker"))
+
+    assert response.status_code == 200
+    assert response.headers["Content-Type"] == "text/javascript"
+    content = response.content.decode()
+    for expected in (
+        reverse("recipes:index"),
+        reverse("recipes:planner"),
+        reverse("recipes:about"),
+        reverse("recipes:offline"),
+        reverse("recipes:manifest"),
+    ):
+        assert f'"{expected}"' in content
+    assert "self.addEventListener(\"install\"" in content
+    assert "self.addEventListener(\"fetch\"" in content
+
+
+def test_base_template_registers_pwa_assets(client):
+    content = client.get(reverse("recipes:index")).content.decode()
+
+    assert '<link rel="manifest" href="/site.webmanifest">' in content
+    assert 'rel="icon" href="' in content
+    assert 'rel="apple-touch-icon" href="' in content
+    assert '<script src="/static/recipes/sw-register.js" defer></script>' in content
+
+
 def test_footer_contains_linked_author_and_current_copyright(client):
     content = client.get(reverse("recipes:index")).content.decode()
 
@@ -484,6 +537,9 @@ def test_unapproved_host_is_rejected(client):
         "recipes:planner",
         "recipes:search-results",
         "recipes:about",
+        "recipes:offline",
+        "recipes:manifest",
+        "recipes:service-worker",
     ],
 )
 def test_read_only_pages_reject_post(client, route_name):

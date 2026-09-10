@@ -8,6 +8,9 @@
     <meta name="theme-color" content="#f7f4eb" data-theme-color>
     <meta name="description" content="{% block description %}A personal collection of dependable recipes.{% endblock %}">
     <title>{% block title %}Platypus | Recipes{% endblock %}</title>
+    <link rel="manifest" href="{% url 'recipes:manifest' %}">
+    <link rel="icon" href="{% static 'recipes/favicon.svg' %}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{% static 'recipes/apple-touch-icon.png' %}">
     <link rel="stylesheet" href="{% static 'recipes/site.css' %}">
     <script src="{% static 'recipes/theme-toggle.js' %}"></script>
   </head>
@@ -33,6 +36,7 @@
     <footer class="site-footer">
       Platypus recipes &middot; &copy; 2020&ndash;{% now "Y" %} <a href="https://MikeGreen.net/">Mike Green</a>
     </footer>
+    <script src="{% static 'recipes/sw-register.js' %}" defer></script>
     {% block scripts %}{% endblock %}
   </body>
 </html>

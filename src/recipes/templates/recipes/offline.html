@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}You're offline | Platypus{% endblock %}
+
+{% block content %}
+  <div class="narrow prose">
+    <p class="eyebrow">No connection</p>
+    <h1>You're offline</h1>
+    <p>Platypus couldn't reach the server, and this page hasn't been saved for offline use yet.</p>
+    <p>Recipes and pages you've already opened stay available without a connection. Try the <a href="{% url 'recipes:index' %}">recipe list</a>, or reconnect to your home network and try again.</p>
+  </div>
+{% endblock %}
