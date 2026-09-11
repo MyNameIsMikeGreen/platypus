@@ -147,11 +147,6 @@ def search_results(request: HttpRequest) -> HttpResponse:
     )
 
 
-@require_safe
-def about(request: HttpRequest) -> HttpResponse:
-    return render(request, "recipes/about.html", {"active_section": "about"})
-
-
 def not_found(request: HttpRequest, exception: Exception) -> HttpResponse:
     _ = exception
     return render(request, "404.html", status=404)

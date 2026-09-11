@@ -504,19 +504,13 @@ def test_planner_lists_each_available_category_once(client, recipe_factory):
     assert "Snacks" in content
 
 
-def test_planner_and_about_pages(client, recipe_factory):
+def test_planner_page(client, recipe_factory):
     recipe_factory()
 
     planner = client.get(reverse("recipes:planner"))
-    about = client.get(reverse("recipes:about"))
 
     assert planner.status_code == 200
-    assert about.status_code == 200
     assert planner.context["active_section"] == "planner"
-    assert about.context["active_section"] == "about"
-    content = about.content.decode()
-    assert "terrible chimaera" in content
-    assert "https://MikeGreen.net/" in content
 
 
 def test_footer_contains_linked_author_and_current_copyright(client):
@@ -550,7 +544,6 @@ def test_unapproved_host_is_rejected(client):
         "recipes:index",
         "recipes:planner",
         "recipes:search-results",
-        "recipes:about",
     ],
 )
 def test_read_only_pages_reject_post(client, route_name):
