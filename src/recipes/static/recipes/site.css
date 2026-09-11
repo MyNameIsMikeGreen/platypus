@@ -209,14 +209,12 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.search,
-.stacked-form {
+.search {
   width: 100%;
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
 
-.search label,
-.stacked-form label {
+.search label {
   display: block;
   margin-bottom: 0.35rem;
   font-size: 0.85rem;
@@ -1042,21 +1040,6 @@ select:focus-visible {
   margin: 0 auto;
 }
 
-.stacked-form {
-  display: grid;
-  gap: 1rem;
-  max-width: 24rem;
-  margin-top: 2rem;
-}
-
-.stacked-form > div {
-  display: grid;
-}
-
-.stacked-form button {
-  width: 100%;
-}
-
 .quantity-form {
   display: grid;
   gap: 1.5rem;
@@ -1191,10 +1174,6 @@ select:focus-visible {
 
 .errorlist {
   color: var(--error-color);
-}
-
-.prose {
-  font-size: 1.1rem;
 }
 
 .empty-state {
@@ -1343,11 +1322,6 @@ select:focus-visible {
 
   .gallery-grid .gallery-thumb {
     min-width: 0;
-  }
-
-  .stacked-form button {
-    width: auto;
-    justify-self: start;
   }
 }
 

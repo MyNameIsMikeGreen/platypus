@@ -126,7 +126,7 @@ def test_index_marks_draft_and_favourite_recipes_with_badges_and_data_attributes
     assert 'class="favourite"' not in item_html(plain)
 
 
-
+def test_index_exposes_tag_filter_controls_linking_to_dedicated_pages(client, recipe_factory):
     recipe_factory(title="Curry", category="MAINS", tags=["Spicy", "Vegetarian"])
     recipe_factory(title="Toast", category="SNACKS", tags=["Vegetarian"])
     recipe_factory(title="Plain Bread", category="SNACKS", tags=[])
@@ -215,7 +215,7 @@ def test_detail_hides_favourite_indicator_when_recipe_is_not_favourite(client, r
     assert 'class="favourite favourite-detail"' not in content
 
 
-
+def test_detail_renders_ingredient_checklist_with_export_names(client, recipe_factory):
     recipe = recipe_factory(ingredients=["600ml Double Cream", "6 Eggs", "Salt and Pepper (To Taste)"])
 
     response = client.get(recipe.get_absolute_url())

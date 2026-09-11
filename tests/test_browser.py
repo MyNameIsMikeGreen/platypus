@@ -215,7 +215,7 @@ def test_status_links_navigate_to_dedicated_draft_and_favourite_pages(live_url):
             browser.close()
 
 
-
+def test_tag_links_navigate_to_dedicated_tag_pages(live_url):
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
         page = browser.new_page()
