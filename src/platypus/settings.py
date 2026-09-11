@@ -61,18 +61,14 @@ X_FRAME_OPTIONS = "DENY"
 SECURE_CSP = {
     "default-src": [CSP.SELF],
     "base-uri": [CSP.SELF],
-    # Same-origin only, so the service worker (sw.js) can fetch and cache pages and static
-    # assets for offline use. No cross-origin XHR/fetch is permitted.
-    "connect-src": [CSP.SELF],
+    "connect-src": [CSP.NONE],
     "font-src": [CSP.NONE],
     "form-action": [CSP.SELF],
     "frame-ancestors": [CSP.NONE],
     "img-src": [CSP.SELF, "https://res.cloudinary.com"],
-    "manifest-src": [CSP.SELF],
     "object-src": [CSP.NONE],
     "script-src": [CSP.SELF],
     "style-src": [CSP.SELF],
-    "worker-src": [CSP.SELF],
 }
 
 RECIPE_CATALOG_PATH = Path(

@@ -14,25 +14,11 @@ remains enabled because it triggers host-header validation; its optional trailin
 are disabled. The [security boundary](security-boundary.md) explains what would need to change if
 write capability, accounts, or public exposure were ever added.
 
-## Offline support
-
-A web app manifest (`/site.webmanifest`) and service worker (`/sw.js`) make the site installable
-and usable without a connection, matching the read-only architecture: both are rendered by
-ordinary `GET`-only Django views from templates (not served as static files), so `{% static %}`
-and `{% url %}` tags resolve real, hashed asset paths in every environment. The service worker
-precaches the app shell (styles, scripts, icons, and the core pages) on install, serves pages
-network-first with a cache fallback, serves other same-origin assets cache-first, and falls back
-to a dedicated `/offline/` page when a never-cached page is requested without a connection. It
-never caches cross-origin requests or non-`GET` requests, and only stores successful responses.
-
 ## Security posture
 
 - Only Gunicorn's application port is published; the container has no persistent or writable application data.
 - The container runs as a non-root user, drops Linux capabilities, prohibits privilege escalation, and uses a read-only root filesystem.
 - Django accepts only configured hostnames, allows only GET and HEAD endpoints, applies a restrictive Content Security Policy, denies framing, and emits MIME-sniffing and referrer controls.
-- The Content Security Policy allows `connect-src 'self'` (rather than `'none'`) solely so the
-  service worker described above can `fetch()` same-origin pages and assets to precache and
-  refresh them; cross-origin requests remain blocked everywhere.
 - Templates use Django's automatic escaping.
 - Remote images are restricted by CSP to the existing Cloudinary host and are never proxied through the server.
 - Logs use Docker's rotating `local` driver.

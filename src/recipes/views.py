@@ -146,23 +146,6 @@ def about(request: HttpRequest) -> HttpResponse:
     return render(request, "recipes/about.html", {"active_section": "about"})
 
 
-@require_safe
-def offline(request: HttpRequest) -> HttpResponse:
-    return render(request, "recipes/offline.html", {"active_section": "offline"})
-
-
-@require_safe
-def manifest(request: HttpRequest) -> HttpResponse:
-    return render(request, "manifest.webmanifest", content_type="application/manifest+json")
-
-
-@require_safe
-def service_worker(request: HttpRequest) -> HttpResponse:
-    # Served at the site root (see urls.py) rather than under /static/, so the service worker's
-    # default scope covers the whole site instead of just its own directory.
-    return render(request, "sw.js", content_type="text/javascript")
-
-
 def not_found(request: HttpRequest, exception: Exception) -> HttpResponse:
     _ = exception
     return render(request, "404.html", status=404)
