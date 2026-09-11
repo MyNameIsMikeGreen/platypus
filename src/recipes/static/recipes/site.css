@@ -816,13 +816,19 @@ select:focus-visible {
   padding-left: 1.4rem;
 }
 
-.ingredients .ingredient-checklist {
+.ingredients .ingredient-checklist,
+.shopping-list-drawer .ingredient-checklist {
   padding-left: 0;
   list-style: none;
 }
 
-.ingredients .ingredient-toggle {
+.ingredients .ingredient-toggle,
+.shopping-list-drawer .ingredient-toggle {
   padding-left: 0;
+}
+
+.shopping-list-drawer .ingredient-toggle {
+  margin-bottom: 0.85rem;
 }
 
 .ingredient-toggle label {
@@ -1153,6 +1159,34 @@ select:focus-visible {
 .plan-group .empty-state {
   margin: 0;
   text-align: left;
+}
+
+.shopping-list-drawer .filter-panels {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.shopping-list-drawer .ingredient-checklist {
+  max-height: min(55vh, 26rem);
+  margin: 0;
+  padding: 0.75rem 1rem;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  overscroll-behavior: contain;
+}
+
+.shopping-list-drawer .ingredient-toggle:last-child {
+  margin-bottom: 0;
+}
+
+.shared-ingredient-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .errorlist {

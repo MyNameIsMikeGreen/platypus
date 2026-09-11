@@ -1,0 +1,45 @@
+{% comment %}
+Shared shopping list for every recipe currently shown on the results page.
+
+Reuses the same ingredient-export.js/CSS hooks as the per-recipe ingredient checklist on the
+recipe detail page (data-ingredient-export/-toggle/-clear/-copy/etc.), so selecting, clearing
+and copying behave identically - just against the deduplicated, combined ingredient list instead
+of a single recipe's ingredients.
+
+Collapsed by default behind a <details> disclosure (no JS required) so it stays out of the way
+for the common case of just browsing results, and only expands - and only then costs any real
+space on the page - once a user actively wants to build a combined shopping list.
+
+Expects:
+  shared_ingredients - tuple of SharedIngredient(export_name, recipe_titles)
+{% endcomment %}
+{% if shared_ingredients %}
+  <details class="filter-drawer shopping-list-drawer" data-ingredient-export>
+    <summary>
+      <span>Shared shopping list</span>
+      <span class="plan-group-count">{{ shared_ingredients|length }}</span>
+    </summary>
+    <div class="filter-panels">
+      <p class="visually-hidden" data-ingredient-status aria-live="polite"></p>
+      <ul class="ingredient-checklist">
+        {% for item in shared_ingredients %}
+          <li class="ingredient-toggle">
+            <label>
+              <input type="checkbox" data-ingredient-toggle data-ingredient-name="{{ item.export_name }}" checked>
+              <span>{{ item.export_name }}</span>
+              {% if item.recipe_titles|length > 1 %}
+                <span class="shared-ingredient-count" title="Used in: {{ item.recipe_titles|join:', ' }}">{{ item.recipe_titles|length }} recipes</span>
+              {% endif %}
+            </label>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="ingredient-export-actions">
+        <button type="button" class="button-link" data-ingredient-copy>Copy shopping list</button>
+        <button type="button" class="tag-clear-button" data-ingredient-clear>Clear all</button>
+        <p class="visually-hidden" data-ingredient-copy-status aria-live="polite"></p>
+      </div>
+      <textarea class="visually-hidden" data-ingredient-export-text readonly aria-hidden="true" tabindex="-1"></textarea>
+    </div>
+  </details>
+{% endif %}

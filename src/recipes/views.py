@@ -6,6 +6,7 @@ from django.views.decorators.http import require_safe
 
 from .catalog import CATALOG, RecipeData
 from .forms import PlannerForm, RecipeSearchForm
+from .shopping_list import build_shared_shopping_list
 
 
 @require_safe
@@ -94,6 +95,7 @@ def search_results(request: HttpRequest) -> HttpResponse:
                 "eyebrow": "Tag",
                 "recipes": recipes,
                 "search_term": tag,
+                "shared_ingredients": build_shared_shopping_list(recipes),
             },
         )
 
@@ -110,6 +112,7 @@ def search_results(request: HttpRequest) -> HttpResponse:
                 "eyebrow": "Status",
                 "recipes": recipes,
                 "search_term": label,
+                "shared_ingredients": build_shared_shopping_list(recipes),
             },
         )
 
@@ -123,11 +126,13 @@ def search_results(request: HttpRequest) -> HttpResponse:
 
     groups = []
     recipe_count_total = 0
+    all_planned_recipes: list[RecipeData] = []
     for category, count in form.category_counts():
         candidates = [recipe for recipe in CATALOG if recipe.category == category]
         recipes = random.sample(candidates, min(count, len(candidates)))
         groups.append((category, recipes))
         recipe_count_total += len(recipes)
+        all_planned_recipes.extend(recipes)
 
     return render(
         request,
@@ -137,6 +142,7 @@ def search_results(request: HttpRequest) -> HttpResponse:
             "is_tag": False,
             "groups": groups,
             "recipe_count_total": recipe_count_total,
+            "shared_ingredients": build_shared_shopping_list(all_planned_recipes),
         },
     )
 

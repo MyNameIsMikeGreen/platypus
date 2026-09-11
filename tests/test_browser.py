@@ -1,3 +1,4 @@
+import pytest
 from playwright.sync_api import expect, sync_playwright
 
 
@@ -713,6 +714,122 @@ def test_planner_rejects_an_all_zero_request(live_url):
             )
             # The (re-rendered) planner form is still shown, ready to try again.
             expect(page.locator("[data-quantity-form]")).to_be_visible()
+        finally:
+            browser.close()
+
+
+def test_shared_shopping_list_is_collapsed_by_default_and_copies_deduplicated_ingredients(
+    live_url,
+):
+    def copied_message(count):
+        return f"Copied {count} ingredient{'' if count == 1 else 's'} to your clipboard."
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        context = browser.new_context(permissions=["clipboard-read", "clipboard-write"])
+        page = context.new_page()
+        try:
+            # Requesting several Mains recipes at once is the easiest way to reliably land on a
+            # results page with more than one recipe (and therefore a shared shopping list worth
+            # combining), without depending on which specific recipes the catalog happens to have.
+            page.goto(f"{live_url}/search-results/?count_mains=10", wait_until="domcontentloaded")
+
+            drawer = page.locator("[data-ingredient-export].shopping-list-drawer")
+            expect(drawer).to_be_visible()
+
+            # Collapsed by default: the checklist inside exists but isn't shown to the user, and
+            # the <details> element itself reports as closed.
+            checklist = drawer.locator(".ingredient-checklist")
+            expect(checklist).to_be_hidden()
+            assert drawer.evaluate("el => el.open") is False
+
+            drawer.locator("summary").click()
+            expect(checklist).to_be_visible()
+            assert drawer.evaluate("el => el.open") is True
+
+            toggles = drawer.locator("[data-ingredient-toggle]")
+            status = drawer.locator("[data-ingredient-status]")
+            clear_button = drawer.locator("[data-ingredient-clear]")
+            copy_button = drawer.locator("[data-ingredient-copy]")
+            copy_status = drawer.locator("[data-ingredient-copy-status]")
+            toggle_count = toggles.count()
+            assert toggle_count > 0
+
+            # Every ingredient across every recipe shown is deduplicated into a single row.
+            names = toggles.evaluate_all("els => els.map(el => el.dataset.ingredientName)")
+            assert len(names) == len(set(names))
+
+            # Every ingredient is selected by default.
+            for index in range(toggle_count):
+                expect(toggles.nth(index)).to_be_checked()
+            expect(status).to_have_text(f"{toggle_count} of {toggle_count} ingredients selected")
+
+            default_copy_label = copy_button.inner_text()
+            copy_button.click()
+            expect(copy_button).to_have_text("Copied!")
+            expect(copy_status).to_have_text(copied_message(toggle_count))
+            assert page.evaluate("navigator.clipboard.readText()") == "\n".join(names)
+            expect(copy_button).to_have_text(default_copy_label, timeout=3000)
+
+            # Deselecting an item (as if the user already has it) excludes it from the export.
+            toggles.first.uncheck()
+            expect(status).to_have_text(f"{toggle_count - 1} of {toggle_count} ingredients selected")
+            copy_button.click()
+            expect(copy_button).to_have_text("Copied!")
+            expect(copy_status).to_have_text(copied_message(toggle_count - 1))
+            assert page.evaluate("navigator.clipboard.readText()") == "\n".join(names[1:])
+
+            # "Clear all" deselects everything; copying then is a clear no-op.
+            clear_button.click()
+            expect(status).to_have_text(f"0 of {toggle_count} ingredients selected")
+            expect(clear_button).to_have_text("Select all")
+            copy_button.click()
+            expect(copy_button).to_have_text("Select an ingredient")
+            expect(copy_status).to_have_text("Select at least one ingredient to copy.")
+        finally:
+            browser.close()
+
+
+def test_shared_shopping_list_scrolls_internally_once_it_grows_long(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            # Requesting a large batch of Mains recipes reliably produces a long enough
+            # combined ingredient list to overflow the scrollpane's max-height.
+            page.goto(f"{live_url}/search-results/?count_mains=40", wait_until="domcontentloaded")
+
+            drawer = page.locator("[data-ingredient-export].shopping-list-drawer")
+            drawer.locator("summary").click()
+            drawer.scroll_into_view_if_needed()
+
+            checklist = drawer.locator(".ingredient-checklist")
+            actions = drawer.locator(".ingredient-export-actions")
+            expect(checklist).to_be_visible()
+
+            toggle_count = drawer.locator("[data-ingredient-toggle]").count()
+            assert toggle_count > 20, "expected enough ingredients to force scrolling"
+
+            # The list is tall enough to need scrolling, but the box itself is capped, so the
+            # user never has to scroll the whole page to reach the checklist or the buttons.
+            scroll_height = checklist.evaluate("el => el.scrollHeight")
+            client_height = checklist.evaluate("el => el.clientHeight")
+            assert scroll_height > client_height
+            expect(checklist).to_have_css("overflow-y", "auto")
+
+            page_scroll_before = page.evaluate("window.scrollY")
+            actions_box_before = actions.bounding_box()
+            last_toggle = drawer.locator("[data-ingredient-toggle]").last
+            expect(last_toggle).not_to_be_in_viewport()
+
+            # Scrolling within the checklist reveals items further down, without scrolling the
+            # page itself - so the copy/clear buttons below the box never move out of view.
+            checklist.evaluate("el => { el.scrollTop = el.scrollHeight; }")
+            expect(last_toggle).to_be_in_viewport()
+            assert page.evaluate("window.scrollY") == page_scroll_before
+
+            actions_box_after = actions.bounding_box()
+            assert actions_box_after["y"] == pytest.approx(actions_box_before["y"], abs=1)
         finally:
             browser.close()
 

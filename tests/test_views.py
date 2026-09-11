@@ -363,6 +363,26 @@ def test_planner_can_combine_multiple_category_counts(client, recipe_factory):
     assert "Light Dishes" in content
 
 
+def test_planner_results_show_deduplicated_shared_shopping_list(client, recipe_factory):
+    recipe_factory(title="Omelette", category="MAINS", ingredients=["6 Eggs", "1 Onion"])
+    recipe_factory(title="Pancakes", category="MAINS", ingredients=["3 Eggs", "240g Caster Sugar"])
+
+    response = client.get(reverse("recipes:search-results"), {"count_mains": 10})
+
+    assert response.status_code == 200
+    shared = response.context["shared_ingredients"]
+    names = [item.export_name for item in shared]
+    assert names == ["Caster Sugar", "Eggs", "Onion"]
+    eggs = next(item for item in shared if item.export_name == "Eggs")
+    assert set(eggs.recipe_titles) == {"Omelette", "Pancakes"}
+
+    content = response.content.decode()
+    assert "Shared shopping list" in content
+    assert content.count('data-ingredient-name="Eggs"') == 1
+    assert "Copy shopping list" in content
+    assert "ingredient-export.js" in content
+
+
 def test_tag_selection_returns_matching_recipes(client, recipe_factory):
     tagged = recipe_factory(tags=["Vegetarian"])
     recipe_factory(tags=["Other"])
@@ -373,6 +393,35 @@ def test_tag_selection_returns_matching_recipes(client, recipe_factory):
     assert response.context["recipes"] == [tagged]
     assert response.context["is_tag"] is True
     assert "All recipes" in response.content.decode()
+
+
+def test_tag_selection_shows_shared_shopping_list_for_matching_recipes(client, recipe_factory):
+    recipe_factory(title="Curry", tags=["Vegetarian"], ingredients=["2 Cloves Garlic"])
+    recipe_factory(title="Stir Fry", tags=["Vegetarian"], ingredients=["3 Garlic Cloves"])
+    recipe_factory(title="Steak", tags=["Other"], ingredients=["1 Steak"])
+
+    response = client.get(reverse("recipes:search-results"), {"tag": "Vegetarian"})
+
+    assert response.status_code == 200
+    names = {item.export_name for item in response.context["shared_ingredients"]}
+    assert names == {"Garlic", "Garlic Cloves"}
+    content = response.content.decode()
+    assert "Shared shopping list" in content
+    assert "Steak" not in content.split("Shared shopping list")[1].split("</details>")[0]
+
+
+def test_search_results_with_no_matching_recipes_hides_shared_shopping_list(
+    client, recipe_factory
+):
+    recipe_factory(tags=["Other"])
+
+    response = client.get(reverse("recipes:search-results"), {"tag": "Nonexistent"})
+
+    assert response.status_code == 200
+    assert response.context["shared_ingredients"] == ()
+    content = response.content.decode()
+    assert "Shared shopping list" not in content
+    assert "ingredient-export.js" not in content
 
 
 def test_status_draft_filter_returns_only_draft_recipes(client, recipe_factory):
