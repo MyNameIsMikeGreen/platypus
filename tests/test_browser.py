@@ -585,6 +585,77 @@ def test_ingredient_export_copies_selected_ingredient_names_without_quantities(l
             browser.close()
 
 
+def test_method_checklist_tracks_progress_and_resets_on_navigation(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(live_url)
+            recipe_urls = page.locator("[data-search-option]").evaluate_all(
+                "options => options.map(option => option.dataset.url)"
+            )
+
+            method_url = None
+            step_count = 0
+            for recipe_url in recipe_urls:
+                page.goto(f"{live_url}{recipe_url}", wait_until="domcontentloaded")
+                count = page.locator("[data-method-step-toggle]").count()
+                if count >= 3:
+                    method_url = recipe_url
+                    step_count = count
+                    break
+            assert method_url is not None, "expected at least one recipe with 3+ method steps"
+
+            steps = page.locator("[data-method-step-toggle]")
+            status = page.locator("[data-method-status]")
+            reset_button = page.locator("[data-method-reset]")
+
+            # Every step starts unchecked, and the reset control stays out of the way
+            # until there is something to reset.
+            for index in range(step_count):
+                expect(steps.nth(index)).not_to_be_checked()
+            expect(status).to_have_text(f"0 of {step_count} steps completed")
+            expect(reset_button).to_be_hidden()
+
+            # Crossing off a step updates the live status and reveals the reset control.
+            steps.first.check()
+            expect(status).to_have_text(f"1 of {step_count} steps completed")
+            expect(reset_button).to_be_visible()
+            first_step_text = page.locator(".method-step span").first
+            expect(first_step_text).to_have_css("text-decoration-line", "line-through")
+
+            # Crossing off every remaining step announces full completion.
+            for index in range(1, step_count):
+                steps.nth(index).check()
+            expect(status).to_have_text(f"All {step_count} steps completed")
+
+            # Reset clears every step in one go.
+            reset_button.click()
+            for index in range(step_count):
+                expect(steps.nth(index)).not_to_be_checked()
+            expect(status).to_have_text(f"0 of {step_count} steps completed")
+            expect(reset_button).to_be_hidden()
+
+            # Progress is intentionally not persisted: leaving and returning to the
+            # recipe starts with a clean checklist, ready to cook it again.
+            steps.first.check()
+            steps.nth(1).check()
+            expect(status).to_have_text(f"2 of {step_count} steps completed")
+
+            page.goto(live_url)
+            page.goto(f"{live_url}{method_url}", wait_until="domcontentloaded")
+
+            steps = page.locator("[data-method-step-toggle]")
+            status = page.locator("[data-method-status]")
+            reset_button = page.locator("[data-method-reset]")
+            for index in range(step_count):
+                expect(steps.nth(index)).not_to_be_checked()
+            expect(status).to_have_text(f"0 of {step_count} steps completed")
+            expect(reset_button).to_be_hidden()
+        finally:
+            browser.close()
+
+
 def test_planner_builds_a_multi_category_meal_plan(live_url):
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()

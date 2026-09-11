@@ -68,9 +68,22 @@
       </section>
       <section class="method">
         <h2>Method</h2>
-        <ol>
-          {% for instruction in recipe.instructions %}<li>{{ instruction }}</li>{% endfor %}
-        </ol>
+        <div class="method-progress" data-method-progress>
+          <p class="visually-hidden" data-method-status aria-live="polite"></p>
+          <ol class="method-checklist">
+            {% for instruction in recipe.instructions %}
+              <li class="method-step">
+                <label>
+                  <input type="checkbox" data-method-step-toggle aria-label="Mark step {{ forloop.counter }} as done">
+                  <span>{{ instruction }}</span>
+                </label>
+              </li>
+            {% endfor %}
+          </ol>
+          <div class="method-progress-actions">
+            <button type="button" class="tag-clear-button" data-method-reset hidden>Reset progress</button>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -108,6 +121,7 @@
 
 {% block scripts %}
   <script src="{% static 'recipes/ingredient-export.js' %}" defer></script>
+  <script src="{% static 'recipes/method-progress.js' %}" defer></script>
   {% if recipe.image_urls %}
     <script src="{% static 'recipes/gallery-lightbox.js' %}" defer></script>
   {% endif %}

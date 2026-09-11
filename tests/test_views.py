@@ -235,6 +235,24 @@ def test_detail_hides_favourite_indicator_when_recipe_is_not_favourite(client, r
     assert "ingredient-export.js" in content
 
 
+def test_detail_renders_method_steps_as_an_unchecked_checklist(client, recipe_factory):
+    recipe = recipe_factory(instructions=["Preheat the oven.", "Mix the batter.", "Bake for 20 minutes."])
+
+    response = client.get(recipe.get_absolute_url())
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    # Every step renders as a checkbox that starts unchecked, ready to be crossed off.
+    assert content.count("data-method-step-toggle") == 3
+    assert content.count("data-method-step-toggle checked") == 0
+    assert "Preheat the oven." in content
+    assert "Mix the batter." in content
+    assert "Bake for 20 minutes." in content
+    assert "data-method-status" in content
+    assert 'data-method-reset hidden' in content
+    assert "method-progress.js" in content
+
+
 def test_detail_renders_photo_lightbox_when_recipe_has_images(client, recipe_factory):
     recipe = recipe_factory(
         image_urls=[
