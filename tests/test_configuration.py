@@ -19,7 +19,7 @@ def test_critical_django_security_settings():
     assert settings.SECURE_REFERRER_POLICY == "strict-origin-when-cross-origin"
     assert settings.X_FRAME_OPTIONS == "DENY"
     assert settings.SECURE_CSP["default-src"] == [CSP.SELF]
-    assert settings.SECURE_CSP["connect-src"] == [CSP.NONE]
+    assert settings.SECURE_CSP["connect-src"] == [CSP.SELF]
     assert settings.SECURE_CSP["frame-ancestors"] == [CSP.NONE]
     assert settings.SECURE_CSP["object-src"] == [CSP.NONE]
     assert settings.SECURE_CSP["script-src"] == [CSP.SELF]

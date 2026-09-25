@@ -20,11 +20,6 @@ INSTALLED_APPS = [
     "recipes",
 ]
 
-# This app has no database - the recipe catalog is a static JSON file (see catalog.py). Spelled
-# out explicitly rather than left unset so it doesn't depend on Django's incidental behaviour of
-# lazily filling in a dummy backend the first time something touches `django.db.connections`.
-DATABASES = {"default": {"ENGINE": "django.db.backends.dummy"}}
-
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -66,7 +61,7 @@ X_FRAME_OPTIONS = "DENY"
 SECURE_CSP = {
     "default-src": [CSP.SELF],
     "base-uri": [CSP.SELF],
-    "connect-src": [CSP.NONE],
+    "connect-src": [CSP.SELF],
     "font-src": [CSP.NONE],
     "form-action": [CSP.SELF],
     "frame-ancestors": [CSP.NONE],

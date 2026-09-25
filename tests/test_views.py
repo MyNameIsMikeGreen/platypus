@@ -330,7 +330,7 @@ def test_planner_returns_unique_recipes_from_selected_category(client, recipe_fa
 
     response = client.get(
         reverse("recipes:search-results"),
-        {"count_dinner": 10},
+        {"count_dinner": 2},
     )
 
     assert response.status_code == 200
@@ -349,11 +349,11 @@ def test_planner_can_combine_multiple_category_counts(client, recipe_factory):
 
     response = client.get(
         reverse("recipes:search-results"),
-        {"count_mains": 2, "count_light_dishes": 5},
+        {"count_mains": 2, "count_light_dishes": 1},
     )
 
     assert response.status_code == 200
-    groups = {category: recipes for category, recipes, _ in response.context["groups"]}
+    groups = dict(response.context["groups"])
     assert len(groups["MAINS"]) == 2
     assert set(groups["MAINS"]) <= {main1, main2, main3}
     assert groups["LIGHT DISHES"] == [light1]
@@ -367,7 +367,7 @@ def test_planner_results_show_deduplicated_shared_shopping_list(client, recipe_f
     recipe_factory(title="Omelette", category="MAINS", ingredients=["6 Eggs", "1 Onion"])
     recipe_factory(title="Pancakes", category="MAINS", ingredients=["3 Eggs", "240g Caster Sugar"])
 
-    response = client.get(reverse("recipes:search-results"), {"count_mains": 10})
+    response = client.get(reverse("recipes:search-results"), {"count_mains": 2})
 
     assert response.status_code == 200
     shared = response.context["shared_ingredients"]
@@ -383,113 +383,200 @@ def test_planner_results_show_deduplicated_shared_shopping_list(client, recipe_f
     assert "ingredient-export.js" in content
 
 
-def test_planner_results_include_a_refresh_link_per_recipe(client, recipe_factory):
-    recipe_factory(title="Main One", category="MAINS")
-    recipe_factory(title="Main Two", category="MAINS")
-    recipe_factory(title="Main Three", category="MAINS")
-
-    response = client.get(reverse("recipes:search-results"), {"count_mains": 1})
-
-    assert response.status_code == 200
-    content = response.content.decode()
-    assert content.count("refresh-recipe-button") == 1
-    assert "aria-disabled" not in content
-    assert "refresh-recipe/?recipe_id=" in content
-    assert "Swap Main" in content
-
-
-def test_planner_disables_refresh_control_when_no_alternative_recipe_exists(client, recipe_factory):
-    recipe_factory(title="Only Main", category="MAINS")
-
-    response = client.get(reverse("recipes:search-results"), {"count_mains": 5})
-
-    assert response.status_code == 200
-    content = response.content.decode()
-    assert 'aria-disabled="true"' in content
-    assert "No other Mains recipes are available to swap in." in content
-    assert "refresh-recipe/?recipe_id=" not in content
-
-
-def test_refresh_recipe_swaps_in_a_different_recipe_from_the_same_category(client, recipe_factory):
-    kept = recipe_factory(title="Kept Recipe", category="MAINS", ingredients=["1 Onion"])
-    shown = recipe_factory(title="Shown Recipe", category="MAINS", ingredients=["2 Eggs"])
-    alternative = recipe_factory(
-        title="Alternative Recipe", category="MAINS", ingredients=["3 Carrots"]
-    )
-    recipe_factory(title="Other Category", category="SNACKS")
-
-    response = client.get(
-        reverse("recipes:refresh-recipe"),
-        {"recipe_id": shown.id, "plan": f"{kept.id},{shown.id}"},
-    )
-
-    assert response.status_code == 200
-    groups = {category: recipes for category, recipes, _ in response.context["groups"]}
-    assert set(groups["MAINS"]) == {kept, alternative}
-    assert response.context["recipe_count_total"] == 2
-    content = response.content.decode()
-    assert alternative.title in content
-    assert shown.title not in content
-    assert kept.title in content
-    shared_names = {item.export_name for item in response.context["shared_ingredients"]}
-    assert shared_names == {"Onion", "Carrots"}
-
-
-def test_refresh_recipe_keeps_the_plan_unchanged_when_every_alternative_is_already_shown(
+def test_planner_results_link_back_to_the_planner_with_the_requested_counts(
     client, recipe_factory
 ):
-    first = recipe_factory(title="First Main", category="MAINS")
-    second = recipe_factory(title="Second Main", category="MAINS")
+    recipe_factory(category="MAINS")
+    recipe_factory(category="MAINS")
+    recipe_factory(category="LIGHT DISHES")
+    recipe_factory(category="SNACKS")
 
     response = client.get(
-        reverse("recipes:refresh-recipe"),
-        {"recipe_id": first.id, "plan": f"{first.id},{second.id}"},
+        reverse("recipes:search-results"),
+        {"count_mains": 2, "count_light_dishes": 1, "count_snacks": 0},
     )
 
     assert response.status_code == 200
-    groups = {category: recipes for category, recipes, _ in response.context["groups"]}
-    assert set(groups["MAINS"]) == {first, second}
+    planner_url = f"{reverse('recipes:planner')}?count_light_dishes=1&count_mains=2"
+    assert response.context["planner_url"] == planner_url
+    assert f'href="{planner_url.replace("&", "&amp;")}"' in response.content.decode()
 
 
-def test_refresh_recipe_rejects_a_recipe_not_present_in_the_given_plan(client, recipe_factory):
-    shown = recipe_factory(title="Shown Recipe", category="MAINS")
-    recipe_factory(title="Other Recipe", category="MAINS")
-
-    response = client.get(
-        reverse("recipes:refresh-recipe"),
-        {"recipe_id": shown.id, "plan": "999999"},
-    )
-
-    assert response.status_code == 400
-
-
-def test_refresh_recipe_returns_not_found_for_an_unknown_recipe(client, recipe_factory):
-    recipe_factory(category="MAINS")
+def test_planner_is_prefilled_with_valid_counts_and_ignores_invalid_ones(client, recipe_factory):
+    for _ in range(3):
+        recipe_factory(category="DINNER")
+    recipe_factory(category="LUNCH")
+    recipe_factory(category="SNACKS")
 
     response = client.get(
-        reverse("recipes:refresh-recipe"),
-        {"recipe_id": 999999, "plan": "999999"},
+        reverse("recipes:planner"),
+        {"count_dinner": 2, "count_lunch": 5, "count_snacks": "lots"},
     )
-
-    assert response.status_code == 404
-
-
-def test_refresh_recipe_rejects_a_non_numeric_recipe_id(client, recipe_factory):
-    recipe_factory(category="MAINS")
-
-    response = client.get(reverse("recipes:refresh-recipe"), {"recipe_id": "not-a-number"})
-
-    assert response.status_code == 400
-
-
-def test_tag_selection_does_not_show_refresh_controls(client, recipe_factory):
-    recipe_factory(title="Tagged", tags=["Vegetarian"], category="MAINS")
-
-    response = client.get(reverse("recipes:search-results"), {"tag": "Vegetarian"})
 
     assert response.status_code == 200
+    form = response.context["form"]
+    assert not form.is_bound
+    assert form.initial == {"count_dinner": 2}
     content = response.content.decode()
-    assert "refresh-recipe-button" not in content
+    assert 'name="count_dinner" value="2"' in content
+    assert 'name="count_lunch" value="0"' in content
+    assert 'name="count_snacks" value="0"' in content
+    assert "errorlist" not in content
+
+    all_zero = client.get(reverse("recipes:planner"), {"count_dinner": 0})
+    assert all_zero.context["form"].initial == {}
+    assert "errorlist" not in all_zero.content.decode()
+
+
+def test_planner_results_disable_swaps_for_categories_without_alternatives(
+    client, recipe_factory
+):
+    mains = [recipe_factory(category="MAINS") for _ in range(3)]
+    light = recipe_factory(category="LIGHT DISHES")
+
+    response = client.get(
+        reverse("recipes:search-results"), {"count_mains": 2, "count_light_dishes": 1}
+    )
+
+    assert response.status_code == 200
+    assert response.context["swappable_categories"] == {"MAINS"}
+    content = response.content.decode()
+    assert f'data-plan-swap-url="{reverse("recipes:plan-swap")}"' in content
+    assert 'data-plan-group="MAINS"' in content
+    assert content.count("data-plan-slot") == 3
+    assert content.count("data-plan-swap ") == 3
+    planned_mains = dict(response.context["groups"])["MAINS"]
+    for recipe in planned_mains:
+        assert (
+            f'aria-label="Swap {recipe.title} for another recipe" title="Swap for another recipe"'
+            in content
+        )
+    assert set(planned_mains) < set(mains)
+    # Every Light Dishes recipe is already planned, so its button is shown but disabled, with a
+    # tooltip explaining why.
+    assert content.count('aria-disabled="true"') == 1
+    assert (
+        f'aria-label="Swap {light.title} for another recipe" aria-disabled="true" '
+        'title="No other Light Dishes recipes available"'
+    ) in content
+    assert "plan-swap.js" in content
+
+
+def test_planner_results_disable_every_swap_and_omit_script_when_nothing_can_be_swapped(
+    client, recipe_factory
+):
+    recipe_factory(category="MAINS")
+    recipe_factory(category="MAINS")
+
+    response = client.get(reverse("recipes:search-results"), {"count_mains": 2})
+
+    assert response.status_code == 200
+    assert response.context["swappable_categories"] == set()
+    content = response.content.decode()
+    assert content.count("data-plan-swap ") == 2
+    assert content.count('aria-disabled="true"') == 2
+    assert content.count('title="No other Mains recipes available"') == 2
+    assert "plan-swap.js" not in content
+
+
+def test_plan_swap_replaces_recipe_with_an_unplanned_one_from_the_same_category(
+    client, recipe_factory
+):
+    outgoing = recipe_factory(title="Omelette", category="MAINS", ingredients=["6 Eggs"])
+    kept = recipe_factory(title="Pancakes", category="MAINS", ingredients=["3 Eggs", "1 Lemon"])
+    incoming = recipe_factory(title="Risotto", category="MAINS", ingredients=["300g Rice"])
+    light = recipe_factory(title="Salad", category="LIGHT DISHES", ingredients=["1 Lettuce"])
+    recipe_factory(title="Soup", category="LIGHT DISHES", ingredients=["1 Leek"])
+
+    response = client.get(
+        reverse("recipes:plan-swap"),
+        {"plan": [outgoing.id, kept.id, light.id], "swap": outgoing.id},
+    )
+
+    assert response.status_code == 200
+    assert response.context["recipe"] == incoming
+    assert response.context["swappable_categories"] == {"MAINS"}
+    shared = response.context["shared_ingredients"]
+    assert [item.export_name for item in shared] == ["Eggs", "Lemon", "Lettuce", "Rice"]
+    eggs = next(item for item in shared if item.export_name == "Eggs")
+    assert eggs.recipe_titles == ("Pancakes",)
+
+    content = response.content.decode()
+    assert f'data-recipe-id="{incoming.id}"' in content
+    assert f'href="{incoming.get_absolute_url()}"' in content
+    assert f'aria-label="Swap {incoming.title} for another recipe"' in content
+    assert "Shared shopping list" in content
+    assert 'data-ingredient-name="Rice"' in content
+    assert "<html" not in content
+
+
+def test_plan_swap_offers_rejected_recipes_again_only_once_every_alternative_is_rejected(
+    client, recipe_factory, monkeypatch
+):
+    current = recipe_factory(category="MAINS")
+    rejected = [recipe_factory(category="MAINS") for _ in range(2)]
+    unseen = recipe_factory(category="MAINS")
+    offered_candidates = []
+
+    def choose_first(candidates):
+        offered_candidates.append(list(candidates))
+        return candidates[0]
+
+    monkeypatch.setattr("recipes.views.random.choice", choose_first)
+
+    response = client.get(
+        reverse("recipes:plan-swap"),
+        {"plan": [current.id], "swap": current.id, "rejected": [r.id for r in rejected]},
+    )
+    assert response.status_code == 200
+    assert response.context["recipe"] == unseen
+
+    response = client.get(
+        reverse("recipes:plan-swap"),
+        {
+            "plan": [current.id],
+            "swap": current.id,
+            "rejected": [recipe.id for recipe in [*rejected, unseen]],
+        },
+    )
+    assert response.status_code == 200
+    assert offered_candidates == [[unseen], [*rejected, unseen]]
+
+
+def test_plan_swap_is_a_conflict_when_every_recipe_in_the_category_is_planned(
+    client, recipe_factory
+):
+    first = recipe_factory(category="MAINS")
+    second = recipe_factory(category="MAINS")
+    recipe_factory(category="LIGHT DISHES")
+
+    response = client.get(
+        reverse("recipes:plan-swap"), {"plan": [first.id, second.id], "swap": first.id}
+    )
+
+    assert response.status_code == 409
+
+
+@pytest.mark.parametrize(
+    "query",
+    [
+        {},
+        {"swap": 1},
+        {"plan": [1, 2]},
+        {"plan": [1, 2], "swap": 3},
+        {"plan": [1, 1], "swap": 1},
+        {"plan": [1, 999], "swap": 1},
+        {"plan": ["one"], "swap": "one"},
+        {"plan": [1], "swap": 1, "rejected": [999]},
+    ],
+)
+def test_plan_swap_rejects_invalid_requests(client, recipe_factory, query):
+    for _ in range(3):
+        recipe_factory(category="MAINS")
+
+    response = client.get(reverse("recipes:plan-swap"), query)
+
+    assert response.status_code == 400
 
 
 def test_tag_selection_returns_matching_recipes(client, recipe_factory):
@@ -591,12 +678,36 @@ def test_invalid_planner_input_returns_bad_request(client, recipe_factory):
     assert negative_count.status_code == 400
     assert "Ensure this value is greater than or equal to 0" in negative_count.content.decode()
 
-    too_many = client.get(
+    more_than_available = client.get(
         reverse("recipes:search-results"),
-        {"count_dinner": 51},
+        {"count_dinner": 2},
     )
-    assert too_many.status_code == 400
-    assert "Ensure this value is less than or equal to 50" in too_many.content.decode()
+    assert more_than_available.status_code == 400
+    assert (
+        "Ensure this value is less than or equal to 1" in more_than_available.content.decode()
+    )
+
+
+def test_planner_caps_each_category_count_at_its_number_of_recipes(client, recipe_factory):
+    for _ in range(3):
+        recipe_factory(category="DINNER")
+    for _ in range(60):
+        recipe_factory(category="MAINS")
+
+    response = client.get(reverse("recipes:planner"))
+
+    form = response.context["form"]
+    assert 'max="3"' in str(form["count_dinner"])
+    assert 'max="60"' in str(form["count_mains"])
+    content = response.content.decode()
+    assert str(form["count_dinner"]) in content
+    assert str(form["count_mains"]) in content
+
+    assert client.get(reverse("recipes:search-results"), {"count_dinner": 3}).status_code == 200
+    assert client.get(reverse("recipes:search-results"), {"count_dinner": 4}).status_code == 400
+    every_main = client.get(reverse("recipes:search-results"), {"count_mains": 60})
+    assert every_main.status_code == 200
+    assert every_main.context["recipe_count_total"] == 60
 
 
 def test_planner_lists_each_available_category_once(client, recipe_factory):
@@ -653,6 +764,7 @@ def test_unapproved_host_is_rejected(client):
         "recipes:index",
         "recipes:planner",
         "recipes:search-results",
+        "recipes:plan-swap",
     ],
 )
 def test_read_only_pages_reject_post(client, route_name):

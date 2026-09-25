@@ -1,0 +1,26 @@
+{% comment %}
+One recipe in a meal plan, with a button to swap it for another recipe from the same category.
+When every recipe in the category is already planned, the button stays in place but is disabled,
+with a tooltip explaining why. It uses aria-disabled rather than disabled so it still receives
+hover (and keyboard focus) and its tooltip shows reliably across browsers.
+
+Shared by the meal-plan results page and the swap response (see plan-swap.js), so a swapped-in
+recipe renders exactly as it would have had it been chosen originally.
+
+Expects:
+  recipe               - the RecipeData shown in this slot
+  swappable_categories - categories with another recipe that could take this slot
+{% endcomment %}
+<li class="plan-slot" data-plan-slot data-recipe-id="{{ recipe.id }}">
+  <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
+  {% include "recipes/_status_badges.html" with recipe=recipe %}
+  {% if recipe.category in swappable_categories %}
+    <button type="button" class="plan-swap-button" data-plan-swap aria-label="Swap {{ recipe.title }} for another recipe" title="Swap for another recipe">
+      <span aria-hidden="true">&#8635;</span>
+    </button>
+  {% else %}
+    <button type="button" class="plan-swap-button" data-plan-swap aria-label="Swap {{ recipe.title }} for another recipe" aria-disabled="true" title="No other {{ recipe.category|title }} recipes available">
+      <span aria-hidden="true">&#8635;</span>
+    </button>
+  {% endif %}
+</li>

@@ -26,28 +26,31 @@
         </div>
       {% endif %}
     {% else %}
-      <a class="back-link" href="{% url 'recipes:planner' %}">&larr; Back to planner</a>
+      <a class="back-link" href="{{ planner_url }}">&larr; Back to planner</a>
       <p class="eyebrow">Meal plan</p>
       <h1>Meal plan</h1>
       <p class="plan-summary">{{ recipe_count_total }} recipe{{ recipe_count_total|pluralize }} across {{ groups|length }} categor{{ groups|length|pluralize:"y,ies" }}.</p>
-      {% include "recipes/_shared_shopping_list.html" with shared_ingredients=shared_ingredients %}
-      {% for category, category_recipes, can_refresh in groups %}
-        <section class="plan-group">
-          <h2>{{ category|title }} <span class="plan-group-count">{{ category_recipes|length }}</span></h2>
-          {% if category_recipes %}
-            <ul class="result-list result-card">
-              {% for recipe in category_recipes %}
-                {% include "recipes/_plan_recipe_item.html" with recipe=recipe category=category can_refresh=can_refresh %}
-              {% endfor %}
-            </ul>
-          {% else %}
-            <div class="empty-state">
-              <h2>No recipes available</h2>
-              <p>There weren&rsquo;t enough {{ category|title }} recipes to fill this request.</p>
-            </div>
-          {% endif %}
-        </section>
-      {% endfor %}
+      <div data-plan data-plan-swap-url="{% url 'recipes:plan-swap' %}">
+        <p class="visually-hidden" data-plan-swap-status aria-live="polite"></p>
+        {% include "recipes/_shared_shopping_list.html" with shared_ingredients=shared_ingredients %}
+        {% for category, category_recipes in groups %}
+          <section class="plan-group" data-plan-group="{{ category }}">
+            <h2>{{ category|title }} <span class="plan-group-count">{{ category_recipes|length }}</span></h2>
+            {% if category_recipes %}
+              <ul class="result-list result-card">
+                {% for recipe in category_recipes %}
+                  {% include "recipes/_plan_slot.html" with recipe=recipe swappable_categories=swappable_categories %}
+                {% endfor %}
+              </ul>
+            {% else %}
+              <div class="empty-state">
+                <h2>No recipes available</h2>
+                <p>There weren&rsquo;t enough {{ category|title }} recipes to fill this request.</p>
+              </div>
+            {% endif %}
+          </section>
+        {% endfor %}
+      </div>
     {% endif %}
   </div>
 {% endblock %}
@@ -55,5 +58,8 @@
 {% block scripts %}
   {% if shared_ingredients %}
     <script src="{% static 'recipes/ingredient-export.js' %}" defer></script>
+  {% endif %}
+  {% if swappable_categories %}
+    <script src="{% static 'recipes/plan-swap.js' %}" defer></script>
   {% endif %}
 {% endblock %}

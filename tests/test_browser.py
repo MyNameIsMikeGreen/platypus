@@ -682,8 +682,18 @@ def test_planner_builds_a_multi_category_meal_plan(live_url):
 
             # Decrementing below zero is clamped rather than going negative.
             confectionery_row = page.locator(".quantity-row", has_text="Confectionery")
+            confectionery_input = confectionery_row.locator("[data-quantity-input]")
             confectionery_row.locator("[data-quantity-step='-1']").click()
-            expect(confectionery_row.locator("[data-quantity-input]")).to_have_value("0")
+            expect(confectionery_input).to_have_value("0")
+            expect(total).to_have_text("3 recipes selected")
+
+            # Incrementing is likewise clamped at the number of Confectionery recipes available.
+            confectionery_size = confectionery_input.get_attribute("max")
+            confectionery_input.fill(confectionery_size)
+            confectionery_row.locator("[data-quantity-step='1']").click()
+            expect(confectionery_input).to_have_value(confectionery_size)
+            confectionery_input.fill("0")
+            confectionery_input.dispatch_event("input")
             expect(total).to_have_text("3 recipes selected")
 
             page.locator("[data-quantity-form] button[type='submit']").click()
@@ -698,6 +708,31 @@ def test_planner_builds_a_multi_category_meal_plan(live_url):
             light_dishes_group = page.locator(".plan-group", has_text="Light Dishes")
             expect(mains_group.locator(".result-list li")).to_have_count(2)
             expect(light_dishes_group.locator(".result-list li")).to_have_count(1)
+
+            # Going back to the planner keeps every count, so tweaking one doesn't mean
+            # re-entering the rest.
+            page.locator(".back-link", has_text="Back to planner").click()
+            page.wait_for_url("**/planner/*")
+            expect(mains_row.locator("[data-quantity-input]")).to_have_value("2")
+            expect(light_dishes_input).to_have_value("1")
+            expect(confectionery_input).to_have_value("0")
+            expect(total).to_have_text("3 recipes selected")
+            expect(page.locator(".errorlist")).to_have_count(0)
+
+            mains_row.locator("[data-quantity-step='1']").click()
+            expect(total).to_have_text("4 recipes selected")
+            page.locator("[data-quantity-form] button[type='submit']").click()
+            page.wait_for_url("**/search-results/*")
+            expect(page.locator(".plan-summary")).to_have_text("4 recipes across 2 categories.")
+            expect(mains_group.locator(".result-list li")).to_have_count(3)
+            expect(light_dishes_group.locator(".result-list li")).to_have_count(1)
+
+            # The browser's own Back button also returns to the planner with the counts kept.
+            page.go_back()
+            page.wait_for_url("**/planner/*")
+            expect(mains_row.locator("[data-quantity-input]")).to_have_value("3")
+            expect(light_dishes_input).to_have_value("1")
+            expect(total).to_have_text("4 recipes selected")
         finally:
             browser.close()
 
@@ -834,44 +869,241 @@ def test_shared_shopping_list_scrolls_internally_once_it_grows_long(live_url):
             browser.close()
 
 
-def test_refresh_control_swaps_a_planner_result_and_rebuilds_the_shared_shopping_list(live_url):
+
+def test_plan_swap_replaces_one_recipe_in_place_and_updates_the_shared_shopping_list(live_url):
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
-        page = browser.new_page()
+        context = browser.new_context(
+            viewport={"width": 390, "height": 700},
+            permissions=["clipboard-read", "clipboard-write"],
+        )
+        page = context.new_page()
         try:
-            page.goto(f"{live_url}/search-results/?count_mains=3", wait_until="domcontentloaded")
+            plan_url = f"{live_url}/search-results/?count_mains=10&count_light_dishes=3"
+            page.goto(plan_url, wait_until="domcontentloaded")
 
-            items = page.locator("[data-plan-recipe]")
-            expect(items).to_have_count(3)
-            other_titles = [items.nth(i).locator(".plan-recipe-details a").inner_text() for i in (1, 2)]
-            first_item = items.first
-            first_title = first_item.locator(".plan-recipe-details a").inner_text()
-            refresh_link = first_item.locator(".refresh-recipe-button")
-
-            # Plenty of Mains recipes exist, so the very first refresh control is enabled.
-            assert refresh_link.get_attribute("aria-disabled") is None
-
-            refresh_link.click()
-            page.wait_for_url("**/search-results/refresh-recipe/**")
-
-            # Still 3 results, the untouched two unchanged, but the first is a different recipe.
-            expect(page.locator("h1")).to_have_text("Meal plan")
-            items = page.locator("[data-plan-recipe]")
-            expect(items).to_have_count(3)
-            titles = [items.nth(i).locator(".plan-recipe-details a").inner_text() for i in range(3)]
-            assert first_title not in titles
-            assert titles[1:] == other_titles
-
-            # The shared shopping list was rebuilt for the new plan, and still works normally.
             drawer = page.locator("[data-ingredient-export].shopping-list-drawer")
-            drawer.locator("summary").click()
             toggles = drawer.locator("[data-ingredient-toggle]")
             status = drawer.locator("[data-ingredient-status]")
-            toggle_count = toggles.count()
-            expect(status).to_have_text(f"{toggle_count} of {toggle_count} ingredients selected")
+            drawer.locator("summary").click()
+            # Deselecting everything first (as if the user already has it all) makes it clear
+            # afterwards which ingredients the swap newly added.
+            drawer.locator("[data-ingredient-clear]").click()
+            names_before = toggles.evaluate_all("els => els.map(el => el.dataset.ingredientName)")
+
+            slots = page.locator("[data-plan-slot]")
+            ids_before = slots.evaluate_all("els => els.map(el => el.dataset.recipeId)")
+            mains_slots = page.locator("[data-plan-group='MAINS'] [data-plan-slot]")
+            target = mains_slots.nth(4)
+            target_index = ids_before.index(target.get_attribute("data-recipe-id"))
+            target.evaluate(
+                "el => window.scrollTo(0, window.scrollY + el.getBoundingClientRect().top - 400)"
+            )
+            assert page.evaluate("window.scrollY") > 0
+            target_y_before = target.bounding_box()["y"]
+
+            target.locator("[data-plan-swap]").click()
+            expect(mains_slots.nth(4)).not_to_have_attribute(
+                "data-recipe-id", ids_before[target_index]
+            )
+
+            # Only the swapped recipe changed: it's a Mains recipe that wasn't already planned,
+            # and it sits exactly where the old one did on screen, without a page load.
+            ids_after = slots.evaluate_all("els => els.map(el => el.dataset.recipeId)")
+            assert ids_after[:target_index] == ids_before[:target_index]
+            assert ids_after[target_index + 1 :] == ids_before[target_index + 1 :]
+            assert ids_after[target_index] not in ids_before
+            expect(mains_slots).to_have_count(10)
+            assert page.url == plan_url
+            assert mains_slots.nth(4).bounding_box()["y"] == pytest.approx(target_y_before, abs=1)
+            expect(mains_slots.nth(4).locator("[data-plan-swap]")).to_be_visible()
+            expect(page.locator("[data-plan-swap-status]")).to_contain_text("Swapped ")
+
+            # The shared shopping list now covers exactly the recipes in the updated plan, just
+            # as if the swapped-in recipe had been chosen originally.
+            recipe_urls = page.locator("[data-plan-slot] a").evaluate_all(
+                "els => els.map(el => el.href)"
+            )
+            detail_page = context.new_page()
+            expected_names = set()
+            for recipe_url in recipe_urls:
+                detail_page.goto(recipe_url, wait_until="domcontentloaded")
+                expected_names |= {
+                    name.casefold()
+                    for name in detail_page.locator("[data-ingredient-toggle]").evaluate_all(
+                        "els => els.map(el => el.dataset.ingredientName)"
+                    )
+                }
+            detail_page.close()
+            names_after = toggles.evaluate_all("els => els.map(el => el.dataset.ingredientName)")
+            assert {name.casefold() for name in names_after} == expected_names
+            assert len(names_after) == len(expected_names)
+            expect(drawer.locator("[data-ingredient-count]")).to_have_text(str(len(names_after)))
+
+            # The drawer stays open, and ingredients kept from before keep their (cleared)
+            # selection; only ingredients the swap newly added start selected.
+            assert drawer.evaluate("el => el.open") is True
+            previous_names = {name.casefold() for name in names_before}
+            added_names = [name for name in names_after if name.casefold() not in previous_names]
+            checked_names = toggles.evaluate_all(
+                "els => els.filter(el => el.checked).map(el => el.dataset.ingredientName)"
+            )
+            assert checked_names == added_names
+            expect(status).to_have_text(
+                f"{len(added_names)} of {len(names_after)} ingredients selected"
+            )
+
+            # The swapped-in shopping list works exactly like the original one.
+            clear_button = drawer.locator("[data-ingredient-clear]")
+            if clear_button.inner_text() == "Clear all":
+                clear_button.click()
+            expect(status).to_have_text(f"0 of {len(names_after)} ingredients selected")
+            clear_button.click()
+            expect(status).to_have_text(
+                f"{len(names_after)} of {len(names_after)} ingredients selected"
+            )
             toggles.first.uncheck()
-            expect(status).to_have_text(f"{toggle_count - 1} of {toggle_count} ingredients selected")
+            expect(status).to_have_text(
+                f"{len(names_after) - 1} of {len(names_after)} ingredients selected"
+            )
+            drawer.locator("[data-ingredient-copy]").click()
+            expect(drawer.locator("[data-ingredient-copy]")).to_have_text("Copied!")
+            assert page.evaluate("navigator.clipboard.readText()") == "\n".join(names_after[1:])
         finally:
             browser.close()
 
 
+def test_plan_swap_keeps_the_row_in_place_when_the_shopping_list_above_changes_height(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page(viewport={"width": 390, "height": 640})
+        try:
+            page.goto(
+                f"{live_url}/search-results/?count_mains=1&count_miscellaneous=2",
+                wait_until="domcontentloaded",
+            )
+            # Lifting the checklist's height cap makes its height track the number of
+            # ingredients, so swaps reliably resize the open shopping list above the row.
+            page.evaluate(
+                "sheet => sheet.insertRule("
+                "'.shopping-list-drawer .ingredient-checklist { max-height: none !important; }',"
+                " sheet.cssRules.length)",
+                page.evaluate_handle("document.styleSheets[0]"),
+            )
+            drawer = page.locator("[data-ingredient-export].shopping-list-drawer")
+            drawer.locator("summary").click()
+            checklist = drawer.locator(".ingredient-checklist")
+            page.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
+
+            slot = page.locator("[data-plan-group='MAINS'] [data-plan-slot]")
+            expect(slot).to_be_in_viewport(ratio=1)
+            checklist_heights = {checklist.bounding_box()["height"]}
+            for _ in range(10):
+                recipe_id = slot.get_attribute("data-recipe-id")
+                slot_y_before = slot.bounding_box()["y"]
+
+                slot.locator("[data-plan-swap]").click()
+                expect(slot).not_to_have_attribute("data-recipe-id", recipe_id)
+
+                assert slot.bounding_box()["y"] == pytest.approx(slot_y_before, abs=1)
+                checklist_heights.add(checklist.bounding_box()["height"])
+
+            assert len(checklist_heights) > 1, "expected a swap to resize the shopping list"
+        finally:
+            browser.close()
+
+
+def test_plan_swap_works_through_every_alternative_before_repeating_and_keeps_focus(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            category_size = _planner_category_size(page, live_url, "Miscellaneous")
+            assert category_size >= 3, "expected enough recipes to cycle through"
+
+            page.goto(
+                f"{live_url}/search-results/?count_miscellaneous=1", wait_until="domcontentloaded"
+            )
+            slot = page.locator("[data-plan-slot]")
+            seen_ids = [slot.get_attribute("data-recipe-id")]
+            slot.locator("[data-plan-swap]").focus()
+
+            # Swapping by keyboard keeps focus on the (new) swap button, so the user can keep
+            # pressing Enter to work through every other recipe, each offered exactly once.
+            for _ in range(category_size - 1):
+                page.keyboard.press("Enter")
+                expect(slot).not_to_have_attribute("data-recipe-id", seen_ids[-1])
+                expect(slot.locator("[data-plan-swap]")).to_be_focused()
+                seen_ids.append(slot.get_attribute("data-recipe-id"))
+            assert len(set(seen_ids)) == category_size
+
+            # With every alternative offered, swapping again starts over with one already seen.
+            page.keyboard.press("Enter")
+            expect(slot).not_to_have_attribute("data-recipe-id", seen_ids[-1])
+            assert slot.get_attribute("data-recipe-id") in seen_ids
+        finally:
+            browser.close()
+
+
+def test_plan_swap_button_is_disabled_with_an_explanation_when_nothing_can_be_swapped(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            # Requesting every Miscellaneous recipe leaves nothing to swap in; Mains still has
+            # alternatives, so swapping is otherwise available.
+            miscellaneous_size = _planner_category_size(page, live_url, "Miscellaneous")
+            page.goto(
+                f"{live_url}/search-results/?count_mains=1&count_miscellaneous={miscellaneous_size}",
+                wait_until="domcontentloaded",
+            )
+            enabled_button = page.locator("[data-plan-group='MAINS'] [data-plan-swap]")
+            expect(enabled_button).to_be_enabled()
+            expect(enabled_button).to_have_css("opacity", "1")
+
+            slots = page.locator("[data-plan-group='MISCELLANEOUS'] [data-plan-slot]")
+            disabled_buttons = slots.locator("[data-plan-swap]")
+            expect(disabled_buttons).to_have_count(slots.count())
+            ids_before = slots.evaluate_all("els => els.map(el => el.dataset.recipeId)")
+
+            # Each button is still shown, but greyed out and disabled, with a tooltip explaining
+            # why. It must still receive hover for the tooltip to appear.
+            for index in range(disabled_buttons.count()):
+                button = disabled_buttons.nth(index)
+                expect(button).to_be_visible()
+                expect(button).to_be_disabled()
+                expect(button).to_have_attribute(
+                    "title", "No other Miscellaneous recipes available"
+                )
+                expect(button).to_have_css("opacity", "0.5")
+                expect(button).to_have_css("cursor", "not-allowed")
+            disabled_buttons.first.hover()
+            assert disabled_buttons.first.evaluate("el => el.matches(':hover')") is True
+
+            # Clicking a disabled button does nothing. Swaps run in order, so once a later swap
+            # of the Mains recipe has finished, any swap the disabled button started would have too.
+            swap_requests = []
+            page.on(
+                "request",
+                lambda request: swap_requests.append(request.url)
+                if "/search-results/swap/" in request.url
+                else None,
+            )
+            disabled_buttons.first.click(force=True)
+            disabled_buttons.first.focus()
+            page.keyboard.press("Enter")
+            enabled_button.click()
+            expect(page.locator("[data-plan-swap-status]")).to_contain_text("Swapped ")
+            assert len(swap_requests) == 1
+            assert slots.evaluate_all("els => els.map(el => el.dataset.recipeId)") == ids_before
+        finally:
+            browser.close()
+
+
+def _planner_category_size(page, live_url, category_label):
+    """The number of recipes in a category, read from its capped planner quantity input."""
+    page.goto(f"{live_url}/planner/", wait_until="domcontentloaded")
+    quantity_input = page.locator(".quantity-row", has_text=category_label).locator(
+        "[data-quantity-input]"
+    )
+    return int(quantity_input.get_attribute("max"))

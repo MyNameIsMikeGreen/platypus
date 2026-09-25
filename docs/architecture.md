@@ -19,6 +19,7 @@ write capability, accounts, or public exposure were ever added.
 - Only Gunicorn's application port is published; the container has no persistent or writable application data.
 - The container runs as a non-root user, drops Linux capabilities, prohibits privilege escalation, and uses a read-only root filesystem.
 - Django accepts only configured hostnames, allows only GET and HEAD endpoints, applies a restrictive Content Security Policy, denies framing, and emits MIME-sniffing and referrer controls.
+- The Content Security Policy permits scripts to make same-origin `GET` requests only, so the meal planner can swap a single recipe in place; no other origin can be contacted.
 - Templates use Django's automatic escaping.
 - Remote images are restricted by CSP to the existing Cloudinary host and are never proxied through the server.
 - Logs use Docker's rotating `local` driver.

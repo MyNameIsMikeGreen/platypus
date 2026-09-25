@@ -1,5 +1,8 @@
 const exportContainers = document.querySelectorAll("[data-ingredient-export]");
 const COPY_LABEL_RESET_DELAY_MS = 2000;
+// Dispatched on a container after its ingredient checklist is replaced (e.g. by a meal-plan
+// swap), so the selection status reflects the new ingredients.
+const INGREDIENT_EXPORT_REFRESH_EVENT = "ingredient-export:refresh";
 
 const copyText = async (text) => {
   if (navigator.clipboard?.writeText) {
@@ -14,26 +17,27 @@ const copyText = async (text) => {
 };
 
 for (const container of exportContainers) {
-  const toggles = [...container.querySelectorAll("[data-ingredient-toggle]")];
+  // Looked up on demand rather than cached, as the checklist may be replaced after page load.
+  const allToggles = () => [...container.querySelectorAll("[data-ingredient-toggle]")];
   const clearButton = container.querySelector("[data-ingredient-clear]");
   const copyButton = container.querySelector("[data-ingredient-copy]");
   const status = container.querySelector("[data-ingredient-status]");
   const copyStatus = container.querySelector("[data-ingredient-copy-status]");
   const fallbackTextarea = container.querySelector("[data-ingredient-export-text]");
 
-  if (toggles.length === 0 || !copyButton) {
+  if (allToggles().length === 0 || !copyButton) {
     continue;
   }
 
   const defaultCopyLabel = copyButton.textContent;
   let copyLabelResetId = null;
 
-  const selectedToggles = () => toggles.filter((toggle) => toggle.checked);
+  const selectedToggles = () => allToggles().filter((toggle) => toggle.checked);
 
   const updateStatus = () => {
     const selectedCount = selectedToggles().length;
     if (status) {
-      status.textContent = `${selectedCount} of ${toggles.length} ingredients selected`;
+      status.textContent = `${selectedCount} of ${allToggles().length} ingredients selected`;
     }
     if (clearButton) {
       clearButton.textContent = selectedCount > 0 ? "Clear all" : "Select all";
@@ -57,14 +61,17 @@ for (const container of exportContainers) {
     }, COPY_LABEL_RESET_DELAY_MS);
   };
 
-  for (const toggle of toggles) {
-    toggle.addEventListener("change", updateStatus);
-  }
+  container.addEventListener("change", (event) => {
+    if (event.target.matches("[data-ingredient-toggle]")) {
+      updateStatus();
+    }
+  });
+  container.addEventListener(INGREDIENT_EXPORT_REFRESH_EVENT, updateStatus);
 
   if (clearButton) {
     clearButton.addEventListener("click", () => {
       const shouldSelectAll = clearButton.textContent === "Select all";
-      for (const toggle of toggles) {
+      for (const toggle of allToggles()) {
         toggle.checked = shouldSelectAll;
       }
       updateStatus();

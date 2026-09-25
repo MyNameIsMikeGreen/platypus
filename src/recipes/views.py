@@ -2,10 +2,11 @@ import random
 
 from django.http import Http404, HttpRequest, HttpResponse, HttpResponseBadRequest
 from django.shortcuts import redirect, render
+from django.urls import reverse
 from django.views.decorators.http import require_safe
 
 from .catalog import CATALOG, RecipeData
-from .forms import PlannerForm, RecipeSearchForm
+from .forms import PlannerForm, PlanSwapForm, RecipeSearchForm
 from .shopping_list import build_shared_shopping_list
 
 
@@ -70,58 +71,7 @@ def planner(request: HttpRequest) -> HttpResponse:
     return render(
         request,
         "recipes/planner.html",
-        {"active_section": "planner", "form": PlannerForm()},
-    )
-
-
-def _can_refresh(category: str, shown_ids: set[int]) -> bool:
-    """Whether some other CATALOG recipe in `category` isn't already in `shown_ids`.
-
-    Used both to decide whether a planner result's refresh link starts enabled, and to check
-    that a refresh request still has somewhere to swap to.
-    """
-    same_category = [recipe for recipe in CATALOG if recipe.category == category]
-    shown_in_category = sum(1 for recipe in same_category if recipe.id in shown_ids)
-    return len(same_category) > shown_in_category
-
-
-def _parse_recipe_ids(raw: str) -> list[int]:
-    """Parse a comma-separated list of recipe IDs, in order, dropping duplicates and anything
-    unrecognised. Order is preserved so a refresh only changes the one recipe it swaps, rather
-    than reshuffling the position of every other recipe already in the plan.
-    """
-    return list(dict.fromkeys(int(token) for token in raw.split(",") if token.strip().isdigit()))
-
-
-def _group_plan(recipes: list[RecipeData]) -> list[tuple[str, list[RecipeData], bool]]:
-    """Group `recipes` by category (alphabetically), alongside whether each category has another
-    CATALOG recipe left to refresh into. Shared by the initial planner search and by
-    `refresh_recipe`, so a plan looks and behaves identically how ever it was assembled.
-    """
-    grouped: dict[str, list[RecipeData]] = {}
-    for recipe in recipes:
-        grouped.setdefault(recipe.category, []).append(recipe)
-    return [
-        (category, category_recipes, _can_refresh(category, {r.id for r in category_recipes}))
-        for category, category_recipes in sorted(
-            grouped.items(), key=lambda item: item[0].casefold()
-        )
-    ]
-
-
-def _render_plan_results(request: HttpRequest, plan_recipes: list[RecipeData]) -> HttpResponse:
-    """Render the meal-plan results page for exactly `plan_recipes`."""
-    return render(
-        request,
-        "recipes/search_results.html",
-        {
-            "active_section": "planner",
-            "is_tag": False,
-            "groups": _group_plan(plan_recipes),
-            "recipe_count_total": len(plan_recipes),
-            "shared_ingredients": build_shared_shopping_list(plan_recipes),
-            "plan_ids": ",".join(str(recipe.id) for recipe in plan_recipes),
-        },
+        {"active_section": "planner", "form": PlannerForm.prefilled(request.GET)},
     )
 
 
@@ -175,53 +125,70 @@ def search_results(request: HttpRequest) -> HttpResponse:
             status=400,
         )
 
+    groups = []
+    swappable_categories = set()
+    recipe_count_total = 0
     all_planned_recipes: list[RecipeData] = []
     for category, count in form.category_counts():
         candidates = [recipe for recipe in CATALOG if recipe.category == category]
         recipes = random.sample(candidates, min(count, len(candidates)))
+        groups.append((category, recipes))
+        if len(candidates) > len(recipes):
+            swappable_categories.add(category)
+        recipe_count_total += len(recipes)
         all_planned_recipes.extend(recipes)
 
-    return _render_plan_results(request, all_planned_recipes)
+    return render(
+        request,
+        "recipes/search_results.html",
+        {
+            "active_section": "planner",
+            "is_tag": False,
+            "groups": groups,
+            "planner_url": f"{reverse('recipes:planner')}?{form.counts_query()}",
+            "swappable_categories": swappable_categories,
+            "recipe_count_total": recipe_count_total,
+            "shared_ingredients": build_shared_shopping_list(all_planned_recipes),
+        },
+    )
 
 
 @require_safe
-def refresh_recipe(request: HttpRequest) -> HttpResponse:
-    """Swap one planner result for a different recipe from the same category.
+def plan_swap(request: HttpRequest) -> HttpResponse:
+    """Swap one meal-plan recipe for another that could equally have been chosen originally.
 
-    Backs the refresh ("re-roll") link shown on each meal-plan result: `recipe_id` is the result
-    being replaced and `plan` is every recipe ID currently shown anywhere in the plan (so the
-    replacement can't duplicate another result already on the page). The replacement is drawn
-    from exactly the same pool the original planner search used - every CATALOG recipe in that
-    category - so it's exactly as if that recipe had been picked the first time round, and the
-    rest of the plan (and its shared shopping list) is simply re-rendered around it. If nothing
-    is left to swap to, the plan is re-rendered unchanged.
+    Returns only the replacement recipe row and the rebuilt shared shopping list, so the results
+    page can update both in place without reloading (and so without moving the user's position).
     """
-    raw_recipe_id = request.GET.get("recipe_id", "")
-    if not raw_recipe_id.isdigit():
-        return HttpResponseBadRequest("recipe_id must be a positive integer.")
-    recipe_id = int(raw_recipe_id)
+    form = PlanSwapForm(request.GET)
+    if not form.is_valid():
+        return HttpResponseBadRequest()
 
-    catalog_by_id = {recipe.id: recipe for recipe in CATALOG}
-    recipe = catalog_by_id.get(recipe_id)
-    if recipe is None:
-        raise Http404
-
-    plan_ids = _parse_recipe_ids(request.GET.get("plan", ""))
-    if recipe_id not in plan_ids:
-        return HttpResponseBadRequest("recipe_id must be one of the recipes in plan.")
-
-    plan_recipes = [catalog_by_id[pid] for pid in plan_ids if pid in catalog_by_id]
+    recipes_by_id = {recipe.id: recipe for recipe in CATALOG}
+    plan = [recipes_by_id[recipe_id] for recipe_id in form.cleaned_data["plan"]]
+    outgoing = recipes_by_id[form.cleaned_data["swap"]]
+    planned_ids = set(form.cleaned_data["plan"])
+    rejected_ids = set(form.cleaned_data["rejected"])
     candidates = [
-        candidate
-        for candidate in CATALOG
-        if candidate.category == recipe.category and candidate.id not in plan_ids
+        recipe
+        for recipe in CATALOG
+        if recipe.category == outgoing.category and recipe.id not in planned_ids
     ]
-    if candidates:
-        replacement = random.choice(candidates)
-        index = next(i for i, r in enumerate(plan_recipes) if r.id == recipe_id)
-        plan_recipes[index] = replacement
+    if not candidates:
+        return HttpResponse(status=409)
 
-    return _render_plan_results(request, plan_recipes)
+    unseen_candidates = [recipe for recipe in candidates if recipe.id not in rejected_ids]
+    incoming = random.choice(unseen_candidates or candidates)
+    new_plan = [incoming if recipe == outgoing else recipe for recipe in plan]
+    return render(
+        request,
+        "recipes/_plan_swap.html",
+        {
+            "recipe": incoming,
+            "swappable_categories": {incoming.category},
+            "shared_ingredients": build_shared_shopping_list(new_plan),
+        },
+    )
 
 
 def not_found(request: HttpRequest, exception: Exception) -> HttpResponse:

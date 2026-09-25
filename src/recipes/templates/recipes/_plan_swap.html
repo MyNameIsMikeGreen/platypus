@@ -1,0 +1,13 @@
+{% comment %}
+Response to a meal-plan swap request: the replacement recipe row and the shared shopping list
+rebuilt for the updated plan. plan-swap.js moves both into the already-open results page.
+
+Expects:
+  recipe               - the RecipeData swapped into the plan
+  swappable_categories - the recipe's category; the swapped-out recipe remains an alternative
+  shared_ingredients   - tuple of SharedIngredient(export_name, recipe_titles) for the new plan
+{% endcomment %}
+<ul>
+  {% include "recipes/_plan_slot.html" with recipe=recipe swappable_categories=swappable_categories %}
+</ul>
+{% include "recipes/_shared_shopping_list.html" with shared_ingredients=shared_ingredients %}

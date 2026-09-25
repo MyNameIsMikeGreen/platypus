@@ -27,4 +27,7 @@ if (form) {
   }
 
   updateTotal();
+  // Returning with the browser's Back button restores previously entered counts after this
+  // script has run, so recount once the page is shown.
+  window.addEventListener("pageshow", updateTotal);
 }
