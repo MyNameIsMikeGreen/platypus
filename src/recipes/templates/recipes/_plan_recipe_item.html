@@ -1,0 +1,33 @@
+{% comment %}
+A single recipe row within a meal-plan category result, paired with a "refresh" link that lets
+a user swap this recipe for a different, randomly chosen recipe from the same category. Following
+the link re-renders the whole meal-plan page for the same plan with just this one recipe swapped
+out - everything else in the plan, and the shared shopping list, are rebuilt around it exactly as
+they would have been had the new recipe been picked the first time round.
+
+Expects:
+  recipe - RecipeData
+  category - the category `recipe` was drawn from
+  can_refresh - whether another recipe exists in `category` to swap in; when false there is
+    nothing left to swap to, so the control is shown greyed-out rather than removed
+  plan_ids - comma-separated IDs of every recipe currently shown across the whole plan
+{% endcomment %}
+<li data-plan-recipe data-recipe-id="{{ recipe.id }}">
+  <span class="plan-recipe-details">
+    <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
+    {% include "recipes/_status_badges.html" with recipe=recipe %}
+  </span>
+  {% if can_refresh %}
+    <a
+      class="refresh-recipe-button"
+      href="{% url 'recipes:refresh-recipe' %}?recipe_id={{ recipe.id }}&amp;plan={{ plan_ids|urlencode }}"
+      title="Swap {{ recipe.title }} for a different {{ category|title }} recipe"
+    ><span aria-hidden="true">&#8635;</span><span class="visually-hidden">Swap {{ recipe.title }} for a different {{ category|title }} recipe</span></a>
+  {% else %}
+    <span
+      class="refresh-recipe-button refresh-recipe-button-disabled"
+      aria-disabled="true"
+      title="No other {{ category|title }} recipes are available to swap in."
+    ><span aria-hidden="true">&#8635;</span><span class="visually-hidden">No other {{ category|title }} recipes are available to swap in.</span></span>
+  {% endif %}
+</li>

@@ -31,16 +31,13 @@
       <h1>Meal plan</h1>
       <p class="plan-summary">{{ recipe_count_total }} recipe{{ recipe_count_total|pluralize }} across {{ groups|length }} categor{{ groups|length|pluralize:"y,ies" }}.</p>
       {% include "recipes/_shared_shopping_list.html" with shared_ingredients=shared_ingredients %}
-      {% for category, category_recipes in groups %}
+      {% for category, category_recipes, can_refresh in groups %}
         <section class="plan-group">
           <h2>{{ category|title }} <span class="plan-group-count">{{ category_recipes|length }}</span></h2>
           {% if category_recipes %}
             <ul class="result-list result-card">
               {% for recipe in category_recipes %}
-                <li>
-                  <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a>
-                  {% include "recipes/_status_badges.html" with recipe=recipe %}
-                </li>
+                {% include "recipes/_plan_recipe_item.html" with recipe=recipe category=category can_refresh=can_refresh %}
               {% endfor %}
             </ul>
           {% else %}

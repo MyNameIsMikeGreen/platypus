@@ -833,3 +833,45 @@ def test_shared_shopping_list_scrolls_internally_once_it_grows_long(live_url):
         finally:
             browser.close()
 
+
+def test_refresh_control_swaps_a_planner_result_and_rebuilds_the_shared_shopping_list(live_url):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        try:
+            page.goto(f"{live_url}/search-results/?count_mains=3", wait_until="domcontentloaded")
+
+            items = page.locator("[data-plan-recipe]")
+            expect(items).to_have_count(3)
+            other_titles = [items.nth(i).locator(".plan-recipe-details a").inner_text() for i in (1, 2)]
+            first_item = items.first
+            first_title = first_item.locator(".plan-recipe-details a").inner_text()
+            refresh_link = first_item.locator(".refresh-recipe-button")
+
+            # Plenty of Mains recipes exist, so the very first refresh control is enabled.
+            assert refresh_link.get_attribute("aria-disabled") is None
+
+            refresh_link.click()
+            page.wait_for_url("**/search-results/refresh-recipe/**")
+
+            # Still 3 results, the untouched two unchanged, but the first is a different recipe.
+            expect(page.locator("h1")).to_have_text("Meal plan")
+            items = page.locator("[data-plan-recipe]")
+            expect(items).to_have_count(3)
+            titles = [items.nth(i).locator(".plan-recipe-details a").inner_text() for i in range(3)]
+            assert first_title not in titles
+            assert titles[1:] == other_titles
+
+            # The shared shopping list was rebuilt for the new plan, and still works normally.
+            drawer = page.locator("[data-ingredient-export].shopping-list-drawer")
+            drawer.locator("summary").click()
+            toggles = drawer.locator("[data-ingredient-toggle]")
+            status = drawer.locator("[data-ingredient-status]")
+            toggle_count = toggles.count()
+            expect(status).to_have_text(f"{toggle_count} of {toggle_count} ingredients selected")
+            toggles.first.uncheck()
+            expect(status).to_have_text(f"{toggle_count - 1} of {toggle_count} ingredients selected")
+        finally:
+            browser.close()
+
+

@@ -1144,6 +1144,41 @@ select:focus-visible {
   text-align: left;
 }
 
+.plan-group .result-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.refresh-recipe-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.refresh-recipe-button:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+  background: var(--highlight-bg);
+}
+
+.refresh-recipe-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .shopping-list-drawer .filter-panels {
   display: flex;
   flex-direction: column;

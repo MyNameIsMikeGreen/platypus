@@ -8,5 +8,6 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("planner/", views.planner, name="planner"),
     path("search-results/", views.search_results, name="search-results"),
+    path("search-results/refresh-recipe/", views.refresh_recipe, name="refresh-recipe"),
     path("<int:recipe_id>/<slug:slug>/", views.detail, name="detail"),
 ]

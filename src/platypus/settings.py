@@ -20,6 +20,11 @@ INSTALLED_APPS = [
     "recipes",
 ]
 
+# This app has no database - the recipe catalog is a static JSON file (see catalog.py). Spelled
+# out explicitly rather than left unset so it doesn't depend on Django's incidental behaviour of
+# lazily filling in a dummy backend the first time something touches `django.db.connections`.
+DATABASES = {"default": {"ENGINE": "django.db.backends.dummy"}}
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",

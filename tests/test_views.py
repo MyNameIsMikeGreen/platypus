@@ -353,7 +353,7 @@ def test_planner_can_combine_multiple_category_counts(client, recipe_factory):
     )
 
     assert response.status_code == 200
-    groups = dict(response.context["groups"])
+    groups = {category: recipes for category, recipes, _ in response.context["groups"]}
     assert len(groups["MAINS"]) == 2
     assert set(groups["MAINS"]) <= {main1, main2, main3}
     assert groups["LIGHT DISHES"] == [light1]
@@ -381,6 +381,115 @@ def test_planner_results_show_deduplicated_shared_shopping_list(client, recipe_f
     assert content.count('data-ingredient-name="Eggs"') == 1
     assert "Copy shopping list" in content
     assert "ingredient-export.js" in content
+
+
+def test_planner_results_include_a_refresh_link_per_recipe(client, recipe_factory):
+    recipe_factory(title="Main One", category="MAINS")
+    recipe_factory(title="Main Two", category="MAINS")
+    recipe_factory(title="Main Three", category="MAINS")
+
+    response = client.get(reverse("recipes:search-results"), {"count_mains": 1})
+
+    assert response.status_code == 200
+    content = response.content.decode()
+    assert content.count("refresh-recipe-button") == 1
+    assert "aria-disabled" not in content
+    assert "refresh-recipe/?recipe_id=" in content
+    assert "Swap Main" in content
+
+
+def test_planner_disables_refresh_control_when_no_alternative_recipe_exists(client, recipe_factory):
+    recipe_factory(title="Only Main", category="MAINS")
+
+    response = client.get(reverse("recipes:search-results"), {"count_mains": 5})
+
+    assert response.status_code == 200
+    content = response.content.decode()
+    assert 'aria-disabled="true"' in content
+    assert "No other Mains recipes are available to swap in." in content
+    assert "refresh-recipe/?recipe_id=" not in content
+
+
+def test_refresh_recipe_swaps_in_a_different_recipe_from_the_same_category(client, recipe_factory):
+    kept = recipe_factory(title="Kept Recipe", category="MAINS", ingredients=["1 Onion"])
+    shown = recipe_factory(title="Shown Recipe", category="MAINS", ingredients=["2 Eggs"])
+    alternative = recipe_factory(
+        title="Alternative Recipe", category="MAINS", ingredients=["3 Carrots"]
+    )
+    recipe_factory(title="Other Category", category="SNACKS")
+
+    response = client.get(
+        reverse("recipes:refresh-recipe"),
+        {"recipe_id": shown.id, "plan": f"{kept.id},{shown.id}"},
+    )
+
+    assert response.status_code == 200
+    groups = {category: recipes for category, recipes, _ in response.context["groups"]}
+    assert set(groups["MAINS"]) == {kept, alternative}
+    assert response.context["recipe_count_total"] == 2
+    content = response.content.decode()
+    assert alternative.title in content
+    assert shown.title not in content
+    assert kept.title in content
+    shared_names = {item.export_name for item in response.context["shared_ingredients"]}
+    assert shared_names == {"Onion", "Carrots"}
+
+
+def test_refresh_recipe_keeps_the_plan_unchanged_when_every_alternative_is_already_shown(
+    client, recipe_factory
+):
+    first = recipe_factory(title="First Main", category="MAINS")
+    second = recipe_factory(title="Second Main", category="MAINS")
+
+    response = client.get(
+        reverse("recipes:refresh-recipe"),
+        {"recipe_id": first.id, "plan": f"{first.id},{second.id}"},
+    )
+
+    assert response.status_code == 200
+    groups = {category: recipes for category, recipes, _ in response.context["groups"]}
+    assert set(groups["MAINS"]) == {first, second}
+
+
+def test_refresh_recipe_rejects_a_recipe_not_present_in_the_given_plan(client, recipe_factory):
+    shown = recipe_factory(title="Shown Recipe", category="MAINS")
+    recipe_factory(title="Other Recipe", category="MAINS")
+
+    response = client.get(
+        reverse("recipes:refresh-recipe"),
+        {"recipe_id": shown.id, "plan": "999999"},
+    )
+
+    assert response.status_code == 400
+
+
+def test_refresh_recipe_returns_not_found_for_an_unknown_recipe(client, recipe_factory):
+    recipe_factory(category="MAINS")
+
+    response = client.get(
+        reverse("recipes:refresh-recipe"),
+        {"recipe_id": 999999, "plan": "999999"},
+    )
+
+    assert response.status_code == 404
+
+
+def test_refresh_recipe_rejects_a_non_numeric_recipe_id(client, recipe_factory):
+    recipe_factory(category="MAINS")
+
+    response = client.get(reverse("recipes:refresh-recipe"), {"recipe_id": "not-a-number"})
+
+    assert response.status_code == 400
+
+
+def test_tag_selection_does_not_show_refresh_controls(client, recipe_factory):
+    recipe_factory(title="Tagged", tags=["Vegetarian"], category="MAINS")
+
+    response = client.get(reverse("recipes:search-results"), {"tag": "Vegetarian"})
+
+    assert response.status_code == 200
+    content = response.content.decode()
+    assert "refresh-recipe-button" not in content
 
 
 def test_tag_selection_returns_matching_recipes(client, recipe_factory):
